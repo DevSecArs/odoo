@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="contract_customer_form" model="ir.ui.view">
+            <field name="name">Договор</field>
+            <field name="model">partner.contract.customer</field>
+            <field name="arch" type="xml">
+                <form string="Договор">
+                    <header>
+                        <field name="state" widget="statusbar" nolabel="1" clickable="True"/>
+                        <button name="contract_action_confirm" string="На согласовании" type="object"
+                                invisible="state!='draft'"/>
+                        <button name="contract_action_confirm" class="btn-primary" string="Подтвердить" type="object"
+                                invisible="state!='progress'"/>
+                        <button name="contract_in_draft" string="В черновик" type="object"
+                                invisible="state!='signed' and state!='progress'"/>
+                        <button name="generate_contract_header" string="Генерация шапки документа"
+                                type="object"/>
+
+                    </header>
+                    <sheet>
+                        <h1>
+                            <label for="name"/>
+                            <field name="name" readonly="state!='draft'"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="date_start" readonly="state!='draft'"/>
+                                <field name="date_end" readonly="state!='draft'"/>
+                                <field name="type" readonly="state!='draft'"/>
+                                <field name="profile_id" readonly="state!='draft'"/>
+                                <field name="saleorder_id" areadonly="state!='draft'"/>
+                            </group>
+                            <group>
+                                <field name="partner_id" readonly="state!='draft'"/>
+                                <field name="partner_type" readonly="state!='draft'"/>
+                                <!-- <field name="name_print"/>-->
+                                <field name="sec_partner_id" invisible="1"/>
+                                <field name="company_id" readonly="state!='draft'"/>
+                                <!--<field name="name_dirprint"/>-->
+                                <field name="stamp"/>
+                                <field name="signed"/>
+                            </group>
+                            <group>
+                                <field name="payment_term_id" invisible="1"/>
+                                <field name="manager_id"/>
+                                <field name="team_id"/>
+
+                                <field name="accountant_id"/>
+                                <field name="buh_code"/>
+                            </group>
+                            <group>
+                                <field name="is_template"/>
+                                <field name="copy_from" domain="[('is_template','=',True)]"/>
+                                <button name="copy_it" type="object" string="Скопировать пункты из шаблона"
+                                        invisible="copy_from==False"/>
+                            </group>
+                            <group>
+
+                                <field name="order_days_ids"/>
+                                <field name="shipment_days_ids"/>
+                            </group>
+                            <group>
+                                <field name="time_to_delivery_from" class="oe_inline" widget="daterange"
+                                       title="Интервал" options="{'related_end_date': 'time_to_delivery_to'}"/>
+                                <field name="time_to_delivery_to" class="oe_inline" widget="daterange"
+                                       title="Интервал" options="{'related_end_date': 'time_to_delivery_from'}"/>
+                            </group>
+
+                        </group>
+                        <notebook>
+                            <page string="Пункты договора" name="contract_lines">
+                                <field name="lines">
+                                    <list editable="bottom">
+                                        <field name='sequence' widget='handle'/>
+                                        <field name="name"/>
+                                        <field name="punct"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Шапка договора" name="contract_header">
+                                <field name="contract_header"/>
+                            </page>
+                        </notebook>
+
+
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!--
+                <record id="view_sale_calendar_inherit" model="ir.ui.view">
+                    <field name="name">calendar.contract</field>
+                    <field name="model">partner.contract.customer</field>
+                    <field name="inherit_id" ref="contract.contract_customer_form"/>
+                    <field name="arch" type="xml">
+                        <xpath expr="//field[@name='team_id']" position="after">
+                            <calendar string="Movings" date_start="time_to_delivery_from" date_stop="time_to_delivery_to">
+                                <field name="time_to_delivery_from"/>
+                                <field name="time_to_delivery_to"/>
+                            </calendar>
+                        </xpath>
+                    </field>
+                </record>-->
+
+        <record id="contract_customer_tree" model="ir.ui.view">
+            <field name="name">Договор</field>
+            <field name="model">partner.contract.customer</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="date_start"/>
+                </list>
+            </field>
+        </record>
+
+
+        <record id="contract_customer_search" model="ir.ui.view">
+            <field name="name">Поиск в договорах</field>
+            <field name="model">partner.contract.customer</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="partner_id" string="Номер или клиент"
+                           filter_domain="['|',('partner_id','ilike',self),('name','ilike',self)]"/>
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="company_id"/>
+                    <field name="date_start"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="contract_customer_action" model="ir.actions.act_window">
+            <field name="name">Все договоры</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">partner.contract.customer</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Нет созданных контрактов
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+
+
+        <record id="contract_customer_action1" model="ir.actions.act_window">
+            <field name="name">Договоры с поставщиками</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">partner.contract.customer</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="domain">[('type', '=', 'supplier')]</field>
+            <field name="context">{'default_type': 'supplier'}</field>
+            <field name="help" type="html">
+
+                <p class="oe_view_nocontent_create">
+                    Нет созданных контрактов с поставщиками
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+
+
+        <record id="contract_customer_action2" model="ir.actions.act_window">
+            <field name="name">Договоры с клиентами</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">partner.contract.customer</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="domain">[('type', '=', 'customer')]</field>
+            <field name="context">{'default_type': 'customer'}</field>
+            <field name="help" type="html">
+
+                <p class="oe_view_nocontent_create">
+                    Нет созданных контрактов с клиентами
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+
+
+        <record id="contract_allowed_profiles_action" model="ir.actions.act_window">
+            <field name="name">Настройка одновременно включенных договоров</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">contract.allowed.profiles</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="contract_profile_action" model="ir.actions.act_window">
+            <field name="name">Виды договоров</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">contract.profile</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="contract_profile_view" model="ir.ui.view">
+            <field name="name">view_profile_form</field>
+            <field name="model">contract.profile</field>
+            <field name="arch" type="xml">
+                <form string="Профиль договора">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="receivable_account_id" domain="[('account_type', '=', 'asset_receivable')]"/>
+                                <field name="max_receivable_id"/>
+                            </group>
+                            <group>
+                                <field name="payable_account_id" domain="[('account_type', '=', 'liability_payable')]"/>
+                                <field name="payment_term_id"/>
+                                <field name="journal_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">view_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_contract" type="object" class="oe_stat_button" icon="fa-pencil-square-o"
+                            context="{'view':'contract_customer_action', 'search_default_open': 1}">
+                        <field name="contract_count" widget="statinfo" string="Договоры"/>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="passport" invisible="is_company==True"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="view_saleorder_form" model="ir.ui.view">
+            <field name="name">view_saleorder_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="mt_contractid"
+                           domain="[('partner_id','=',sec_partner_id),('company_id','=',company_id)]"
+                           context="{'default_sec_partner_id':partner_id,'default_company_id':company_id,'default_type':'customer'}"/>
+                    <field name="sec_partner_id" invisible="1"/>
+
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_purchaseorder_formcontr" model="ir.ui.view">
+            <field name="name">view_purchaseorder_formcontr</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='origin']" position="after">
+
+                    <field name="mt_contractid"
+                           domain="[('partner_id','=',sec_partner_id),('company_id','=',company_id)]"
+                           context="{'default_sec_partner_id':partner_id,'default_company_id':company_id,'default_type':'supplier'}"/>
+                    <field name="sec_partner_id" invisible="1"/>
+
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_invoice_form" model="ir.ui.view">
+            <field name="name">view_invoice_form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payment_reference']" position="after">
+
+                    <field name="mt_contractid"
+                           domain="[('partner_id','=',sec_partner_id),('company_id','=',company_id)]"
+                           context="{'default_sec_partner_id':partner_id,'default_company_id':company_id,'default_type':'customer'}"/>
+                    <field name="sec_partner_id" invisible="1"/>
+                    <field name="sf_number"/>
+                    <field name="osnovanie" invisible="1"/>
+
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="contract_customer_kanban" model="ir.ui.view">
+            <field name="name">Договор</field>
+            <field name="model">partner.contract.customer</field>
+            <field name="arch" type="xml">
+
+                <kanban default_group_by="state">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="profile_id"/>
+                    <field name="company_id"/>
+                    <field name="type"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_content">
+                                    <div>
+                                        <strong class="o_kanban_record_title">Номер: <b><field
+                                                name="name"/></b></strong>
+                                    </div>
+                                    <div>
+                                        Контрагент: <b><field name="partner_id"/></b> <br/>
+                                        Тип: <b><field name="type"/></b> <br/>
+                                        Вид договора: <b><field name="profile_id"/></b>
+                                    </div>
+                                    <div class="o_kanban_record_bottom">
+                                        Наша компания: <b><field name="company_id"/></b>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+
+
+            </field>
+        </record>
+        <menuitem name="Договоры" id="l10n_ru_contract.main" parent="sale.sale_menu_root"/>
+        <menuitem name="Договоры с клиентами" id="l10n_ru_contract.contracts" parent="l10n_ru_contract.main"
+                  action="l10n_ru_contract.contract_customer_action2"/>
+        <menuitem name="Все договоры" id="l10n_ru_contract.all_contracts" parent="l10n_ru_contract.main"
+                  action="l10n_ru_contract.contract_customer_action"/>
+
+        <menuitem name="Договоры" id="l10n_ru_contract.main1" parent="purchase.menu_purchase_root"/>
+        <menuitem name="Договоры с поставщиками" id="l10n_ru_contract.contracts1" parent="l10n_ru_contract.main1"
+                  action="l10n_ru_contract.contract_customer_action1"/>
+        <menuitem name="Все договоры" id="l10n_ru_contract.all_contracts1" parent="l10n_ru_contract.main1"
+                  action="l10n_ru_contract.contract_customer_action"/>
+
+        <menuitem name="Настройка" id="l10n_ru_contract.separator" parent="l10n_ru_contract.main"/>
+        <menuitem name="Виды договоров" id="l10n_ru_contract.contract_profiles" parent="l10n_ru_contract.separator"
+                  action="l10n_ru_contract.contract_profile_action"/>
+        <menuitem name="Включенные договора" id="l10n_ru_contract.contract_profile_setting" parent="l10n_ru_contract.separator"
+                  action="l10n_ru_contract.contract_allowed_profiles_action"/>
+
+
+        <menuitem name="Настройка" id="l10n_ru_contract.separator1" parent="l10n_ru_contract.main1"/>
+        <menuitem name="Виды договоров" id="l10n_ru_contract.contract_profiles1" parent="l10n_ru_contract.separator1"
+                  action="l10n_ru_contract.contract_profile_action"/>
+        <menuitem name="Включенные договора" id="l10n_ru_contract.contract_profile_setting1" parent="l10n_ru_contract.separator1"
+                  action="l10n_ru_contract.contract_allowed_profiles_action"/>
+
+
+    </data>
+</odoo>

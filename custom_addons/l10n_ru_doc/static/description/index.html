@@ -1,0 +1,129 @@
+﻿﻿<div>
+    <!-- Заголовок -->
+    <div class="mb-4">
+        <h1 class="mb-1">Россия - Бухгалтерские документы</h1>
+        <p class="fs-4 text-muted">Модуль российской локализации для печатных форм документов в Odoo 18</p>
+    </div>
+
+    <!-- Описание -->
+    <div class="d-flex align-items-center p-3 mb-4 bg-light rounded">
+        <i class="fa fa-info-circle text-muted me-3 fa-2x"></i>
+        <div>
+            <strong>Описание:</strong> Этот модуль предоставляет функционал для создания печатных форм документов в соответствии с российским законодательством. Он является частью комплексной российской локализации и зависит от базового модуля l10n_ru_base.
+        </div>
+    </div>
+
+    <!-- Основные функции -->
+    <div class="row mb-4">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+            <h3 class="mb-3 border-bottom pb-2"><i class="fa fa-file-text-o me-2"></i>Печатные формы документов</h3>
+            <ul class="list-unstyled">
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Товарная накладная (ТОРГ-12)</li>
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Счета на оплату</li>
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Счета-фактуры</li>
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Акты выполненных работ</li>
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Универсальные передаточные документы (УПД)</li>
+                <li class="d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>УПД без печатей</li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <h3 class="mb-3 border-bottom pb-2"><i class="fa fa-building me-2"></i>Российская компания</h3>
+            <ul class="list-unstyled">
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Поля ИНН, КПП, ОКПО для компаний и контрагентов</li>
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Назначение руководителя и главного бухгалтера</li>
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Добавление факсимиле и печатей</li>
+                <li class="d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Настройки печати документов</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Поддерживаемые документы -->
+    <div class="mb-4">
+        <h2 class="border-bottom pb-2 mb-3"><i class="fa fa-print me-2"></i>Поддерживаемые документы</h2>
+         <ul class="list-unstyled">
+            <li class="mb-2"><i class="fa fa-file-o text-primary me-2"></i><strong>Счет по форме 1С</strong> - для заказов продаж</li>
+            <li class="mb-2"><i class="fa fa-file-o text-primary me-2"></i><strong>Счет-фактура</strong> - для счетов</li>
+            <li class="mb-2"><i class="fa fa-file-o text-primary me-2"></i><strong>Товарная накладная (ТОРГ-12)</strong> - для счетов</li>
+            <li class="mb-2"><i class="fa fa-file-o text-primary me-2"></i><strong>Акт выполненных работ</strong> - для счетов</li>
+            <li class="mb-2"><i class="fa fa-file-o text-primary me-2"></i><strong>Универсальный передаточный документ (УПД)</strong> - для счетов</li>
+            <li><i class="fa fa-file-o text-primary me-2"></i><strong>УПД без печатей</strong> - для счетов</li>
+        </ul>
+    </div>
+
+    <!-- Использование -->
+    <div class="mb-4">
+        <h2 class="border-bottom pb-2 mb-3"><i class="fa fa-play-circle text-success me-2"></i>Как пользоваться модулем</h2>
+        <p>После установки модуля вы можете использовать российские печатные формы документов в различных разделах системы:</p>
+        
+        <div class="mb-3">
+            <h5 class="text-primary"><i class="fa fa-shopping-cart me-2"></i>Продажи</h5>
+            <p>Откройте заказ продажи или счет и выберите в меню "Действия" → "Печать" для создания документа по форме 1С.</p>
+        </div>
+        
+        <div class="mb-3">
+            <h5 class="text-primary"><i class="fa fa-file-text me-2"></i>Бухгалтерия</h5>
+            <p>В разделе Бухгалтерия откройте счет или счет-фактуру и выберите в меню "Действия" → "Печать" нужный документ:</p>
+            <ul>
+                <li>Товарная накладная (ТОРГ-12)</li>
+                <li>Счет-фактура</li>
+                <li>Акт выполненных работ</li>
+                <li>Универсальный передаточный документ (УПД)</li>
+                <li>УПД без печатей</li>
+            </ul>
+        </div>
+        
+        <div class="mb-3">
+            <h5 class="text-primary"><i class="fa fa-building me-2"></i>Настройка компании</h5>
+            <p>Перейдите в Настройки → Компании → Компании для настройки российских реквизитов:</p>
+            <ul>
+                <li>Заполните ИНН, КПП, ОКПО</li>
+                <li>Назначьте руководителя и главного бухгалтера</li>
+                <li>Добавьте печать компании (опционально)</li>
+                <li>Настройте параметры печати документов</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h5 class="text-primary"><i class="fa fa-users me-2"></i>Настройка контрагентов</h5>
+            <p>В разделе Контакты заполните российские реквизиты контрагентов:</p>
+            <ul>
+                <li>ИНН</li>
+                <li>КПП (для юридических лиц)</li>
+                <li>ОКПО</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Важная информация -->
+    <div class="p-3 mb-4 border border-danger-subtle rounded bg-danger-subtle">
+        <h4 class="text-danger-emphasis"><i class="fa fa-exclamation-triangle me-2"></i>ВАЖНО:</h4>
+        <hr>
+        <ul class="mb-0">
+            <li class="mb-2">Для работы требуется установка дополнительных Python библиотек (pytils).</li>
+            <li>Модуль должен использоваться вместе с основным приложением "Россия - Базовая локализация".</li>
+        </ul>
+    </div>
+
+    <!-- Зависимости -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="mb-3"><i class="fa fa-code me-2"></i>Зависимости</h3>
+            <h5 class="text-primary mb-2">Модули Odoo</h5>
+            <div class="p-3 bg-light rounded mb-3">
+                <code>l10n_ru_base</code>
+            </div>
+            <h5 class="text-primary mb-2">Python библиотеки</h5>
+            <div class="p-3 bg-light rounded">
+                <code>pytils</code>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Подвал -->
+    <div class="mt-4 pt-3 border-top text-center">
+        <small class="text-muted">
+            <i class="fa fa-info-circle me-1"></i>
+            Этот модуль является частью комплексной российской локализации и обеспечивает печать документов в соответствии с российским законодательством.
+        </small>
+    </div>
+</div>

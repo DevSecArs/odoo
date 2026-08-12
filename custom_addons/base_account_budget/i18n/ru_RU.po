@@ -1,0 +1,382 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_account_budget
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20250930\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-08 07:59+0000\n"
+"PO-Revision-Date: 2025-10-08 13:02+0500\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.7\n"
+
+#. module: base_account_budget
+#: model_terms:ir.actions.act_window,help:base_account_budget.act_budget_view
+msgid ""
+"A budget is a forecast of your company's income and/or expenses\n"
+"                expected for a period in the future. A budget is defined on\n"
+"                some\n"
+"                financial accounts and/or analytic accounts (that may represent\n"
+"                projects, departments, categories of products, etc.)"
+msgstr ""
+"Бюджет - это прогноз доходов и/или расходов вашей компании,\n"
+"                ожидаемых в будущем периоде. Бюджет определяется по\n"
+"                некоторым\n"
+"                финансовым счетам и/или аналитическим счетам (которые могут представлять\n"
+"                проекты, отделы, категории продуктов и т.д.)"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__account_ids
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_budget_post_form
+msgid "Accounts"
+msgstr "Счета"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__percentage
+msgid "Achievement"
+msgstr "Выполнение"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_needaction
+msgid "Action Needed"
+msgstr "Требуется действие"
+
+#. module: base_account_budget
+#: model:ir.model,name:base_account_budget.model_account_analytic_account
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__analytic_account_id
+msgid "Analytic Account"
+msgstr "Аналитический счёт"
+
+#. module: base_account_budget
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "Approve"
+msgstr "Утвердить"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_attachment_count
+msgid "Attachment Count"
+msgstr "Количество вложений"
+
+#. module: base_account_budget
+#: model:ir.model,name:base_account_budget.model_budget_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__budget_id
+#: model_terms:ir.ui.view,arch_db:base_account_budget.budget_budget_view_tree
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "Budget"
+msgstr "Бюджет"
+
+#. module: base_account_budget
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_account_analytic_account_form_inherit_budget
+msgid "Budget Items"
+msgstr "Статьи бюджета"
+
+#. module: base_account_budget
+#: model:ir.model,name:base_account_budget.model_budget_lines
+msgid "Budget Line"
+msgstr "Строка бюджета"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_analytic_account__budget_line
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__budget_line
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__budget_line
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_budget_line_form
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_budget_line_search
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_budget_line_tree
+msgid "Budget Lines"
+msgstr "Строки бюджета"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__name
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "Budget Name"
+msgstr "Название бюджета"
+
+#. module: base_account_budget
+#: model:ir.model,name:base_account_budget.model_account_budget_post
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__general_budget_id
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_budget_post_form
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_budget_post_search
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_budget_post_tree
+msgid "Budgetary Position"
+msgstr "Бюджетная позиция"
+
+#. module: base_account_budget
+#: model:ir.actions.act_window,name:base_account_budget.open_budget_post_form
+#: model:ir.ui.menu,name:base_account_budget.menu_budget_post_form
+msgid "Budgetary Positions"
+msgstr "Бюджетные позиции"
+
+#. module: base_account_budget
+#: model:ir.actions.act_window,name:base_account_budget.act_budget_lines_view
+#: model:ir.actions.act_window,name:base_account_budget.act_budget_view
+#: model:ir.ui.menu,name:base_account_budget.menu_act_budget_view
+#: model:ir.ui.menu,name:base_account_budget.menu_act_crossovered_budget_lines_view
+msgid "Budgets"
+msgstr "Бюджеты"
+
+#. module: base_account_budget
+#: model_terms:ir.actions.act_window,help:base_account_budget.act_budget_view
+msgid ""
+"By keeping track of where your money goes, you may be less\n"
+"                likely to overspend, and more likely to meet your financial\n"
+"                goals. Forecast a budget by detailing the expected revenue per\n"
+"                analytic account and monitor its evolution based on the actual\n"
+"                realised during that period."
+msgstr ""
+"Отслеживая, куда уходят ваши деньги, вы с меньшей вероятностью\n"
+"                превысите расходы и с большей вероятностью достигнете своих финансовых\n"
+"                целей. Спрогнозируйте бюджет, детализируя ожидаемый доход по каждому\n"
+"                аналитическому счёту, и отслеживайте его динамику на основе фактических\n"
+"                результатов за этот период."
+
+#. module: base_account_budget
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "Cancel Budget"
+msgstr "Отменить бюджет"
+
+#. module: base_account_budget
+#: model:ir.model.fields.selection,name:base_account_budget.selection__budget_budget__state__cancel
+msgid "Cancelled"
+msgstr "Отменён"
+
+#. module: base_account_budget
+#: model_terms:ir.actions.act_window,help:base_account_budget.act_budget_view
+msgid "Click to create a new budget."
+msgstr "Нажмите, чтобы создать новый бюджет."
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__company_id
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__company_id
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: base_account_budget
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "Confirm"
+msgstr "Подтвердить"
+
+#. module: base_account_budget
+#: model:ir.model.fields.selection,name:base_account_budget.selection__budget_budget__state__confirm
+msgid "Confirmed"
+msgstr "Подтверждён"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__create_uid
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__create_uid
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__create_uid
+msgid "Created by"
+msgstr "Автор"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__create_date
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__create_date
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__create_date
+msgid "Created on"
+msgstr "Дата создания"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__display_name
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__display_name
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: base_account_budget
+#: model:ir.model.fields.selection,name:base_account_budget.selection__budget_budget__state__done
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "Done"
+msgstr "Выполнен"
+
+#. module: base_account_budget
+#: model:ir.model.fields.selection,name:base_account_budget.selection__budget_budget__state__draft
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__date_to
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__date_to
+msgid "End Date"
+msgstr "Дата окончания"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_follower_ids
+msgid "Followers"
+msgstr "Подписчики"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Подписчики (контрагенты)"
+
+#. module: base_account_budget
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "From"
+msgstr "С"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__has_message
+msgid "Has Message"
+msgstr "Есть сообщения"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__id
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__id
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__id
+msgid "ID"
+msgstr "ID"
+
+#. module: base_account_budget
+#: model:ir.model.fields,help:base_account_budget.field_budget_budget__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Если установлено, новые сообщения требуют вашего внимания."
+
+#. module: base_account_budget
+#: model:ir.model.fields,help:base_account_budget.field_budget_budget__message_has_error
+#: model:ir.model.fields,help:base_account_budget.field_budget_budget__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Если установлено, некоторые сообщения не были доставлены."
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_is_follower
+msgid "Is Follower"
+msgstr "Является подписчиком"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__write_uid
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__write_uid
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__write_uid
+msgid "Last Updated by"
+msgstr "Кем обновлено"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__write_date
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__write_date
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__write_date
+msgid "Last Updated on"
+msgstr "Дата обновления"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_has_error
+msgid "Message Delivery error"
+msgstr "Ошибка доставки сообщения"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_ids
+msgid "Messages"
+msgstr "Сообщения"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_account_budget_post__name
+msgid "Name"
+msgstr "Название"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Количество действий"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_has_error_counter
+msgid "Number of errors"
+msgstr "Количество ошибок"
+
+#. module: base_account_budget
+#: model:ir.model.fields,help:base_account_budget.field_budget_budget__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Количество сообщений, требующих действий"
+
+#. module: base_account_budget
+#: model:ir.model.fields,help:base_account_budget.field_budget_budget__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Количество сообщений с ошибкой доставки"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__paid_date
+msgid "Paid Date"
+msgstr "Дата оплаты"
+
+#. module: base_account_budget
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "Period"
+msgstr "Период"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__planned_amount
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "Planned Amount"
+msgstr "Плановая сумма"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__practical_amount
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_account_analytic_account_form_inherit_budget
+msgid "Practical Amount"
+msgstr "Фактическая сумма"
+
+#. module: base_account_budget
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "Reset to Draft"
+msgstr "Вернуть в черновик"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__creating_user_id
+msgid "Responsible"
+msgstr "Ответственный"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Ошибка доставки SMS"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__date_from
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__date_from
+msgid "Start Date"
+msgstr "Дата начала"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__state
+msgid "Status"
+msgstr "Статус"
+
+#. module: base_account_budget
+#. odoo-python
+#: code:addons/base_account_budget/models/account_budget.py:0
+msgid "The budget must have at least one account."
+msgstr "В бюджете должен быть указан хотя бы один счёт."
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_lines__theoretical_amount
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+#: model_terms:ir.ui.view,arch_db:base_account_budget.view_account_analytic_account_form_inherit_budget
+msgid "Theoretical Amount"
+msgstr "Теоретическая сумма"
+
+#. module: base_account_budget
+#: model_terms:ir.ui.view,arch_db:base_account_budget.crossovered_budget_view_form
+msgid "To"
+msgstr "По"
+
+#. module: base_account_budget
+#: model:ir.model.fields.selection,name:base_account_budget.selection__budget_budget__state__validate
+msgid "Validated"
+msgstr "Проверен"
+
+#. module: base_account_budget
+#: model:ir.model.fields,field_description:base_account_budget.field_budget_budget__website_message_ids
+msgid "Website Messages"
+msgstr "Сообщения с сайта"
+
+#. module: base_account_budget
+#: model:ir.model.fields,help:base_account_budget.field_budget_budget__website_message_ids
+msgid "Website communication history"
+msgstr "История общения на сайте"

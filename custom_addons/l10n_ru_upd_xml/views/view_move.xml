@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+    <record id="view_form_account_move_edi" model="ir.ui.view">
+        <field name="name">edi account move</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//header" position="inside">
+                    <button name="print_upd" type="object" string="Печать УПД в xml-формате"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+  </data>
+</odoo>
+

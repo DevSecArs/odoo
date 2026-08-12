@@ -1,0 +1,99 @@
+<div>
+    <!-- Заголовок -->
+    <div class="mb-4">
+        <h1 class="mb-1">Россия - Базовая локализация</h1>
+        <p class="fs-4 text-muted">Основное приложение российской локализации для Odoo 18</p>
+    </div>
+
+    <!-- Описание -->
+    <div class="d-flex align-items-center p-3 mb-4 bg-light rounded">
+        <i class="fa fa-info-circle text-muted me-3 fa-2x"></i>
+        <div>
+            <strong>Описание:</strong> Базовый модуль с централизованными настройками российской локализации.
+        </div>
+    </div>
+
+    <!-- Основные возможности -->
+    <div class="row mb-4">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+            <h3 class="mb-3 border-bottom pb-2"><i class="fa fa-cog me-2"></i>Центральная панель настроек</h3>
+            <ul class="list-unstyled">
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Единая точка управления всеми модулями российской локализации.</li>
+                <li class="mb-2 d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Возможность включения/выключения отдельных модулей.</li>
+                <li class="d-flex"><i class="fa fa-check text-success me-2 mt-1"></i>Проверка корректности настроек.</li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <h3 class="mb-3 border-bottom pb-2"><i class="fa fa-list me-2"></i>Управляемые модули</h3>
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="fa fa-puzzle-piece text-primary me-2"></i><strong>Акты сверки взаиморасчетов</strong> <code class="small">(l10n_ru_act_rev)</code></li>
+                <li class="mb-2"><i class="fa fa-puzzle-piece text-primary me-2"></i><strong>Управление договорами</strong> <code class="small">(l10n_ru_contract)</code></li>
+                <li class="mb-2"><i class="fa fa-puzzle-piece text-primary me-2"></i><strong>Печатные формы документов</strong> <code class="small">(l10n_ru_doc)</code></li>
+                <li><i class="fa fa-puzzle-piece text-primary me-2"></i><strong>Доверенности</strong> <code class="small">(l10n_ru_attorney)</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Дополнительные модули -->
+    <div class="p-3 mb-4 border rounded">
+        <h4 class="mb-2"><i class="fa fa-download me-2"></i>Дополнительные модули</h4>
+        <p class="text-muted mb-2"><em>Устанавливаются отдельно через меню "Приложения":</em></p>
+        <ul class="list-unstyled mb-0">
+            <li><i class="fa fa-file-code-o me-2"></i><strong>УПД в формате XML</strong> <code class="small">(l10n_ru_upd_xml)</code></li>
+        </ul>
+    </div>
+
+    <!-- Использование -->
+    <div class="mb-4">
+        <h2 class="border-bottom pb-2 mb-3"><i class="fa fa-play-circle text-success me-2"></i>Использование</h2>
+        <ol>
+            <li class="mb-2">Установите этот модуль как основное приложение "Россия - Базовая локализация".</li>
+            <li class="mb-2">Все обязательные модули будут установлены автоматически.</li>
+            <li>При необходимости установите дополнительные модули через меню "Приложения".</li>
+        </ol>
+    </div>
+
+    <!-- Важная информация -->
+    <div class="p-3 mb-4 border border-danger-subtle rounded bg-danger-subtle">
+        <h4 class="text-danger-emphasis"><i class="fa fa-exclamation-triangle me-2"></i>ВАЖНО:</h4>
+        <hr>
+        <ul class="mb-0">
+            <li class="mb-2">Этот модуль должен использоваться как основное приложение "Россия - Базовая локализация".</li>
+            <li class="mb-2">Для работы некоторых модулей требуются дополнительные Python библиотеки.</li>
+            <li>Удаление данного модуля приведет к неработоспособности всех других модулей российской локализации.</li>
+        </ul>
+    </div>
+
+    <!-- Требования и зависимости -->
+    <div class="row">
+        <div class="col-lg-6 mb-3 mb-lg-0">
+            <h3 class="mb-3"><i class="fa fa-building me-2"></i>Требования к настройке компании</h3>
+            <p class="text-muted">Для корректной работы всех модулей необходимо настроить обязательные реквизиты:</p>
+            <ul class="list-unstyled">
+                <li class="mb-2"><i class="fa fa-id-card text-info me-2"></i><strong>ИНН</strong> - индивидуальный налоговый номер</li>
+                <li class="mb-2"><i class="fa fa-id-card text-info me-2"></i><strong>КПП</strong> - код причины постановки на учет</li>
+                <li class="mb-2"><i class="fa fa-id-card text-info me-2"></i><strong>ОГРН/ОГРНИП</strong> - основной государственный регистрационный номер</li>
+                <li><i class="fa fa-map-marker text-info me-2"></i><strong>Юридический адрес</strong> - полный адрес компании</li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <h3 class="mb-3"><i class="fa fa-code me-2"></i>Зависимости</h3>
+            <h5 class="mb-2">Модули Odoo</h5>
+            <div class="p-3 bg-light rounded mb-3">
+                <code>base, sale, account, sale_stock, uom, contacts, portal, website</code>
+            </div>
+            <h5 class="mb-2">Python библиотеки</h5>
+            <div class="p-3 bg-light rounded">
+                <code>pytils</code>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Подвал -->
+    <div class="mt-4 pt-3 border-top text-center">
+        <small class="text-muted">
+            <i class="fa fa-info-circle me-1"></i>
+            Модуль разработан в соответствии со стандартами российского законодательства.
+        </small>
+    </div>
+</div>

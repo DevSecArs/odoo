@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Добавление пункта меню "Акты сверки" в раздел "Partner Reports" базового модуля account -->
+    <menuitem id="menu_general_ledger_act_revise"
+              name="Акты сверки"
+              sequence="5"
+              parent="account.account_reports_partners_reports_menu"
+              action="action_general_ledger_wizard"
+              groups="account.group_account_user,account.group_account_manager"/>
+</odoo>

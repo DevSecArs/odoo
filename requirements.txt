@@ -104,3 +104,8 @@ xlwt==1.3.0
 zeep==4.1.0 ; python_version < '3.11'  # (jammy)
 zeep==4.2.1 ; python_version >= '3.11' and python_version < '3.13'
 zeep==4.3.1 ; python_version >= '3.13'
+pytils ; python_version <= '3.11'      # Для l10n_ru_doc
+pymorphy2 ; python_version <= '3.11'    # Для l10n_ru_contract
+lxml ; python_version <= '3.11'         # Для l10n_ru_upd_xml
+openpyxl ; python_version <= '3.11'     # Для l10n_ru_upd_xlsx
+qifparse ; python_version <= '3.11'

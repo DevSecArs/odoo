@@ -1,0 +1,3425 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_ru_doc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20250819\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-09 13:02+0000\n"
+"PO-Revision-Date: 2025-09-09 13:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"\"&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;\"&amp;nbsp;_____________&amp;nbsp;20&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;года"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Масса&amp;nbsp;груза&amp;nbsp;(брутто)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Масса&amp;nbsp;груза&amp;nbsp;(нетто)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,print_report_name:l10n_ru_doc.report_account_invoice_act_new
+msgid ""
+"'Акт - %s ' % (object.name+' '+(object.partner_id.parent_id.name if "
+"object.partner_id.parent_id else object.partner_id.name))"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,print_report_name:l10n_ru_doc.action_report_saleorder_new
+msgid ""
+"'Счет - %s ' % (object.name+' '+(object.partner_id.parent_id.name if "
+"object.partner_id.parent_id else object.partner_id.name))"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,print_report_name:l10n_ru_doc.account_invoices_new
+msgid ""
+"'Счет-фактура - %s ' % (object.name+' '+(object.partner_id.parent_id.name if"
+" object.partner_id.parent_id else object.partner_id.name))"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,print_report_name:l10n_ru_doc.report_account_invoice_bill_new
+msgid ""
+"'Товарная накладная - %s ' % (object.name+' "
+"'+(object.partner_id.parent_id.name if object.partner_id.parent_id else "
+"object.partner_id.name))"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,print_report_name:l10n_ru_doc.report_account_invoice_updn
+msgid "'УПД без печатей'"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,print_report_name:l10n_ru_doc.report_account_invoice_upd_new
+msgid "'УПД'"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(1a)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(2а)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(2б)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(5a)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(6а)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(6б)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"(в&amp;nbsp;редакции\n"
+"                                    &amp;nbsp;постановления&amp;nbsp;Правительства&amp;nbsp;\n"
+"                                    Российской&amp;nbsp;Федерации&amp;nbsp;от&amp;nbsp;\n"
+"                                    2&amp;nbsp;апреля&amp;nbsp;2021г.&amp;nbsp;№\n"
+"                                    &amp;nbsp;534)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+msgid ""
+"(в&amp;nbsp;редакции\n"
+"                                    &amp;nbsp;постановления&amp;nbsp;Правительства&amp;nbsp;\n"
+"                                    Российской&amp;nbsp;Федерации&amp;nbsp;от&amp;nbsp;\n"
+"                                    2&amp;nbsp;апреля&amp;nbsp;2021г.&amp;nbsp;№&amp;nbsp;534)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"(договор;&amp;nbsp;доверенность\n"
+"                                    &amp;nbsp;и&amp;nbsp;др.)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(должность)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"(информация&amp;nbsp;о\n"
+"                                    &amp;nbsp;наличии/отсутствии&amp;nbsp;претензии;&amp;nbsp;\n"
+"                                    ссылки&amp;nbsp;на&amp;nbsp;неотъемлемые&amp;nbsp;\n"
+"                                    приложения,&amp;nbsp;и&amp;nbsp;другие&amp;nbsp;документы\n"
+"                                    &amp;nbsp;и&amp;nbsp;т.п.)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "(масса&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"(может&amp;nbsp;не\n"
+"                                    &amp;nbsp;заполняться&amp;nbsp;при&amp;nbsp;проставлении\n"
+"                                    &amp;nbsp;печати&amp;nbsp;в&amp;nbsp;М.П.,&amp;nbsp;\n"
+"                                    может&amp;nbsp;быть&amp;nbsp;указан&amp;nbsp;ИНН\n"
+"                                    &amp;nbsp;/&amp;nbsp;КПП)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(национальное)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(объем)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(подпись)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"(работ,&amp;nbsp;\n"
+"                                    услуг),"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"(реквизиты&amp;nbsp;\n"
+"                                    свидетельства&amp;nbsp;о&amp;nbsp;государственной&amp;nbsp;\n"
+"                                    регистрации&amp;nbsp;индивидуального&amp;nbsp;\n"
+"                                    предпринимателя)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"(ссылки&amp;nbsp;на\n"
+"                                    &amp;nbsp;неотъемлемые&amp;nbsp;приложения,&amp;nbsp;\n"
+"                                    сопутствующие&amp;nbsp;документы,&amp;nbsp;иные&amp;nbsp;\n"
+"                                    документы&amp;nbsp;и&amp;nbsp;т.п.)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(тариф)&amp;nbsp;за"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"(транспортная&amp;nbsp;\n"
+"                                    накладная,&amp;nbsp;поручение&amp;nbsp;экспедитору,\n"
+"                                    &amp;nbsp;экспедиторская&amp;nbsp;/&amp;nbsp;складская\n"
+"                                    &amp;nbsp;расписка&amp;nbsp;и&amp;nbsp;др.&amp;nbsp;\n"
+"                                    /&amp;nbsp;масса&amp;nbsp;нетто&amp;nbsp;/&amp;nbsp;\n"
+"                                    брутто&amp;nbsp;груза,&amp;nbsp;если&amp;nbsp;не\n"
+"                                    &amp;nbsp;приведены&amp;nbsp;ссылки&amp;nbsp;на\n"
+"                                    &amp;nbsp;транспортные&amp;nbsp;документы,&amp;nbsp;\n"
+"                                    содержащие&amp;nbsp;эти&amp;nbsp;сведения)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "(ф.и.о.)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid ", на сумму"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ",&amp;nbsp;ИНН/КПП&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"-\n"
+"                                                    &amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "0330212"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"1\n"
+"                                                &amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"1&amp;nbsp;-\n"
+"                                    &amp;nbsp;счет-фактура&amp;nbsp;и"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "10"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "10а"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "11"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "12"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "13"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "14"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "15"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "18%"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "1а"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "1б"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "2&amp;nbsp;-&amp;nbsp;передаточный"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "20"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "2а"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "643"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "796"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_account_move
+msgid "Account Move with Contract Link"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_partner__type
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_users__type
+msgid "Address Type"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_res_bank
+msgid "Bank"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,help:l10n_ru_doc.field_res_company__print_facsimile
+#: model:ir.model.fields,help:l10n_ru_doc.field_res_users__print_facsimile
+msgid "Check this for adding Facsimiles of responsible persons to documents."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,help:l10n_ru_doc.field_res_company__print_stamp
+msgid "Check this for adding Stamp of company to documents."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_company__chief_id
+msgid "Chief"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_setup_bank_manual_config__bank_corr_acc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_bank__corr_acc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_partner_bank__bank_corr_acc
+msgid "Corresponding account"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_users__facsimile
+msgid "Facsimile"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_company__accountant_id
+msgid "General Accountant"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_company__inn
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_partner__inn
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_users__inn
+msgid "INN"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_company__kpp
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_partner__kpp
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_users__kpp
+msgid "KPP"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_company__okpo
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_partner__okpo
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_users__okpo
+msgid "OKPO"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_company__print_anywhere
+msgid "Print Anywhere"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_company__print_facsimile
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_users__print_facsimile
+msgid "Print Facsimile"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_company__print_stamp
+msgid "Print Stamp"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_uom_category
+msgid "Product UoM Categories"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_product_product
+msgid "Product Variant"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_report_l10n_ru_doc_report_act
+msgid "Russian Act Report"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_report_l10n_ru_doc_report_bill
+msgid "Russian Bill Report"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_report_l10n_ru_doc_report_invoice
+msgid "Russian Invoice Report"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_report_l10n_ru_doc_report_order
+msgid "Russian Sale Order Report"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_report_l10n_ru_doc_report_upd
+msgid "Russian UPD Report"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_report_l10n_ru_doc_report_updn
+msgid "Russian UPDN Report"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_sale_order
+msgid "Sales Order with Contract Link"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_company__stamp
+msgid "Stamp"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_account_tax
+msgid "Tax"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,help:l10n_ru_doc.field_res_company__inn
+#: model:ir.model.fields,help:l10n_ru_doc.field_res_partner__inn
+#: model:ir.model.fields,help:l10n_ru_doc.field_res_users__inn
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move_line__price_total_pf
+msgid "TotalPF"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,help:l10n_ru_doc.field_res_company__print_anywhere
+msgid "Uncheck this, if you want add Facsimile and Stamp only in email."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model,name:l10n_ru_doc.model_res_users
+msgid "User"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[10]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[11]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[12]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[13]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[14]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[15]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[16]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[17]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[18]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "[19]"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid ""
+"body { background: #ffffff; margin: 0; font-family: Arial; font-size: 8pt; font-style:\n"
+"                            normal; }\n"
+"                            tr.R0{ height: 15px; }\n"
+"                            tr.R0 td.R0C1{ text-align: center; vertical-align: medium; }\n"
+"                            tr.R0 td.R16C19{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000\n"
+"                            1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R16C22{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            top; border-left: #000000 1px solid; border-top: #ffffff 0px none; border-bottom: #000000\n"
+"                            1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R17C1{ border-left: #000000 1px solid; border-bottom: #000000 1px solid;\n"
+"                            border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R19C1{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align: top;\n"
+"                            border-left: #000000 1px solid; border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R21C1{ font-family: Arial; font-size: 8pt; font-style: normal; vertical-align:\n"
+"                            medium; border-left: #000000 1px solid; border-top: #ffffff 0px none; border-bottom: #000000\n"
+"                            1px solid; }\n"
+"                            tr.R0 td.R24C1{ font-family: Arial; font-size: 14pt; font-style: normal; font-weight: bold;\n"
+"                            vertical-align: medium; }\n"
+"                            tr.R0 td.R37C1{ text-align: center; vertical-align: top; overflow: hidden;border-left:\n"
+"                            #000000 2px solid; border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R37C2{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R37C4{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R37C5{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R37C7{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R15{ height: 17px; }\n"
+"                            tr.R15 td.R15C1{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-right: #000000\n"
+"                            1px solid; }\n"
+"                            tr.R15 td.R15C19{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom:\n"
+"                            #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R15 td.R15C22{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom:\n"
+"                            #ffffff 0px none; border-right: #000000 1px solid; }\n"
+"                            tr.R15 td.R18C1{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            medium; border-left: #000000 1px solid; border-top: #000000 1px solid; }\n"
+"                            tr.R15 td.R18C19{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000\n"
+"                            1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R15 td.R18C3{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            medium; border-top: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R15 td.R29C1{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            top; }\n"
+"                            tr.R15 td.R29C5{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            vertical-align: top; }\n"
+"                            tr.R15 td.R35C1{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: center; vertical-align: medium; border-left: #000000 2px solid; border-top:\n"
+"                            #000000 2px solid; }\n"
+"                            tr.R15 td.R35C2{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top:\n"
+"                            #000000 2px solid; }\n"
+"                            tr.R15 td.R35C7{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top:\n"
+"                            #000000 2px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R15 td.R40C6{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: right; vertical-align: top; }\n"
+"                            tr.R15 td.R46C1{ font-family: Arial; font-size: 9pt; font-style: normal; }\n"
+"                            tr.R15 td.R51C1{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            }\n"
+"                            tr.R15 td.R51C10{ text-align: right; border-bottom: #000000 1px solid; }\n"
+"                            tr.R15 td.R51C6,tr.R15 td.R51C6I,tr.R15 td.R51C6S{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R15 td.R51C6I,tr.R15 td.R51C6S { overflow: visible; }\n"
+"                            tr.R15 td.R51C6I span,tr.R15 td.R51C6S span { position: relative; }\n"
+"                            tr.R15 td.R51C6I span img { position: absolute; width: 100px; top: -40px; }\n"
+"                            tr.R15 td.R51C6S span img { position: absolute; width: 140px; top: -80px; left: -100px; }\n"
+"                            tr.R26{ height: 9px; }\n"
+"                            tr.R26 td.R26C1{ border-bottom: #000000 2px solid; }\n"
+"                            tr.R26 td.R39C1{ border-top: #000000 2px solid; }\n"
+"                            table {table-layout: fixed; padding: 0px; padding-left: 2px; vertical-align:bottom;\n"
+"                            border-collapse:collapse;width: 100%; font-family: Arial; font-size: 8pt; font-style:\n"
+"                            normal; }\n"
+"                            td { padding: 0px; padding-left: 2px; overflow:hidden; }\n"
+"                            .cu_space15 { width:100%;height:15px;overflow:hidden; }\n"
+"                            .cu_space44 { width:100%;height:44px;overflow:hidden; }\n"
+"                            .cu_space104 { width:100%;height:104px;overflow:hidden; }\n"
+"                            .cu_space31 { width:100%;height:31px;overflow:hidden; }\n"
+"                            .cu_wspace { white-space:nowrap; }\n"
+"                            .cu_space29 { width:100%;height:29px;overflow:hidden; }\n"
+"                            .cu_space61 { width:100%;height:61px;overflow:hidden; }\n"
+"                            .cu_space9 { width:100%;height:9px;overflow:hidden; }\n"
+"                            tbody, table, tr, td, th{border: none;}"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid ""
+"body { background: #ffffff; margin: 0; font-family: Arial; font-size: 8pt; font-style: normal; }\n"
+"tr.R0{ font-family: Arial; font-size: 8pt; font-style: normal; height: 31px; }\n"
+"tr.R0 td.R0C14{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: right; overflow: hidden;}\n"
+"tr.R1{ font-family: Arial; font-size: 8pt; font-style: normal; height: 25px; }\n"
+"tr.R1 td.R1C1{ font-family: Arial; font-size: 14pt; font-style: normal; font-weight: bold; vertical-align: top; overflow: hidden;}\n"
+"tr.R1 td.R2C1{ font-family: Arial; font-size: 14pt; font-style: normal; font-weight: bold; overflow: hidden;}\n"
+"tr.R12{ height: 15px; }\n"
+"tr.R12 td.R12C1{ vertical-align: top; overflow: hidden;}\n"
+"tr.R12 td.R14C1{ vertical-align: top; }\n"
+"tr.R12 td.R16C14{ text-align: right; }\n"
+"tr.R18{ font-family: Arial; font-size: 8pt; font-style: normal; height: 43px; }\n"
+"tr.R18 td.R18C1{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"tr.R18 td.R18C10{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R18 td.R18C4{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"tr.R18 td.R19C11{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R27{ font-family: Arial; font-size: 8pt; font-style: normal; height: 29px; }\n"
+"tr.R27 td.R27C1{ overflow: hidden;}\n"
+"tr.R27 td.R27C2, tr.R27 td.R27C2I{ overflow: hidden;border-bottom: #ffffff 1px none; }\n"
+"\n"
+"tr.R27 td.R27C2I{ overflow: visible; }\n"
+"tr.R27 td.R27C2I span{ position: relative; }\n"
+"tr.R27 td.R27C2I span img { position: absolute; width: 100px; top: -30px; }\n"
+"\n"
+"tr.R27 td.R27C5{ border-bottom: #ffffff 1px none; }\n"
+"tr.R27 td.R30C8{ text-align: center; overflow: hidden;border-bottom: #ffffff 1px none; }\n"
+"tr.R3{ font-family: Arial; font-size: 8pt; font-style: normal; height: 15px; }\n"
+"tr.R3 td.R20C1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"tr.R3 td.R20C10{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R22C1{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R22C14{ font-family: Arial; font-size: 8pt; font-style: normal; vertical-align: top; }\n"
+"tr.R3 td.R22C2{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R22C4{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R22C7{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R24C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; border-left: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"tr.R3 td.R24C2{ border-bottom: #000000 1px solid; }\n"
+"tr.R3 td.R24C6{ text-align: right; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R24C7{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; text-align: center; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"tr.R3 td.R24C8{ text-align: center; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R28C11{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; }\n"
+"tr.R3 td.R28C2{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; overflow: hidden;border-top: #000000 1px solid; }\n"
+"tr.R3 td.R29C1{ vertical-align: top; }\n"
+"tr.R3 td.R3C1{ }\n"
+"tr.R31{ font-family: Arial; font-size: 8pt; font-style: normal; height: 21px; }\n"
+"tr.R31 td.R31C2{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; overflow: hidden;border-top: #000000 1px solid; }\n"
+"tr.R31 td.R31C8{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; overflow: hidden;border-top: #000000 1px solid; }\n"
+"table {table-layout: fixed; padding: 0px; padding-left: 2px; vertical-align:bottom; border-collapse:collapse;width: 100%; font-family: Arial; font-size: 8pt; font-style: normal; }\n"
+"td { padding: 0px; padding-left: 2px; overflow:hidden; }\n"
+"\n"
+".cu_wspace { white-space:nowrap; }\n"
+".cu_space43 { width:100%;height:48px;overflow:hidden; }\n"
+".cu_space85 { width:100%;height:85px;overflow:hidden; }\n"
+"tbody, table, tr, td, th{border: none;}"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid ""
+"body { background: #ffffff; margin: 0; font-family: Arial; font-size: 8pt; font-style: normal; }\n"
+"tr.R0{ height: 15px; }\n"
+"tr.R0 td.R11C1{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: medium; border-left: #000000 2px solid; border-top: #000000 2px solid; }\n"
+"tr.R0 td.R11C29{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"tr.R0 td.R11C3{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 2px solid; }\n"
+"tr.R0 td.R14C1{ text-align: center; vertical-align: top; border-left: #000000 2px solid; border-top: #000000 1px solid; }\n"
+"tr.R0 td.R14C20{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; }\n"
+"tr.R0 td.R14C23{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; }\n"
+"tr.R0 td.R14C29{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"tr.R0 td.R14C3{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; }\n"
+"tr.R0 td.R31C1{ font-family: Arial; font-size: 9pt; font-style: normal; }\n"
+"tr.R17{ height: 20px; }\n"
+"tr.R2{ height: 1px; }\n"
+"tr.R3{ height: 28px; }\n"
+"tr.R3 td.R3C1{ font-family: Arial; font-size: 14pt; font-style: normal; font-weight: bold; vertical-align: medium; border-bottom: #000000 2px solid; }\n"
+"tr.R32{ height: 19px; }\n"
+"tr.R37{ height: 25px; }\n"
+"tr.R37 td.R37C1{ border-bottom: #000000 1px solid; }\n"
+"tr.R37 td.R37C17{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; }\n"
+"tr.R37 td.R37C4{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: right; border-bottom: #000000 1px solid; }\n"
+"tr.R37 td.R37C5, tr.R37 td.R37C5I, tr.R37 td.R37C5S{ font-family: Arial; font-size: 7pt; font-style: normal; text-align: right; border-bottom: #000000 1px solid; }\n"
+"tr.R37 td.R37C5I,tr.R37 td.R37C5S { overflow: visible; }\n"
+"tr.R37 td.R37C5I span,tr.R37 td.R37C5S span { position: relative; }\n"
+"tr.R37 td.R37C5I span img { position: absolute; width: 100px; top: -30px; left: -120px;}\n"
+"tr.R37 td.R37C5S span img { position: absolute; width: 140px; top: -60px; left: -60px; }\n"
+"tr.R5{ height: 17px; }\n"
+"tr.R5 td.R22C28{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: right; vertical-align: top; }\n"
+"tr.R5 td.R35C1{ font-family: Arial; font-size: 10pt; font-style: normal; font-weight: bold; }\n"
+"tr.R5 td.R35C17{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; }\n"
+"tr.R5 td.R35C20{ font-family: Arial; font-size: 10pt; font-style: normal; font-weight: bold; border-bottom: #ffffff 1px none; }\n"
+"tr.R5 td.R36C1{ }\n"
+"tr.R5 td.R36C20{ border-bottom: #ffffff 1px none; }\n"
+"tr.R5 td.R38C1{ text-align: center; border-top: #000000 1px solid;}\n"
+"tr.R5 td.R5C1{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align: medium; }\n"
+"tr.R5 td.R5C5{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; vertical-align: top; }\n"
+"tr.R6{ height: 9px; }\n"
+"tr.R6 td.R21C1{ border-top: #000000 2px solid; }\n"
+"tr.R6 td.R33C1{ border-bottom: #000000 2px solid; }\n"
+"table {table-layout: fixed; padding: 0px; padding-left: 2px; vertical-align:bottom; border-collapse:collapse;width: 100%; font-family: Arial; font-size: 8pt; font-style: normal; }\n"
+"td { padding: 0px; padding-left: 2px; overflow:hidden; }\n"
+".cu_wspace { white-space:nowrap; }\n"
+".cu_space1 { width:100%;height:1px;overflow:hidden; }\n"
+".cu_space28 { width:100%;height:28px;overflow:hidden; }\n"
+".cu_space9 { width:100%;height:9px;overflow:hidden; }\n"
+".cu_space29 { width:100%;height:29px;overflow:hidden; }\n"
+".cu_space34 { width:100%;height:34px;overflow:hidden; }\n"
+".cu_space20 { width:100%;height:20px;overflow:hidden; }\n"
+".cu_space19 { width:100%;height:19px;overflow:hidden; }\n"
+".cu_space33 { width:100%;height:33px;overflow:hidden; }\n"
+".cu_space25 { width:100%;height:25px;overflow:hidden; }\n"
+"tbody, table, tr, td, th{border: none;}"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"body { background: #ffffff; margin: 0; font-family: Arial; font-size: 8pt; font-style: normal; }\n"
+"tr.R0{ height: 17px; }\n"
+"tr.R0 td.R0C0{ color: #413003; }\n"
+"tr.R0 td.R0C5{ font-family: Arial; font-size: 6pt; font-style: normal; vertical-align: top; }\n"
+"tr.R0 td.R0C8{ font-family: Arial; font-size: 7pt; font-style: normal; text-align: right; }\n"
+"tr.R0 td.R19C15{ font-family: Arial; font-size: 8pt; font-style: normal; text-align: right; vertical-align: medium; }\n"
+"tr.R0 td.R20C0{ vertical-align: top; }\n"
+"tr.R0 td.R20C15{ font-family: Arial; font-size: 8pt; font-style: italic; text-align: right; vertical-align: top; }\n"
+"tr.R0 td.R20C3{ text-align: center; vertical-align: top; }\n"
+"tr.R0 td.R20C7{ text-align: right; vertical-align: top; }\n"
+"tr.R0 td.R21C0{ vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; border-right: #ffffff 1px none; }\n"
+"tr.R0 td.R21C1{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R21C2{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R23C0{ vertical-align: medium; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; border-right: #ffffff 1px none; }\n"
+"tr.R0 td.R23C1{ font-family: Arial; font-size: 7pt; font-style: normal; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R23C3{ font-family: Arial; font-size: 7pt; font-style: normal; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 2px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R25C1{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #ffffff 0px none; }\n"
+"tr.R0 td.R25C10{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R25C12{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #ffffff 0px none; }\n"
+"tr.R0 td.R25C13{ text-align: center; vertical-align: top; border-left: #000000 2px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #ffffff 0px none; }\n"
+"tr.R0 td.R25C14{ text-align: right; vertical-align: top; border-left: #000000 2px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R25C15{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"tr.R0 td.R25C2{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R25C3{ text-align: left; vertical-align: top; border-left: #000000 2px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R25C4{ text-align: center; vertical-align: top; border-left: #000000 2px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R25C5{ text-align: center; vertical-align: top; border-left: #000000 2px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #ffffff 0px none; }\n"
+"tr.R0 td.R25C6{ text-align: center; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R25C7{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R25C8{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R27C0{ border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; border-right: #ffffff 1px none; }\n"
+"tr.R0 td.R27C1{ border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"tr.R0 td.R27C11{ text-align: center; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 2px solid; border-bottom: #000000 1px solid; border-right: #ffffff 0px none; }\n"
+"tr.R0 td.R27C12{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 2px solid; border-bottom: #000000 1px solid; border-right: #ffffff 1px none; }\n"
+"tr.R0 td.R27C13{ text-align: center; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #ffffff 0px none; }\n"
+"tr.R0 td.R27C14{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 2px solid; border-bottom: #000000 1px solid; border-right: #ffffff 0px none; }\n"
+"tr.R0 td.R27C15{ text-align: right; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 2px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R27C2{ border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; border-right: #ffffff 1px none; }\n"
+"tr.R0 td.R27C3{ border-top: #000000 2px solid; }\n"
+"tr.R0 td.R27C7{ text-align: right; border-top: #000000 2px solid; }\n"
+"tr.R0 td.R27C8{ text-align: right; border-left: #000000 1px solid; border-top: #000000 2px solid; border-bottom: #000000 1px solid; border-right: #ffffff 0px none; }\n"
+"tr.R0 td.R29C11{ text-align: center; vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R29C7, tr.R0 td.R29C7S{ text-align: right; }\n"
+"tr.R0 td.R29C8{ text-align: right; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R32C3{ border-top: #ffffff 1px none; border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R32C4{ border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R32C7{ border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R32C8, tr.R0 td.R32C8I{ border-bottom: #000000 1px solid; }\n"
+"\n"
+"tr.R0 td.R32C8I,tr.R0 td.R29C7S { overflow: visible; }\n"
+"tr.R0 td.R32C8I span,tr.R0 td.R29C7S span { position: relative; }\n"
+"tr.R0 td.R32C8I span img { position: absolute; width: 100px; top: -30px; }\n"
+"tr.R0 td.R29C7S span img { position: absolute; width: 140px; top: -110px; left: 50px; }\n"
+"\n"
+"tr.R0 td.R34C8{ border-left: #ffffff 0px none; border-top: #ffffff 0px none; border-bottom: #000000 1px solid; border-right: #ffffff 0px none; }\n"
+"tr.R0 td.R36C16{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-top: #ffffff 1px none; }\n"
+"tr.R0 td.R36C9{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-top: #ffffff 1px none; border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R42C0{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; vertical-align: bottom; }\n"
+"tr.R0 td.R42C1{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; vertical-align: bottom; border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R42C2{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; vertical-align: top; border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R42C7{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; vertical-align: top; border-right: #000000 1px solid; }\n"
+"tr.R0 td.R44C2{ border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R44C3{ border-bottom: #ffffff 1px none; }\n"
+"tr.R0 td.R44C6{ border-bottom: #000000 1px solid;}\n"
+"tr.R0 td.R44C6_1{border-right: #000000 1px solid; }\n"
+"tr.R0 td.R46C0{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; }\n"
+"tr.R0 td.R47C17{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; overflow: hidden;border-top: #ffffff 1px none; }\n"
+"tr.R0 td.R47C2{ font-family: Arial; font-size: 8pt; font-style: normal; text-align: left; vertical-align: bottom; border-top: #ffffff 1px none; }\n"
+"tr.R0 td.R47C6{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-top: #ffffff 1px none;}\n"
+"tr.R0 td.R47C6_1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top;border-right: #000000 1px solid; }\n"
+"tr.R0 td.R48C2{ font-family: Arial; font-size: 8pt; font-style: normal; text-align: left; vertical-align: bottom; border-bottom: #000000 1px solid; }\n"
+"tr.R0 td.R48C3{ font-family: Arial; font-size: 8pt; font-style: normal; text-align: left; vertical-align: bottom; border-bottom: #ffffff 1px none; }\n"
+"tr.R0 td.R51C10{ text-align: center; }\n"
+"tr.R0 td.R51C7{ border-right: #000000 1px solid; }\n"
+"tr.R1{ height: 21px; }\n"
+"tr.R1 td.R1C5{ font-family: Arial; font-size: 6pt; font-style: normal; vertical-align: top; }\n"
+"tr.R1 td.R1C9{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: right; }\n"
+"tr.R2{ height: 17px; }\n"
+"tr.R2 td.R2C0{ font-family: Arial; font-size: 8pt; font-style: normal; vertical-align: top; }\n"
+"tr.R2 td.R2C7{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; vertical-align: medium; }\n"
+"tr.R2 td.R2C9{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R22{ height: 56px; }\n"
+"tr.R22 td.R22C0{ vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; border-right: #ffffff 1px none; }\n"
+"tr.R22 td.R22C2{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R22 td.R22C3{ text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3{ height: 16px; }\n"
+"tr.R3 td.R14C2{ vertical-align: bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #000000 1px solid; }\n"
+"tr.R3 td.R15C1{ font-family: Arial; font-size: 8pt; font-style: normal; }\n"
+"tr.R3 td.R15C2{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"tr.R3 td.R15C8{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; vertical-align: bottom; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R16C3{ font-family: Arial; font-size: 8pt; font-style: normal; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R17C2{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: right; vertical-align: medium; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R17C3{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: center; vertical-align: medium; border-left: #000000 2px solid; border-top: #000000 2px solid; border-bottom: #000000 2px solid; border-right: #000000 1px solid; }\n"
+"tr.R3 td.R17C4{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 2px solid; border-bottom: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"tr.R3 td.R18C3{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: center; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; border-right: #ffffff 1px none; }\n"
+"tr.R3 td.R18C7{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; vertical-align: bottom; }\n"
+"tr.R3 td.R18C9{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid; border-top: #000000 1px solid; border-bottom: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"tr.R3 td.R31C5{ border-bottom: #ffffff 1px none; }\n"
+"tr.R3 td.R31C6{ border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #000000 1px solid; }\n"
+"tr.R3 td.R3C0{ font-family: Arial; font-size: 8pt; font-style: normal; vertical-align: top; }\n"
+"tr.R3 td.R3C1{ font-family: Arial; font-size: 8pt; font-style: normal; vertical-align: bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #000000 1px solid; }\n"
+"tr.R3 td.R3C7{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; vertical-align: medium; }\n"
+"tr.R3 td.R3C9{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: medium; border-left: #000000 2px solid; border-top: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"tr.R3 td.R4C0{ text-align: right; }\n"
+"tr.R3 td.R4C6{ border-bottom: #000000 1px solid; }\n"
+"tr.R3 td.R4C7{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"tr.R3 td.R4C9{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid; border-top: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"tr.R3 td.R6C1{ font-family: Arial; font-size: 8pt; font-style: normal; vertical-align: bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #000000 1px solid; }\n"
+"tr.R3 td.R6C7{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"tr.R3 td.R8C1{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"tr.R3 td.R8C9{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"tr.R38{ height: 7px; }\n"
+"tr.R38 td.R50C7{ border-right: #000000 1px solid; }\n"
+"tr.R39{ height: 13px; }\n"
+"tr.R39 td.R39C10{ text-align: right; }\n"
+"tr.R39 td.R39C14{ text-align: center; }\n"
+"tr.R39 td.R39C4{ border-bottom: #000000 1px solid; }\n"
+"tr.R39 td.R39C7{ border-right: #000000 1px solid; }\n"
+"tr.R39 td.R41C0{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; }\n"
+"tr.R39 td.R41C11{ border-top: #ffffff 1px none; border-bottom: #000000 1px solid; }\n"
+"tr.R39 td.R41C2{ font-family: Arial; font-size: 8pt; font-style: normal; font-weight: bold; }\n"
+"tr.R40{ height: 14px; }\n"
+"tr.R40 td.R40C4{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-top: #ffffff 1px none; }\n"
+"tr.R40 td.R40C7{ border-right: #000000 1px solid; }\n"
+"tr.R45{ height: 12px; }\n"
+"tr.R45 td.R45C10{ border-left: #ffffff 0px none; border-top: #ffffff 1px none; }\n"
+"tr.R45 td.R45C11{ border-top: #ffffff 1px none; }\n"
+"tr.R45 td.R45C2{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-top: #ffffff 1px none; }\n"
+"tr.R45 td.R45C6{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-top: #ffffff 1px none;}\n"
+"tr.R45 td.R45C6_1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-right: #000000 1px solid; }\n"
+"tr.R5{ height: 15px; }\n"
+"tr.R5 td.R11C3{ font-family: Arial; font-size: 8pt; font-style: normal; vertical-align: bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"tr.R5 td.R13C8{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; vertical-align: bottom; border-left: #000000 1px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"tr.R5 td.R33C17{ border-left: #000000 2px solid; border-top: #000000 2px solid; border-bottom: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"tr.R5 td.R35C10{ border-top: #ffffff 1px none; }\n"
+"tr.R5 td.R35C9{ font-family: Arial; font-size: 6pt; font-style: normal; border-top: #ffffff 1px none; }\n"
+"tr.R5 td.R43C1{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"tr.R5 td.R43C11{ border-bottom: #000000 1px solid; }\n"
+"tr.R5 td.R43C7{ border-right: #000000 1px solid; }\n"
+"tr.R5 td.R5C0{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-top: #ffffff 1px none; }\n"
+"tr.R5 td.R5C2{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"tr.R5 td.R5C7{ font-family: Arial; font-size: 8pt; font-style: normal; }\n"
+"tr.R5 td.R5C9{ font-family: Arial; font-size: 9pt; font-style: normal; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"tr.R5 td.R9C0{ text-align: right; }\n"
+"tr.R5 td.R9C1{ font-family: Arial; font-size: 8pt; font-style: normal; text-align: right; }\n"
+"tr.R5 td.R9C3{ font-family: Arial; font-size: 8pt; font-style: normal; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"tr.R5 td.R9C7{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"tr.R5 td.R9C9{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid; border-top: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"tr.R7{ height: 19px; }\n"
+"tr.R7 td.R7C0{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-left: #ffffff 0px none; border-top: #ffffff 1px none; }\n"
+"tr.R7 td.R7C2{ font-family: Arial; font-size: 6pt; font-style: normal; text-align: center; vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"tr.R7 td.R7C7{ font-family: Arial; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"tr.R7 td.R7C9{ font-family: Arial; font-size: 9pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid; border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"table {table-layout: fixed; padding: 0px; padding-left: 2px; vertical-align:bottom; border-collapse:collapse;width: 100%; font-family: Arial; font-size: 8pt; font-style: normal; }\n"
+"td { padding: 0px; padding-left: 2px; overflow:hidden; }\n"
+"\n"
+".cu_wspace { white-space:nowrap; }\n"
+".cu_space21 { width:100%;height:30px;overflow:hidden; }\n"
+".cu_space31 { width:100%;height:31px;overflow:hidden; }\n"
+".cu_space11 { width:100%;height:15px;overflow:hidden; }\n"
+".cu_space16 { width:100%;height:16px;overflow:hidden; }\n"
+".cu_space19 { width:100%;height:19px;overflow:hidden; }\n"
+".cu_space26 { width:100%;height:26px;overflow:hidden; }\n"
+".cu_left { border-left: #ffffff 0px none; }\n"
+".cu_space15 { width:100%;height:15px;overflow:hidden; }\n"
+".cu_space70 { width:100%;height:70px;overflow:hidden; }\n"
+".cu_space40 { width:100%;height:40px;overflow:hidden; }\n"
+".cu_space7 { width:100%;height:7px;overflow:hidden; }\n"
+".cu_space13 { width:100%;height:13px;overflow:hidden; }\n"
+".cu_right { border-right: #000000 1px solid; }\n"
+".cu_space14 { width:100%;height:14px;overflow:hidden; }\n"
+".cu_space12 { width:100%;height:12px;overflow:hidden; }\n"
+"tbody, table, tr, td, th{border: none;}"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"body { background: #ffffff; margin: 0; font-family: Times new roman; font-size: 8pt;\n"
+"                            font-style:\n"
+"                            normal; }\n"
+"\n"
+"                            tr.RE15{ height: 15px; }\n"
+"                            tr.RE15 td.RE15CE1l{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-right: #000000 2px solid;}\n"
+"                            tr.RE15 td.RE15CE1{ font-family: Times new roman; font-size: 7pt; font-style: normal;\n"
+"                            text-align:\n"
+"                            right; }\n"
+"                            tr.RE15 td.RE15CE2box{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 2px solid;border-top: #000000 2px\n"
+"                            solid;border-left: #000000 2px solid;border-right: #000000 2px solid;}\n"
+"                            tr.RE15 td.RE15CE2b{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; text-align: left; }\n"
+"                            tr.RE15 td.RE15CE2p{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-bottom: #000000 1px solid;}\n"
+"                            tr.RE15 td.RE15CE3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; }\n"
+"                            tr.RE15 td.RE15CE1box{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE15 td.RE15CE1boxr{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 2px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE15 td.RE15CE1boxl{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 2px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE16{ height: 16px; }\n"
+"                            tr.RE16 td.RE16CE1l{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align:\n"
+"                            left; border-right: #000000 2px solid;}\n"
+"                            tr.RE16 td.RE16CE1{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: left;}\n"
+"                            tr.RE16 td.RE16CE2{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: center;}\n"
+"                            tr.RE16 td.RE16CE2p{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;}\n"
+"                            tr.RE16 td.RE16CE3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; }\n"
+"                            tr.RE16 td.RE16CE4{ font-family: Times new roman; font-size: 7pt; font-style: normal;\n"
+"                            text-align: right; }\n"
+"                            tr.RE7{ height: 7px; }\n"
+"                            tr.RE7 td.RE7CE1l{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-right: #000000 2px solid;}\n"
+"                            tr.RE7 td.RE7CE1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left;}\n"
+"                            tr.RE29{ height: 29px; }\n"
+"                            tr.RE29 td.RE29CE1box{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE29 td.RE29CE1boxr{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 2px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE29 td.RE29CE1boxl{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 2px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE62{ height: 62px; }\n"
+"                            tr.RE62 td.RE62CE1box{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE62 td.RE62CE1boxr{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 2px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE62 td.RE62CE1boxl{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 2px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE0{ height: 16px; }\n"
+"                            tr.RE0 td.RE0CE1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-left: #000000 1px solid; border-top: #000000\n"
+"                            1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.RE0 td.RE0CE1r{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-left: #000000 1px solid; border-top: #000000\n"
+"                            1px solid; border-bottom: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"                            tr.RE0 td.RE0CE1l{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: top; border-left: #000000 2px solid; border-top: #000000\n"
+"                            1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.RE0 td.RE0CE1lb{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; font-weight: bold; vertical-align: top; border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.RE6{ height: 6px;}\n"
+"                            tr.RE6 td.RE6CE1 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left;}\n"
+"                            tr.RE6 td.RE6CE1r {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-left: #000000 2px solid;}\n"
+"                            tr.RE6 td.RE6CE1t {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-top: #000000 2px solid;}\n"
+"                            tr.RE30{ height: 30px; }\n"
+"                            tr.RE30 td.RE30CE1 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom;}\n"
+"                            tr.RE30 td.RE30CE1r {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom; border-left: #000000 2px solid;}\n"
+"                            tr.RE30 td.RE30CE2 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom; border-bottom: #000000 1px solid;}\n"
+"                            tr.RE30 td.RE30CE3 {font-family: Times new roman; font-size: 7pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top;}\n"
+"\n"
+"                            tr.RE30 td.RE29CE7S2 span img { position: absolute; width: 140px; top: -110px; left: -10px;\n"
+"                            }\n"
+"                            tr.RE30 td.RE32CE82, tr.RE30 td.RE32CE8I2{ border-bottom: #000000 1px solid; }\n"
+"                            tr.RE30 td.RE32CE8I2,tr.RE30 td.RE29CE7S2 { overflow: visible; }\n"
+"                            tr.RE30 td.RE32CE8I2 span,tr.RE30 td.RE29CE7S2 span { position: relative; }\n"
+"                            tr.RE30 td.RE32CE8I2 span img { position: absolute; width: 100px; top: -5px; }\n"
+"                            tr.RE30 td.RE29CE72, tr.RE30 td.RE29CE7S2{ text-align: right; }\n"
+"\n"
+"                            tr.REB15{ height: 15px; }\n"
+"                            tr.REB15 td.REB15CE1 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom;}\n"
+"                            tr.REB15 td.REB15CE1r {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom; border-left: #000000 2px solid;}\n"
+"                            tr.REB15 td.REB15CE2 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom; border-bottom: #000000 1px solid;}\n"
+"                            tr.REB15 td.REB15CE3 {font-family: Times new roman; font-size: 7pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top;}\n"
+"                            tr.REB15 td.REB15CE4 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom;}\n"
+"\n"
+"                            tr.REB15 td.RE29CE7S span img { position: absolute; width: 140px; top: -110px; left: -140px;\n"
+"                            }\n"
+"                            tr.REB15 td.RE32CE8, tr.REB15 td.RE32CE8I{ border-bottom: #000000 1px solid; }\n"
+"                            tr.REB15 td.RE32CE8I,tr.REB15 td.RE29CE7S { overflow: visible; }\n"
+"                            tr.REB15 td.RE32CE8I span,tr.REB15 td.RE29CE7S span { position: relative; }\n"
+"                            tr.REB15 td.RE32CE8I span img { position: absolute; width: 100px; top: -30px; }\n"
+"                            tr.REB15 td.RE29CE7, tr.REB15 td.RE29CE7S{ text-align: left; }\n"
+"\n"
+"                            tr.RE2{ height: 21px; }\n"
+"                            tr.RE2 td.RE2CE1{ font-family: Times new roman; font-size: 6pt; font-style: normal;\n"
+"                            text-align: right;\n"
+"                            }\n"
+"\n"
+"                            tr.R0{ height: 15px; }\n"
+"                            tr.R0 td.R0C0{ color: #413003; }\n"
+"                            tr.R0 td.R0C5{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            vertical-align: top; }\n"
+"                            tr.R0 td.R0C8{ font-family: Times new roman; font-size: 8pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.R0 td.R19C15{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: right; vertical-align: medium; }\n"
+"                            tr.R0 td.R20C0{ vertical-align: top; }\n"
+"                            tr.R0 td.R20C15{ font-family: Times new roman; font-size: 8pt; font-style: italic;\n"
+"                            text-align: right; vertical-align: top; }\n"
+"                            tr.R0 td.R20C3{ text-align: center; vertical-align: top; }\n"
+"                            tr.R0 td.R20C7{ text-align: right; vertical-align: top; }\n"
+"                            tr.R0 td.R21C0{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R21C1{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R21C2{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R23C0{ vertical-align: medium; border-left: #000000 1px solid; border-top: #000000\n"
+"                            1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R23C1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top:\n"
+"                            #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R23C3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top:\n"
+"                            #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C1{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C10{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C12{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C13{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C14{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C15{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C2{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C3{ text-align: left; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C4{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C5{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C6{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C7{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C8{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C0{ border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C1{ border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C11{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C12{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C13{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C14{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C15{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C2{ border-top: #000000 1px solid; border-bottom: #000000 1px solid;\n"
+"                            border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C3{ border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C7{ text-align: right; border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C8{ text-align: right; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R29C11{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R29C7, tr.R0 td.R29C7S{ text-align: right; }\n"
+"                            tr.R0 td.R29C8{ text-align: right; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R32C3{ border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R32C7{ border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R32C8, tr.R0 td.R32C8I{ border-bottom: #000000 1px solid; }\n"
+"\n"
+"                            tr.R0 td.R32C8I,tr.R0 td.R29C7S { overflow: visible; }\n"
+"                            tr.R0 td.R32C8I span,tr.R0 td.R29C7S span { position: relative; }\n"
+"                            tr.R0 td.R32C8I span img { position: absolute; width: 100px; top: -30px; }\n"
+"                            tr.R0 td.R29C7S span img { position: absolute; width: 140px; top: -110px; left: 50px; }\n"
+"\n"
+"                            tr.R0 td.R34C8{ border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R36C16{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R36C9{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-top: #000000 1px solid; border-bottom:\n"
+"                            #000000 1px solid; }\n"
+"                            tr.R0 td.R42C0{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; vertical-align: bottom; }\n"
+"                            tr.R0 td.R42C1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; vertical-align: bottom; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R42C2{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; vertical-align: top; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R42C7{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; vertical-align: top; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R44C2{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R44C3{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R44C6{ border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R46C0{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; }\n"
+"                            tr.R0 td.R47C17{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; overflow: hidden;border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R47C2{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom; border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R47C6{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-top: #000000 1px solid; border-right:\n"
+"                            #000000 1px solid; }\n"
+"                            tr.R0 td.R48C2{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R48C3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R51C10{ text-align: center; }\n"
+"                            tr.R0 td.R51C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R1{ height: 21px; }\n"
+"                            tr.R1 td.R1C5{ font-family: Times new roman; font-size: 6pt; font-style: normal;\n"
+"                            vertical-align: top;\n"
+"                            }\n"
+"                            tr.R1 td.R1C9{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.R2{ height: 17px; }\n"
+"                            tr.R2 td.R2C0{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            vertical-align: top;\n"
+"                            }\n"
+"                            tr.R2 td.R2C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align:\n"
+"                            right;\n"
+"                            vertical-align: medium; }\n"
+"                            tr.R2 td.R2C9{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R22{ height: 56px; }\n"
+"                            tr.R22 td.R22C0{ vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px\n"
+"                            none; border-bottom: #ffffff 1px none; border-right: #ffffff 1px none; }\n"
+"                            tr.R22 td.R22C2{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R22 td.R22C3{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R3{ height: 16px; }\n"
+"                            tr.R3 td.R14C2{ vertical-align: bottom; border-left: #ffffff 1px none; border-top: #ffffff\n"
+"                            1px none; border-bottom: #000000 1px solid; }\n"
+"                            tr.R3 td.R15C1{ font-family: Times new roman; font-size: 8pt; font-style: normal; }\n"
+"                            tr.R3 td.R15C2{ font-family: Times new roman; font-size: 6pt; font-style: normal;\n"
+"                            text-align: center;\n"
+"                            vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none;\n"
+"                            border-bottom: #ffffff 1px none; }\n"
+"                            tr.R3 td.R15C8{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: right;\n"
+"                            vertical-align: bottom; border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R3 td.R16C3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center;\n"
+"                            vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R3 td.R17C2{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            font-weight: bold;\n"
+"                            text-align: right; vertical-align: medium; border-right: #000000 1px solid; }\n"
+"                            tr.R3 td.R17C3{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: center;\n"
+"                            vertical-align: medium; border-left: #000000 2px solid; border-top: #000000 2px solid;\n"
+"                            border-bottom: #000000 2px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R3 td.R17C4{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: center;\n"
+"                            vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 2px solid;\n"
+"                            border-bottom: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R3 td.R18C3{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: center;\n"
+"                            border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px\n"
+"                            none; border-right: #ffffff 1px none; }\n"
+"                            tr.R3 td.R18C7{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: right;\n"
+"                            vertical-align: bottom; }\n"
+"                            tr.R3 td.R18C9{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 2px solid; border-right: #000000 2px\n"
+"                            solid; }\n"
+"                            tr.R3 td.R31C5{ border-bottom: #ffffff 1px none; }\n"
+"                            tr.R3 td.R31C6{ border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom:\n"
+"                            #000000 1px solid; }\n"
+"                            tr.R3 td.R3C0{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            vertical-align: top;\n"
+"                            }\n"
+"                            tr.R3 td.R3C1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            vertical-align:\n"
+"                            bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #000000\n"
+"                            1px solid; }\n"
+"                            tr.R3 td.R3C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align:\n"
+"                            right;\n"
+"                            vertical-align: medium; }\n"
+"                            tr.R3 td.R3C9{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            font-weight: bold;\n"
+"                            text-align: center; vertical-align: medium; border-left: #000000 2px solid; border-top:\n"
+"                            #000000 2px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R3 td.R4C0{ text-align: right; }\n"
+"                            tr.R3 td.R4C6{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R3 td.R4C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.R3 td.R4C9{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R3 td.R6C1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            vertical-align:\n"
+"                            bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #000000\n"
+"                            1px solid; }\n"
+"                            tr.R3 td.R6C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.R3 td.R8C1{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.R3 td.R8C9{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-right: #000000 2px solid; }\n"
+"                            tr.R38{ height: 7px; }\n"
+"                            tr.R38 td.R50C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R39{ height: 13px; }\n"
+"                            tr.R39 td.R39C10{ text-align: right; }\n"
+"                            tr.R39 td.R39C14{ text-align: center; }\n"
+"                            tr.R39 td.R39C4{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R39 td.R39C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R39 td.R41C0{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold;\n"
+"                            }\n"
+"                            tr.R39 td.R41C11{ border-top: #ffffff 1px none; border-bottom: #000000 1px solid; }\n"
+"                            tr.R39 td.R41C2{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold;\n"
+"                            }\n"
+"                            tr.R40{ height: 14px; }\n"
+"                            tr.R40 td.R40C4{ font-family: Times new roman; font-size: 6pt; font-style: normal;\n"
+"                            text-align: center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; }\n"
+"                            tr.R40 td.R40C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R45{ height: 12px; }\n"
+"                            tr.R45 td.R45C10{ border-left: #ffffff 0px none; border-top: #ffffff 1px none; }\n"
+"                            tr.R45 td.R45C11{ border-top: #ffffff 1px none; }\n"
+"                            tr.R45 td.R45C2{ font-family: Times new roman; font-size: 6pt; font-style: normal;\n"
+"                            text-align: center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; }\n"
+"                            tr.R45 td.R45C6{ font-family: Times new roman; font-size: 6pt; font-style: normal;\n"
+"                            text-align: center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; border-right: #000000 1px solid; }\n"
+"                            tr.R5{ height: 11px; }\n"
+"                            tr.R5 td.R11C3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            vertical-align:\n"
+"                            bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff\n"
+"                            1px none; }\n"
+"                            tr.R5 td.R13C8{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: right;\n"
+"                            vertical-align: bottom; border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R5 td.R33C17{ border-left: #000000 2px solid; border-top: #000000 2px solid;\n"
+"                            border-bottom: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R5 td.R35C10{ border-top: #ffffff 1px none; }\n"
+"                            tr.R5 td.R35C9{ font-family: Times new roman; font-size: 6pt; font-style: normal;\n"
+"                            border-top: #ffffff\n"
+"                            1px none; }\n"
+"                            tr.R5 td.R43C1{ font-family: Times new roman; font-size: 6pt; font-style: normal;\n"
+"                            text-align: center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"                            tr.R5 td.R43C11{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R5 td.R43C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R5 td.R5C0{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align:\n"
+"                            center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; }\n"
+"                            tr.R5 td.R5C2{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align:\n"
+"                            center;\n"
+"                            vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none;\n"
+"                            border-bottom: #ffffff 1px none; }\n"
+"                            tr.R5 td.R5C7{ font-family: Times new roman; font-size: 8pt; font-style: normal; }\n"
+"                            tr.R5 td.R5C9{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            vertical-align:\n"
+"                            bottom; overflow: hidden;border-left: #000000 2px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R5 td.R9C0{ text-align: right; }\n"
+"                            tr.R5 td.R9C1{ font-family: Times new roman; font-size: 8pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.R5 td.R9C3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            border-left: #ffffff\n"
+"                            1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"                            tr.R5 td.R9C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.R5 td.R9C9{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R7{ height: 19px; }\n"
+"                            tr.R7 td.R7C0{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align:\n"
+"                            center;\n"
+"                            vertical-align: top; border-left: #ffffff 0px none; border-top: #ffffff 1px none; }\n"
+"                            tr.R7 td.R7C2{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align:\n"
+"                            center;\n"
+"                            vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none;\n"
+"                            border-bottom: #ffffff 1px none; }\n"
+"                            tr.R7 td.R7C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.R7 td.R7C9{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 2px\n"
+"                            solid; }\n"
+"                            table {table-layout: fixed; padding: 0px; padding-left: 2px; vertical-align:bottom;\n"
+"                            border-collapse:collapse;width: 100%; font-family: Times new roman; font-size: 8pt;\n"
+"                            font-style:\n"
+"                            normal; }\n"
+"                            td { padding: 0px; padding-left: 2px; overflow:hidden; }\n"
+"\n"
+"                            .cu_wspace { white-space:nowrap; }\n"
+"                            .cu_space21 { width:100%;height:21px;overflow:hidden; }\n"
+"                            .cu_space31 { width:100%;height:31px;overflow:hidden; }\n"
+"                            .cu_space11 { width:100%;height:11px;overflow:hidden; }\n"
+"                            .cu_space16 { width:100%;height:16px;overflow:hidden; }\n"
+"                            .cu_space19 { width:100%;height:19px;overflow:hidden; }\n"
+"                            .cu_space26 { width:100%;height:26px;overflow:hidden; }\n"
+"                            .cu_left { border-left: #ffffff 0px none; }\n"
+"                            .cu_space15 { width:100%;height:15px;overflow:hidden; }\n"
+"                            .cu_space70 { width:100%;height:70px;overflow:hidden; }\n"
+"                            .cu_space40 { width:100%;height:40px;overflow:hidden; }\n"
+"                            .cu_space7 { width:100%;height:7px;overflow:hidden; }\n"
+"                            .cu_space13 { width:100%;height:13px;overflow:hidden; }\n"
+"                            .cu_right { border-right: #000000 1px solid; }\n"
+"                            .cu_space14 { width:100%;height:14px;overflow:hidden; }\n"
+"                            .cu_space12 { width:100%;height:12px;overflow:hidden; }\n"
+"                            tbody, table, tr, td, th{border: none;}"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+msgid ""
+"body { background: #ffffff; margin: 0; font-family: Times new roman; font-size: 8pt; font-style:\n"
+"                            normal; }\n"
+"\n"
+"                            tr.RE15{ height: 15px; }\n"
+"                            tr.RE15 td.RE15CE1l{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-right: #000000 2px solid;}\n"
+"                            tr.RE15 td.RE15CE1{ font-family: Times new roman; font-size: 7pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.RE15 td.RE15CE2box{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 2px solid;border-top: #000000 2px\n"
+"                            solid;border-left: #000000 2px solid;border-right: #000000 2px solid;}\n"
+"                            tr.RE15 td.RE15CE2b{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; text-align: left; }\n"
+"                            tr.RE15 td.RE15CE2p{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-bottom: #000000 1px solid;}\n"
+"                            tr.RE15 td.RE15CE3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; }\n"
+"                            tr.RE15 td.RE15CE1box{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE15 td.RE15CE1boxr{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 2px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE15 td.RE15CE1boxl{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 2px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE16{ height: 16px; }\n"
+"                            tr.RE16 td.RE16CE1l{ font-family: Times new roman; font-size: 8pt; font-style: normal; text-align:\n"
+"                            left; border-right: #000000 2px solid;}\n"
+"                            tr.RE16 td.RE16CE1{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: left;}\n"
+"                            tr.RE16 td.RE16CE2{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: center;}\n"
+"                            tr.RE16 td.RE16CE2p{ font-family: Times new roman; font-size: 9pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;}\n"
+"                            tr.RE16 td.RE16CE3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; }\n"
+"                            tr.RE16 td.RE16CE4{ font-family: Times new roman; font-size: 7pt; font-style: normal;\n"
+"                            text-align: right; }\n"
+"                            tr.RE7{ height: 7px; }\n"
+"                            tr.RE7 td.RE7CE1l{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-right: #000000 2px solid;}\n"
+"                            tr.RE7 td.RE7CE1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left;}\n"
+"                            tr.RE29{ height: 29px; }\n"
+"                            tr.RE29 td.RE29CE1box{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE29 td.RE29CE1boxr{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 2px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE29 td.RE29CE1boxl{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 2px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE62{ height: 62px; }\n"
+"                            tr.RE62 td.RE62CE1box{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE62 td.RE62CE1boxr{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 1px solid;border-right: #000000 2px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE62 td.RE62CE1boxl{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; border-bottom: #000000 1px solid;border-top: #000000 1px\n"
+"                            solid;border-left: #000000 2px solid;border-right: #000000 1px solid;vertical-align: middle\n"
+"                            ;}\n"
+"                            tr.RE0{ height: 16px; }\n"
+"                            tr.RE0 td.RE0CE1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-left: #000000 1px solid; border-top: #000000\n"
+"                            1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.RE0 td.RE0CE1r{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-left: #000000 1px solid; border-top: #000000\n"
+"                            1px solid; border-bottom: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"                            tr.RE0 td.RE0CE1l{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: top; border-left: #000000 2px solid; border-top: #000000\n"
+"                            1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.RE0 td.RE0CE1lb{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; font-weight: bold; vertical-align: top; border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.RE6{ height: 6px;}\n"
+"                            tr.RE6 td.RE6CE1 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left;}\n"
+"                            tr.RE6 td.RE6CE1r {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-left: #000000 2px solid;}\n"
+"                            tr.RE6 td.RE6CE1t {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; border-top: #000000 2px solid;}\n"
+"                            tr.RE30{ height: 30px; }\n"
+"                            tr.RE30 td.RE30CE1 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom;}\n"
+"                            tr.RE30 td.RE30CE1r {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom; border-left: #000000 2px solid;}\n"
+"                            tr.RE30 td.RE30CE2 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom; border-bottom: #000000 1px solid;}\n"
+"                            tr.RE30 td.RE30CE3 {font-family: Times new roman; font-size: 7pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top;}\n"
+"\n"
+"                            tr.RE30 td.RE29CE7S2 span img { position: absolute; width: 140px; top: -110px; left: -10px;\n"
+"                            }\n"
+"                            tr.RE30 td.RE32CE82, tr.RE30 td.RE32CE8I2{ border-bottom: #000000 1px solid; }\n"
+"                            tr.RE30 td.RE32CE8I2,tr.RE30 td.RE29CE7S2 { overflow: visible; }\n"
+"                            tr.RE30 td.RE32CE8I2 span,tr.RE30 td.RE29CE7S2 span { position: relative; }\n"
+"                            tr.RE30 td.RE32CE8I2 span img { position: absolute; width: 100px; top: -20px; }\n"
+"                            tr.RE30 td.RE29CE72, tr.RE30 td.RE29CE7S2{ text-align: right; }\n"
+"\n"
+"                            tr.REB15{ height: 15px; }\n"
+"                            tr.REB15 td.REB15CE1 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom;}\n"
+"                            tr.REB15 td.REB15CE1r {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom; border-left: #000000 2px solid;}\n"
+"                            tr.REB15 td.REB15CE2 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom; border-bottom: #000000 1px solid;}\n"
+"                            tr.REB15 td.REB15CE3 {font-family: Times new roman; font-size: 7pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top;}\n"
+"                            tr.REB15 td.REB15CE4 {font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: bottom;}\n"
+"\n"
+"                            tr.REB15 td.RE29CE7S span img { position: absolute; width: 140px; top: -110px; left: -140px;\n"
+"                            }\n"
+"                            tr.REB15 td.RE32CE8, tr.REB15 td.RE32CE8I{ border-bottom: #000000 1px solid; }\n"
+"                            tr.REB15 td.RE32CE8I,tr.REB15 td.RE29CE7S { overflow: visible; }\n"
+"                            tr.REB15 td.RE32CE8I span,tr.REB15 td.RE29CE7S span { position: relative; }\n"
+"                            tr.REB15 td.RE32CE8I span img { position: absolute; width: 100px; top: -30px; }\n"
+"                            tr.REB15 td.RE29CE7, tr.REB15 td.RE29CE7S{ text-align: left; }\n"
+"\n"
+"                            tr.RE2{ height: 21px; }\n"
+"                            tr.RE2 td.RE2CE1{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: right;\n"
+"                            }\n"
+"\n"
+"                            tr.R0{ height: 15px; }\n"
+"                            tr.R0 td.R0C0{ color: #413003; }\n"
+"                            tr.R0 td.R0C5{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            vertical-align: top; }\n"
+"                            tr.R0 td.R0C8{ font-family: Times new roman; font-size: 8pt; font-style: normal; text-align:\n"
+"                            right; }\n"
+"                            tr.R0 td.R19C15{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: right; vertical-align: medium; }\n"
+"                            tr.R0 td.R20C0{ vertical-align: top; }\n"
+"                            tr.R0 td.R20C15{ font-family: Times new roman; font-size: 8pt; font-style: italic;\n"
+"                            text-align: right; vertical-align: top; }\n"
+"                            tr.R0 td.R20C3{ text-align: center; vertical-align: top; }\n"
+"                            tr.R0 td.R20C7{ text-align: right; vertical-align: top; }\n"
+"                            tr.R0 td.R21C0{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R21C1{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R21C2{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R23C0{ vertical-align: medium; border-left: #000000 1px solid; border-top: #000000\n"
+"                            1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R23C1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top:\n"
+"                            #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R23C3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: medium; border-left: #000000 1px solid; border-top:\n"
+"                            #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C1{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C10{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C12{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C13{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C14{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C15{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C2{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C3{ text-align: left; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C4{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R25C5{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C6{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C7{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R25C8{ vertical-align: top; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C0{ border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C1{ border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C11{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C12{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C13{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C14{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C15{ text-align: right; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R27C2{ border-top: #000000 1px solid; border-bottom: #000000 1px solid;\n"
+"                            border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C3{ border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C7{ text-align: right; border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R27C8{ text-align: right; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R29C11{ text-align: center; vertical-align: top; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R0 td.R29C7, tr.R0 td.R29C7S{ text-align: right; }\n"
+"                            tr.R0 td.R29C8{ text-align: right; border-left: #000000 1px solid; border-top: #000000 1px\n"
+"                            solid; border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R32C3{ border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R32C7{ border-top: #000000 1px solid; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R32C8, tr.R0 td.R32C8I{ border-bottom: #000000 1px solid; }\n"
+"\n"
+"                            tr.R0 td.R32C8I,tr.R0 td.R29C7S { overflow: visible; }\n"
+"                            tr.R0 td.R32C8I span,tr.R0 td.R29C7S span { position: relative; }\n"
+"                            tr.R0 td.R32C8I span img { position: absolute; width: 100px; top: -30px; }\n"
+"                            tr.R0 td.R29C7S span img { position: absolute; width: 140px; top: -110px; left: 50px; }\n"
+"\n"
+"                            tr.R0 td.R34C8{ border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R36C16{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R36C9{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-top: #000000 1px solid; border-bottom:\n"
+"                            #000000 1px solid; }\n"
+"                            tr.R0 td.R42C0{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; vertical-align: bottom; }\n"
+"                            tr.R0 td.R42C1{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; vertical-align: bottom; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R42C2{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; vertical-align: top; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R42C7{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; vertical-align: top; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R44C2{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R44C3{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R44C6{ border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R0 td.R46C0{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            font-weight: bold; }\n"
+"                            tr.R0 td.R47C17{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; overflow: hidden;border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R47C2{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom; border-top: #000000 1px solid; }\n"
+"                            tr.R0 td.R47C6{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: center; vertical-align: top; border-top: #000000 1px solid; border-right:\n"
+"                            #000000 1px solid; }\n"
+"                            tr.R0 td.R48C2{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R48C3{ font-family: Times new roman; font-size: 8pt; font-style: normal;\n"
+"                            text-align: left; vertical-align: bottom; border-bottom: #000000 1px solid; }\n"
+"                            tr.R0 td.R51C10{ text-align: center; }\n"
+"                            tr.R0 td.R51C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R1{ height: 21px; }\n"
+"                            tr.R1 td.R1C5{ font-family: Times new roman; font-size: 6pt; font-style: normal; vertical-align: top;\n"
+"                            }\n"
+"                            tr.R1 td.R1C9{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: right; }\n"
+"                            tr.R2{ height: 17px; }\n"
+"                            tr.R2 td.R2C0{ font-family: Times new roman; font-size: 8pt; font-style: normal; vertical-align: top;\n"
+"                            }\n"
+"                            tr.R2 td.R2C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right;\n"
+"                            vertical-align: medium; }\n"
+"                            tr.R2 td.R2C9{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R22{ height: 56px; }\n"
+"                            tr.R22 td.R22C0{ vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px\n"
+"                            none; border-bottom: #ffffff 1px none; border-right: #ffffff 1px none; }\n"
+"                            tr.R22 td.R22C2{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R22 td.R22C3{ text-align: center; vertical-align: medium; border-left: #000000 1px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 1px\n"
+"                            solid; }\n"
+"                            tr.R3{ height: 16px; }\n"
+"                            tr.R3 td.R14C2{ vertical-align: bottom; border-left: #ffffff 1px none; border-top: #ffffff\n"
+"                            1px none; border-bottom: #000000 1px solid; }\n"
+"                            tr.R3 td.R15C1{ font-family: Times new roman; font-size: 8pt; font-style: normal; }\n"
+"                            tr.R3 td.R15C2{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none;\n"
+"                            border-bottom: #ffffff 1px none; }\n"
+"                            tr.R3 td.R15C8{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right;\n"
+"                            vertical-align: bottom; border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R3 td.R16C3{ font-family: Times new roman; font-size: 8pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R3 td.R17C2{ font-family: Times new roman; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: right; vertical-align: medium; border-right: #000000 1px solid; }\n"
+"                            tr.R3 td.R17C3{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: medium; border-left: #000000 2px solid; border-top: #000000 2px solid;\n"
+"                            border-bottom: #000000 2px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R3 td.R17C4{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: medium; border-left: #000000 1px solid; border-top: #000000 2px solid;\n"
+"                            border-bottom: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R3 td.R18C3{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: center;\n"
+"                            border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px\n"
+"                            none; border-right: #ffffff 1px none; }\n"
+"                            tr.R3 td.R18C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right;\n"
+"                            vertical-align: bottom; }\n"
+"                            tr.R3 td.R18C9{ font-family: Times new roman; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 2px solid; border-right: #000000 2px\n"
+"                            solid; }\n"
+"                            tr.R3 td.R31C5{ border-bottom: #ffffff 1px none; }\n"
+"                            tr.R3 td.R31C6{ border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom:\n"
+"                            #000000 1px solid; }\n"
+"                            tr.R3 td.R3C0{ font-family: Times new roman; font-size: 8pt; font-style: normal; vertical-align: top;\n"
+"                            }\n"
+"                            tr.R3 td.R3C1{ font-family: Times new roman; font-size: 8pt; font-style: normal; vertical-align:\n"
+"                            bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #000000\n"
+"                            1px solid; }\n"
+"                            tr.R3 td.R3C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right;\n"
+"                            vertical-align: medium; }\n"
+"                            tr.R3 td.R3C9{ font-family: Times new roman; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: center; vertical-align: medium; border-left: #000000 2px solid; border-top:\n"
+"                            #000000 2px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R3 td.R4C0{ text-align: right; }\n"
+"                            tr.R3 td.R4C6{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R3 td.R4C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"                            tr.R3 td.R4C9{ font-family: Times new roman; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R3 td.R6C1{ font-family: Times new roman; font-size: 8pt; font-style: normal; vertical-align:\n"
+"                            bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #000000\n"
+"                            1px solid; }\n"
+"                            tr.R3 td.R6C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"                            tr.R3 td.R8C1{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"                            tr.R3 td.R8C9{ font-family: Times new roman; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-right: #000000 2px solid; }\n"
+"                            tr.R38{ height: 7px; }\n"
+"                            tr.R38 td.R50C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R39{ height: 13px; }\n"
+"                            tr.R39 td.R39C10{ text-align: right; }\n"
+"                            tr.R39 td.R39C14{ text-align: center; }\n"
+"                            tr.R39 td.R39C4{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R39 td.R39C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R39 td.R41C0{ font-family: Times new roman; font-size: 8pt; font-style: normal; font-weight: bold;\n"
+"                            }\n"
+"                            tr.R39 td.R41C11{ border-top: #ffffff 1px none; border-bottom: #000000 1px solid; }\n"
+"                            tr.R39 td.R41C2{ font-family: Times new roman; font-size: 8pt; font-style: normal; font-weight: bold;\n"
+"                            }\n"
+"                            tr.R40{ height: 14px; }\n"
+"                            tr.R40 td.R40C4{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; }\n"
+"                            tr.R40 td.R40C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R45{ height: 12px; }\n"
+"                            tr.R45 td.R45C10{ border-left: #ffffff 0px none; border-top: #ffffff 1px none; }\n"
+"                            tr.R45 td.R45C11{ border-top: #ffffff 1px none; }\n"
+"                            tr.R45 td.R45C2{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; }\n"
+"                            tr.R45 td.R45C6{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; border-right: #000000 1px solid; }\n"
+"                            tr.R5{ height: 11px; }\n"
+"                            tr.R5 td.R11C3{ font-family: Times new roman; font-size: 8pt; font-style: normal; vertical-align:\n"
+"                            bottom; border-left: #ffffff 1px none; border-top: #ffffff 1px none; border-bottom: #ffffff\n"
+"                            1px none; }\n"
+"                            tr.R5 td.R13C8{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right;\n"
+"                            vertical-align: bottom; border-left: #000000 1px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 1px solid; }\n"
+"                            tr.R5 td.R33C17{ border-left: #000000 2px solid; border-top: #000000 2px solid;\n"
+"                            border-bottom: #000000 2px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R5 td.R35C10{ border-top: #ffffff 1px none; }\n"
+"                            tr.R5 td.R35C9{ font-family: Times new roman; font-size: 6pt; font-style: normal; border-top: #ffffff\n"
+"                            1px none; }\n"
+"                            tr.R5 td.R43C1{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"                            tr.R5 td.R43C11{ border-bottom: #000000 1px solid; }\n"
+"                            tr.R5 td.R43C7{ border-right: #000000 1px solid; }\n"
+"                            tr.R5 td.R5C0{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: top; border-top: #ffffff 1px none; }\n"
+"                            tr.R5 td.R5C2{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none;\n"
+"                            border-bottom: #ffffff 1px none; }\n"
+"                            tr.R5 td.R5C7{ font-family: Times new roman; font-size: 8pt; font-style: normal; }\n"
+"                            tr.R5 td.R5C9{ font-family: Times new roman; font-size: 9pt; font-style: normal; vertical-align:\n"
+"                            bottom; overflow: hidden;border-left: #000000 2px solid; border-top: #000000 1px solid;\n"
+"                            border-bottom: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R5 td.R9C0{ text-align: right; }\n"
+"                            tr.R5 td.R9C1{ font-family: Times new roman; font-size: 8pt; font-style: normal; text-align: right; }\n"
+"                            tr.R5 td.R9C3{ font-family: Times new roman; font-size: 8pt; font-style: normal; border-left: #ffffff\n"
+"                            1px none; border-top: #ffffff 1px none; border-bottom: #ffffff 1px none; }\n"
+"                            tr.R5 td.R9C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"                            tr.R5 td.R9C9{ font-family: Times new roman; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-right: #000000 2px solid; }\n"
+"                            tr.R7{ height: 19px; }\n"
+"                            tr.R7 td.R7C0{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: top; border-left: #ffffff 0px none; border-top: #ffffff 1px none; }\n"
+"                            tr.R7 td.R7C2{ font-family: Times new roman; font-size: 6pt; font-style: normal; text-align: center;\n"
+"                            vertical-align: top; border-left: #ffffff 1px none; border-top: #ffffff 1px none;\n"
+"                            border-bottom: #ffffff 1px none; }\n"
+"                            tr.R7 td.R7C7{ font-family: Times new roman; font-size: 9pt; font-style: normal; text-align: right; }\n"
+"                            tr.R7 td.R7C9{ font-family: Times new roman; font-size: 9pt; font-style: normal; font-weight: bold;\n"
+"                            text-align: center; vertical-align: bottom; overflow: hidden;border-left: #000000 2px solid;\n"
+"                            border-top: #000000 1px solid; border-bottom: #000000 1px solid; border-right: #000000 2px\n"
+"                            solid; }\n"
+"                            table {table-layout: fixed; padding: 0px; padding-left: 2px; vertical-align:bottom;\n"
+"                            border-collapse:collapse;width: 100%; font-family: Times new roman; font-size: 8pt; font-style:\n"
+"                            normal; }\n"
+"                            td { padding: 0px; padding-left: 2px; overflow:hidden; }\n"
+"\n"
+"                            .cu_wspace { white-space:nowrap; }\n"
+"                            .cu_space21 { width:100%;height:21px;overflow:hidden; }\n"
+"                            .cu_space31 { width:100%;height:31px;overflow:hidden; }\n"
+"                            .cu_space11 { width:100%;height:11px;overflow:hidden; }\n"
+"                            .cu_space16 { width:100%;height:16px;overflow:hidden; }\n"
+"                            .cu_space19 { width:100%;height:19px;overflow:hidden; }\n"
+"                            .cu_space26 { width:100%;height:26px;overflow:hidden; }\n"
+"                            .cu_left { border-left: #ffffff 0px none; }\n"
+"                            .cu_space15 { width:100%;height:15px;overflow:hidden; }\n"
+"                            .cu_space70 { width:100%;height:70px;overflow:hidden; }\n"
+"                            .cu_space40 { width:100%;height:40px;overflow:hidden; }\n"
+"                            .cu_space7 { width:100%;height:7px;overflow:hidden; }\n"
+"                            .cu_space13 { width:100%;height:13px;overflow:hidden; }\n"
+"                            .cu_right { border-right: #000000 1px solid; }\n"
+"                            .cu_space14 { width:100%;height:14px;overflow:hidden; }\n"
+"                            .cu_space12 { width:100%;height:12px;overflow:hidden; }\n"
+"                            tbody, table, tr, td, th{border: none;}"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.view_partner_ru_form
+msgid "e.g. Sales Director"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Адрес"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Адрес:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,name:l10n_ru_doc.report_account_invoice_act_new
+msgid "Акт выполненных работ"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid "Акт №"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "БИК"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Банк получателя"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Без\n"
+"                                    акциза"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Без НДС"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields.selection,name:l10n_ru_doc.selection__res_partner__type__accountant
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Бухгалтер"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "В&amp;nbsp;том"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Валюта: наименование, код Российский рубль, 643"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Валюта:&amp;nbsp;\n"
+"                                    наименование,&amp;nbsp;код"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Вид упаков"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Вид&amp;nbsp;деятельности&amp;nbsp;по&amp;nbsp;ОКДП"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Вид&amp;nbsp;операции"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid ""
+"Внимание! Оплата данного счета означает согласие с условиями поставки "
+"товара."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Всего наименований"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid "Всего оказано услуг"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Всего&amp;nbsp;к\n"
+"                                    &amp;nbsp;оплате (9)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Всего&amp;nbsp;к&amp;nbsp;оплате"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Всего&amp;nbsp;мест"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Всего&amp;nbsp;отпущено&amp;nbsp;&amp;nbsp;на&amp;nbsp;сумму"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Всего&amp;nbsp;по&amp;nbsp;накладной&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid ""
+"Вышеперечисленные услуги выполнены полностью и в срок. Заказчик претензий по"
+" объему, качеству и срокам оказания услуг не имеет."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Главный&amp;nbsp;\n"
+"                                    бухгалтер"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Главный&amp;nbsp;(старший)&amp;nbsp;бухгалтер"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Главный&amp;nbsp;бухгалтер"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Груз&amp;nbsp;получил&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Груз&amp;nbsp;принял"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_bank_statement_line__gruzootpr
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move__gruzootpr
+msgid "Грузоотправитель"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Грузоотправитель\n"
+"                                    &amp;nbsp;и&amp;nbsp;его&amp;nbsp;адрес"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Грузоотправитель и его адрес:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_bank_statement_line__gruzopol
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move__gruzopol
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Грузополучатель"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Грузополучатель\n"
+"                                    &amp;nbsp;и&amp;nbsp;его&amp;nbsp;адрес"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Грузополучатель и его адрес:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_bank_statement_line__transport
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move__transport
+msgid "Данные о транспортировке и грузе"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Данные&amp;nbsp;о&amp;nbsp;\n"
+"                                    транспортировке&amp;nbsp;и&amp;nbsp;грузе"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_bank_statement_line__payment_date
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move__payment_date
+msgid "Дата платежки в УПД"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Дата&amp;nbsp;отгрузки,\n"
+"                                    &amp;nbsp;передачи&amp;nbsp;(сдачи)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Дата&amp;nbsp;получения\n"
+"                                    &amp;nbsp;(приемки)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Дата&amp;nbsp;составления"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields.selection,name:l10n_ru_doc.selection__res_partner__type__director
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Директор"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Документ&amp;nbsp;об&amp;nbsp;отгрузке"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Ед."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Единица"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Единица&amp;nbsp;измерения"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid "ЗАКАЗЧИК"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid "Заказчик:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.view_companyruform
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.view_partner_ru_form
+msgid "ИНН"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "ИНН/КПП покупателя:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "ИНН/КПП продавца:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"ИНН/КПП&amp;nbsp;\n"
+"                                    покупателя"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"ИНН/КПП&amp;nbsp;\n"
+"                                    продавца"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid "ИСПОЛНИТЕЛЬ"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Идентификатор&amp;nbsp;\n"
+"                                    государственного&amp;nbsp;контракта,&amp;nbsp;договора&amp;nbsp;(соглашения)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Индивидуальный&amp;nbsp;\n"
+"                                    предприниматель"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Иные&amp;nbsp;сведения\n"
+"                                    &amp;nbsp;о&amp;nbsp;получении,&amp;nbsp;приемке"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Иные&amp;nbsp;сведения\n"
+"                                    &amp;nbsp;об&amp;nbsp;отгрузке,&amp;nbsp;\n"
+"                                    передаче"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid "Исполнитель:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Исправление&amp;nbsp;\n"
+"                                    N"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Итого&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Итого:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "К платежно-расчетному документу № от"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"К&amp;nbsp;\n"
+"                                    платежно-расчетному&amp;nbsp;документу №"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "КПП"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Код"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_product_product__kod_tnved
+msgid "Код ТНВЭД"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_uom_uom__kod
+msgid "Код единицы измерения"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_uom_category__kod
+msgid "Код категории единицы измерения"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Код&amp;nbsp;товара/"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Коды"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Кол-во"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Коли-"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Количество"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Краткое"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "М.П."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Масса брутто"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "НДС"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "НДС,&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "НДС:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid ""
+"Наименование товара (описание выполненных работ, оказанных услуг), "
+"имущественного права"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Наименование&amp;nbsp;\n"
+"                                    экономического&amp;nbsp;субъекта&amp;nbsp;-&amp;nbsp;\n"
+"                                    составителя документа"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Наименование&amp;nbsp;\n"
+"                                    экономического&amp;nbsp;субъекта&amp;nbsp;–&amp;nbsp;\n"
+"                                    составителя&amp;nbsp;документа&amp;nbsp;(в&amp;nbsp;т.ч.\n"
+"                                    &amp;nbsp;комиссионера&amp;nbsp;/&amp;nbsp;\n"
+"                                    агента)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid "Наименование&amp;nbsp;работ,&amp;nbsp;услуг"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Наименование&amp;nbsp;товара\n"
+"                                    &amp;nbsp;(описание"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Нало-"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Налоговая ставка"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.view_companyruform
+msgid "Настройки печати"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_tax__invisiblePF
+msgid "Не видно в ПФ"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Но-"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Номер"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_bank_statement_line__payment_num
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move__payment_num
+msgid "Номер платежки в УПД"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Номер&amp;nbsp;документа"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_partner__ogrn
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_users__ogrn
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.view_companyruform
+msgid "ОГРН"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_bank_statement_line__osnovanie
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move__osnovanie
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Основание"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Основание&amp;nbsp;\n"
+"                                    передачи&amp;nbsp;(сдачи)&amp;nbsp;/&amp;nbsp;получения\n"
+"                                    &amp;nbsp;(приемки)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.view_companyruform
+msgid "Ответственные"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Ответственный\n"
+"                                    &amp;nbsp;за&amp;nbsp;правильность&amp;nbsp;оформления\n"
+"                                    &amp;nbsp;факта&amp;nbsp;хозяйственной&amp;nbsp;\n"
+"                                    жизни"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_bank_statement_line__kladov
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move__kladov
+msgid "Ответственный за передачу товаров/услуг"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Отпуск&amp;nbsp;груза&amp;nbsp;произвел"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Отпуск&amp;nbsp;груза&amp;nbsp;разрешил"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_partner__stamp
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_users__stamp
+msgid "Печать"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Плательщик"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "По&amp;nbsp;доверенности&amp;nbsp;№"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.view_companyruform
+msgid "Подписи и печати"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_res_partner__facsimile
+msgid "Подпись"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Покупатель"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Покупатель:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Получатель"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Поставщик"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Поставщик:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Приложение\n"
+"                                    &amp;nbsp;N&amp;nbsp;1&amp;nbsp;к&amp;nbsp;\n"
+"                                    постановлению&amp;nbsp;Правительства&amp;nbsp;Российской\n"
+"                                    &amp;nbsp;Федерации&amp;nbsp;от&amp;nbsp;26\n"
+"                                    &amp;nbsp;декабря&amp;nbsp;2011&amp;nbsp;года\n"
+"                                    &amp;nbsp;№&amp;nbsp;1137"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"Приложение&amp;nbsp;(паспорта,&amp;nbsp;сертификаты&amp;nbsp;и&amp;nbsp;т.п.)&amp;nbsp;на&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Приложение&amp;nbsp;№&amp;nbsp;1"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Продавец"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Продавец:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "РФ"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Регистрационный&amp;nbsp;номер"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Российский рубль,\n"
+"                                    &amp;nbsp;643"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Руководитель"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Руководитель&amp;nbsp;\n"
+"                                    организации"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Руководитель&amp;nbsp;организации"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Статус:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Стоимость"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid ""
+"Стоимость товаров (работ, услуг), имущественных прав без налога - всего"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Стоимость товаров (работ, услуг), имущественных прав с налогом - всего"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Страна"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Страна&amp;nbsp;происхождения"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Страница 1"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Сумма"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+msgid "Сумма НДС:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Сумма налога, предъявляемая покупателю"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Сумма&amp;nbsp;без"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Сумма&amp;nbsp;налога,"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Сумма&amp;nbsp;с"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Сч. №"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,name:l10n_ru_doc.action_report_saleorder_new
+msgid "Счет по форме 1С"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,name:l10n_ru_doc.account_invoices_new
+msgid "Счет-фактура"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Счет-фактура №"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Счет-фактура&amp;nbsp;\n"
+"                                    N"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "ТОВАРНАЯ&amp;nbsp;НАКЛАДНАЯ&amp;nbsp;&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_bank_statement_line__payment_text
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move__payment_text
+msgid "Текст для платежек в УПД"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Товар"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Товар&amp;nbsp;(груз)\n"
+"                                    &amp;nbsp;передал&amp;nbsp;/&amp;nbsp;услуги,\n"
+"                                    &amp;nbsp;результаты&amp;nbsp;работ,&amp;nbsp;права\n"
+"                                    &amp;nbsp;сдал"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"Товар&amp;nbsp;(груз)\n"
+"                                    &amp;nbsp;получил&amp;nbsp;/&amp;nbsp;услуги,\n"
+"                                    &amp;nbsp;результаты&amp;nbsp;работ,&amp;nbsp;права\n"
+"                                    &amp;nbsp;принял"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,name:l10n_ru_doc.report_account_invoice_bill_new
+msgid "Товарная накладная (ТОРГ-12)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"Товарная&amp;nbsp;накладная&amp;nbsp;имеет&amp;nbsp;приложение&amp;nbsp;на"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Товары (работы, услуги)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_bank_statement_line__only_service
+#: model:ir.model.fields,field_description:l10n_ru_doc.field_account_move__only_service
+msgid "Только услуги"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Транспортная&amp;nbsp;накладная"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,name:l10n_ru_doc.report_account_invoice_updn
+msgid "УПД без печатей"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Универсальный"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model:ir.actions.report,name:l10n_ru_doc.report_account_invoice_upd_new
+msgid "Универсальный передаточный документ(УПД)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Унифицированная&amp;nbsp;форма&amp;nbsp;№&amp;nbsp;ТОРГ-12"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "Условия оплаты:"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"Утверждена&amp;nbsp;постановлением&amp;nbsp;Госкомстата&amp;nbsp;России&amp;nbsp;от&amp;nbsp;25.12.98&amp;nbsp;№&amp;nbsp;132"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Форма&amp;nbsp;по&amp;nbsp;ОКУД&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Цена"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "Цена (тариф) за единицу измерения"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "Цена,"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "Цифро-"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "акциза"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "без акциза"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "в одном месте"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "ваемости"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "вида"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "вой&amp;nbsp;код"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "всего"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "выданной"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"выполненных&amp;nbsp;работ,\n"
+"                                    &amp;nbsp;оказанных"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "говая"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "грузополучатель"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "дата"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "декларации"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "декларации&amp;nbsp;на&amp;nbsp;товары"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "договор,&amp;nbsp;заказ-наряд"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "документ"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"документ\n"
+"                                    &amp;nbsp;(акт)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "документ&amp;nbsp;(акт)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "должность"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "единицу"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "и&amp;nbsp;содержит"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "измерения"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"или&amp;nbsp;иное&amp;nbsp;\n"
+"                                    уполномоченное&amp;nbsp;лицо"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"или&amp;nbsp;иное&amp;nbsp;уполномоченное\n"
+"                                    &amp;nbsp;лицо"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "или&amp;nbsp;иное&amp;nbsp;уполномоченное&amp;nbsp;лицо"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "или&amp;nbsp;регистрационный"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "имущественных"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid ""
+"к&amp;nbsp;постановлению&amp;nbsp;Правительства&amp;nbsp;Российской&amp;nbsp;Федерации"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"кем,&amp;nbsp;кому&amp;nbsp;(организация,&amp;nbsp;должность,&amp;nbsp;фамилия,&amp;nbsp;и.&amp;nbsp;о.)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "ки"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "код"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "код по ОКЕИ"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "краткое наименование"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "листах"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "мер"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "мест,"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "наиме- нование"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "наименование"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "наименование, характеристика, сорт, артикул товара"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "нетто)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "номер"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"номер&amp;nbsp;партии&amp;nbsp;товара,&amp;nbsp;\n"
+"                                    подлежащего&amp;nbsp;прослежи-"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "обозначение"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"организация,&amp;nbsp;адрес,&amp;nbsp;телефон,&amp;nbsp;факс,&amp;nbsp;банковские&amp;nbsp;реквизиты"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid ""
+"организация-"
+"грузоотправитель,&amp;nbsp;адрес,&amp;nbsp;телефон,&amp;nbsp;факс,&amp;nbsp;банковские&amp;nbsp;реквизиты"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "от"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid ""
+"от&amp;nbsp;26&amp;nbsp;декабря&amp;nbsp;2011&amp;nbsp;г.&amp;nbsp;№&amp;nbsp;1137"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "п/п"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "передаточный"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "по по-"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "по&amp;nbsp;ОКПО"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "подпись"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "покупателю"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "порядковых&amp;nbsp;номеров&amp;nbsp;записей"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"прав&amp;nbsp;без&amp;nbsp;налога\n"
+"                                    &amp;nbsp;-"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"прав&amp;nbsp;с&amp;nbsp;налогом\n"
+"                                    &amp;nbsp;-"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "предъявляемая"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "происхождения товара"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "прописью"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"работ,\n"
+"                                    &amp;nbsp;услуг"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+msgid "работ,&amp;nbsp;услуг"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "расшифровка&amp;nbsp;подписи"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_act
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_order
+msgid "руб."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "руб. коп."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "руб.&amp;nbsp;коп."
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "рядку"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "ставка"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "ставка, %"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "структурное&amp;nbsp;подразделение"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "сумма"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "сумма&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "сумма,"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "таможенной"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "товара"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "товаров"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "условное"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "условное обозначение (национальное)"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid ""
+"услуг),&amp;nbsp;имущественного\n"
+"                                    &amp;nbsp;права"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "учета&amp;nbsp;НДС,"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "учетом&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "цифровой код"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "чество"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+msgid "чество&amp;nbsp;"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "числе"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_bill
+msgid "штук"
+msgstr ""
+
+#. module: l10n_ru_doc
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_upd
+#: model_terms:ir.ui.view,arch_db:l10n_ru_doc.report_updn
+msgid "№&amp;nbsp;п/п"
+msgstr ""

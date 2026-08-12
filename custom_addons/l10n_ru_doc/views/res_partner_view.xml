@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_ru_form" model="ir.ui.view">
+        <field name="name">res.partner.ru.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="inn" invisible="True"/>
+                <field name="kpp" invisible="is_company==False"/>
+                <field name="okpo" invisible="is_company==False"/>
+                <field name="ogrn" invisible="is_company==False"/>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="string">ИНН</attribute>
+            </xpath>
+            <xpath expr="//page[@name='internal_notes']" position="inside">
+                <group>
+                    <field name="facsimile" invisible="is_company==True" widget="image" class="oe_avatar codup_sign"/>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']/field[@name='child_ids']/form/sheet/group" position="after">
+                <group>
+                    <field name="facsimile" invisible="type not in ['director','accountant','contact']" widget="image" class="oe_avatar codup_sign"/>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']/field[@name='child_ids']/form/sheet/group/group/field[@name='function']" position="replace">
+                <field name="function" placeholder="напр. Директор по продажам" invisible="type not in ['director','accountant','contact']"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.actions.report" id="l10n_ru_attorney.action_report_consent">
+        <field name="name">Доверенность</field>
+        <field name="model">base.consent</field>
+        <field name="print_report_name">(u'Доверенность - %s.pdf' % (object.name))</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">l10n_ru_attorney.report_consent</field>
+    </record>
+
+    <record id="paperformat_a4new" model="report.paperformat">
+        <field name="name">A4</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">15</field>
+        <field name="margin_bottom">15</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">10</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <template id="l10n_ru_attorney.report_consent">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="page">
+                    <style type="text/css">
+                        /*----------------Invoice classes-------------------*/
+                        p {
+                        font-size: 13px;
+                        }
+                        .tb-numbers {
+                        width: 600px;
+                        }
+                        .tb-numbers td {
+                        padding: 4px 10px;
+                        }
+                        .tb-numbers label {
+                        display: inline-block;
+                        padding: 4px 0px 0px;
+                        line-height: 20px;
+                        font-size: 12px;
+                        }
+                        .tb-numbers input {
+                        width: 100px;
+                        }
+                        .company-info {
+                        width: 100%;
+                        margin: 20px auto;
+                        }
+                        .company-info td {
+                        padding: 5px 2px;
+                        font-size: 13px;
+                        }
+                        .approver-info {
+                        width: 100%;
+                        margin: 20px auto;
+                        text-align: center
+                        }
+                        .approver-info .director {
+                        font-weight: bold;
+                        }
+                        .approver-info .title {
+                        font-weight: bold;
+                        font-size: 18px;
+                        padding-bottom: 20px;
+                        }
+                        .approver-info .signature {
+                        font-size: 11px;
+                        padding-top: 40px;
+                        }
+                        .actDate {
+                        float: right
+                        }
+                        .actDescription {
+                        width: 100%;
+                        padding-top: 30px
+                        }
+                        .act-info p {
+                        font-weight: bold;
+                        }
+                        .buyer-box {
+                        width: 50%;
+                        }
+                        .buyer-box table {
+                        width: 100%;
+                        }
+                        .buyer-box .tb-info {
+                        width: 310px;
+                        }
+                        .buyer-box .tb-info td {
+                        padding: 2px 5px;
+                        }
+                        .buyer-box .tb-info td.lbl {
+                        text-align: right;
+                        font-weight: bold;
+                        width: 40%;
+                        }
+                        .tb-invoice {
+                        width: 100%;
+                        border-collapse: collapse;
+                        }
+                        .tb-invoice td {
+                        padding: 2px 4px;
+                        border: 1px solid #ccc;
+                        font-size: 11px;
+                        text-align: center;
+                        }
+                        .tb-invoice td input {
+                        border: 0px;
+                        text-align: center;
+                        }
+                        .tb-invoice .head td {
+                        background: #f3f3f3;
+                        font-weight: bold;
+                        }
+                        .deleteRow {
+                        color: Red;
+                        font-size: 13px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        }
+                        .tb-act {
+                        width: 100%;
+                        border-collapse: collapse;
+                        margin-bottom: 15px;
+                        clear: both;
+                        margin: 20px 0px 10px 0px;
+                        }
+                        .tb-act td {
+                        padding: 2px 4px;
+                        border: 1px solid #ccc;
+                        font-size: 13px;
+                        text-align: center;
+                        }
+                        .tb-act td input {
+                        border: 0px;
+                        text-align: center;
+                        }
+                        .tb-act .head td {
+                        background: #f3f3f3;
+                        }
+                        .tb-act td .deleteActRow {
+                        color: Red;
+                        font-size: 13px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        }
+                        .description {
+                        font-size: 12px;
+                        text-align: justify;
+                        text-indent: 1.5em;
+                        white-space: pre-wrap;
+                        }
+                        .tb-total {
+                        width: 405px;
+                        margin: 30px 0px 20px auto;
+                        }
+                        .tb-total td {
+                        padding: 2px 5px;
+                        font-size: 12px;
+                        }
+                        .tb-total td.lbl {
+                        font-weight: bold;
+                        text-align: right;
+                        }
+                        .tb-total td.val {
+                        border: 1px solid #ccc;
+                        min-width: 50px;
+                        }
+                        .tb-total td input {
+                        padding: 1px;
+                        font-size: 11px;
+                        }
+                        .act-link-addrow-container {
+                        margin-bottom: 30px;
+                        }
+                        .link-addrow,
+                        .act-link-addrow {
+                        text-decoration: none !important;
+                        border-bottom: 1px dashed #777;
+                        font-size: 13px;
+                        }
+                        .btn-box {
+                        margin: 10px 0px;
+                        }
+                        .signer-box {
+                        width: 400px;
+                        }
+                        .buyer-box .tb-info {
+                        width: 400px;
+                        }
+                        .btn-box a {
+                        font-size: 14px;
+                        margin-left: 10px;
+                        }
+                        .podpis-box {
+                        clear: both;
+                        display: inline-block;
+                        font-size: 11px;
+                        margin: 20px auto 30px;
+                        width: 100%;
+                        }
+                        .tb-podpis {
+                        width: 100%;
+                        }
+                        .podpis-box .box1 {
+                        float: left;
+                        width: 48%;
+                        }
+                        /*SIGNATURES PLACE BEGIN*/
+                        .signatures-box {
+                        clear: both;
+                        display: inline-block;
+                        font-size: 11px;
+                        margin: 20px auto 30px;
+                        width: 100%;
+                        }
+                        .signatures-box .box1 {
+                        float: left;
+                        width: 35%;
+                        }
+                        .signatures-box .box2 {
+                        float: right;
+                        width: 35%;
+                        }
+                        .signatures-box .box1 table,
+                        .signatures-box .box2 table {
+                        width: 100%;
+                        }
+                        .signatures-box table td {
+                        padding: 3px;
+                        text-align: center;
+                        }
+                        /*SIGNATURES PLACE END*/
+                        .podpis-box .box2 {
+                        float: right;
+                        width: 48%;
+                        }
+                        .podpis-box .box1 table,
+                        .podpis-box .box2 table {
+                        width: 100%;
+                        }
+                        .podpis-box table td {
+                        padding: 3px;
+                        text-align: center;
+                        }
+                        .special-line {
+                        border-bottom: 1px solid #000;
+                        display: block;
+                        line-height: 22px !important;
+                        text-align: center;
+                        }
+                        .w120 {
+                        width: 120px;
+                        }
+                        .w130 {
+                        width: 130px;
+                        }
+                        .note {
+                        font-size: 11px !important;
+                        }
+                        .l {
+                        text-align: left !important;
+                        }
+                        .r {
+                        text-align: right !important;
+                        }
+                        .c {
+                        text-align: center !important;
+                        }
+
+                    </style>
+                    <div>
+                        <h4 style="text-align:center; margin:10px 5px 5px;">
+
+
+                            Доверенность №
+                            <span t-field="o.name"/>
+                        </h4>
+                    </div>
+                    <table style="width:55%">
+                        <tr>
+                            <td>Дата выдачи:</td>
+
+
+                            <td>
+                                <span t-field="o.date_from" t-options="{&quot;widget&quot;: &quot;date&quot;}"/>
+                                г.
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <td>Доверенность действительна по:</td>
+                            <td>
+                                <span t-field="o.date_from" t-options="{&quot;widget&quot;: &quot;date&quot;}"/>
+                                г.
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <div class="special-line" style="width:100%;margin-top:15px;text-align:center">
+                        <b>
+                            <span t-field="o.company_id.name"/>, адрес:<span t-field="o.company_id.street"/>, ИНН
+                            <span t-field="o.company_id.vat"/>,
+
+                        </b>
+                    </div>
+                    <div style="margin:0 auto;text-align:center;">наименование предприятия и его адрес</div>
+                    <table style="width:100%;margin-top:10px">
+                        <tr>
+                            <td style="width:30%">
+
+
+                                Доверенность выдана
+
+
+                            </td>
+                            <td style="width:100%;text-align:center;">
+                                <span style="border-bottom:1px solid;display:block;clear:both;text-align:center;">
+                                    <span t-field="o.employee_id"/>,<span t-field="o.employee_id.job_id.name"/>, ИНН
+                                    <span t-field="o.employee_id.inn"/>
+
+
+                                </span>
+                                <span style="">
+
+
+                                    должность и Ф.И.О.
+
+
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width:100%">
+                        <tr>
+                            <td>Паспорт серия и №
+
+
+                                <span style="padding:0 5px 0 5px;margin-left:12px;margin-right:12px;display:inline-table;"
+                                        class="special-line">
+
+                                    <span t-field="o.employee_id.passport_id"/>
+
+
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Кем выдан
+
+
+                                <span style="padding:0 5px 0 5px;margin-left:12px;margin-right:12px;display:inline-table;"
+                                        class="special-line">
+                                    <span t-field="o.employee_id.pass_kem"/>
+
+                                </span>
+
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Дата выдачи
+
+
+                                <span style="padding:0 5px 0 5px;margin-left:12px;margin-right:12px;display:inline-table;"
+                                        class="special-line">
+
+                                    <span t-field="o.employee_id.pass_date"/>
+
+                                </span>
+
+
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:25%">
+
+
+                                На получение от
+
+
+                            </td>
+                            <td style="width:75%;text-align:center;">
+                                <span style="border-bottom:1px solid;display:block;clear:both;">
+
+
+                                    <span t-field="o.partner_id"/>
+
+
+                                </span>
+                                <span style="">
+
+
+                                    наименование поставщика
+
+
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:25%">
+
+
+                                Материальных ценностей по
+
+
+                            </td>
+                            <td style="width:75%;text-align:center;">
+                                <span style="border-bottom:1px solid;display:block;clear:both;">
+
+
+                                    Заказу на закупку №
+                                    <span t-field="o.purchaseorder_id.name"/>
+                                    от
+                                    <span t-field="o.purchaseorder_id.date_order"
+                                            t-options="{&quot;widget&quot;: &quot;date&quot;}"/>
+                                    г.
+
+
+                                </span>
+                                <span style="">
+
+
+                                    наименование, номер и дата документа
+
+
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div>
+                        <h4 style="text-align:center; margin:15px 5px 15px;">
+
+
+                            Перечень материальных ценностей,
+
+
+                            <br/>
+                            подлежащих получению
+
+
+                        </h4>
+                    </div>
+
+                    <table class="tb-invoice">
+                        <tr class="head">
+                            <td></td>
+                            <td style="min-width:200px;">Наименование товаров (работ, услуг)</td>
+                            <td>Ед. изм.</td>
+                            <td>Количество</td>
+                        </tr>
+                        <t t-set="num" t-value="1"/>
+                        <t t-foreach="o.purchaseorder_id.order_line" t-as="line">
+                            <tr class="data-row">
+                                <td>
+                                    <t t-esc="num"/>
+                                </td>
+                                <td class="l" style="white-space: pre-wrap;">
+                                    <span t-field="line.name"/>
+                                </td>
+                                <td>
+                                    <span t-field="line.product_uom"/>
+                                </td>
+                                <td>
+                                    <span t-field="line.product_qty"/>
+                                </td>
+                            </tr>
+                            <t t-set="num" t-value="num+1"/>
+                        </t>
+                    </table>
+
+                    <div class="clear h100"></div>
+                    <div>
+                        <p></p>
+
+                        <p>Подпись лица, получившего доверенность ___________________ удостоверяем</p>
+
+
+                    </div>
+                    <div class="podpis-box">
+                        <table style="width:50%;">
+                            <tr>
+                                <td style="width: 13%;">Руководитель предприятия</td>
+                                <td style="width: 19%; vertical-align: bottom;">
+
+
+                                    <span class="special-line"></span>
+
+
+                                    <span class="note">(подпись)</span>
+
+
+                                </td>
+                                <td style="width: 16%; vertical-align: bottom;">
+
+
+                                    <span class="special-line"></span>
+
+
+                                    <span class="note">(Ф.И.О)</span>
+
+
+                                </td>
+                                <td style="width: 16%; vertical-align: bottom;"></td>
+
+
+                            </tr>
+                            <tr>
+                                <td style="width: 13%;">Гл. бухгалтер:</td>
+                                <td style="width: 19%; vertical-align: bottom;">
+
+
+                                    <span class="special-line"></span>
+
+
+                                    <span class="note">(подпись)</span>
+
+
+                                </td>
+                                <td style="width: 16%; vertical-align: bottom;">
+
+
+                                    <span class="special-line"></span>
+
+
+                                    <span class="note">(Ф.И.О)</span>
+
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
