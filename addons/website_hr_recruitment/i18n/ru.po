@@ -311,12 +311,12 @@ msgstr "Выполненное заказы"
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
 msgid "Apply Job"
-msgstr "Применить задание"
+msgstr "Откликнуться на вакансию"
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.detail
 msgid "Apply Now!"
-msgstr "Применить прямо сейчас!"
+msgstr "Откликнуться сейчас!"
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
@@ -1012,7 +1012,7 @@ msgstr "Ваша <b>контактная</b> информация:"
 #. odoo-javascript
 #: code:addons/website_hr_recruitment/static/src/js/website_hr_recruitment_editor.js:0
 msgid "Your Email"
-msgstr "Ваш Email"
+msgstr "Ваш адрес электронной почты"
 
 #. module: website_hr_recruitment
 #. odoo-javascript

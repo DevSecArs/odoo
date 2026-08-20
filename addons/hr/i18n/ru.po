@@ -122,7 +122,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr.hr_employee_public_view_kanban
 #: model_terms:ir.ui.view,arch_db:hr.hr_kanban_view_employees
 msgid "<i class=\"fa fa-fw me-2 fa-envelope text-primary\" title=\"Email\"/>"
-msgstr "<i class=\"fa fa-fw me-2 fa-envelope text-primary\" title=\"Email\"/>"
+msgstr "<i class=\"fa fa-fw me-2 fa-envelope text-primary\" title=\"Электронная почта\"/>"
 
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.hr_employee_public_view_kanban
@@ -1301,7 +1301,7 @@ msgstr "Образование"
 #: model:ir.model.fields,field_description:hr.field_hr_employee_public__email
 #: model_terms:ir.ui.view,arch_db:hr.res_users_view_form_profile
 msgid "Email"
-msgstr "Email"
+msgstr "Электронная почта"
 
 #. module: hr
 #: model:ir.model,name:hr.model_mail_alias
@@ -1753,12 +1753,12 @@ msgstr "Отчет руководителя отдела кадров"
 #: model:ir.model.fields,field_description:hr.field_hr_employee_public__hr_presence_state
 #: model:ir.model.fields,field_description:hr.field_res_users__hr_presence_state
 msgid "Hr Presence State"
-msgstr "Hr Presence State"
+msgstr "Статус присутствия"
 
 #. module: hr
 #: model:ir.ui.menu,name:hr.menu_hr_main
 msgid "Human Resources"
-msgstr "HR"
+msgstr "Кадры"
 
 #. module: hr
 #: model:hr.job,name:hr.job_hrm
@@ -1812,7 +1812,7 @@ msgstr "Иконка, указывающая на задачу-исключен�
 #: model:ir.model.fields,field_description:hr.field_hr_employee__identification_id
 #: model:ir.model.fields,field_description:hr.field_res_users__identification_id
 msgid "Identification No"
-msgstr "Идентификация Нет"
+msgstr "Идентификационный номер"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_department__message_needaction
@@ -1950,7 +1950,7 @@ msgstr "Должность"
 #: model:ir.actions.act_window,name:hr.action_hr_job
 #: model:ir.ui.menu,name:hr.menu_view_hr_job
 msgid "Job Positions"
-msgstr "Положения вакансии"
+msgstr "Условия вакансии"
 
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.view_hr_job_form
@@ -2743,7 +2743,7 @@ msgstr "Частная страна"
 #: model:ir.model.fields,field_description:hr.field_hr_employee__private_email
 #: model:ir.model.fields,field_description:hr.field_res_users__private_email
 msgid "Private Email"
-msgstr "Ваш Email"
+msgstr "Личная электронная почта"
 
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.res_users_view_form_profile
@@ -2980,7 +2980,7 @@ msgstr "В отставке"
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee__sinid
 msgid "SIN No"
-msgstr "SIN No"
+msgstr "Номер социального страхования"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department__message_has_sms_error
@@ -2993,7 +2993,7 @@ msgstr "Ошибка доставки SMS"
 #: model:ir.model.fields,field_description:hr.field_hr_employee__ssnid
 #: model:ir.model.fields,field_description:hr.field_res_users__ssnid
 msgid "SSN No"
-msgstr "SSN Нет"
+msgstr "ИНН"
 
 #. module: hr
 #: model:hr.department,name:hr.dep_sales
