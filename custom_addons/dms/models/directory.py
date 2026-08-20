@@ -241,25 +241,24 @@ class DmsDirectory(models.Model):
     def check_access_token(self, access_token=False):
         res = False
         if access_token:
-            items = (
+            token_directory = (
                 self.env["dms.directory"]
                 .sudo()
-                .search([("access_token", "=", access_token)])
+                .search([("access_token", "=", access_token)], limit=1)
             )
-            if items:
-                item = items[0]
-                if item.id == self.id:
-                    return True
+            if token_directory:
                 # sudo because the user might not usually have access to the record but
                 # now the token is valid.
+                # `seen` bounds the walk: _check_directory_recursion rejects
+                # cycles created through the ORM, but this path is reachable
+                # anonymously and must not hang on corrupted data.
                 directory_item = self.sudo()
-                while directory_item.parent_id:
-                    if directory_item.id == item.id:
+                seen = set()
+                while directory_item and directory_item.id not in seen:
+                    if directory_item.id == token_directory.id:
                         return True
+                    seen.add(directory_item.id)
                     directory_item = directory_item.parent_id
-                # Fix last level
-                if directory_item.id == item.id:
-                    return True
         return res
 
     @api.model
@@ -625,8 +624,8 @@ class DmsDirectory(models.Model):
             parent_directory._process_message(msg_dict)
             return parent_directory
         names = parent_directory.child_directory_ids.mapped("name")
-        slug = self.env["ir.http"]._slug
-        subject = slug(msg_dict.get("subject", _("Alias-Mail-Extraction")))
+        slugify = self.env["ir.http"]._slugify
+        subject = slugify(msg_dict.get("subject", _("Alias-Mail-Extraction")))
         defaults = dict(
             {"name": unique_name(subject, names, escape_suffix=True)}, **custom_values
         )
@@ -646,10 +645,9 @@ class DmsDirectory(models.Model):
                 "directory_id": self.id,
                 "name": uname,
             }
-            try:
-                vals["content"] = base64.b64encode(attachment.content)
-            except Exception:
-                vals["content"] = attachment.content
+            if isinstance(contents_raw := attachment.content, str):
+                contents_raw = contents_raw.encode()
+            vals["content"] = base64.b64encode(contents_raw)
             self.env["dms.file"].sudo().create(vals)
             names.append(uname)
 

@@ -140,7 +140,7 @@
                     name="filter_write"
                     date="write_date"
                 />
-                <group>
+                <group expand="0" string="Group By">
                     <filter
                         name="group_color"
                         string="Color"
