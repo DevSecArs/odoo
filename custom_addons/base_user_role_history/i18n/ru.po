@@ -1,0 +1,163 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_user_role_history
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_user_role_history
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.res_users_form_view
+msgid "<span class=\"o_stat_text\">Last update of roles</span>"
+msgstr "<span class=\"o_stat_text\">Последнее обновление ролей</span>"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__performed_action
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.base_user_role_line_history_search_view
+msgid "Action"
+msgstr "Действие"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__new_is_enabled
+msgid "Active after edit"
+msgstr "Активно после изменения"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__old_is_enabled
+msgid "Active before edit"
+msgstr "Активно до изменения"
+
+#. module: base_user_role_history
+#: model:ir.model.fields.selection,name:base_user_role_history.selection__base_user_role_line_history__performed_action__add
+msgid "Add"
+msgstr "Добавить"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__create_uid
+msgid "Created by"
+msgstr "Создано"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__create_date
+msgid "Created on"
+msgstr "Дата создания"
+
+#. module: base_user_role_history
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.base_user_role_line_history_form_view
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.base_user_role_line_history_tree_view
+msgid "Date and time of edition"
+msgstr "Дата и время изменения"
+
+#. module: base_user_role_history
+#: model:ir.model.fields.selection,name:base_user_role_history.selection__base_user_role_line_history__performed_action__unlink
+msgid "Delete"
+msgstr "Удалить"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: base_user_role_history
+#: model:ir.model.fields.selection,name:base_user_role_history.selection__base_user_role_line_history__performed_action__edit
+msgid "Edit"
+msgstr "Изменить"
+
+#. module: base_user_role_history
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.base_user_role_line_history_form_view
+msgid "Edited user"
+msgstr "Изменённый пользователь"
+
+#. module: base_user_role_history
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.base_user_role_line_history_form_view
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.base_user_role_line_history_tree_view
+msgid "Editor"
+msgstr "Редактор"
+
+#. module: base_user_role_history
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.base_user_role_line_history_search_view
+msgid "Group By"
+msgstr "Группировать по"
+
+#. module: base_user_role_history
+#: model:ir.model,name:base_user_role_history.model_base_user_role_line_history
+msgid "History of user roles"
+msgstr "История ролей пользователей"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__id
+msgid "ID"
+msgstr "Идентификатор"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_res_users__last_role_line_modification
+msgid "Last Role Line Modification"
+msgstr "Последнее изменение строки роли"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__write_uid
+msgid "Last Updated by"
+msgstr "Кем изменено"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__write_date
+msgid "Last Updated on"
+msgstr "Дата изменения"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__new_date_to
+msgid "New end date"
+msgstr "Новая дата окончания"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__new_role_id
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.base_user_role_line_history_search_view
+msgid "New role"
+msgstr "Новая роль"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__new_date_from
+msgid "New start date"
+msgstr "Новая дата начала"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__old_date_to
+msgid "Old end date"
+msgstr "Прежняя дата окончания"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__old_role_id
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.base_user_role_line_history_search_view
+msgid "Old role"
+msgstr "Прежняя роль"
+
+#. module: base_user_role_history
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__old_date_from
+msgid "Old start date"
+msgstr "Прежняя дата начала"
+
+#. module: base_user_role_history
+#. odoo-python
+#: code:addons/base_user_role_history/models/res_users.py:0
+#: model_terms:ir.ui.view,arch_db:base_user_role_history.res_users_form_view
+msgid "Roles history"
+msgstr "История ролей"
+
+#. module: base_user_role_history
+#: model:ir.model,name:base_user_role_history.model_res_users
+#: model:ir.model.fields,field_description:base_user_role_history.field_base_user_role_line_history__user_id
+msgid "User"
+msgstr "Пользователь"
+
+#. module: base_user_role_history
+#: model:ir.model,name:base_user_role_history.model_res_users_role_line
+msgid "Users associated to a role"
+msgstr "Пользователи, связанные с ролью"
