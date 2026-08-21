@@ -109,3 +109,4 @@ pymorphy2 ; python_version <= '3.11'    # Для l10n_ru_contract
 lxml ; python_version <= '3.11'         # Для l10n_ru_upd_xml
 openpyxl ; python_version <= '3.11'     # Для l10n_ru_upd_xlsx
 qifparse ; python_version <= '3.11'
+pdfminer ; python_version <= '3.11'
