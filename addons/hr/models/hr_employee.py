@@ -107,8 +107,11 @@ class HrEmployeePrivate(models.Model):
     additional_note = fields.Text(string='Additional Note', groups="hr.group_hr_user", tracking=True)
     certificate = fields.Selection([
         ('graduate', 'Graduate'),
+        ('certificate', 'Certificate'),
         ('bachelor', 'Bachelor'),
+        ('specialist', 'Specialist'),
         ('master', 'Master'),
+        ('candidate', 'Candidate of Sciences'),
         ('doctor', 'Doctor'),
         ('other', 'Other'),
     ], 'Certificate Level', groups="hr.group_hr_user", tracking=True)

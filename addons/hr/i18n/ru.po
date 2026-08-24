@@ -642,6 +642,16 @@ msgid "Bachelor"
 msgstr "Бакалавр"
 
 #. module: hr
+#: model:ir.model.fields.selection,name:hr.selection__hr_employee__certificate__candidate
+msgid "Candidate of Sciences"
+msgstr "Кандидат наук"
+
+#. module: hr
+#: model:ir.model.fields.selection,name:hr.selection__hr_employee__certificate__certificate
+msgid "Certificate"
+msgstr "Сертификат"
+
+#. module: hr
 #: model_terms:hr.job,website_description:hr.job_ceo
 #: model_terms:hr.job,website_description:hr.job_consultant
 #: model_terms:hr.job,website_description:hr.job_cto
@@ -1644,7 +1654,7 @@ msgstr "Опыт работы с Google Adwords"
 #. module: hr
 #: model:ir.model.fields.selection,name:hr.selection__hr_employee__certificate__graduate
 msgid "Graduate"
-msgstr "Выпускник"
+msgstr "Выпускник школы"
 
 #. module: hr
 #: model_terms:hr.job,website_description:hr.job_ceo
@@ -2153,6 +2163,11 @@ msgstr "В браке"
 #: model:ir.model.fields.selection,name:hr.selection__hr_employee__certificate__master
 msgid "Master"
 msgstr "Магистр"
+
+#. module: hr
+#: model:ir.model.fields.selection,name:hr.selection__hr_employee__certificate__specialist
+msgid "Specialist"
+msgstr "Специалист"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department__master_department_id

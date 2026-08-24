@@ -1171,6 +1171,21 @@ msgid "Bachelor Degree"
 msgstr "Бакалавр"
 
 #. module: hr_recruitment
+#: model:hr.recruitment.degree,name:hr_recruitment.degree_candidate
+msgid "Candidate of Sciences"
+msgstr "Кандидат наук"
+
+#. module: hr_recruitment
+#: model:hr.recruitment.degree,name:hr_recruitment.degree_certificate
+msgid "Certificate"
+msgstr "Сертификат"
+
+#. module: hr_recruitment
+#: model:hr.recruitment.degree,name:hr_recruitment.degree_specialist
+msgid "Specialist"
+msgstr "Специалист"
+
+#. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_candidate__is_blacklisted
 msgid "Blacklist"
 msgstr "Черный список"
@@ -1651,7 +1666,7 @@ msgstr ""
 #. module: hr_recruitment
 #: model:hr.recruitment.degree,name:hr_recruitment.degree_bac5
 msgid "Doctoral Degree"
-msgstr "Докторская степень"
+msgstr "Доктор наук"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_job__documents_count
@@ -1908,7 +1923,7 @@ msgstr "Хорошо"
 #. module: hr_recruitment
 #: model:hr.recruitment.degree,name:hr_recruitment.degree_graduate
 msgid "Graduate"
-msgstr "Выпускник"
+msgstr "Выпускник школы"
 
 #. module: hr_recruitment
 #: model_terms:web_tour.tour,rainbow_man_message:hr_recruitment.hr_recruitment_tour
@@ -2486,7 +2501,7 @@ msgstr "Руководитель"
 #. module: hr_recruitment
 #: model:hr.recruitment.degree,name:hr_recruitment.degree_licenced
 msgid "Master Degree"
-msgstr "Степень магистра"
+msgstr "Магистр"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__medium_id
