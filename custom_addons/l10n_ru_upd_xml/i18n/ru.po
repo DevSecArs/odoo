@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14) ? 2 : 3);\n"
+
+#. module: l10n_ru_upd_xml
+#: model_terms:ir.ui.view,arch_db:l10n_ru_upd_xml.ir_actions_report_view_form_report_xml
+msgid "XML Rreport Settings"
+msgstr "Настройки XML-отчёта"
+
+#. module: l10n_ru_upd_xml
+#: model:ir.model.fields,field_description:l10n_ru_upd_xml.field_ir_actions_report__xsd_schema
+msgid "XSD Validation Schema"
+msgstr "Схема проверки XSD"
+
+#. module: l10n_ru_upd_xml
+#: model:ir.model.fields,field_description:l10n_ru_upd_xml.field_ir_actions_report__xml_encoding
+msgid "XML Encoding"
+msgstr "Кодировка XML"
+
+#. module: l10n_ru_upd_xml
+#: model:ir.model.fields,field_description:l10n_ru_upd_xml.field_ir_actions_report__xml_declaration
+msgid "XML Declaration"
+msgstr "Декларация XML"

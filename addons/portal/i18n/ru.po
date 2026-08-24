@@ -844,7 +844,7 @@ msgstr "Неверный адрес электронной почты"
 #. odoo-python
 #: code:addons/portal/controllers/portal.py:0
 msgid "Invalid Email! Please enter a valid email address."
-msgstr ""
+msgstr "Недействительный адрес электронной почты! Введите корректный адрес."
 "Неверный email! Пожалуйста, введите корректный адрес электронной почты."
 
 #. module: portal
@@ -861,7 +861,7 @@ msgstr "Приглашение"
 #. module: portal
 #: model:mail.template,description:portal.mail_template_data_portal_welcome
 msgid "Invitation email to contacts to create a user account"
-msgstr ""
+msgstr "Пригласительное письмо контактам для создания пользовательской учётной записи"
 "Приглашение по электронной почте для создания учетной записи пользователя"
 
 #. module: portal
@@ -1000,7 +1000,7 @@ msgstr "Только внутренние и портальные пользов
 #. odoo-javascript
 #: code:addons/portal/static/src/xml/portal_chatter.xml:0
 msgid "Oops! Something went wrong. Try to reload the page and log in."
-msgstr ""
+msgstr "Что-то пошло не так! Попробуйте перезагрузить страницу и войти снова."
 "Ой! Что-то пошло не так. Попробуйте перезагрузить страницу и войти снова."
 
 #. module: portal
@@ -1032,7 +1032,7 @@ msgstr "Телефон"
 #. odoo-javascript
 #: code:addons/portal/static/src/xml/portal_security.xml:0
 msgid "Please enter your password to confirm you own this account"
-msgstr ""
+msgstr "Введите пароль, чтобы подтвердить, что эта учётная запись принадлежит вам"
 "Пожалуйста, введите пароль, чтобы подтвердить, что это ваша учетная запись"
 
 #. module: portal
@@ -1348,14 +1348,14 @@ msgstr ""
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.wizard_view
 msgid "This text is included at the end of the email sent to new portal users."
-msgstr ""
+msgstr "Этот текст добавляется в конец письма, отправляемого новым пользователям портала."
 "Этот текст добавляется в конец письма, отправляемого новым пользователям "
 "портала."
 
 #. module: portal
 #: model:ir.model.fields,help:portal.field_portal_wizard__welcome_message
 msgid "This text is included in the email sent to new users of the portal."
-msgstr ""
+msgstr "Этот текст добавляется в письмо, отправляемое новым пользователям портала."
 "Этот текст включается в письмо, отправляемое новым пользователям портала."
 
 #. module: portal

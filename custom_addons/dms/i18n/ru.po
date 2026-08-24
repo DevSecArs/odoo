@@ -1469,7 +1469,7 @@ msgstr "ID записи связанных вложений"
 #. module: dms
 #: model:ir.model.fields,field_description:dms.field_dms_directory__alias_incoming_local
 msgid "Local-part based incoming detection"
-msgstr "Обнаружение входящих на основе локальной части"
+msgstr "Определение входящих сообщений по локальной части адреса"
 
 #. module: dms
 #: model_terms:ir.ui.view,arch_db:dms.view_dms_file_form
@@ -1518,18 +1518,18 @@ msgstr "Мета-информация"
 #. module: dms
 #: model:ir.actions.server,name:dms.action_dms_attachment_migrate
 msgid "Migrate"
-msgstr "Мигрировать"
+msgstr "Перенести"
 
 #. module: dms
 #. odoo-python
 #: code:addons/dms/models/dms_file.py:0
 msgid "Migrate File %(index)s of %(record_count)s [ %(dms_file_migration)s ]"
-msgstr "Мигрировать файл %(index)s из %(record_count)s [ %(dms_file_migration)s ]"
+msgstr "Перенести файл %(index)s из %(record_count)s [ %(dms_file_migration)s ]"
 
 #. module: dms
 #: model_terms:ir.ui.view,arch_db:dms.view_dms_storage_form
 msgid "Migrate Files"
-msgstr "Мигрировать файлы"
+msgstr "Перенести файлы"
 
 #. module: dms
 #: model:ir.ui.menu,name:dms.menu_dms_file_migration
@@ -1683,17 +1683,17 @@ msgstr "Количество сообщений с ошибкой доставк
 #. module: dms
 #: model:ir.model,name:dms.model_onboarding_onboarding
 msgid "Onboarding"
-msgstr "Онбординг"
+msgstr "Начало работы"
 
 #. module: dms
 #: model:onboarding.onboarding.step,step_image_alt:dms.onboarding_step_create_directory
 msgid "Onboarding Directory"
-msgstr "Онбординг каталога"
+msgstr "Начало работы с каталогом"
 
 #. module: dms
 #: model:onboarding.onboarding.step,step_image_alt:dms.onboarding_step_upload_file
 msgid "Onboarding File"
-msgstr "Онбординг файла"
+msgstr "Начало работы с файлом"
 
 #. module: dms
 #: model:ir.model,name:dms.model_onboarding_onboarding_step
@@ -1703,7 +1703,7 @@ msgstr "Этап онбординга"
 #. module: dms
 #: model:onboarding.onboarding.step,step_image_alt:dms.onboarding_step_document_storage
 msgid "Onboarding Storage"
-msgstr "Онбординг хранилища"
+msgstr "Начало работы с хранилищем"
 
 #. module: dms
 #. odoo-python
@@ -1785,7 +1785,7 @@ msgstr ""
 #. module: dms
 #: model:dms.tag,name:dms.tag_02_demo
 msgid "Partner"
-msgstr "Партнер"
+msgstr "Контрагент"
 
 #. module: dms
 #: model:ir.model.fields,field_description:dms.field_dms_file__path_json

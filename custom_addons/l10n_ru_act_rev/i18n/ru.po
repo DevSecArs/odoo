@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14) ? 2 : 3);\n"
+
+#. module: l10n_ru_act_rev
+#: model:ir.model.fields,field_description:l10n_ru_act_rev.field_general_ledger_act_revise_wizard__account_ids
+#: model_terms:ir.ui.view,arch_db:l10n_ru_act_rev.general_ledger_wizard
+msgid "Filter accounts"
+msgstr "Фильтр счетов"
+
+#. module: l10n_ru_act_rev
+#: model_terms:ir.ui.view,arch_db:l10n_ru_act_rev.general_ledger_wizard
+msgid "From Code"
+msgstr "С кода"
+
+#. module: l10n_ru_act_rev
+#: model_terms:ir.ui.view,arch_db:l10n_ru_act_rev.general_ledger_wizard
+msgid "Filter analytic accounts"
+msgstr "Фильтр аналитических счетов"
+
+#. module: l10n_ru_act_rev
+#: model_terms:ir.ui.view,arch_db:l10n_ru_act_rev.general_ledger_wizard
+msgid "Additional Filtering"
+msgstr "Дополнительная фильтрация"
+
+#. module: l10n_ru_act_rev
+#: model:ir.model.fields,field_description:l10n_ru_act_rev.field_general_ledger_act_revise_wizard__centralize
+msgid "Activate centralization"
+msgstr "Включить централизацию"
+
+#. module: l10n_ru_act_rev
+#: model:ir.model.fields,field_description:l10n_ru_act_rev.field_general_ledger_act_revise_wizard__hide_account_at_0
+msgid "Hide account ending balance at 0"
+msgstr "Скрыть конечное сальдо счёта, равное нулю"
+
+#. module: l10n_ru_act_rev
+#: model:ir.model.fields,field_description:l10n_ru_act_rev.field_general_ledger_act_revise_wizard__account_journal_ids
+msgid "Filter journals"
+msgstr "Фильтр журналов"
+
+#. module: l10n_ru_act_rev
+#: model:ir.model.fields,field_description:l10n_ru_act_rev.field_general_ledger_act_revise_wizard__cost_center_ids
+msgid "Filter cost centers"
+msgstr "Фильтр центров затрат"
+
+#. module: l10n_ru_act_rev
+#: model:ir.model.fields,field_description:l10n_ru_act_rev.field_general_ledger_act_revise_wizard__foreign_currency
+msgid "Show foreign currency"
+msgstr "Показывать иностранную валюту"
+
+#. module: l10n_ru_act_rev
+#: model:ir.model.fields,field_description:l10n_ru_act_rev.field_general_ledger_act_revise_wizard__show_cost_center
+msgid "Show Analytic Account"
+msgstr "Показывать аналитический счёт"
+
+#. module: l10n_ru_act_rev
+#: model:ir.model.fields,field_description:l10n_ru_act_rev.field_general_ledger_act_revise_wizard__domain
+msgid "Journal Items Domain"
+msgstr "Домен записей журнала"

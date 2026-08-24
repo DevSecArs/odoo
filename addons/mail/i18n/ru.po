@@ -594,7 +594,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/mail/models/mail_scheduled_message.py:0
 msgid "A Scheduled Message cannot be scheduled in the past"
-msgstr ""
+msgstr "Запланированное сообщение нельзя назначить на прошедшее время"
 "Запланированное сообщение не может быть запланировано на прошедшую дату"
 
 #. module: mail
@@ -647,7 +647,7 @@ msgstr "Реакция на сообщение должна исходить о�
 #. odoo-python
 #: code:addons/mail/models/ir_actions_server.py:0
 msgid "A next activity can only be planned on models that use activities."
-msgstr ""
+msgstr "Следующее действие можно запланировать только для моделей, использующих действия."
 "Следующая активность может быть запланирована только для моделей, которые "
 "используют активности."
 
@@ -997,7 +997,7 @@ msgstr "Добавьте описание к вашей активности..."
 #. odoo-python
 #: code:addons/mail/models/mail_thread.py:0
 msgid "Add a new %(document)s or send an email to %(email_link)s"
-msgstr ""
+msgstr "Добавьте новый документ %(document)s или отправьте письмо на %(email_link)s"
 "Добавить новый документ «%(document)s» или отправить email на %(email_link)s"
 
 #. module: mail
@@ -1422,7 +1422,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/mail/models/mail_thread_blacklist.py:0
 msgid "Are you sure you want to unblacklist this Email Address?"
-msgstr ""
+msgstr "Вы уверены, что хотите удалить этот адрес электронной почты из чёрного списка?"
 "Вы уверены, что хотите удалить этот адрес электронной почты из черного "
 "списка?"
 
@@ -1430,7 +1430,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/mail/models/mail_blacklist.py:0
 msgid "Are you sure you want to unblacklist this email address?"
-msgstr ""
+msgstr "Вы уверены, что хотите удалить этот адрес электронной почты из чёрного списка?"
 "Вы уверены, что хотите удалить этот адрес электронной почты из черного "
 "списка?"
 
@@ -2042,7 +2042,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/mail/models/discuss/discuss_channel.py:0
 msgid "Cannot change initial message nor parent channel of: %(channels)s."
-msgstr ""
+msgstr "Нельзя изменить исходное сообщение или родительский канал: %(channels)s."
 "Невозможно изменить начальное сообщение или родительский канал для: %"
 "(channels)s."
 
@@ -2363,7 +2363,7 @@ msgstr "Собирать ответы на определенный адрес e
 #. odoo-javascript
 #: code:addons/mail/static/src/core/web/messaging_menu_patch.js:0
 msgid "Come here often? Install the app for quick and easy access!"
-msgstr ""
+msgstr "Часто заходите сюда? Установите приложение для быстрого и удобного доступа!"
 "Часто бываете здесь? Установите приложение для быстрого и удобного доступа!"
 
 #. module: mail
@@ -2393,7 +2393,7 @@ msgstr "Адреса получателей, разделенные запяты
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_template__email_to
 msgid "Comma-separated recipient addresses (placeholders may be used here)"
-msgstr ""
+msgstr "Адреса получателей через запятую (здесь можно использовать заполнители)"
 "Адреса получателей, разделенные запятыми (здесь можно использовать "
 "заполнители)"
 
@@ -2725,7 +2725,7 @@ msgstr "Создать новый «%(document)s»"
 #. odoo-python
 #: code:addons/mail/models/mail_thread.py:0
 msgid "Create new %(document)s by sending an email to %(email_link)s"
-msgstr ""
+msgstr "Создайте новый документ %(document)s, отправив письмо на %(email_link)s"
 "Создать новый документ «%(document)s», отправив email на %(email_link)s"
 
 #. module: mail
@@ -2854,7 +2854,7 @@ msgstr "Валюта"
 #: model:ir.model.fields,help:mail.field_mail_mail__starred
 #: model:ir.model.fields,help:mail.field_mail_message__starred
 msgid "Current user has a starred notification linked to this message"
-msgstr ""
+msgstr "С этим сообщением связано отмеченное звёздочкой уведомление текущего пользователя"
 "Текущий пользователь имеет уведомление в избранном, связанное с этим "
 "сообщением"
 
@@ -3068,7 +3068,7 @@ msgstr "Пользователь по умолчанию"
 #. module: mail
 #: model:ir.model.fields,help:mail.field_fetchmail_server__priority
 msgid "Defines the order of processing, lower values mean higher priority"
-msgstr ""
+msgstr "Определяет порядок обработки: меньшие значения означают более высокий приоритет"
 "Определяет порядок обработки, меньшие значения означают более высокий "
 "приоритет"
 
@@ -3151,7 +3151,7 @@ msgstr "Сбой доставки"
 #. odoo-python
 #: code:addons/mail/wizard/mail_compose_message.py:0
 msgid "Deprecated usage of 'default_res_id', should use 'default_res_ids'."
-msgstr ""
+msgstr "Использование «default_res_id» устарело; используйте «default_res_ids»."
 "Использование 'default_res_id' устарело, следует использовать "
 "'default_res_ids'."
 
@@ -3985,7 +3985,7 @@ msgstr "Не удалось загрузить GIF..."
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/rtc_service.js:0
 msgid "Failed to load the SFU server, falling back to peer-to-peer"
-msgstr ""
+msgstr "Не удалось загрузить сервер SFU, выполняется переход на соединение между участниками"
 "Не удалось загрузить сервер SFU, выполняется переход к одноранговой сети"
 
 #. module: mail
@@ -4144,7 +4144,7 @@ msgstr "Поля"
 #: model:ir.model.fields,help:mail.field_mail_template__template_fs
 #: model:ir.model.fields,help:mail.field_template_reset_mixin__template_fs
 msgid "File from where the template originates. Used to reset broken template."
-msgstr ""
+msgstr "Файл, из которого создан шаблон. Используется для восстановления повреждённого шаблона."
 "Файл-источник шаблона. Используется для восстановления поврежденного шаблона."
 
 #. module: mail
@@ -4921,7 +4921,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields,help:mail.field_res_config_settings__use_twilio_rtc_servers
 msgid "If you want to use twilio as TURN/STUN server provider"
-msgstr ""
+msgstr "Если вы хотите использовать Twilio в качестве поставщика сервера TURN/STUN"
 "Если вы хотите использовать Twilio в качестве поставщика серверов TURN/STUN"
 
 #. module: mail
@@ -5206,7 +5206,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/mail/models/mail_thread.py:0
 msgid "Invalid template or view source record %(svalue)s, is %(model)s instead"
-msgstr ""
+msgstr "Недопустимый шаблон или исходная запись представления %(svalue)s: фактически это %(model)s"
 "Неверная запись шаблона или источника представления %(svalue)s, вместо нее "
 "используется %(model)s"
 
@@ -5419,7 +5419,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_tracking_duration_mixin__duration_tracking
 msgid "JSON that maps ids from a many2one field to seconds spent"
-msgstr ""
+msgstr "JSON, сопоставляющий идентификаторы поля many2one с затраченным временем в секундах"
 "JSON, который сопоставляет ID из поля many2one с затраченными секундами"
 
 #. module: mail
@@ -5487,7 +5487,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_activity_type__keep_done
 msgid "Keep activities marked as done in the activity view"
-msgstr ""
+msgstr "Оставлять выполненные действия в представлении действий"
 "Сохранять активности, отмеченные как выполненные, в представлении активностей"
 
 #. module: mail
@@ -5505,28 +5505,28 @@ msgstr "С наилучшими пожеланиями"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_config_settings__tenor_api_key
 msgid "Klipy API key"
-msgstr ""
+msgstr "Ключ API Klipy"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Klipy GIF API key"
-msgstr ""
+msgstr "Ключ API GIF Klipy"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Klipy GIF content filter"
-msgstr ""
+msgstr "Фильтр содержимого GIF Klipy"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_config_settings__tenor_gif_limit
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Klipy GIF limits"
-msgstr ""
+msgstr "Ограничения GIF Klipy"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_config_settings__tenor_content_filter
 msgid "Klipy content filter"
-msgstr ""
+msgstr "Фильтр содержимого Klipy"
 
 #. module: mail
 #. odoo-javascript
@@ -6002,7 +6002,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_mail__is_notification
 msgid "Mail has been created to notify people of an existing mail.message"
-msgstr ""
+msgstr "Создано письмо для уведомления пользователей о существующем сообщении mail.message"
 "Письмо было создано для уведомления людей о существующем сообщении "
 "(mail.message)"
 
@@ -6010,7 +6010,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/mail/models/ir_actions_server.py:0
 msgid "Mail template model of %(action_name)s does not match action model."
-msgstr ""
+msgstr "Модель шаблона письма %(action_name)s не соответствует модели действия."
 "Модель шаблона письма для действия %(action_name)s не совпадает с моделью "
 "самого действия."
 
@@ -6135,7 +6135,7 @@ msgstr "Отметить как выполненное"
 #. odoo-python
 #: code:addons/mail/models/mail_render_mixin.py:0
 msgid "Mass Mailing Template: '%(name)s' (ID: %(record_id)s)"
-msgstr ""
+msgstr "Шаблон массовой рассылки: «%(name)s» (идентификатор: %(record_id)s)"
 
 #. module: mail
 #. odoo-javascript
@@ -6559,7 +6559,7 @@ msgstr "Отключить уведомления до"
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/core/common/discuss_notification_settings.xml:0
 msgid "Muting prevents unread indicators and notifications from appearing."
-msgstr ""
+msgstr "Отключение звука предотвращает отображение индикаторов непрочитанных сообщений и уведомлений."
 "Отключение звука предотвращает появление индикаторов непрочитанных сообщений "
 "и уведомлений."
 
@@ -6875,7 +6875,7 @@ msgstr "Пользователь не найден"
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/core/common/channel_invitation.xml:0
 msgid "No user found that is not already a member of this channel."
-msgstr ""
+msgstr "Не найден пользователь, который ещё не является участником этого канала."
 "Не найдено пользователей, которые еще не являются участниками этого канала."
 
 #. module: mail
@@ -7358,7 +7358,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_notification__mail_mail_id
 msgid "Optional mail_mail ID. Used mainly to optimize searches."
-msgstr ""
+msgstr "Необязательный идентификатор mail_mail. Используется главным образом для оптимизации поиска."
 "Необязательный ID письма (mail.mail). Используется в основном для "
 "оптимизации поиска."
 
@@ -7915,7 +7915,7 @@ msgstr "Доступ на портал отозван"
 #. odoo-python
 #: code:addons/mail/models/mail_thread.py:0
 msgid "Portal users can only filter threads by themselves as followers."
-msgstr ""
+msgstr "Пользователи портала могут фильтровать обсуждения только по себе как по подписчикам."
 "Пользователи портала могут фильтровать обсуждения только по своему участию в "
 "качестве подписчиков."
 
@@ -8406,7 +8406,7 @@ msgstr "Мастер удаления email из черного списка"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
 msgid "Remove the contextual action to use this template on related documents"
-msgstr ""
+msgstr "Удалить контекстное действие для использования этого шаблона в связанных документах"
 "Удалить контекстное действие для использования этого шаблона в связанных "
 "документах"
 
@@ -8449,7 +8449,7 @@ msgstr ""
 #: code:addons/mail/models/mail_composer_mixin.py:0
 #: code:addons/mail/models/mail_render_mixin.py:0
 msgid "Rendering of %(field_name)s is not possible as not defined on template."
-msgstr ""
+msgstr "Невозможно отобразить %(field_name)s, поскольку оно не определено в шаблоне."
 "Рендеринг поля %(field_name)s невозможен, так как оно не определено в "
 "шаблоне."
 
@@ -8575,7 +8575,7 @@ msgstr "Ограничить рендеринг шаблонов"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Restrict mail templates edition and QWEB placeholders usage."
-msgstr ""
+msgstr "Ограничить редактирование шаблонов писем и использование заполнителей QWeb."
 "Ограничить редактирование шаблонов писем и использование заполнителей QWeb."
 
 #. module: mail
@@ -8825,7 +8825,7 @@ msgstr "Поиск серверов входящей почты"
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/gif_picker/common/gif_picker.xml:0
 msgid "Search Klipy"
-msgstr ""
+msgstr "Поиск в Klipy"
 
 #. module: mail
 #. odoo-javascript
@@ -8997,7 +8997,7 @@ msgstr "Выберите фильтр содержимого для фильтр
 #. odoo-python
 #: code:addons/mail/wizard/mail_activity_schedule.py:0
 msgid "Selected user '%(user)s' cannot upload documents on model '%(model)s'"
-msgstr ""
+msgstr "Выбранный пользователь «%(user)s» не может загружать документы в модель «%(model)s»"
 "Выбранный пользователь «%(user)s» не может загружать документы в модель «%"
 "(model)s»"
 
@@ -9224,7 +9224,7 @@ msgstr "Горячая клавиша"
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_message_translation__target_lang
 msgid "Shortened language code used as the target for the translation request."
-msgstr ""
+msgstr "Сокращённый код языка, используемый как целевой язык запроса на перевод."
 "Сокращенный код языка, используемый как целевой для запроса на перевод."
 
 #. module: mail
@@ -9255,7 +9255,7 @@ msgstr "Показать всех получателей"
 #: model_terms:ir.ui.view,arch_db:mail.mail_activity_view_search
 #: model_terms:ir.ui.view,arch_db:mail.res_partner_view_search_inherit_mail
 msgid "Show all records which has next action date is before today"
-msgstr ""
+msgstr "Показывать все записи, у которых дата следующего действия раньше сегодняшней"
 "Показать все записи, дата следующего действия по которым раньше сегодняшнего "
 "дня"
 
@@ -9437,7 +9437,7 @@ msgstr "Статус со временем"
 #. odoo-javascript
 #: code:addons/mail/static/src/core/web/messaging_menu_patch.js:0
 msgid "Stay tuned! Enable push notifications to never miss a message."
-msgstr ""
+msgstr "Оставайтесь в курсе! Включите push-уведомления, чтобы не пропустить сообщения."
 "Будьте на связи! Включите push-уведомления, чтобы никогда не пропускать "
 "сообщения."
 
@@ -9561,7 +9561,7 @@ msgstr "Предложить следующую активность"
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_activity_type__suggested_next_type_ids
 msgid "Suggest these activities once the current one is marked as done."
-msgstr ""
+msgstr "Предлагать эти действия после завершения текущего."
 "Предлагать эти активности после того, как текущая будет отмечена как "
 "выполненная."
 
@@ -10083,7 +10083,7 @@ msgstr "В этой беседе нет закрепленных сообщен�
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_partner_view_form_inherit_mail
 msgid "This email is blacklisted for mass mailings. Click to unblacklist."
-msgstr ""
+msgstr "Этот адрес электронной почты находится в чёрном списке массовых рассылок. Нажмите, чтобы удалить его из списка."
 "Этот email находится в черном списке для массовых рассылок. Нажмите, чтобы "
 "удалить из черного списка."
 
@@ -10557,7 +10557,7 @@ msgstr "Не удалось подключиться к SMTP-серверу"
 #. odoo-python
 #: code:addons/mail/wizard/mail_wizard_invite.py:0
 msgid "Unable to post message, please configure the sender's email address."
-msgstr ""
+msgstr "Не удалось опубликовать сообщение. Настройте адрес электронной почты отправителя."
 "Невозможно опубликовать сообщение, пожалуйста, настройте email-адрес "
 "отправителя."
 
@@ -10565,7 +10565,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/mail/models/mail_thread.py:0
 msgid "Unable to send message, please configure the sender's email address."
-msgstr ""
+msgstr "Не удалось отправить сообщение. Настройте адрес электронной почты отправителя."
 "Невозможно отправить сообщение, пожалуйста, настройте email-адрес "
 "отправителя."
 
@@ -10846,7 +10846,7 @@ msgstr "Использовать сервер Gmail"
 #. odoo-python
 #: code:addons/mail/models/fetchmail.py:0
 msgid "Use a local script to fetch your emails and create new records."
-msgstr ""
+msgstr "Используйте локальный скрипт для получения писем и создания новых записей."
 "Использовать локальный скрипт для получения писем и создания новых записей."
 
 #. module: mail
@@ -11451,7 +11451,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/mail/static/src/core/web/thread_patch.xml:0
 msgid "You can mark any message as 'starred', and it shows up in this mailbox."
-msgstr ""
+msgstr "Любое сообщение можно отметить звёздочкой — оно появится в этом почтовом ящике."
 "Вы можете отметить любое сообщение как 'избранное', и оно появится в этом "
 "почтовом ящике."
 
@@ -11471,7 +11471,7 @@ msgstr "Вы можете общаться только с существующ�
 #. odoo-javascript
 #: code:addons/mail/static/src/core/common/store_service.js:0
 msgid "You can only chat with partners that have a dedicated user."
-msgstr ""
+msgstr "Вы можете общаться только с контрагентами, у которых есть отдельный пользователь."
 "Вы можете общаться только с партнерами, у которых есть выделенный "
 "пользователь."
 
@@ -11484,13 +11484,13 @@ msgstr "Вы можете безопасно проигнорировать эт
 #. odoo-python
 #: code:addons/mail/models/mail_alias_domain.py:0
 msgid "You cannot assign an empty domain name."
-msgstr ""
+msgstr "Нельзя назначить пустое имя домена."
 
 #. module: mail
 #. odoo-python
 #: code:addons/mail/models/mail_activity_type.py:0
 msgid "You cannot delete %(activity_names)s as it is required in various apps."
-msgstr ""
+msgstr "Нельзя удалить %(activity_names)s, так как они необходимы для работы нескольких приложений."
 "Вы не можете удалить %(activity_names)s, так как оно используется в других "
 "модулях."
 
@@ -11585,7 +11585,7 @@ msgstr "Вы не можете определить шаблон для абст
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/message_pin/common/message_model_patch.js:0
 msgid "You sure want this message pinned to %(conversation)s forever and ever?"
-msgstr ""
+msgstr "Вы уверены, что хотите навсегда закрепить это сообщение в %(conversation)s?"
 "Вы уверены, что хотите закрепить это сообщение в %(conversation)s навсегда?"
 
 #. module: mail
@@ -11991,7 +11991,7 @@ msgstr "только что назначил вам следующую акти�
 #. module: mail
 #: model:ir.model.fields,help:mail.field_res_config_settings__tenor_content_filter
 msgid "https://docs.klipy.com/migrate-from-tenor/content-filtering"
-msgstr ""
+msgstr "https://docs.klipy.com/migrate-from-tenor/content-filtering"
 
 #. module: mail
 #. odoo-javascript
@@ -12306,7 +12306,7 @@ msgstr "«%(member_name)s» в «%(channel_name)s»"
 #. odoo-javascript
 #: code:addons/mail/static/src/core/web/activity.js:0
 msgid "“%s”"
-msgstr ""
+msgstr "«%s»"
 
 #~ msgid "Search for a GIF"
 #~ msgstr "Найти GIF"

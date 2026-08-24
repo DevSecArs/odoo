@@ -1916,7 +1916,7 @@ msgstr "Пользовательское встроенное действие"
 #. odoo-python
 #: code:addons/web/controllers/view.py:0
 msgid "Custom view %(view)s does not belong to user %(user)s"
-msgstr ""
+msgstr "Пользователь %(user)s не владеет пользовательским представлением %(view)s"
 "Пользовательское представление %(view)s не принадлежит пользователю %(user)s"
 
 #. module: web
@@ -1957,7 +1957,7 @@ msgstr "База данных"
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.neutralize_banner
 msgid "Database neutralized for testing: no emails sent, etc."
-msgstr ""
+msgstr "База данных нейтрализована для тестирования: электронные письма не отправляются и т. д."
 "База данных нейтрализована для тестирования: письма не отправляются и т.д."
 
 #. module: web
@@ -3329,7 +3329,7 @@ msgstr "Недопустимый ID записи: %s"
 #. odoo-python
 #: code:addons/web/controllers/json.py:0
 msgid "Invalid view type '%(view_type)s' for action id=%(action)s"
-msgstr ""
+msgstr "Недопустимый тип представления «%(view_type)s» для действия с идентификатором %(action)s"
 "Недопустимый тип представления '%(view_type)s' для действия id=%(action)s"
 
 #. module: web
@@ -5661,7 +5661,7 @@ msgstr "Сохранить вручную"
 #. odoo-javascript
 #: code:addons/web/static/src/views/fields/translation_button.js:0
 msgid "Save this record and its parent to translate"
-msgstr ""
+msgstr "Сохраните эту запись и её родительскую запись, чтобы перевести их"
 
 #. module: web
 #. odoo-javascript
@@ -5958,7 +5958,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/web/static/src/views/fields/datetime/datetime_field.js:0
 msgid "Set to true to display days, months (and hours) with unpadded numbers"
-msgstr ""
+msgstr "Установите значение «Истина», чтобы отображать дни, месяцы и часы без ведущих нулей"
 "Установите значение true для отображения дней, месяцев (и часов) без ведущих "
 "нулей"
 
@@ -6517,7 +6517,7 @@ msgstr "Этот блок присутствует не всегда в зави
 #. odoo-javascript
 #: code:addons/web/static/src/views/fields/datetime/datetime_field.xml:0
 msgid "This date is on the future. Make sure it is what you expected."
-msgstr ""
+msgstr "Эта дата находится в будущем. Убедитесь, что это ожидаемое значение."
 "Эта дата будет указана в будущем. Убедитесь, что она соответствует вашим "
 "ожиданиям."
 
@@ -7021,7 +7021,7 @@ msgstr "Использовать это для моего Канбана"
 #: code:addons/web/static/src/views/fields/float/float_field.js:0
 #: code:addons/web/static/src/views/fields/integer/integer_field.js:0
 msgid "Use a human readable format (e.g.: 500G instead of 500,000,000,000)."
-msgstr ""
+msgstr "Используйте удобный для чтения формат (например, 500 ГБ вместо 500 000 000 000 байт)."
 "Использовать человекочитаемый формат (например: 500G вместо 500,000,000,000)."
 
 #. module: web
@@ -7443,7 +7443,7 @@ msgstr "Вам нужны права на экспорт для использо
 #. odoo-javascript
 #: code:addons/web/static/src/views/fields/properties/property_tags.js:0
 msgid "You need to be able to edit parent first to add property tags"
-msgstr ""
+msgstr "Сначала необходимо получить возможность редактировать родительскую запись, чтобы добавить теги свойств"
 "Сначала нужно иметь возможность редактировать родителя, чтобы добавить теги "
 "свойств"
 

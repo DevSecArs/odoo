@@ -15361,7 +15361,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/ir_ui_view.py:0
 msgid "%(method)s on %(model)s is private and cannot be called from a button"
-msgstr ""
+msgstr "Метод %(method)s модели %(model)s является закрытым и не может быть вызван кнопкой"
 "%(method)s в %(model)s является приватным и не может быть вызван с кнопки"
 
 #. module: base
@@ -15566,7 +15566,7 @@ msgstr "'%s', похоже, не является допустимой дато�
 #. odoo-python
 #: code:addons/base/models/ir_fields.py:0
 msgid "'%s' does not seem to be a valid datetime for field '%%(field)s'"
-msgstr ""
+msgstr "«%s» не является допустимой датой и временем для поля «%%(field)s»"
 "'%s', похоже, не является допустимой датой и временем для поля '%%(field)s'"
 
 #. module: base
@@ -15654,7 +15654,7 @@ msgstr "- домен ="
 #. odoo-python
 #: code:addons/base/models/ir_ui_view.py:0
 msgid "- element “%(node)s” is shown in the view for groups: %(groups)s"
-msgstr ""
+msgstr "— элемент «%(node)s» отображается в представлении для групп: %(groups)s"
 "- элемент “%(node)s” отображается в представлении для групп: %(groups)s"
 
 #. module: base
@@ -15952,7 +15952,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_users_kanban
 msgid "<i class=\"fa fa-circle\" role=\"img\" aria-label=\"Ok\" title=\"Ok\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-circle\" role=\"img\" aria-label=\"ОК\" title=\"ОК\"/>"
 "<i class=\"fa fa-circle\" role=\"img\" aria-label=\"ОК\" title=\"ОК\"/>"
 
 #. module: base
@@ -16057,7 +16057,7 @@ msgstr "<span class=\"text-white text-uppercase\">Опасная зона</span>
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "<span colspan=\"2\" class=\"text-muted\"> Available variables: </span>"
-msgstr ""
+msgstr "<span colspan=\"2\" class=\"text-muted\"> Доступные переменные: </span>"
 "<span colspan=\"2\" class=\"text-muted\"> Доступные переменные: </span>"
 
 #. module: base
@@ -16342,7 +16342,7 @@ msgstr "<strong>Seq</strong>"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "<strong>The contact linked to this user is still active</strong>"
-msgstr ""
+msgstr "<strong>Контакт, связанный с этим пользователем, всё ещё активен</strong>"
 "<strong>Контакт, связанный с этим пользователем, всё ещё активен</strong>"
 
 #. module: base
@@ -16679,7 +16679,7 @@ msgstr "Модуль для проверки механизма пакетов �
 #. module: base
 #: model:ir.module.module,description:base.module_test_inherit_depends
 msgid "A module to verify the inheritance using _inherit across modules."
-msgstr ""
+msgstr "Модуль для проверки наследования с использованием _inherit между модулями."
 "Модуль для проверки наследования с использованием _inherit между модулями."
 
 #. module: base
@@ -16760,7 +16760,7 @@ msgstr "Платёжный провайдер для Индонезии и Фи�
 #. module: base
 #: model:ir.module.module,summary:base.module_payment_custom
 msgid "A payment provider for custom flows like wire transfers."
-msgstr ""
+msgstr "Платёжный провайдер для нестандартных сценариев, например банковских переводов."
 "Платёжный провайдер для пользовательских процессов, таких как банковские "
 "переводы."
 
@@ -16772,7 +16772,7 @@ msgstr "Платёжный провайдер для активации прям
 #. module: base
 #: model:ir.module.module,summary:base.module_payment_demo
 msgid "A payment provider for running fake payment flows for demo purposes."
-msgstr ""
+msgstr "Платёжный провайдер для запуска имитации платежей в демонстрационных целях."
 "Платёжный провайдер для запуска фиктивных платёжных процессов в "
 "демонстрационных целях."
 
@@ -16803,7 +16803,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/res_partner.py:0
 msgid "A valid email is required for find_or_create to work properly."
-msgstr ""
+msgstr "Для корректной работы find_or_create требуется действительный адрес электронной почты."
 "Для корректной работы функции find_or_create требуется действительный адрес "
 "электронной почты."
 
@@ -17428,7 +17428,7 @@ msgstr "Добавить языки"
 #: model:ir.module.module,description:base.module_data_merge_helpdesk
 #: model:ir.module.module,summary:base.module_data_merge_helpdesk
 msgid "Add Merge action in contextual menu of helpdesk ticket model."
-msgstr ""
+msgstr "Добавляет действие объединения в контекстное меню модели обращений службы поддержки."
 "Добавить действие 'Объединить' в контекстное меню модели заявок службы "
 "поддержки."
 
@@ -17436,7 +17436,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_data_merge_project
 #: model:ir.module.module,summary:base.module_data_merge_project
 msgid "Add Merge action in contextual menu of project task and tag models."
-msgstr ""
+msgstr "Добавляет действие объединения в контекстное меню моделей задач и тегов проекта."
 "Добавить действие 'Объединить' в контекстное меню моделей задач и тегов "
 "проекта."
 
@@ -17495,7 +17495,7 @@ msgstr "Добавьте этап оплаты в конце бронирова�
 #. module: base
 #: model:ir.module.module,description:base.module_project_purchase_stock
 msgid "Add a project link between POs and their generated stock pickings."
-msgstr ""
+msgstr "Добавляет связь проекта между заказами на закупку и созданными по ним перемещениями запасов."
 "Добавьте связь с проектом между заказами на покупку и их сгенерированными "
 "складскими комплектациями."
 
@@ -17532,7 +17532,7 @@ msgstr "Добавьте сертификацию в резюме ваших с�
 #. module: base
 #: model:ir.module.module,description:base.module_pos_account_tax_python
 msgid "Add code to manage custom taxes to the POS assets bundle"
-msgstr ""
+msgstr "Добавляет код для управления пользовательскими налогами в набор ресурсов POS"
 "Добавьте код для управления пользовательскими налогами в пакет активов POS"
 
 #. module: base
@@ -17555,7 +17555,7 @@ msgstr "Добавить направление"
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "Add directional information (not used for digital)"
-msgstr ""
+msgstr "Добавляет информацию о направлении (не используется для цифровых товаров)"
 "Добавьте информацию о направлении (не используется для цифровых данных)"
 
 #. module: base
@@ -17639,7 +17639,7 @@ msgstr "Добавьте варианты в заказ на продажу че
 #. module: base
 #: model:ir.module.module,summary:base.module_purchase_product_matrix
 msgid "Add variants to your purchase orders through an Order Grid Entry."
-msgstr ""
+msgstr "Добавляет варианты в заказы на закупку через сетку заказа."
 "Добавьте варианты в ваши заказы на покупку через ввод в таблицу заказов."
 
 #. module: base
@@ -17686,7 +17686,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_self_order_adyen
 msgid "Addon for the Self Order App that allows customers to pay by Adyen."
-msgstr ""
+msgstr "Дополнение для приложения самостоятельного заказа, позволяющее клиентам оплачивать через Adyen."
 "Дополнение для приложения Self Order, позволяющее клиентам оплачивать через "
 "Adyen."
 
@@ -17702,7 +17702,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_self_order_stripe
 msgid "Addon for the Self Order App that allows customers to pay by Stripe."
-msgstr ""
+msgstr "Дополнение для приложения самостоятельного заказа, позволяющее клиентам оплачивать через Stripe."
 "Дополнение для приложения Self Order, позволяющее клиентам оплачивать через "
 "Stripe."
 
@@ -17793,7 +17793,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_website_crm_livechat
 msgid "Adds a stat button on lead form view to access their livechat sessions."
-msgstr ""
+msgstr "Добавляет статистическую кнопку в форму лида для доступа к сеансам онлайн-чата."
 "Добавляет кнопку статистики в форме лида для доступа к их сеансам живого "
 "чата."
 
@@ -17810,7 +17810,7 @@ msgstr "Добавляет, в частности, картографическ�
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_mx_hr
 msgid "Adds specific fields to Employees for Mexican companies."
-msgstr ""
+msgstr "Добавляет специальные поля сотрудников для мексиканских компаний."
 "Добавляет специальные поля в раздел «Сотрудники» для мексиканских компаний."
 
 #. module: base
@@ -18070,7 +18070,7 @@ msgstr "Расширенные функции для склада"
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_subcontracting_landed_costs
 msgid "Advanced views to manage landed cost for subcontracting orders"
-msgstr ""
+msgstr "Расширенные представления для управления дополнительными затратами по заказам субподряда"
 "Расширенные представления для управления затратами на поставку для заказов "
 "на субподряд"
 
@@ -18491,7 +18491,7 @@ msgstr "Разрешить создание повторяющихся зака�
 #. module: base
 #: model:ir.module.module,description:base.module_appointment_microsoft_calendar
 msgid "Allow to sync your Outlook Calendar from the Appointment App"
-msgstr ""
+msgstr "Позволяет синхронизировать календарь Outlook из приложения встреч"
 "Разрешить синхронизацию вашего календаря Outlook с приложением «Назначения»"
 
 #. module: base
@@ -18503,7 +18503,7 @@ msgstr "Разрешить обновление налоговых таблиц 
 #: model:ir.module.module,description:base.module_industry_fsm_repair
 #: model:ir.module.module,summary:base.module_industry_fsm_repair
 msgid "Allow user without repair right to access fsm stock.picking"
-msgstr ""
+msgstr "Разрешает пользователю без права ремонта получать доступ к stock.picking в FSM"
 "Разрешить пользователю без прав на ремонт доступ к комплектации FSM на складе"
 
 #. module: base
@@ -18595,7 +18595,7 @@ msgstr "Разрешить отправлять SMS посетителям са�
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_stock_renting
 msgid "Allows use of stock application to manage rentals inventory"
-msgstr ""
+msgstr "Позволяет использовать приложение складского учёта для управления запасами аренды"
 "Разрешить использовать приложение складского учёта для управления запасами "
 "аренды"
 
@@ -19452,7 +19452,7 @@ msgstr "Американский платёжный провайдер для о
 #. module: base
 #: model:ir.module.module,summary:base.module_payment_stripe
 msgid "An Irish-American payment provider covering the US and many others."
-msgstr ""
+msgstr "Ирландско-американский платёжный провайдер, работающий в США и многих других странах."
 "Ирландско-американский платёжный провайдер, охватывающий США и многие другие "
 "страны."
 
@@ -19501,7 +19501,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/res_partner.py:0
 msgid "An email is required for find_or_create to work"
-msgstr ""
+msgstr "Для работы find_or_create требуется адрес электронной почты"
 "Для работы функции find_or_create требуется указать адрес электронной почты"
 
 #. module: base
@@ -19527,7 +19527,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_payment_asiapay
 msgid "An payment provider based in Hong Kong covering most Asian countries."
-msgstr ""
+msgstr "Платёжный провайдер из Гонконга, работающий в большинстве стран Азии."
 "Платёжный провайдер из Гонконга, охватывающий большинство азиатских стран."
 
 #. module: base
@@ -19869,13 +19869,13 @@ msgstr "Арктика/Лонгйир"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
 msgid "Are you sure to execute the automatic merge of your contacts?"
-msgstr ""
+msgstr "Вы уверены, что хотите выполнить автоматическое объединение контактов?"
 "Вы уверены, что хотите выполнить автоматическое объединение ваших контактов?"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
 msgid "Are you sure to execute the list of automatic merges of your contacts?"
-msgstr ""
+msgstr "Вы уверены, что хотите выполнить список автоматических объединений контактов?"
 "Вы уверены, что хотите выполнить список автоматических объединений ваших "
 "контактов?"
 
@@ -20437,7 +20437,7 @@ msgstr "Интеграция активов и автопарка"
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_category_form
 msgid "Assign tags to your contacts to organize, filter and track them."
-msgstr ""
+msgstr "Назначайте теги контактам, чтобы упорядочивать, фильтровать и отслеживать их."
 "Присваивайте метки своим контактам для их упорядочивания, фильтрации и "
 "отслеживания."
 
@@ -20953,7 +20953,7 @@ msgstr "Тема Aviato – адаптивная тема на Bootstrap для 
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_fsm
 msgid "Avoid auto-enabling the documents feature on fsm projects"
-msgstr ""
+msgstr "Не включать функцию документов автоматически в проектах FSM"
 "Предотвращает автоматическое включение функции документов в проектах FSM"
 
 #. module: base
@@ -21094,7 +21094,7 @@ msgstr "Бани"
 #. module: base
 #: model:ir.module.module,summary:base.module_theme_notes
 msgid "Band, Musics, Sound, Concerts, Artists, Records, Event, Food, Stores"
-msgstr ""
+msgstr "Группы, музыка, звук, концерты, исполнители, записи, мероприятия, еда, магазины"
 "Группы, Музыка, Звук, Концерты, Артисты, Записи, Мероприятия, Еда, Магазины"
 
 #. module: base
@@ -21390,7 +21390,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_pe_website_sale
 msgid "Be able to see Identification Type in ecommerce checkout form."
-msgstr ""
+msgstr "Позволяет отображать тип удостоверения в форме оформления заказа интернет-магазина."
 "Позволяет видеть тип идентификации в форме оформления заказа в электронной "
 "коммерции."
 
@@ -22061,7 +22061,7 @@ msgstr "Модуль интеграции для отправки уведомл
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_track_live_quiz
 msgid "Bridge module to support quiz features during \"live\" tracks. "
-msgstr ""
+msgstr "Связующий модуль для поддержки тестов во время «живых» трансляций. "
 "Модуль интеграции для поддержки функций викторины во время \"живых\" треков"
 
 #. module: base
@@ -22435,7 +22435,7 @@ msgstr "Нельзя деактивировать язык, используем
 #. odoo-python
 #: code:addons/base/models/res_lang.py:0
 msgid "Cannot deactivate a language that is currently used by users."
-msgstr ""
+msgstr "Нельзя отключить язык, который сейчас используется пользователями."
 "Нельзя деактивировать язык, используемый в настоящее время пользователями."
 
 #. module: base
@@ -22610,7 +22610,7 @@ msgstr "Централизация адресной книги"
 #: model:ir.module.module,description:base.module_knowledge
 #: model:ir.module.module,summary:base.module_knowledge
 msgid "Centralize, manage, share and grow your knowledge library"
-msgstr ""
+msgstr "Централизуйте, управляйте, распространяйте и развивайте библиотеку знаний"
 "Централизация, управление, совместное использование и расширение библиотеки "
 "знаний"
 
@@ -22777,7 +22777,7 @@ msgstr "База печати чеков"
 #: model:ir.model.fields,help:base.field_res_partner__is_company
 #: model:ir.model.fields,help:base.field_res_users__is_company
 msgid "Check if the contact is a company, otherwise it is a person"
-msgstr ""
+msgstr "Проверяет, является ли контакт компанией; в противном случае он считается физическим лицом"
 "Отметьте, если контакт является компанией, в противном случае — это "
 "физическое лицо"
 
@@ -22946,7 +22946,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_documents
 msgid "Choose the website on which documents/folder are shared"
-msgstr ""
+msgstr "Выберите веб-сайт, на котором доступны документы или папка"
 "Выберите сайт, на котором предоставляется общий доступ к документам/папкам"
 
 #. module: base
@@ -23792,7 +23792,7 @@ msgstr "Значение контекста"
 #: model:ir.model.fields,help:base.field_ir_actions_client__context
 #: model:ir.model.fields,help:base.field_ir_embedded_actions__context
 msgid "Context dictionary as Python expression, empty by default (Default: {})"
-msgstr ""
+msgstr "Контекстный словарь в виде выражения Python; по умолчанию пуст (значение по умолчанию: {})"
 "Словарь контекста в виде выражения Python, по умолчанию пустой (по "
 "умолчанию: {})"
 
@@ -23988,7 +23988,7 @@ msgstr "Купоны и программы лояльности"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_loyalty
 msgid "Coupons, Promotions, Gift Card and Loyalty for eCommerce"
-msgstr ""
+msgstr "Купоны, акции, подарочные карты и программы лояльности для электронной торговли"
 "Купоны, акции, подарочные карты и программы лояльности для электронной "
 "коммерции"
 
@@ -24194,7 +24194,7 @@ msgstr "Создание нового лида с помощью команды 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_work_entry_contract_planning_attendance
 msgid "Create work entries from attendances based on employee's planning"
-msgstr ""
+msgstr "Создаёт записи рабочего времени на основе посещаемости и планирования сотрудника"
 "Создание рабочих записей на основе посещений согласно планированию сотрудника"
 
 #. module: base
@@ -24889,7 +24889,7 @@ msgstr "Формат даты"
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "Date to compare with the field value, by default use the current date."
-msgstr ""
+msgstr "Дата для сравнения со значением поля; по умолчанию используется текущая дата."
 "Дата для сравнения со значением поля, по умолчанию используется текущая дата."
 
 #. module: base
@@ -25032,7 +25032,7 @@ msgstr "Представление по умолчанию"
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_embedded_actions__filter_ids
 msgid "Default filter of the embedded action (if none, no filters)"
-msgstr ""
+msgstr "Фильтр встроенного действия по умолчанию (если не задан, фильтры отсутствуют)"
 "Фильтр по умолчанию для встроенного действия (если не указано, фильтры "
 "отсутствуют)"
 
@@ -25049,7 +25049,7 @@ msgstr "Формат бумаги по умолчанию?"
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_embedded_actions__default_view_mode
 msgid "Default view (if none, default view of the action is taken)"
-msgstr ""
+msgstr "Представление по умолчанию (если не задано, используется представление действия по умолчанию)"
 "Представление по умолчанию (если не указано, используется представление "
 "действия по умолчанию)"
 
@@ -26057,7 +26057,7 @@ msgstr "Локализация Нидерландов для SBR-докумен�
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_E
 msgid "E - WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES"
-msgstr ""
+msgstr "E — ВОДОСНАБЖЕНИЕ; ВОДООТВЕДЕНИЕ, УДАЛЕНИЕ ОТХОДОВ И ЛИКВИДАЦИЯ ЗАГРЯЗНЕНИЙ"
 "E - ВОДОСНАБЖЕНИЕ; КАНАЛИЗАЦИЯ, УТИЛИЗАЦИЯ ОТХОДОВ И ВОССТАНОВЛЕНИЕ "
 "ОКРУЖАЮЩЕЙ СРЕДЫ"
 
@@ -29150,7 +29150,7 @@ msgstr "Получите адрес склада, если счет создае
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_in_sale_stock
 msgid "Get warehouse address if the invoice is created from Sale Order"
-msgstr ""
+msgstr "Получает адрес склада, если счёт создан из заказа на продажу"
 "Получите адрес склада, если счет-фактура создается на основе заказа на "
 "продажу"
 
@@ -29360,7 +29360,7 @@ msgstr "Название группы"
 #. module: base
 #: model:ir.model.fields,help:base.field_res_groups__share
 msgid "Group created to set access rights for sharing data with some users."
-msgstr ""
+msgstr "Группа, созданная для настройки прав доступа при обмене данными с отдельными пользователями."
 "Группа создана для настройки прав доступа к данным для некоторых "
 "пользователей."
 
@@ -29847,7 +29847,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,description:base.module_category_sales_sales
 msgid "Helps you handle your quotations, sale orders and invoicing."
-msgstr ""
+msgstr "Помогает управлять коммерческими предложениями, заказами на продажу и выставлением счетов."
 "Помогает управлять вашими коммерческими предложениями, заказами на продажу и "
 "выставлением счетов."
 
@@ -30387,7 +30387,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_rule__global
 msgid "If no group is specified the rule is global and applied to everyone"
-msgstr ""
+msgstr "Если группа не указана, правило является глобальным и применяется ко всем"
 "Если группа не указана, правило является глобальным и применяется ко всем"
 
 #. module: base
@@ -30403,26 +30403,26 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_default__company_id
 msgid "If set, action binding only applies for this company"
-msgstr ""
+msgstr "Если установлено, привязка действия применяется только для этой компании"
 "Если установлено, привязка действия применяется только для этой компании"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_default__user_id
 msgid "If set, action binding only applies for this user."
-msgstr ""
+msgstr "Если установлено, привязка действия применяется только для этого пользователя."
 "Если установлено, привязка действия применяется только для этого "
 "пользователя."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_default__condition
 msgid "If set, applies the default upon condition."
-msgstr ""
+msgstr "Если установлено, значение по умолчанию применяется при выполнении условия."
 "Если установлено, применяется значение по умолчанию при выполнении условия."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_report__domain
 msgid "If set, the action will only appear on records that matches the domain."
-msgstr ""
+msgstr "Если установлено, действие отображается только для записей, соответствующих домену."
 "Если установлено, действие будет отображаться только для записей, "
 "соответствующих домену."
 
@@ -31191,7 +31191,7 @@ msgstr "Установленная версия"
 #. module: base
 #: model:ir.module.module,description:base.module_bus
 msgid "Instant Messaging Bus allow you to send messages to users, in live."
-msgstr ""
+msgstr "Шина мгновенных сообщений позволяет отправлять пользователям сообщения в реальном времени."
 "Шина мгновенных сообщений позволяет отправлять сообщения пользователям в "
 "реальном времени."
 
@@ -31233,7 +31233,7 @@ msgstr "Интеграция WhatsApp в маркетинговые кампан
 #. module: base
 #: model:ir.module.module,description:base.module_sale_loyalty
 msgid "Integrate discount and loyalty programs mechanisms in sales orders."
-msgstr ""
+msgstr "Интегрирует механизмы скидок и программ лояльности в заказы на продажу."
 "Интеграция механизмов программ скидок и лояльности в заказы на продажу."
 
 #. module: base
@@ -31334,7 +31334,7 @@ msgstr "Интеграция точки продаж Odoo с итальянск�
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_purchase_stock_inter_company_rules
 msgid "Inter Company Module for Sale/Purchase Orders (with Inventory link)"
-msgstr ""
+msgstr "Межкомпанейский модуль для заказов на продажу и закупку со связью со складом"
 "Модуль межфирменного обмена заказами на продажу/покупку (со связью со "
 "складом)"
 
@@ -31347,7 +31347,7 @@ msgstr "Модуль межфирменного обмена для заказо
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_service
 msgid "Interaction between Sales and services apps (project and planning)"
-msgstr ""
+msgstr "Взаимодействие между приложениями продаж и услуг (проекты и планирование)"
 "Взаимодействие между приложениями продаж и услуг (проекты и планирование)"
 
 #. module: base
@@ -32826,7 +32826,7 @@ msgstr "Лесото"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_mass_mailing
 msgid "Let new customers sign up for a newsletter during checkout"
-msgstr ""
+msgstr "Позволяет новым клиентам подписываться на рассылку при оформлении заказа"
 "Позвольте новым клиентам подписаться на рассылку во время оформления заказа"
 
 #. module: base
@@ -33055,7 +33055,7 @@ msgstr "Список"
 #. odoo-python
 #: code:addons/base/models/ir_ui_view.py:0
 msgid "List child can only have one of %(tags)s tag (not %(wrong_tag)s)"
-msgstr ""
+msgstr "Дочерний список может иметь только один тег из %(tags)s, но не %(wrong_tag)s"
 "Дочерний список может содержать только один тег %(tags)s (не %(wrong_tag)s)"
 
 #. module: base
@@ -33803,7 +33803,7 @@ msgstr "Управление отклоненными расходами с по
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_plm
 msgid "Manage engineering change orders on products, bills of material"
-msgstr ""
+msgstr "Управляет заказами на инженерные изменения продукции и спецификаций"
 "Управление заказами на изменение конструкции изделий и спецификаций "
 "материалов"
 
@@ -33820,21 +33820,21 @@ msgstr "Управление продажей стендов на меропри
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_be_hr_payroll_attendance
 msgid "Manage extra hours for your hourly paid employees for belgian payroll"
-msgstr ""
+msgstr "Управляет дополнительными часами почасовых сотрудников для бельгийской зарплаты"
 "Управление дополнительными часами для сотрудников с почасовой оплатой в "
 "бельгийской ведомости"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_payroll_attendance
 msgid "Manage extra hours for your hourly paid employees using attendance"
-msgstr ""
+msgstr "Управляет дополнительными часами почасовых сотрудников на основе посещаемости"
 "Управление дополнительными часами для сотрудников с почасовой оплатой с "
 "использованием посещаемости"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_payroll_planning
 msgid "Manage extra hours for your hourly paid employees using planning"
-msgstr ""
+msgstr "Управляет дополнительными часами почасовых сотрудников на основе планирования"
 "Управление дополнительными часами для сотрудников с почасовой оплатой с "
 "использованием планирования"
 
@@ -34094,7 +34094,7 @@ msgstr "Тесты массовой рассылки"
 #. module: base
 #: model:ir.module.module,summary:base.module_test_mass_mailing
 msgid "Mass Mail Tests: feature and performance tests for mass mailing"
-msgstr ""
+msgstr "Тесты массовой рассылки: функциональные и производительные тесты массовой рассылки"
 "Тесты массовой рассылки: тесты функций и производительности для массовых "
 "рассылок"
 
@@ -34611,7 +34611,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/models.py:0
 msgid "Missing required value for the field '%(name)s' (%(technical_name)s)"
-msgstr ""
+msgstr "Отсутствует обязательное значение поля «%(name)s» (%(technical_name)s)"
 "Отсутствует обязательное значение для поля '%(name)s' (%(technical_name)s)"
 
 #. module: base
@@ -35749,7 +35749,7 @@ msgstr "№ Таити"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_O
 msgid "O - PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY"
-msgstr ""
+msgstr "O — ГОСУДАРСТВЕННОЕ УПРАВЛЕНИЕ И ОБОРОНА; ОБЯЗАТЕЛЬНОЕ СОЦИАЛЬНОЕ ОБЕСПЕЧЕНИЕ"
 "O - ГОСУДАРСТВЕННОЕ УПРАВЛЕНИЕ И ОБОРОНА; ОБЯЗАТЕЛЬНОЕ СОЦИАЛЬНОЕ ОБЕСПЕЧЕНИЕ"
 
 #. module: base
@@ -38008,13 +38008,13 @@ msgstr ""
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_customer_form
 msgid "Odoo helps you easily track all activities related to a customer."
-msgstr ""
+msgstr "Odoo помогает легко отслеживать все действия, связанные с клиентом."
 "Odoo помогает вам легко отслеживать все действия, связанные с клиентом."
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_supplier_form
 msgid "Odoo helps you easily track all activities related to a vendor."
-msgstr ""
+msgstr "Odoo помогает легко отслеживать все действия, связанные с поставщиком."
 "Odoo помогает вам легко отслеживать все действия, связанные с поставщиком."
 
 #. module: base
@@ -38247,7 +38247,7 @@ msgstr "Разрешен только один курс валюты в день
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_decimal_precision_name_uniq
 msgid "Only one value can be defined for each given usage!"
-msgstr ""
+msgstr "Для каждого назначения можно определить только одно значение!"
 "Для каждого конкретного использования может быть определено только одно "
 "значение!"
 
@@ -38353,7 +38353,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_client__res_model
 msgid "Optional model, mostly used for needactions."
-msgstr ""
+msgstr "Необязательная модель, используемая главным образом для действий, требующих внимания."
 "Необязательная модель, в основном используется для действий, требующих "
 "внимания."
 
@@ -38994,7 +38994,7 @@ msgstr "Файл PO"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "PO(T) format: you should edit it with a PO editor such as"
-msgstr ""
+msgstr "Формат PO(T): редактируйте файл в редакторе PO, например"
 "Формат PO(T): вы должны редактировать его с помощью редактора PO, такого как"
 
 #. module: base
@@ -39762,7 +39762,7 @@ msgstr "Путь для отображения в URL"
 #: model:ir.model.constraint,message:base.constraint_ir_act_window_path_unique
 #: model:ir.model.constraint,message:base.constraint_ir_actions_path_unique
 msgid "Path to show in the URL must be unique! Please choose another one."
-msgstr ""
+msgstr "Путь, отображаемый в URL, должен быть уникальным! Выберите другой путь."
 "Путь, отображаемый в URL, должен быть уникальным! Пожалуйста, выберите "
 "другой."
 
@@ -41117,7 +41117,7 @@ msgstr "Предоставление оплаты наложенным плат�
 #. module: base
 #: model:ir.module.module,summary:base.module_mail_mobile
 msgid "Provides push notification and redirection to the mobile app."
-msgstr ""
+msgstr "Обеспечивает push-уведомления и перенаправление в мобильное приложение."
 "Обеспечивает push-уведомления и перенаправление в мобильное приложение."
 
 #. module: base
@@ -41433,7 +41433,7 @@ msgstr "Викторины по трекам"
 #: model:ir.module.module,summary:base.module_sale_expense
 #: model:ir.module.module,summary:base.module_sale_stock
 msgid "Quotation, Sales Orders, Delivery & Invoicing Control"
-msgstr ""
+msgstr "Управление коммерческими предложениями, заказами на продажу, доставкой и выставлением счетов"
 "Коммерческое предложение, заказы на продажу, контроль доставки и выставления "
 "счетов"
 
@@ -41899,7 +41899,7 @@ msgstr "Удалить"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "Remove 'More' top-menu contextual action related to this action"
-msgstr ""
+msgstr "Удаляет контекстное действие «Ещё» из верхнего меню для этого действия"
 "Удалить контекстное действие 'Еще' в верхнем меню, связанное с этим действием"
 
 #. module: base
@@ -42662,7 +42662,7 @@ msgstr "Продажа"
 #. module: base
 #: model:ir.module.module,summary:base.module_test_sale_purchase_edi_ubl
 msgid "Sale & Purchase Order EDI Tests: Ensure Flow Robustness"
-msgstr ""
+msgstr "Тесты EDI заказов на продажу и закупку: проверка надёжности процесса"
 "Тесты EDI заказов на продажу и покупку: обеспечение надежности процессов"
 
 #. module: base
@@ -43063,7 +43063,7 @@ msgstr "Планирование и управление обслуживани�
 #. module: base
 #: model:ir.module.module,summary:base.module_industry_fsm_sale
 msgid "Schedule and track onsite operations, invoice time and material"
-msgstr ""
+msgstr "Планируйте и отслеживайте выездные операции, выставляйте счета за время и материалы"
 "Планирование и отслеживание операций на месте, выставление счетов за время и "
 "материалы"
 
@@ -43338,7 +43338,7 @@ msgstr "Продажа ваших курсов онлайн"
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale_slides
 msgid "Sell your courses using the e-commerce features of the website."
-msgstr ""
+msgstr "Продавайте свои курсы с помощью функций электронной торговли веб-сайта."
 "Продажа ваших курсов с использованием функций электронной коммерции сайта."
 
 #. module: base
@@ -43684,7 +43684,7 @@ msgstr "Маржа услуг в заказах на продажу"
 #. module: base
 #: model:ir.module.module,summary:base.module_theme_graphene
 msgid "Service, Corporate, Design, Technology, Robotics, Computers, IT, Blogs"
-msgstr ""
+msgstr "Услуги, корпоративное, дизайн, технологии, робототехника, компьютеры, ИТ, блоги"
 "Сервис, Корпоративный сектор, Дизайн, Технологии, Робототехника, Компьютеры, "
 "IT, Блоги"
 
@@ -44144,7 +44144,7 @@ msgstr "Социальные тесты (полные)"
 #. module: base
 #: model:ir.module.module,summary:base.module_social_test_full
 msgid "Social Tests: tests specific to social with all sub-modules"
-msgstr ""
+msgstr "Тесты социальных функций: специализированные тесты всех подмодулей"
 "Социальные тесты: тесты, специфичные для социальных сетей, со всеми "
 "подмодулями"
 
@@ -44367,7 +44367,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.res_partner_industry_action
 msgid "Specify industries to classify your contacts and draw up reports."
-msgstr ""
+msgstr "Укажите отрасли, чтобы классифицировать контакты и составлять отчёты."
 "Укажите отрасли для классификации ваших контактов и составления отчетов."
 
 #. module: base
@@ -44904,7 +44904,7 @@ msgstr "Подменю"
 #: model:ir.module.module,summary:base.module_hr_expense
 #: model:ir.module.module,summary:base.module_hr_payroll_expense
 msgid "Submit, validate and reinvoice employee expenses"
-msgstr ""
+msgstr "Отправляйте, утверждайте и перевыставляйте расходы сотрудников"
 "Отправка, проверка и повторное выставление счетов за расходы сотрудников"
 
 #. module: base
@@ -45681,7 +45681,7 @@ msgstr "Действие «%s» нельзя выбрать в качестве 
 #. odoo-python
 #: code:addons/base/models/res_users.py:0
 msgid "The \"App Switcher\" action cannot be selected as home action."
-msgstr ""
+msgstr "Действие «Переключатель приложений» нельзя выбрать в качестве домашнего действия."
 "Действие «Переключатель приложений» нельзя выбрать в качестве домашнего "
 "действия."
 
@@ -46256,7 +46256,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/ir_model.py:0
 msgid "The ondelete policy \"%(policy)s\" is not valid for field \"%(field)s\""
-msgstr ""
+msgstr "Политика ondelete «%(policy)s» недействительна для поля «%(field)s»"
 "Политика удаления \"%(policy)s\" недействительна для поля \"%(field)s\""
 
 #. module: base
@@ -46511,7 +46511,7 @@ msgstr "Код состояния."
 #. odoo-python
 #: code:addons/base/models/ir_model.py:0
 msgid "The table “%s” is used by another, possibly incompatible field(s)."
-msgstr ""
+msgstr "Таблица «%s» используется другим, возможно несовместимым полем или полями."
 "Таблица “%s” используется другим(и), возможно несовместимым(и) полем(ями)."
 
 #. module: base
@@ -47295,7 +47295,7 @@ msgstr "This module is used to send/receive documents with PEPPOL"
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_restaurant_appointment
 msgid "This module lets you manage online reservations for restaurant tables"
-msgstr ""
+msgstr "Этот модуль позволяет управлять онлайн-бронированием столиков в ресторане"
 "Этот модуль позволяет управлять онлайн-бронированием столиков в ресторане"
 
 #. module: base
@@ -47603,14 +47603,14 @@ msgstr ""
 #. odoo-python
 #: code:addons/image.py:0
 msgid "Too large image (above %sMpx), reduce the image size."
-msgstr ""
+msgstr "Изображение слишком большое (более %s Мпикс). Уменьшите его размер."
 "Слишком большое изображение (более %s Мпикс), уменьшите размер изображения."
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/res_users.py:0
 msgid "Too many login failures, please wait a bit before trying again."
-msgstr ""
+msgstr "Слишком много неудачных попыток входа. Подождите немного и попробуйте снова."
 "Слишком много неудачных попыток входа, подождите немного перед следующей "
 "попыткой."
 
@@ -47748,7 +47748,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,description:base.module_stock_fleet
 msgid "Transport Management: organize packs in your fleet, or carriers."
-msgstr ""
+msgstr "Управление перевозками: организуйте посылки в автопарке или перевозчиков."
 "Управление транспортом: организация упаковок в вашем флоте или перевозчиках."
 
 #. module: base
@@ -48566,7 +48566,7 @@ msgstr "Используйте '1' для \"да\" и '0' для \"нет\""
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_loyalty
 msgid "Use Coupons, Gift Cards and Loyalty programs in Point of Sale"
-msgstr ""
+msgstr "Используйте купоны, подарочные карты и программы лояльности в POS"
 "Используйте купоны, подарочные карты и программы лояльности в точках продаж"
 
 #. module: base
@@ -48710,14 +48710,14 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_fields__relation_table
 msgid "Used for custom many2many fields to define a custom relation table name"
-msgstr ""
+msgstr "Используется для пользовательских полей many2many, чтобы задать имя таблицы связи"
 "Используется для пользовательских полей many2many для определения имени "
 "пользовательской таблицы отношений"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_act_window__usage
 msgid "Used to filter menu and home actions from the user form."
-msgstr ""
+msgstr "Используется для фильтрации меню и домашних действий в форме пользователя."
 "Используется для фильтрации действий меню и домашних действий из формы "
 "пользователя."
 
@@ -48818,7 +48818,7 @@ msgstr "Записи журнала пользователя"
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_embedded_actions__user_id
 msgid "User specific embedded action. If empty, shared embedded action"
-msgstr ""
+msgstr "Встроенное действие пользователя. Если не заполнено, используется общее встроенное действие"
 "Встроенное действие, специфичное для пользователя. Если пусто — общее "
 "встроенное действие"
 
@@ -49772,7 +49772,7 @@ msgstr "Хранится ли значение в базе данных."
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_module_module_dependency__auto_install_required
 msgid "Whether this dependency blocks automatic installation of the dependent"
-msgstr ""
+msgstr "Блокирует ли эта зависимость автоматическую установку зависимого модуля"
 "Блокирует ли эта зависимость автоматическую установку зависимого модуля."
 
 #. module: base
@@ -49868,7 +49868,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/ir_actions_report.py:0
 msgid "Wkhtmltopdf failed (error code: %(error_code)s). Message: %(message)s"
-msgstr ""
+msgstr "Ошибка Wkhtmltopdf (код ошибки: %(error_code)s). Сообщение: %(message)s"
 "Ошибка Wkhtmltopdf (код ошибки: %(error_code)s). Сообщение: %(message)s"
 
 #. module: base
@@ -50318,7 +50318,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/res_lang.py:0
 msgid "You cannot delete the language which is the user's preferred language."
-msgstr ""
+msgstr "Нельзя удалить язык, выбранный пользователем как предпочтительный."
 "Вы не можете удалить язык, который является предпочтительным для "
 "пользователя."
 

@@ -310,7 +310,7 @@ msgstr "- %(name)s в %(company)s"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "- A default Customer Invoice / Vendor Bill date will be suggested."
-msgstr ""
+msgstr "— Будет предложена дата счёта клиента или счёта поставщика по умолчанию."
 "- Будет предложена дата по умолчанию для счета клиента / счета поставщика."
 
 #. module: account
@@ -330,7 +330,7 @@ msgstr "- Взнос по рассрочке"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "- The document's sequence becomes editable on all documents."
-msgstr ""
+msgstr "— Нумерация документа становится редактируемой для всех документов."
 "- Последовательность документа становится редактируемой во всех документах."
 
 #. module: account
@@ -1577,7 +1577,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_report.py:0
 msgid "A line cannot have both children and a groupby value (line '%s')."
-msgstr ""
+msgstr "Строка не может одновременно содержать дочерние строки и значение группировки (строка «%s»)."
 "Строка не может одновременно иметь дочерние элементы и значение группировки "
 "(строка '%s')."
 
@@ -1585,7 +1585,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "A line of this move is using a deprecated account, you cannot post it."
-msgstr ""
+msgstr "В одной из строк этой проводки используется устаревший счёт, поэтому провести её нельзя."
 "В одной из строк этого движения используется устаревший счёт, вы не можете "
 "его опубликовать."
 
@@ -1593,13 +1593,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/company.py:0
 msgid "A new Hard Lock Date must be posterior (or equal) to the previous one."
-msgstr ""
+msgstr "Новая дата жёсткой блокировки должна быть позже или равна предыдущей."
 "Новая дата жёсткой блокировки должна быть позже (или равна) предыдущей."
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "A note, whose content usually applies to the section or product above."
-msgstr ""
+msgstr "Примечание, содержание которого обычно относится к расположенной выше секции или продукции."
 "Примечание, содержание которого обычно относится к разделу или продукту выше."
 
 #. module: account
@@ -1674,7 +1674,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_fiscal_position_tax_tax_src_dest_uniq
 msgid "A tax fiscal position could be defined only one time on same taxes."
-msgstr ""
+msgstr "Позицию налогообложения можно определить для одних и тех же налогов только один раз."
 "Налоговая фискальная позиция может быть определена только один раз для одних "
 "и тех же налогов."
 
@@ -1784,14 +1784,14 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_move_line.py:0
 msgid "Account %s is of payable type, but is used in a sale operation."
-msgstr ""
+msgstr "Счёт %s является счётом кредиторской задолженности, но используется в операции продажи."
 "Счёт %s относится к типу «к оплате», но используется в операции продажи."
 
 #. module: account
 #. odoo-python
 #: code:addons/account/models/account_move_line.py:0
 msgid "Account %s is of receivable type, but is used in a purchase operation."
-msgstr ""
+msgstr "Счёт %s является счётом дебиторской задолженности, но используется в операции закупки."
 "Счёт %s относится к типу «к получению», но используется в операции покупки."
 
 #. module: account
@@ -2523,7 +2523,7 @@ msgstr "Добавьте контакты для уведомления..."
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Add your terms & conditions at the bottom of invoices/orders/quotations"
-msgstr ""
+msgstr "Добавьте условия в нижнюю часть счетов, заказов или коммерческих предложений"
 "Добавьте свои условия и положения в нижнюю часть счетов/заказов/предложений"
 
 #. module: account
@@ -2552,14 +2552,14 @@ msgstr "Корректировочная проводка"
 #. odoo-python
 #: code:addons/account/wizard/account_automatic_entry_wizard.py:0
 msgid "Adjusting Entry {link} {percent}%% of {amount} recognized from {date}"
-msgstr ""
+msgstr "Корректирующая запись {link}: {percent}%% от {amount}, признанная с {date}"
 "Корректировочная проводка {link} {percent}%% от {amount}, признанная с {date}"
 
 #. module: account
 #. odoo-python
 #: code:addons/account/wizard/account_automatic_entry_wizard.py:0
 msgid "Adjusting Entry {link} {percent}%% of {amount} recognized on {new_date}"
-msgstr ""
+msgstr "Корректирующая запись {link}: {percent}%% от {amount}, признанная на дату {new_date}"
 "Корректировочная проводка {link} {percent}%% от {amount}, признанная на "
 "{new_date}"
 
@@ -2668,7 +2668,7 @@ msgstr "Все наши договорные отношения регулиру
 #. odoo-python
 #: code:addons/account/wizard/account_move_reversal.py:0
 msgid "All selected moves for reversal must belong to the same company."
-msgstr ""
+msgstr "Все выбранные для сторнирования проводки должны принадлежать одной компании."
 "Все выбранные проводки для сторнирования должны принадлежать одной компании."
 
 #. module: account
@@ -3134,7 +3134,7 @@ msgstr "Применяйте НДС страны ЕС, в которую дос�
 #. module: account
 #: model:ir.model.fields,help:account.field_account_fiscal_position__country_group_id
 msgid "Apply only if delivery country matches the group."
-msgstr ""
+msgstr "Применять только если страна доставки соответствует группе."
 "Применяется только в том случае, если страна доставки соответствует группе."
 
 #. module: account
@@ -4118,14 +4118,14 @@ msgstr "Аннулированный счёт"
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "Cannot create a purchase document in a non purchase journal"
-msgstr ""
+msgstr "Нельзя создать документ закупки в журнале, не предназначенном для закупок"
 "Нельзя создать документ закупки в журнале, не предназначенном для закупок"
 
 #. module: account
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "Cannot create a sale document in a non sale journal"
-msgstr ""
+msgstr "Нельзя создать документ продажи в журнале, не предназначенном для продаж"
 "Нельзя создать документ продажи в журнале, не предназначенном для продаж"
 
 #. module: account
@@ -6137,7 +6137,7 @@ msgstr "Налоги по умолчанию, используемые при п
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "Default value for 'company_id' for %(record)s is not an integer"
-msgstr ""
+msgstr "Значение по умолчанию для «company_id» записи %(record)s не является целым числом"
 "Значение по умолчанию для company_id для %(record)s не является целым числом"
 
 #. module: account
@@ -6269,7 +6269,7 @@ msgstr "Описание"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_payment_term_form
 msgid "Description on invoice (e.g. Payment terms: 30 days after invoice date)"
-msgstr ""
+msgstr "Описание в счёте (например: условия оплаты — 30 дней после даты счёта)"
 "Описание в счёте-фактуре (например, условия оплаты: 30 дней после даты счёта)"
 
 #. module: account
@@ -8388,7 +8388,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_reversal__journal_id
 msgid "If empty, uses the journal of the journal entry to be reversed."
-msgstr ""
+msgstr "Если не заполнено, используется журнал сторнируемой записи."
 "Если не указано, используется журнал той проводки, которую нужно "
 "сторноровать."
 
@@ -8422,7 +8422,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_journal_form
 msgid "If set, this account is used to automatically balance entries."
-msgstr ""
+msgstr "Если установлено, этот счёт используется для автоматического выравнивания записей."
 "Если установлено, этот счёт используется для автоматического балансирования "
 "проводок."
 
@@ -8886,7 +8886,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_line__domain_formula
 msgid "Internal field to shorten expression_ids creation for the domain engine"
-msgstr ""
+msgstr "Внутреннее поле для сокращения создания expression_ids движком доменов"
 "Внутреннее поле для упрощения создания expression_ids для механизма домена"
 
 #. module: account
@@ -10057,7 +10057,7 @@ msgstr "Группа главной книги"
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_account_journal_group_list
 msgid "Ledger group allows managing multiple accounting standards."
-msgstr ""
+msgstr "Группа регистров позволяет управлять несколькими стандартами бухгалтерского учёта."
 "Группа главной книги позволяет управлять несколькими стандартами "
 "бухгалтерского учёта."
 
@@ -10085,7 +10085,7 @@ msgstr "Юридические примечания..."
 #: model:ir.model.fields,help:account.field_account_fiscal_position__note
 #: model:ir.model.fields,help:account.field_account_tax__invoice_legal_notes
 msgid "Legal mentions that have to be printed on the invoices."
-msgstr ""
+msgstr "Юридическая информация, которую необходимо печатать в счетах."
 "Юридические упоминания, которые должны быть напечатаны на счетах-фактурах."
 
 #. module: account
@@ -10097,7 +10097,7 @@ msgstr "Уменьшение платежа"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
 msgid "Let artificial intelligence scan your bill. Pay easily."
-msgstr ""
+msgstr "Позвольте искусственному интеллекту распознать ваш счёт. Оплачивайте легко."
 "Позвольте искусственному интеллекту сканировать ваш счёт. Платите легко."
 
 #. module: account
@@ -10681,7 +10681,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_partial_reconcile.py:0
 msgid "Missing foreign currencies on partials having ids: %s"
-msgstr ""
+msgstr "В частичных оплатах с идентификаторами %s отсутствуют иностранные валюты"
 "Отсутствуют иностранные валюты в частичных записях с идентификаторами: %s"
 
 #. module: account
@@ -11210,7 +11210,7 @@ msgstr "Заметки"
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "Nothing to export."
-msgstr ""
+msgstr "Нет данных для экспорта."
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__res_company__fiscalyear_last_month__11
@@ -11500,7 +11500,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "Only posted/cancelled journal entries can be reset to draft."
-msgstr ""
+msgstr "В черновик можно вернуть только проведённые или отменённые записи журнала."
 "Только опубликованные или отменённые записи журнала можно сбросить в "
 "черновик."
 
@@ -12046,7 +12046,7 @@ msgstr "Партнёры без банковского счёта"
 #. odoo-python
 #: code:addons/account/models/partner.py:0
 msgid "Partners that are used in hashed entries cannot be merged."
-msgstr ""
+msgstr "Контрагентов, используемых в хешированных записях, нельзя объединить."
 "Партнёры, используемые в хешированных записях, не могут быть объединены."
 
 #. module: account
@@ -13898,7 +13898,7 @@ msgstr "Защита этих записей также защитит запи�
 #. odoo-python
 #: code:addons/account/wizard/account_secure_entries_wizard.py:0
 msgid "Securing these entries will create at least one gap in the sequence."
-msgstr ""
+msgstr "Защита этих записей создаст как минимум один пропуск в нумерации."
 "Защита этих записей создаст как минимум один разрыв в последовательности."
 
 #. module: account
@@ -14233,7 +14233,7 @@ msgstr "Установить цену."
 #: model:ir.model.fields,help:account.field_res_partner__use_partner_credit_limit
 #: model:ir.model.fields,help:account.field_res_users__use_partner_credit_limit
 msgid "Set a value greater than 0.0 to activate a credit limit check"
-msgstr ""
+msgstr "Укажите значение больше 0,0, чтобы включить проверку кредитного лимита"
 "Установите значение больше 0.0 для активации проверки кредитного лимита"
 
 #. module: account
@@ -14406,7 +14406,7 @@ msgstr "Показать активные налоги"
 #: model_terms:ir.ui.view,arch_db:account.view_account_invoice_filter
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_search
 msgid "Show all records which has next action date is before today"
-msgstr ""
+msgstr "Показывать все записи, у которых дата следующего действия раньше сегодняшней"
 "Показать все записи, у которых дата следующего действия раньше сегодняшнего "
 "дня"
 
@@ -15165,7 +15165,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_lock_exception__lock_date
 msgid "Technical field giving the date the lock date was changed to."
-msgstr ""
+msgstr "Техническое поле с датой, на которую была изменена дата блокировки."
 "Техническое поле, указывающее дату, на которую была изменена дата блокировки."
 
 #. module: account
@@ -15572,7 +15572,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_account.py:0
 msgid "The code must be set for every company to which this account belongs."
-msgstr ""
+msgstr "Код должен быть указан для каждой компании, которой принадлежит этот счёт."
 "Код должен быть установлен для каждой компании, к которой относится этот "
 "счет."
 
@@ -15734,7 +15734,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_payment_term.py:0
 msgid "The days added must be a number and has to be between 0 and 31."
-msgstr ""
+msgstr "Количество добавляемых дней должно быть числом от 0 до 31."
 "Добавленные дни должны быть числом и находиться в диапазоне от 0 до 31."
 
 #. module: account
@@ -15888,7 +15888,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_external_value__foreign_vat_fiscal_position_id
 msgid "The foreign fiscal position for which this external value is made."
-msgstr ""
+msgstr "Иностранная позиция налогообложения, для которой создано это внешнее значение."
 "Иностранная фискальная позиция, для которой создано это внешнее значение."
 
 #. module: account
@@ -15975,7 +15975,7 @@ msgstr "Элемент журнала не связан с правильным 
 #: model:ir.model.fields,help:account.field_account_financial_year_op__fiscalyear_last_day
 #: model:ir.model.fields,help:account.field_account_financial_year_op__fiscalyear_last_month
 msgid "The last day of the month will be used if the chosen day doesn't exist."
-msgstr ""
+msgstr "Если выбранный день не существует, будет использован последний день месяца."
 "Если выбранного дня не существует, будет использован последний день месяца."
 
 #. module: account
@@ -16463,13 +16463,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_tax.py:0
 msgid "The tax group must have the same country_id as the tax using it."
-msgstr ""
+msgstr "У налоговой группы должен быть тот же country_id, что и у использующего её налога."
 "Налоговая группа должна иметь тот же country_id, что и использующий ее налог."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_cash_rounding__rounding_method
 msgid "The tie-breaking rule used for float rounding operations"
-msgstr ""
+msgstr "Правило разрешения равенства при округлении чисел с плавающей точкой"
 "Правило разрешения ничьих, используемое для операций округления чисел с "
 "плавающей точкой"
 
@@ -16934,7 +16934,7 @@ msgstr "Эта повторяющаяся запись создана из %s"
 #: model:ir.model.fields,help:account.field_account_bank_statement_line__auto_post_until
 #: model:ir.model.fields,help:account.field_account_move__auto_post_until
 msgid "This recurring move will be posted up to and including this date."
-msgstr ""
+msgstr "Эта повторяющаяся проводка будет проведена по указанную дату включительно."
 "Это повторяющееся перемещение будет проведено до этой даты включительно."
 
 #. module: account
@@ -17713,7 +17713,7 @@ msgstr "Использовать пакетные платежи"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Use budgets to compare actual with expected revenues and costs"
-msgstr ""
+msgstr "Используйте бюджеты для сравнения фактических доходов и расходов с плановыми"
 "Использовать бюджеты для сравнения фактических доходов и затрат с ожидаемыми"
 
 #. module: account
@@ -17774,7 +17774,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal__sequence
 msgid "Used to order Journals in the dashboard view"
-msgstr ""
+msgstr "Используется для сортировки журналов на панели управления"
 "Используется для упорядочивания журналов в представлении панели управления"
 
 #. module: account
@@ -18184,7 +18184,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_column__blank_if_zero
 msgid "When checked, 0 values will not show in this column."
-msgstr ""
+msgstr "Если установлено, нулевые значения не отображаются в этом столбце."
 "Если флажок установлен, значения 0 не будут отображаться в этом столбце."
 
 #. module: account
@@ -18231,7 +18231,7 @@ msgstr "Следует ли отображать этот журнал на па
 #. module: account
 #: model:ir.model.fields,help:account.field_account_setup_bank_manual_config__new_journal_name
 msgid "Will be used to name the Journal related to this bank account"
-msgstr ""
+msgstr "Будет использоваться для названия журнала, связанного с этим банковским счётом"
 "Будет использоваться для названия журнала, связанного с этим банковским "
 "счетом"
 
@@ -18269,14 +18269,14 @@ msgstr "Незавершенное производство"
 #. odoo-javascript
 #: code:addons/account/static/src/js/tours/account.js:0
 msgid "Write a customer name to <b>create one</b> or <b>see suggestions</b>."
-msgstr ""
+msgstr "Введите имя клиента, чтобы <b>создать его</b> или <b>посмотреть предложения</b>."
 "Введите имя клиента, чтобы <b>создать его</b> или <b>увидеть предложения</b>."
 
 #. module: account
 #. odoo-javascript
 #: code:addons/account/static/src/js/tours/account.js:0
 msgid "Write here <b>your own email address</b> to test the flow."
-msgstr ""
+msgstr "Введите здесь <b>свой адрес электронной почты</b>, чтобы проверить процесс."
 "Введите здесь <b>свой адрес электронной почты</b>, чтобы протестировать "
 "процесс."
 
@@ -18371,7 +18371,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/wizard/account_automatic_entry_wizard.py:0
 msgid "You can only change the period/account for posted journal items."
-msgstr ""
+msgstr "Изменять период или счёт можно только у проведённых записей журнала."
 "Вы можете изменить период/счет только для опубликованных статей журнала."
 
 #. module: account
@@ -18390,14 +18390,14 @@ msgstr "Вы можете сверить только опубликованны
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "You can only register payment for posted journal entries."
-msgstr ""
+msgstr "Зарегистрировать оплату можно только для проведённых записей журнала."
 "Вы можете зарегистрировать платеж только для опубликованных записей журнала."
 
 #. module: account
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "You can only request a cancellation for invoice sent to the government."
-msgstr ""
+msgstr "Запросить отмену можно только для счёта, отправленного в государственные органы."
 "Вы можете запросить отмену только для счета, отправленного в государственные "
 "органы."
 
@@ -18486,7 +18486,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/wizard/account_payment_register.py:0
 msgid "You can't create payments for entries belonging to different companies."
-msgstr ""
+msgstr "Нельзя создать платежи для записей, принадлежащих разным компаниям."
 "Вы не можете создать платежи для записей, принадлежащих разным компаниям."
 
 #. module: account
@@ -18675,7 +18675,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_move_line.py:0
 msgid "You cannot delete a tax line as it would impact the tax report"
-msgstr ""
+msgstr "Нельзя удалить строку налога, поскольку это повлияет на налоговый отчёт"
 "Вы не можете удалить налоговую строку, так как это повлияет на налоговый "
 "отчет"
 
@@ -18683,7 +18683,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_move_line.py:0
 msgid "You cannot delete journal items belonging to a locked journal entry."
-msgstr ""
+msgstr "Нельзя удалить записи журнала, относящиеся к заблокированной записи журнала."
 "Вы не можете удалить статьи журнала, относящиеся к заблокированной записи "
 "журнала."
 
@@ -18731,7 +18731,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_account.py:0
 msgid "You cannot deprecate an account that is used in a tax distribution."
-msgstr ""
+msgstr "Нельзя вывести из использования счёт, применяемый в распределении налогов."
 "Вы не можете отменить использование счета, который применяется в "
 "распределении налогов."
 
@@ -18861,7 +18861,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "You cannot modify the following readonly fields on a posted move: %s"
-msgstr ""
+msgstr "Нельзя изменить следующие поля только для чтения в проведённой проводке: %s"
 "Вы не можете изменить следующие поля только для чтения в опубликованной "
 "проводке: %s"
 
@@ -18887,7 +18887,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "You cannot post an entry in an archived journal (%(journal)s)"
-msgstr ""
+msgstr "Нельзя провести запись в архивном журнале (%(journal)s)"
 "Вы не можете опубликовать запись в заархивированном журнале (%(journal)s)"
 
 #. module: account
@@ -18948,7 +18948,7 @@ msgstr "Вы не можете сбросить заблокированную �
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 msgid "You cannot reset to draft a tax cash basis journal entry."
-msgstr ""
+msgstr "Нельзя вернуть в черновик запись журнала налогового кассового метода."
 "Вы не можете сбросить запись журнала налогового кассового метода в черновик."
 
 #. module: account
@@ -19704,7 +19704,7 @@ msgstr ""
 #. module: account
 #: model:mail.template,subject:account.email_template_edi_invoice
 msgid "{{ object.company_id.name }} Invoice (Ref {{ object.name or 'n/a' }})"
-msgstr ""
+msgstr "Счёт {{ object.company_id.name }} (ссылка {{ object.name or 'н/д' }})"
 "{{ object.company_id.name }} Счет-фактура (Ссылка {{ object.name or 'n/a' }})"
 
 #. module: account
