@@ -35,9 +35,11 @@ class DMSFieldMixin(models.AbstractModel):
         """
         f_name = "dms_directory_ids"
         if f_name not in vals and f_name in specification and not self[f_name]:
-            del specification[f_name]
-        res = super().web_save(vals, specification, next_id)
-        return res
+            # Keep the field in the response so the relational model retains its
+            # x2many datapoint. Reading relation ids only is enough for an empty
+            # or inaccessible directory and avoids reading protected DMS fields.
+            specification[f_name] = {}
+        return super().web_save(vals, specification, next_id)
 
     @api.model
     def models_to_track_dms_field_template(self):

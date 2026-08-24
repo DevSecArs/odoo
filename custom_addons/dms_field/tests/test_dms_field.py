@@ -81,6 +81,17 @@ class TestDmsField(BaseCommon):
             )
         )
 
+    def test_web_save_without_directory_keeps_x2many_value(self):
+        self.assertFalse(self.partner.dms_directory_ids)
+        [values] = self.partner.web_save(
+            {"name": "Updated partner"},
+            {
+                "name": {},
+                "dms_directory_ids": {"fields": {"display_name": {}}},
+            },
+        )
+        self.assertEqual(values["dms_directory_ids"], [])
+
     def test_dms_access_group_constrains_dms_field_ref(self):
         group = self.env["dms.access.group"].create(
             {
