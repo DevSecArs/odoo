@@ -1,0 +1,13 @@
+<odoo>
+    <record id="hr_applicant_view_form_offer_pdf" model="ir.ui.view">
+        <field name="name">hr.applicant.form.offer.pdf</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_open_offer_pdf_wizard" string="Prepare and send PDF offer" type="object"
+                        class="btn-primary" groups="hr_recruitment.group_hr_recruitment_user"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<odoo>
+    <record id="rule_offer_pdf_document_company" model="ir.rule">
+        <field name="name">Offer PDF document company</field>
+        <field name="model_id" ref="model_mail_template_offer_pdf_document"/>
+        <field name="domain_force">['|', ('template_id.offer_pdf_company_id', '=', False), ('template_id.offer_pdf_company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_manager'))]"/>
+    </record>
+    <record id="rule_offer_pdf_field_company" model="ir.rule">
+        <field name="name">Offer PDF field company</field>
+        <field name="model_id" ref="model_mail_template_offer_pdf_field"/>
+        <field name="domain_force">['|', ('document_id.template_id.offer_pdf_company_id', '=', False), ('document_id.template_id.offer_pdf_company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_manager'))]"/>
+    </record>
+</odoo>

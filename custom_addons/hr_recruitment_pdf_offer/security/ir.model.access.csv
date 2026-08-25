@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_offer_pdf_document_manager,offer.pdf.document.manager,model_mail_template_offer_pdf_document,hr_recruitment.group_hr_recruitment_manager,1,1,1,1
+access_offer_pdf_field_manager,offer.pdf.field.manager,model_mail_template_offer_pdf_field,hr_recruitment.group_hr_recruitment_manager,1,1,1,1
+access_offer_pdf_send_wizard_user,offer.pdf.send.wizard.user,model_hr_offer_pdf_send_wizard,hr_recruitment.group_hr_recruitment_user,1,1,1,1
+access_offer_pdf_send_document_user,offer.pdf.send.document.user,model_hr_offer_pdf_send_document,hr_recruitment.group_hr_recruitment_user,1,1,1,1
+access_offer_pdf_send_value_user,offer.pdf.send.value.user,model_hr_offer_pdf_send_value,hr_recruitment.group_hr_recruitment_user,1,1,1,1

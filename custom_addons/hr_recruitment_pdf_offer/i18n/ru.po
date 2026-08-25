@@ -1,0 +1,253 @@
+# Translation of Odoo Server.
+#. module: hr_recruitment_pdf_offer
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template__offer_pdf_manual_enabled
+msgid "Manually complete PDF offer"
+msgstr "Заполнять PDF офера вручную"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_view_form_offer_pdf
+msgid "PDF offer"
+msgstr "PDF офера"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_applicant_view_form_offer_pdf
+msgid "Prepare and send PDF offer"
+msgstr "Подготовить и отправить PDF офера"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+#: model:mail.activity.type,name:hr_recruitment_pdf_offer.mail_activity_type_offer_pdf
+#: model:mail.activity.type,summary:hr_recruitment_pdf_offer.mail_activity_type_offer_pdf
+#: model:ir.actions.act_window,name:hr_recruitment_pdf_offer.action_hr_offer_pdf_send_wizard
+msgid "Prepare PDF offer"
+msgstr "Подготовить PDF офера"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "Refresh preview"
+msgstr "Обновить предпросмотр"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "Back"
+msgstr "Назад"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "Next"
+msgstr "Следующий"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "Done"
+msgstr "Готово"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__manual
+msgid "Manual input"
+msgstr "Ручной ввод"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__candidate_name
+msgid "Candidate name"
+msgstr "ФИО кандидата"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__candidate_address
+msgid "Candidate address"
+msgstr "Адрес кандидата"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__job_name
+msgid "Job position"
+msgstr "Должность"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__department_name
+msgid "Department"
+msgstr "Подразделение"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__salary_proposed
+msgid "Proposed salary"
+msgstr "Предлагаемый оклад"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__current_date
+msgid "Current date"
+msgstr "Текущая дата"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__company_name
+msgid "Company name"
+msgstr "Название компании"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__recruiter_name
+msgid "Recruiter name"
+msgstr "Имя рекрутера"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__static
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__default_text
+msgid "Static text"
+msgstr "Постоянный текст"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "PDF document"
+msgstr "PDF-документ"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "Fields"
+msgstr "Поля"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template__offer_pdf_company_id
+msgid "PDF offer company"
+msgstr "Компания PDF-офера"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_hr_recruitment_stage__offer_mail_template_id
+msgid "Manual PDF offer template"
+msgstr "Шаблон PDF-офера с ручным заполнением"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_view_form_offer_pdf
+msgid "Source PDFs are kept separately and are never attached to the email unchanged."
+msgstr "Исходные PDF хранятся отдельно и никогда не прикладываются к письму без заполнения."
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "Values have changed. Refresh the preview before continuing."
+msgstr "Значения изменены. Обновите предпросмотр перед продолжением."
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template__offer_pdf_document_ids
+msgid "Offer PDFs"
+msgstr "PDF-документы офера"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__pdf_file
+msgid "Source PDF"
+msgstr "Исходный PDF"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__pdf_filename
+msgid "Source filename"
+msgstr "Имя исходного файла"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__pdf_mimetype
+msgid "MIME type"
+msgstr "Тип MIME"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__pdf_checksum
+msgid "PDF checksum"
+msgstr "Контрольная сумма PDF"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__field_ids
+msgid "PDF fields"
+msgstr "Поля PDF"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__field_count
+msgid "Detected fields"
+msgstr "Обнаружено полей"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__last_checked
+msgid "Last validation"
+msgstr "Последняя проверка"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__validation_state
+msgid "Validation status"
+msgstr "Статус проверки"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__validation_message
+msgid "Validation message"
+msgstr "Сообщение проверки"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__pdf_field_name
+msgid "PDF field name"
+msgstr "Техническое имя поля PDF"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__label
+msgid "Label"
+msgstr "Подпись"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__default_source
+msgid "Default value"
+msgstr "Значение по умолчанию"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__required
+msgid "Required"
+msgstr "Обязательное"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__multiline
+msgid "Multiline"
+msgstr "Многострочное"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_hr_offer_pdf_send_value__label
+msgid "Field"
+msgstr "Поле"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_hr_offer_pdf_send_value__value
+msgid "Value"
+msgstr "Значение"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_hr_offer_pdf_send_value__sequence
+msgid "Sequence"
+msgstr "Порядок"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_hr_offer_pdf_send_value__required
+msgid "Required"
+msgstr "Обязательное"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_hr_offer_pdf_send_value__multiline
+msgid "Multiline"
+msgstr "Многострочное"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_document__validation_state__draft
+msgid "Not checked"
+msgstr "Не проверен"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_document__validation_state__valid
+msgid "Valid"
+msgstr "Корректен"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_document__validation_state__invalid
+msgid "Invalid"
+msgstr "Некорректен"

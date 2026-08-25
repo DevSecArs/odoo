@@ -1,0 +1,6 @@
+from . import offer_pdf_service
+from . import mail_template
+from . import offer_pdf_document
+from . import offer_pdf_field
+from . import hr_applicant
+from . import hr_recruitment_stage

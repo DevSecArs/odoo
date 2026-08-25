@@ -1,0 +1,59 @@
+<odoo>
+    <record id="mail_template_view_form_offer_pdf" model="ir.ui.view">
+        <field name="name">mail.template.form.offer.pdf</field>
+        <field name="model">mail.template</field>
+        <field name="inherit_id" ref="mail.email_template_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="PDF offer" name="offer_pdf" groups="hr_recruitment.group_hr_recruitment_manager">
+                    <group>
+                        <field name="offer_pdf_manual_enabled"/>
+                        <field name="offer_pdf_company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <div class="alert alert-info" invisible="not offer_pdf_manual_enabled">
+                        Source PDFs are kept separately and are never attached to the email unchanged.
+                    </div>
+                    <field name="offer_pdf_document_ids" invisible="not offer_pdf_manual_enabled">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="pdf_file" widget="pdf_viewer" filename="pdf_filename"/>
+                            <field name="pdf_filename" invisible="1"/>
+                            <field name="pdf_mimetype" invisible="1"/>
+                            <field name="field_count" readonly="1"/>
+                            <field name="validation_state" readonly="1"/>
+                            <field name="validation_message" readonly="1"/>
+                            <field name="active"/>
+                        </list>
+                        <form string="Offer PDF">
+                            <sheet>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="sequence"/>
+                                    <field name="active"/>
+                                    <field name="pdf_file" widget="pdf_viewer" filename="pdf_filename"/>
+                                    <field name="pdf_filename"/>
+                                    <field name="pdf_mimetype" invisible="1"/>
+                                    <field name="validation_state" readonly="1"/>
+                                    <field name="validation_message" readonly="1"/>
+                                </group>
+                                <field name="field_ids">
+                                    <list editable="bottom" create="0" delete="0">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="pdf_field_name"/>
+                                        <field name="label"/>
+                                        <field name="default_source"/>
+                                        <field name="default_text" invisible="default_source != 'static'"/>
+                                        <field name="required"/>
+                                        <field name="multiline"/>
+                                        <field name="active"/>
+                                    </list>
+                                </field>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

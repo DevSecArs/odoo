@@ -1,0 +1,28 @@
+.modal:has(.o_offer_pdf_wizard) .modal-dialog {
+    max-width: calc(100vw - 2rem);
+}
+
+.o_form_view .o_offer_pdf_wizard_stack {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+
+    .o_group {
+        display: block;
+        width: 100%;
+    }
+
+    .o_offer_pdf_fields_section .o_list_renderer {
+        min-height: 22vh;
+    }
+
+    .o_offer_pdf_preview_section .o_field_pdf_viewer,
+    .o_offer_pdf_preview_section .o_pdfview_iframe {
+        min-height: 70vh;
+        width: 100%;
+    }
+
+    .o_pdfview_iframe {
+        border: 1px solid var(--border-color);
+    }
+}

@@ -1,0 +1,8 @@
+<odoo noupdate="1">
+    <record id="mail_activity_type_offer_pdf" model="mail.activity.type">
+        <field name="name">Prepare PDF offer</field>
+        <field name="summary">Prepare PDF offer</field>
+        <field name="res_model">hr.applicant</field>
+        <field name="icon">fa-file-pdf-o</field>
+    </record>
+</odoo>
