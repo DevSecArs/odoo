@@ -3,7 +3,7 @@
         <field name="name">hr.offer.pdf.send.wizard.form</field>
         <field name="model">hr.offer.pdf.send.wizard</field>
         <field name="arch" type="xml">
-            <form string="Prepare PDF offer" class="o_offer_pdf_wizard" create="0" edit="1" delete="0">
+            <form string="Prepare PDF documents" class="o_offer_pdf_wizard" create="0" edit="1" delete="0">
                 <header>
                     <button name="action_previous" string="Back" type="object" class="btn-secondary" invisible="current_index == 0 or state != 'draft'"/>
                     <button name="action_refresh_preview" string="Refresh preview" type="object" class="btn-secondary" invisible="state != 'draft'"/>
@@ -51,7 +51,7 @@
         </field>
     </record>
     <record id="action_hr_offer_pdf_send_wizard" model="ir.actions.act_window">
-        <field name="name">Prepare PDF offer</field>
+        <field name="name">Prepare PDF documents</field>
         <field name="res_model">hr.offer.pdf.send.wizard</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="hr_offer_pdf_send_wizard_view_form"/>

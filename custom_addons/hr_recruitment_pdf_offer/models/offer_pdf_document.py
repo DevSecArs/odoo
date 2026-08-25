@@ -9,10 +9,14 @@ from .offer_pdf_service import MAX_PDF_SIZE, inspect_pdf
 
 class OfferPdfDocument(models.Model):
     _name = 'mail.template.offer.pdf.document'
-    _description = 'Manual Offer PDF Document'
+    _description = 'Manual PDF Document'
     _order = 'sequence, id'
 
-    name = fields.Char(string='PDF document name', required=True, translate=True)
+    name = fields.Char(
+        string='Document name',
+        required=True,
+        help='Used unchanged as the name of the sent PDF attachment.',
+    )
     template_id = fields.Many2one('mail.template', required=True, ondelete='cascade', index=True)
     sequence = fields.Integer(default=10)
     active = fields.Boolean(default=True)
@@ -35,7 +39,7 @@ class OfferPdfDocument(models.Model):
         for document in self:
             if document.pdf_file:
                 if document.pdf_mimetype != 'application/pdf':
-                    raise ValidationError(_('Only application/pdf files can be used as offer documents.'))
+                    raise ValidationError(_('Only application/pdf files can be used as documents.'))
                 document._sync_pdf_fields()
 
     def _sync_pdf_fields(self):

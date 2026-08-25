@@ -11,7 +11,7 @@
                 <attribute name="string">Template name</attribute>
             </xpath>
             <xpath expr="//notebook" position="inside">
-                <page string="PDF offer" name="offer_pdf" groups="hr_recruitment.group_hr_recruitment_manager">
+                <page string="PDF documents" name="offer_pdf" groups="hr_recruitment.group_hr_recruitment_manager">
                     <group>
                         <field name="offer_pdf_manual_enabled"/>
                         <field name="offer_pdf_company_id" groups="base.group_multi_company"/>
@@ -34,7 +34,7 @@
                                     string="Configure PDF fields" icon="fa-cog"
                                     invisible="not id or validation_state != 'valid'"/>
                         </list>
-                        <form string="Offer PDF" class="o_offer_pdf_document_form">
+                        <form string="PDF document" class="o_offer_pdf_document_form">
                             <sheet>
                                 <group>
                                     <field name="name"/>
@@ -89,7 +89,7 @@
         <field name="name">mail.template.offer.pdf.document.form</field>
         <field name="model">mail.template.offer.pdf.document</field>
         <field name="arch" type="xml">
-            <form string="Offer PDF">
+            <form string="PDF document">
                 <sheet>
                     <group>
                         <field name="name"/>

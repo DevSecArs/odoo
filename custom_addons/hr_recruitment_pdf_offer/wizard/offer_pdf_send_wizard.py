@@ -1,5 +1,4 @@
 import base64
-import re
 
 from odoo import Command, _, api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
@@ -8,14 +7,13 @@ from odoo.addons.hr_recruitment_pdf_offer.models.offer_pdf_service import inspec
 
 
 def _attachment_filename(document):
-    base_name = document.source_filename or document.name or 'offer.pdf'
-    base_name = re.sub(r'[^A-Za-z0-9._-]+', '_', base_name.rsplit('.', 1)[0]).strip('._') or 'offer'
-    return '%s_filled.pdf' % base_name
+    """Use the document name selected in the template without altering it."""
+    return document.name or 'document.pdf'
 
 
 class OfferPdfSendWizard(models.TransientModel):
     _name = 'hr.offer.pdf.send.wizard'
-    _description = 'Send PDF Offer'
+    _description = 'Send PDF Documents'
 
     applicant_id = fields.Many2one('hr.applicant', required=True, readonly=True, ondelete='cascade')
     # The template can be deleted; the remaining snapshot is retained only for safe cleanup.
@@ -55,11 +53,11 @@ class OfferPdfSendWizard(models.TransientModel):
     def _check_access_and_configuration(self):
         self.ensure_one()
         if not self.env.user.has_group('hr_recruitment.group_hr_recruitment_user'):
-            raise AccessError(_('Only Recruitment users can prepare PDF offers.'))
+            raise AccessError(_('Only Recruitment users can prepare PDF documents.'))
         self.applicant_id.check_access('read')
         self.applicant_id.check_access_rule('read')
         if not self.template_id:
-            raise ValidationError(_('The email template was deleted. Start a new PDF offer process.'))
+            raise ValidationError(_('The email template was deleted. Start a new PDF document process.'))
         self.template_id._offer_pdf_check_ready(self.applicant_id)
         self.applicant_id._offer_pdf_check_email()
 
@@ -117,9 +115,9 @@ class OfferPdfSendWizard(models.TransientModel):
     def _check_draft(self):
         self.ensure_one()
         if self.state == 'sent':
-            raise UserError(_('This PDF offer has already been sent.'))
+            raise UserError(_('These PDF documents have already been sent.'))
         if self.state == 'sending':
-            raise UserError(_('This PDF offer is currently being sent.'))
+            raise UserError(_('These PDF documents are currently being sent.'))
         self._check_access_and_configuration()
 
     def _validate_current_document(self):
@@ -150,7 +148,7 @@ class OfferPdfSendWizard(models.TransientModel):
         return self.action_open()
 
     def action_save(self):
-        """Persist editable transient values without closing the offer wizard."""
+        """Persist editable transient values without closing the document wizard."""
         self._check_draft()
         return self.action_open()
 
@@ -174,7 +172,7 @@ class OfferPdfSendWizard(models.TransientModel):
         self._validate_current_document()
         documents = self.document_ids.sorted('sequence')
         if self.current_index >= len(documents) - 1:
-            raise UserError(_('This is the last document. Use Done to send the offer.'))
+            raise UserError(_('This is the last document. Use Send to deliver the documents.'))
         next_index = self.current_index + 1
         self.write({
             'current_index': next_index,
@@ -249,7 +247,7 @@ class OfferPdfSendWizard(models.TransientModel):
 
 class OfferPdfSendDocument(models.TransientModel):
     _name = 'hr.offer.pdf.send.document'
-    _description = 'PDF Offer Send Document'
+    _description = 'PDF Document to Send'
     _order = 'sequence, id'
 
     wizard_id = fields.Many2one('hr.offer.pdf.send.wizard', required=True, ondelete='cascade')
@@ -264,7 +262,7 @@ class OfferPdfSendDocument(models.TransientModel):
 
 class OfferPdfSendValue(models.TransientModel):
     _name = 'hr.offer.pdf.send.value'
-    _description = 'PDF Offer Send Value'
+    _description = 'PDF Document Field Value'
     _order = 'sequence, id'
 
     document_id = fields.Many2one('hr.offer.pdf.send.document', required=True, ondelete='cascade')

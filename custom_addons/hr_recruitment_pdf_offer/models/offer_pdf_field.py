@@ -18,7 +18,7 @@ DEFAULT_SOURCES = [
 
 class OfferPdfField(models.Model):
     _name = 'mail.template.offer.pdf.field'
-    _description = 'Manual Offer PDF Field'
+    _description = 'Manual PDF Document Field'
     _order = 'sequence, id'
 
     document_id = fields.Many2one('mail.template.offer.pdf.document', required=True, ondelete='cascade', index=True)

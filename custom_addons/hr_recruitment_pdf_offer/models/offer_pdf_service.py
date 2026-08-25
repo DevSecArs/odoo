@@ -1,4 +1,4 @@
-"""Narrow, defensive AcroForm reader and writer used by the offer workflow."""
+"""Narrow, defensive AcroForm reader and writer used by the document workflow."""
 
 import io
 import re

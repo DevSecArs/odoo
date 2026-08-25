@@ -58,17 +58,17 @@ class OfferPdfCase(TransactionCase):
 
     def create_template_with_document(self, document_bytes=None):
         template = self.env['mail.template'].create({
-            'name': 'PDF offer',
+            'name': 'PDF documents',
             'model_id': self.env['ir.model']._get('hr.applicant').id,
-            'subject': 'Offer',
+            'subject': 'Document',
             'body_html': '<p>Hello</p>',
             'offer_pdf_manual_enabled': True,
             'offer_pdf_company_id': self.env.company.id,
         })
         document = self.env['mail.template.offer.pdf.document'].create({
-            'name': 'Offer',
+            'name': 'Document.pdf',
             'template_id': template.id,
-            'pdf_filename': 'offer.pdf',
+            'pdf_filename': 'document.pdf',
             'pdf_file': base64.b64encode(document_bytes or self.make_pdf()),
         })
         return template, document

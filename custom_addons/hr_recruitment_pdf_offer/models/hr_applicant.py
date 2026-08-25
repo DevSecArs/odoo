@@ -5,18 +5,18 @@ from odoo.exceptions import AccessError, ValidationError
 class HrApplicant(models.Model):
     _inherit = 'hr.applicant'
 
-    offer_pdf_activity_id = fields.Many2one('mail.activity', string='PDF offer activity', copy=False, readonly=True)
+    offer_pdf_activity_id = fields.Many2one('mail.activity', string='PDF document activity', copy=False, readonly=True)
 
     def _offer_pdf_check_user(self):
         if not self.env.user.has_group('hr_recruitment.group_hr_recruitment_user'):
-            raise AccessError(_('Only Recruitment users can prepare PDF offers.'))
+            raise AccessError(_('Only Recruitment users can prepare PDF documents.'))
         self.check_access('read')
         self.check_access_rule('read')
 
     def _offer_pdf_check_email(self):
         self.ensure_one()
         if not self.email_from and not (self.partner_id and self.partner_id.email):
-            raise ValidationError(_('The applicant must have an email address before preparing an offer.'))
+            raise ValidationError(_('The applicant must have an email address before preparing a document.'))
 
     def action_open_offer_pdf_wizard(self):
         self.ensure_one()
@@ -30,7 +30,7 @@ class HrApplicant(models.Model):
                 '|', ('offer_pdf_company_id', '=', False), ('offer_pdf_company_id', '=', self.company_id.id),
             ], order='id', limit=1)
         if not template:
-            raise ValidationError(_('No enabled manual PDF offer template is available for this applicant.'))
+            raise ValidationError(_('No enabled manual PDF document template is available for this applicant.'))
         template._offer_pdf_check_ready(self)
         wizard = self.env['hr.offer.pdf.send.wizard'].create({
             'applicant_id': self.id,
@@ -75,7 +75,7 @@ class HrApplicant(models.Model):
         activity = self.activity_schedule(
             'hr_recruitment_pdf_offer.mail_activity_type_offer_pdf',
             user_id=(self.user_id or self.env.user).id,
-            summary=_('Prepare PDF offer'),
-            note=_('Prepare the filled PDF offer before sending it to the candidate.'),
+            summary=_('Prepare PDF documents'),
+            note=_('Prepare the completed PDF documents before sending them to the candidate.'),
         )
         self.offer_pdf_activity_id = activity

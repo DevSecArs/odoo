@@ -5,7 +5,7 @@ class TestOfferPdfStageTrigger(OfferPdfCase):
     def test_stage_change_creates_one_activity_without_sending_email(self):
         template, _document = self.create_template_with_document()
         stage = self.env['hr.recruitment.stage'].create({
-            'name': 'Offer',
+            'name': 'Document',
             'offer_mail_template_id': template.id,
         })
         applicant = self.env['hr.applicant'].create({

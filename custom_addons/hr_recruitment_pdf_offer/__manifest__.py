@@ -1,6 +1,6 @@
 {
-    'name': 'Recruitment PDF Offer',
-    'summary': 'Manually complete AcroForm offer PDFs before sending them',
+    'name': 'Recruitment PDF Documents',
+    'summary': 'Manually complete AcroForm PDF documents before sending them',
     'version': '18.0.1.0.0',
     'category': 'Human Resources/Recruitment',
     'license': 'LGPL-3',

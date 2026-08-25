@@ -21,9 +21,9 @@ class TestOfferPdfWizard(OfferPdfCase):
         name_field = self.document.field_ids.filtered(lambda field: field.pdf_field_name == 'candidate_name')
         name_field.write({'default_source': 'candidate_name', 'required': True})
         self.env['mail.template.offer.pdf.document'].create({
-            'name': 'Second offer',
+            'name': 'Second document.pdf',
             'template_id': self.template.id,
-            'pdf_filename': 'second_offer.pdf',
+            'pdf_filename': 'second_document.pdf',
             'pdf_file': self.document.pdf_file,
         })
         wizard = self.env['hr.offer.pdf.send.wizard'].create({
@@ -95,6 +95,7 @@ class TestOfferPdfWizard(OfferPdfCase):
         self.assertEqual(address_field._get_default_value(self.applicant), '')
 
     def test_one_document_uses_done_and_rejects_multiple_applicants(self):
+        self.document.name = 'Employment agreement.pdf'
         wizard = self.env['hr.offer.pdf.send.wizard'].create({
             'applicant_id': self.applicant.id,
             'template_id': self.template.id,
@@ -102,7 +103,7 @@ class TestOfferPdfWizard(OfferPdfCase):
         self.assertEqual(wizard.document_count, 1)
         self.assertEqual(wizard.current_index, 0)
         self.assertEqual(wizard.current_document_id, wizard.document_ids)
-        self.assertEqual(_attachment_filename(wizard.current_document_id), 'offer_filled.pdf')
+        self.assertEqual(_attachment_filename(wizard.current_document_id), 'Employment agreement.pdf')
 
     def test_template_can_be_removed_while_a_wizard_snapshot_exists(self):
         wizard = self.env['hr.offer.pdf.send.wizard'].create({
