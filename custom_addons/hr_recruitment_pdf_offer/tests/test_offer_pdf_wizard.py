@@ -20,6 +20,12 @@ class TestOfferPdfWizard(OfferPdfCase):
     def test_defaults_can_be_edited_and_required_blocks_navigation(self):
         name_field = self.document.field_ids.filtered(lambda field: field.pdf_field_name == 'candidate_name')
         name_field.write({'default_source': 'candidate_name', 'required': True})
+        self.env['mail.template.offer.pdf.document'].create({
+            'name': 'Second offer',
+            'template_id': self.template.id,
+            'pdf_filename': 'second_offer.pdf',
+            'pdf_file': self.document.pdf_file,
+        })
         wizard = self.env['hr.offer.pdf.send.wizard'].create({
             'applicant_id': self.applicant.id,
             'template_id': self.template.id,
@@ -28,8 +34,10 @@ class TestOfferPdfWizard(OfferPdfCase):
         self.assertEqual(value.value, 'Иванов Иван Иванович')
         value.value = 'Иванов И. И.'
         self.assertTrue(wizard.preview_stale)
-        with self.assertRaises(ValidationError):
-            wizard.action_next()
+        wizard.action_next()
+        self.assertEqual(wizard.current_index, 1)
+        wizard.action_previous()
+        self.assertEqual(value.value, 'Иванов И. И.')
         wizard.action_refresh_preview()
         self.assertFalse(wizard.preview_stale)
         self.assertEqual(value.value, 'Иванов И. И.')
@@ -55,6 +63,24 @@ class TestOfferPdfWizard(OfferPdfCase):
             lambda item: item.pdf_field_name == 'candidate_address'
         )
         self.assertEqual(value.value, 'г. Москва, ул. Пример, д. 1')
+
+    def test_wizard_uses_pdf_fields_when_a_legacy_mapping_is_incomplete(self):
+        """A missing configuration row must not prevent a PDF from being filled."""
+        self.document.field_ids.filtered(
+            lambda field: field.pdf_field_name == 'candidate_address'
+        ).unlink()
+
+        wizard = self.env['hr.offer.pdf.send.wizard'].create({
+            'applicant_id': self.applicant.id,
+            'template_id': self.template.id,
+        })
+
+        self.assertEqual(
+            wizard.current_document_id.value_ids.mapped('pdf_field_name'),
+            ['candidate_name', 'candidate_address'],
+        )
+        wizard.action_refresh_preview()
+        self.assertFalse(wizard.preview_stale)
 
     def test_candidate_address_never_uses_partner_email_as_an_address(self):
         partner = self.env['res.partner'].create({

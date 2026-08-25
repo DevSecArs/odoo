@@ -4,7 +4,7 @@ import re
 from odoo import Command, _, api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 
-from odoo.addons.hr_recruitment_pdf_offer.models.offer_pdf_service import render_pdf
+from odoo.addons.hr_recruitment_pdf_offer.models.offer_pdf_service import inspect_pdf, render_pdf
 
 
 def _attachment_filename(document):
@@ -69,21 +69,36 @@ class OfferPdfSendWizard(models.TransientModel):
             return
         commands = []
         for document in self.template_id.offer_pdf_document_ids.filtered('active').sorted('sequence'):
+            source_pdf = base64.b64decode(document.pdf_file)
+            configured_fields = {
+                field.pdf_field_name: field
+                for field in document.field_ids.filtered('active')
+            }
+            fallback_sequence = max(
+                document.field_ids.filtered('active').mapped('sequence'), default=0
+            )
+            value_commands = []
+            for index, discovered in enumerate(inspect_pdf(source_pdf), start=1):
+                field = configured_fields.get(discovered['name'])
+                value_commands.append(Command.create({
+                    'source_field_id': field.id if field else False,
+                    'pdf_field_name': discovered['name'],
+                    'label': field.label if field else discovered['label'],
+                    'sequence': field.sequence if field else fallback_sequence + index,
+                    'required': field.required if field else False,
+                    'multiline': discovered['multiline'],
+                    'value': field._get_default_value(self.applicant_id) if field else '',
+                }))
             commands.append(Command.create({
                 'source_document_id': document.id,
                 'name': document.name,
                 'sequence': document.sequence,
                 'source_pdf': document.pdf_file,
                 'source_filename': document.pdf_filename,
-                'value_ids': [Command.create({
-                    'source_field_id': field.id,
-                    'pdf_field_name': field.pdf_field_name,
-                    'label': field.label,
-                    'sequence': field.sequence,
-                    'required': field.required,
-                    'multiline': field.multiline,
-                    'value': field._get_default_value(self.applicant_id),
-                }) for field in document.field_ids.filtered('active').sorted('sequence')],
+                # Always use the fields found in this exact PDF snapshot.  A
+                # legacy or partly saved mapping must not omit a PDF field and
+                # make previewing or sending impossible.
+                'value_ids': value_commands,
             }))
         self.write({'document_ids': commands})
         current = self.document_ids.sorted('sequence')[:1]
@@ -157,8 +172,6 @@ class OfferPdfSendWizard(models.TransientModel):
     def action_next(self):
         self._check_draft()
         self._validate_current_document()
-        if self.preview_stale:
-            raise ValidationError(_('Update the PDF preview before continuing.'))
         documents = self.document_ids.sorted('sequence')
         if self.current_index >= len(documents) - 1:
             raise UserError(_('This is the last document. Use Done to send the offer.'))

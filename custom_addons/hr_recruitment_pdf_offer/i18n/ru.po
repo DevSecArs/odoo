@@ -46,8 +46,8 @@ msgstr "Следующий"
 
 #. module: hr_recruitment_pdf_offer
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
-msgid "Done"
-msgstr "Готово"
+msgid "Send"
+msgstr "Отправить"
 
 #. module: hr_recruitment_pdf_offer
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
@@ -151,8 +151,8 @@ msgstr "Исходные PDF хранятся отдельно и никогда
 
 #. module: hr_recruitment_pdf_offer
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
-msgid "Values have changed. Refresh the preview before continuing."
-msgstr "Значения изменены. Обновите предпросмотр перед продолжением."
+msgid "Values have changed. Refresh the preview to view current values."
+msgstr "Значения изменены. Обновите предпросмотр, чтобы увидеть актуальные значения."
 
 #. module: hr_recruitment_pdf_offer
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template__offer_pdf_document_ids

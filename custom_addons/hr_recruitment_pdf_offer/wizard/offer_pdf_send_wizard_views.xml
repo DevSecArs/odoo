@@ -8,7 +8,7 @@
                     <button name="action_previous" string="Back" type="object" class="btn-secondary" invisible="current_index == 0 or state != 'draft'"/>
                     <button name="action_refresh_preview" string="Refresh preview" type="object" class="btn-secondary" invisible="state != 'draft'"/>
                     <button name="action_next" string="Next" type="object" class="btn-primary" invisible="current_index + 1 >= document_count or state != 'draft'"/>
-                    <button name="action_done" string="Done" type="object" class="btn-primary" invisible="current_index + 1 != document_count or state not in ('draft', 'failed')"/>
+                    <button name="action_done" string="Send" type="object" class="btn-primary" invisible="current_index + 1 != document_count or state not in ('draft', 'failed')"/>
                 </header>
                 <sheet>
                     <field name="state" invisible="1"/>
@@ -23,7 +23,7 @@
                         <field name="step_label" string="Document" readonly="1"/>
                     </group>
                     <div class="alert alert-warning" invisible="not preview_stale">
-                        Values have changed. Refresh the preview before continuing.
+                        Values have changed. Refresh the preview to view current values.
                     </div>
                     <div class="o_offer_pdf_wizard_stack">
                         <group string="Fields" class="o_offer_pdf_fields_section">
