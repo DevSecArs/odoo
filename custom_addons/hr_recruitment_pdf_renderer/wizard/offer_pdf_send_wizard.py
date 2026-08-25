@@ -3,7 +3,7 @@ import base64
 from odoo import Command, _, api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 
-from odoo.addons.hr_recruitment_pdf_offer.models.offer_pdf_service import inspect_pdf, render_pdf
+from odoo.addons.hr_recruitment_pdf_renderer.models.offer_pdf_service import inspect_pdf, render_pdf
 
 
 def _attachment_filename(document):
@@ -107,7 +107,7 @@ class OfferPdfSendWizard(models.TransientModel):
     def action_open(self):
         self.ensure_one()
         action = self.env['ir.actions.act_window']._for_xml_id(
-            'hr_recruitment_pdf_offer.action_hr_offer_pdf_send_wizard'
+            'hr_recruitment_pdf_renderer.action_hr_offer_pdf_send_wizard'
         )
         action.update({'res_id': self.id, 'target': 'new'})
         return action

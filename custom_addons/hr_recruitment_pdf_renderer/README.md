@@ -1,6 +1,6 @@
-# Recruitment PDF Documents
+# PDF-документы для подбора персонала
 
-`hr_recruitment_pdf_offer` lets a recruitment user complete AcroForm PDF documents for one applicant before an email template is sent.
+`hr_recruitment_pdf_renderer` lets a recruitment user complete AcroForm PDF documents for one applicant before an email template is sent.
 
 ## Installation and configuration
 

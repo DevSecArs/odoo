@@ -67,13 +67,13 @@ class HrApplicant(models.Model):
             return
         if template.offer_pdf_company_id and template.offer_pdf_company_id != self.company_id:
             return
-        activity_type = self.env.ref('hr_recruitment_pdf_offer.mail_activity_type_offer_pdf')
+        activity_type = self.env.ref('hr_recruitment_pdf_renderer.mail_activity_type_offer_pdf')
         existing = self.activity_ids.filtered(lambda activity: activity.activity_type_id == activity_type)
         if existing:
             self.offer_pdf_activity_id = existing[:1]
             return
         activity = self.activity_schedule(
-            'hr_recruitment_pdf_offer.mail_activity_type_offer_pdf',
+            'hr_recruitment_pdf_renderer.mail_activity_type_offer_pdf',
             user_id=(self.user_id or self.env.user).id,
             summary=_('Prepare PDF documents'),
             note=_('Prepare the completed PDF documents before sending them to the candidate.'),

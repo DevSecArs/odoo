@@ -1,5 +1,5 @@
 from odoo.exceptions import ValidationError
-from odoo.addons.hr_recruitment_pdf_offer.wizard.offer_pdf_send_wizard import _attachment_filename
+from odoo.addons.hr_recruitment_pdf_renderer.wizard.offer_pdf_send_wizard import _attachment_filename
 
 from .common import OfferPdfCase
 

@@ -1,6 +1,6 @@
 {
-    'name': 'Recruitment PDF Documents',
-    'summary': 'Manually complete AcroForm PDF documents before sending them',
+    'name': 'PDF-документы для подбора персонала',
+    'summary': 'Ручное заполнение PDF-документов AcroForm перед отправкой',
     'version': '18.0.1.0.0',
     'category': 'Human Resources/Recruitment',
     'license': 'LGPL-3',
@@ -16,7 +16,7 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'hr_recruitment_pdf_offer/static/src/scss/offer_pdf_wizard.scss',
+            'hr_recruitment_pdf_renderer/static/src/scss/offer_pdf_wizard.scss',
         ],
     },
     'installable': True,

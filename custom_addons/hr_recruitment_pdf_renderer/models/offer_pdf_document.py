@@ -105,7 +105,7 @@ class OfferPdfDocument(models.Model):
             'res_id': self.id,
             'view_mode': 'form',
             'view_id': self.env.ref(
-                'hr_recruitment_pdf_offer.mail_template_offer_pdf_document_view_form'
+                'hr_recruitment_pdf_renderer.mail_template_offer_pdf_document_view_form'
             ).id,
             'target': 'new',
             'context': {'dialog_size': 'extra-large'},
