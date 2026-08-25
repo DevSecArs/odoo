@@ -50,6 +50,26 @@ msgid "Done"
 msgstr "Готово"
 
 #. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "Save"
+msgstr "Сохранить"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form
+msgid "Cancel"
+msgstr "Отменить"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_view_form_offer_pdf
+msgid "Template name"
+msgstr "Название шаблона"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_document__name
+msgid "PDF document name"
+msgstr "Название PDF-документа"
+
+#. module: hr_recruitment_pdf_offer
 #: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__manual
 msgid "Manual input"
 msgstr "Ручной ввод"
@@ -96,7 +116,6 @@ msgstr "Имя рекрутера"
 
 #. module: hr_recruitment_pdf_offer
 #: model:ir.model.fields.selection,name:hr_recruitment_pdf_offer.selection__mail_template_offer_pdf_field__default_source__static
-#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__default_text
 msgid "Static text"
 msgstr "Постоянный текст"
 
@@ -197,8 +216,8 @@ msgstr "Подпись"
 
 #. module: hr_recruitment_pdf_offer
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__default_source
-msgid "Default value"
-msgstr "Значение по умолчанию"
+msgid "Initial value source"
+msgstr "Источник начального значения"
 
 #. module: hr_recruitment_pdf_offer
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__required
@@ -209,6 +228,43 @@ msgstr "Обязательное"
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__multiline
 msgid "Multiline"
 msgstr "Многострочное"
+
+#. module: hr_recruitment_pdf_offer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_offer.field_mail_template_offer_pdf_field__default_text
+msgid "Static initial value"
+msgstr "Постоянное начальное значение"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_view_form_offer_pdf
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_offer_pdf_document_view_form
+msgid "For each PDF field, choose a safe source from the applicant or enter static text. Initial values can still be edited before the email is sent."
+msgstr "Для каждого поля PDF выберите безопасный источник из заявки кандидата или введите постоянный текст. Начальное значение можно изменить перед отправкой письма."
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_view_form_offer_pdf
+msgid "PDF field"
+msgstr "Поле PDF"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_view_form_offer_pdf
+msgid "Initial value"
+msgstr "Начальное значение"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_view_form_offer_pdf
+msgid "Configure PDF fields"
+msgstr "Настроить поля PDF"
+
+#. module: hr_recruitment_pdf_offer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_view_form_offer_pdf
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.mail_template_offer_pdf_document_view_form
+msgid "PDF field defaults"
+msgstr "Начальные значения полей PDF"
+
+#. module: hr_recruitment_pdf_offer
+#: code:addons/hr_recruitment_pdf_offer/wizard/offer_pdf_send_wizard.py:62
+msgid "The email template was deleted. Start a new PDF offer process."
+msgstr "Шаблон email удалён. Запустите новый процесс подготовки PDF офера."
 
 #. module: hr_recruitment_pdf_offer
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_offer.hr_offer_pdf_send_wizard_view_form

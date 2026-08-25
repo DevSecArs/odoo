@@ -18,7 +18,8 @@ class OfferPdfSendWizard(models.TransientModel):
     _description = 'Send PDF Offer'
 
     applicant_id = fields.Many2one('hr.applicant', required=True, readonly=True, ondelete='cascade')
-    template_id = fields.Many2one('mail.template', required=True, readonly=True, ondelete='restrict')
+    # The template can be deleted; the remaining snapshot is retained only for safe cleanup.
+    template_id = fields.Many2one('mail.template', readonly=True, ondelete='set null')
     document_ids = fields.One2many('hr.offer.pdf.send.document', 'wizard_id', string='Documents', readonly=True)
     current_document_id = fields.Many2one('hr.offer.pdf.send.document', readonly=True, ondelete='set null')
     current_document_name = fields.Char(related='current_document_id.name', readonly=True)
@@ -57,6 +58,8 @@ class OfferPdfSendWizard(models.TransientModel):
             raise AccessError(_('Only Recruitment users can prepare PDF offers.'))
         self.applicant_id.check_access('read')
         self.applicant_id.check_access_rule('read')
+        if not self.template_id:
+            raise ValidationError(_('The email template was deleted. Start a new PDF offer process.'))
         self.template_id._offer_pdf_check_ready(self.applicant_id)
         self.applicant_id._offer_pdf_check_email()
 
@@ -129,6 +132,11 @@ class OfferPdfSendWizard(models.TransientModel):
             'preview_stale': False,
             'state': 'draft',
         })
+        return self.action_open()
+
+    def action_save(self):
+        """Persist editable transient values without closing the offer wizard."""
+        self._check_draft()
         return self.action_open()
 
     def action_previous(self):
@@ -232,7 +240,8 @@ class OfferPdfSendDocument(models.TransientModel):
     _order = 'sequence, id'
 
     wizard_id = fields.Many2one('hr.offer.pdf.send.wizard', required=True, ondelete='cascade')
-    source_document_id = fields.Many2one('mail.template.offer.pdf.document', required=True, readonly=True, ondelete='restrict')
+    # This is an informational link only: source_pdf and field values are the immutable wizard snapshot.
+    source_document_id = fields.Many2one('mail.template.offer.pdf.document', readonly=True, ondelete='set null')
     name = fields.Char(required=True, readonly=True)
     sequence = fields.Integer(readonly=True)
     source_pdf = fields.Binary(required=True, readonly=True)
@@ -246,7 +255,8 @@ class OfferPdfSendValue(models.TransientModel):
     _order = 'sequence, id'
 
     document_id = fields.Many2one('hr.offer.pdf.send.document', required=True, ondelete='cascade')
-    source_field_id = fields.Many2one('mail.template.offer.pdf.field', required=True, readonly=True, ondelete='restrict')
+    # Keep a running wizard usable if the HR manager removes the old mapping.
+    source_field_id = fields.Many2one('mail.template.offer.pdf.field', readonly=True, ondelete='set null')
     pdf_field_name = fields.Char(required=True, readonly=True)
     label = fields.Char(string='Field', required=True, readonly=True)
     sequence = fields.Integer(string='Sequence', readonly=True)

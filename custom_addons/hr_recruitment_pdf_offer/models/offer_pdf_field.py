@@ -25,8 +25,17 @@ class OfferPdfField(models.Model):
     pdf_field_name = fields.Char(string='PDF field name', required=True, readonly=True)
     label = fields.Char(string='Label', required=True, translate=True)
     sequence = fields.Integer(default=10)
-    default_source = fields.Selection(DEFAULT_SOURCES, string='Default value', required=True, default='manual')
-    default_text = fields.Text(string='Static text')
+    default_source = fields.Selection(
+        DEFAULT_SOURCES,
+        string='Initial value source',
+        required=True,
+        default='manual',
+        help='Select a safe applicant field to prefill this PDF field, or choose static text.',
+    )
+    default_text = fields.Text(
+        string='Static initial value',
+        help='Literal text used only when the initial value source is Static text.',
+    )
     required = fields.Boolean(string='Required')
     multiline = fields.Boolean(string='Multiline', readonly=True)
     active = fields.Boolean(default=True, help='Disabled because this field is no longer present in the uploaded PDF.')
@@ -44,7 +53,7 @@ class OfferPdfField(models.Model):
         if source == 'candidate_name':
             return applicant.partner_name or ''
         if source == 'candidate_address':
-            return applicant.partner_id.contact_address or '' if applicant.partner_id else ''
+            return self._get_candidate_address(applicant)
         if source == 'job_name':
             return applicant.job_id.name or ''
         if source == 'department_name':
@@ -61,3 +70,14 @@ class OfferPdfField(models.Model):
         if source == 'static':
             return self.default_text or ''
         raise ValidationError(_('Unsupported PDF default source.'))
+
+    @staticmethod
+    def _get_candidate_address(applicant):
+        """Return only physical address components, never a partner display name or email."""
+        partner = applicant.partner_id
+        if not partner:
+            return ''
+        address_fields = ('street', 'street2', 'zip', 'city', 'state_id', 'country_id')
+        if not any(partner[field_name] for field_name in address_fields):
+            return ''
+        return (partner._display_address(without_company=True) or '').strip()

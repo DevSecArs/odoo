@@ -34,6 +34,40 @@ class TestOfferPdfWizard(OfferPdfCase):
         self.assertFalse(wizard.preview_stale)
         self.assertEqual(value.value, 'Иванов И. И.')
 
+        value.value = 'Иванов Иван И.'
+        action = wizard.action_save()
+        self.assertEqual(action['res_id'], wizard.id)
+        self.assertEqual(value.value, 'Иванов Иван И.')
+
+    def test_static_default_is_copied_to_the_wizard(self):
+        address_field = self.document.field_ids.filtered(
+            lambda field: field.pdf_field_name == 'candidate_address'
+        )
+        address_field.write({
+            'default_source': 'static',
+            'default_text': 'г. Москва, ул. Пример, д. 1',
+        })
+        wizard = self.env['hr.offer.pdf.send.wizard'].create({
+            'applicant_id': self.applicant.id,
+            'template_id': self.template.id,
+        })
+        value = wizard.current_document_id.value_ids.filtered(
+            lambda item: item.pdf_field_name == 'candidate_address'
+        )
+        self.assertEqual(value.value, 'г. Москва, ул. Пример, д. 1')
+
+    def test_candidate_address_never_uses_partner_email_as_an_address(self):
+        partner = self.env['res.partner'].create({
+            'name': 'candidate@example.test',
+            'email': 'candidate@example.test',
+        })
+        self.applicant.candidate_id.partner_id = partner
+        address_field = self.document.field_ids.filtered(
+            lambda field: field.pdf_field_name == 'candidate_address'
+        )
+        address_field.default_source = 'candidate_address'
+        self.assertEqual(address_field._get_default_value(self.applicant), '')
+
     def test_one_document_uses_done_and_rejects_multiple_applicants(self):
         wizard = self.env['hr.offer.pdf.send.wizard'].create({
             'applicant_id': self.applicant.id,
@@ -43,3 +77,16 @@ class TestOfferPdfWizard(OfferPdfCase):
         self.assertEqual(wizard.current_index, 0)
         self.assertEqual(wizard.current_document_id, wizard.document_ids)
         self.assertEqual(_attachment_filename(wizard.current_document_id), 'offer_filled.pdf')
+
+    def test_template_can_be_removed_while_a_wizard_snapshot_exists(self):
+        wizard = self.env['hr.offer.pdf.send.wizard'].create({
+            'applicant_id': self.applicant.id,
+            'template_id': self.template.id,
+        })
+        wizard_document = wizard.current_document_id
+        wizard_value = wizard_document.value_ids[:1]
+        self.template.unlink()
+        self.assertFalse(wizard.template_id)
+        self.assertFalse(wizard_document.source_document_id)
+        self.assertFalse(wizard_value.source_field_id)
+        self.assertTrue(wizard_document.source_pdf)

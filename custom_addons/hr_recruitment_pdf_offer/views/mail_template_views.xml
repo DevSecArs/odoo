@@ -4,6 +4,12 @@
         <field name="model">mail.template</field>
         <field name="inherit_id" ref="mail.email_template_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_title']/label[@for='name']" position="attributes">
+                <attribute name="string">Template name</attribute>
+            </xpath>
+            <xpath expr="//div[@class='oe_title']//h1/field[@name='name']" position="attributes">
+                <attribute name="string">Template name</attribute>
+            </xpath>
             <xpath expr="//notebook" position="inside">
                 <page string="PDF offer" name="offer_pdf" groups="hr_recruitment.group_hr_recruitment_manager">
                     <group>
@@ -24,8 +30,11 @@
                             <field name="validation_state" readonly="1"/>
                             <field name="validation_message" readonly="1"/>
                             <field name="active"/>
+                            <button name="action_open_field_configuration" type="object"
+                                    string="Configure PDF fields" icon="fa-cog"
+                                    invisible="not id or validation_state != 'valid'"/>
                         </list>
-                        <form string="Offer PDF">
+                        <form string="Offer PDF" class="o_offer_pdf_document_form">
                             <sheet>
                                 <group>
                                     <field name="name"/>
@@ -37,6 +46,11 @@
                                     <field name="validation_state" readonly="1"/>
                                     <field name="validation_message" readonly="1"/>
                                 </group>
+                                <separator string="PDF field defaults"/>
+                                <div class="alert alert-info">
+                                    For each PDF field, choose a safe source from the applicant or enter static text.
+                                    Initial values can still be edited before the email is sent.
+                                </div>
                                 <field name="field_ids">
                                     <list editable="bottom" create="0" delete="0">
                                         <field name="sequence" widget="handle"/>
@@ -48,12 +62,63 @@
                                         <field name="multiline"/>
                                         <field name="active"/>
                                     </list>
+                                    <form string="PDF field">
+                                        <sheet>
+                                            <group>
+                                                <field name="pdf_field_name"/>
+                                                <field name="label"/>
+                                                <field name="required"/>
+                                                <field name="multiline"/>
+                                                <field name="active"/>
+                                            </group>
+                                            <group string="Initial value">
+                                                <field name="default_source"/>
+                                                <field name="default_text" invisible="default_source != 'static'"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
                                 </field>
                             </sheet>
                         </form>
                     </field>
                 </page>
             </xpath>
+        </field>
+    </record>
+    <record id="mail_template_offer_pdf_document_view_form" model="ir.ui.view">
+        <field name="name">mail.template.offer.pdf.document.form</field>
+        <field name="model">mail.template.offer.pdf.document</field>
+        <field name="arch" type="xml">
+            <form string="Offer PDF">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="sequence"/>
+                        <field name="active"/>
+                        <field name="pdf_file" widget="pdf_viewer" filename="pdf_filename"/>
+                        <field name="pdf_filename"/>
+                        <field name="validation_state" readonly="1"/>
+                        <field name="validation_message" readonly="1"/>
+                    </group>
+                    <separator string="PDF field defaults"/>
+                    <div class="alert alert-info">
+                        For each PDF field, choose a safe source from the applicant or enter static text.
+                        Initial values can still be edited before the email is sent.
+                    </div>
+                    <field name="field_ids">
+                        <list editable="bottom" create="0" delete="0">
+                            <field name="sequence" widget="handle"/>
+                            <field name="pdf_field_name"/>
+                            <field name="label"/>
+                            <field name="default_source"/>
+                            <field name="default_text" invisible="default_source != 'static'"/>
+                            <field name="required"/>
+                            <field name="multiline"/>
+                            <field name="active"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
         </field>
     </record>
 </odoo>

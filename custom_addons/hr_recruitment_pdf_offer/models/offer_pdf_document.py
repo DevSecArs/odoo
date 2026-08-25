@@ -12,7 +12,7 @@ class OfferPdfDocument(models.Model):
     _description = 'Manual Offer PDF Document'
     _order = 'sequence, id'
 
-    name = fields.Char(required=True, translate=True)
+    name = fields.Char(string='PDF document name', required=True, translate=True)
     template_id = fields.Many2one('mail.template', required=True, ondelete='cascade', index=True)
     sequence = fields.Integer(default=10)
     active = fields.Boolean(default=True)
@@ -91,3 +91,18 @@ class OfferPdfDocument(models.Model):
             for document in self:
                 document._sync_pdf_fields()
         return result
+
+    def action_open_field_configuration(self):
+        """Open the detected field mapping from the template PDF tab."""
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'res_model': self._name,
+            'res_id': self.id,
+            'view_mode': 'form',
+            'view_id': self.env.ref(
+                'hr_recruitment_pdf_offer.mail_template_offer_pdf_document_view_form'
+            ).id,
+            'target': 'new',
+            'context': {'dialog_size': 'extra-large'},
+        }
