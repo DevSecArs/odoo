@@ -18,6 +18,7 @@ class OfferPdfSendWizard(models.TransientModel):
     applicant_id = fields.Many2one('hr.applicant', required=True, readonly=True, ondelete='cascade')
     # The template can be deleted; the remaining snapshot is retained only for safe cleanup.
     template_id = fields.Many2one('mail.template', readonly=True, ondelete='set null')
+    draft_id = fields.Many2one('hr.pdf.document.draft', readonly=True, ondelete='set null')
     document_ids = fields.One2many('hr.offer.pdf.send.document', 'wizard_id', string='Documents', readonly=True)
     current_document_id = fields.Many2one('hr.offer.pdf.send.document', readonly=True, ondelete='set null')
     current_document_name = fields.Char(related='current_document_id.name', readonly=True)
@@ -47,6 +48,9 @@ class OfferPdfSendWizard(models.TransientModel):
         wizards = super().create(vals_list)
         for wizard in wizards:
             wizard._check_access_and_configuration()
+            wizard.draft_id = self.env['hr.pdf.document.draft']._get_current_draft(
+                wizard.applicant_id, wizard.template_id,
+            )
             wizard._copy_configuration()
         return wizards
 
@@ -103,6 +107,24 @@ class OfferPdfSendWizard(models.TransientModel):
         if not current:
             raise ValidationError(_('The email template has no active PDF document.'))
         self.write({'current_document_id': current.id, 'current_index': 0, 'preview_stale': True})
+        self._apply_saved_draft()
+
+    def _apply_saved_draft(self):
+        """Restore values saved by the current user for this applicant and template."""
+        self.ensure_one()
+        if not self.draft_id:
+            return
+        saved_documents = {
+            document.source_document_id.id: document.value_map or {}
+            for document in self.draft_id.document_ids
+        }
+        for document in self.document_ids:
+            values = saved_documents.get(document.source_document_id.id)
+            if values is None:
+                continue
+            for value in document.value_ids:
+                if value.pdf_field_name in values:
+                    value.value = values[value.pdf_field_name]
 
     def action_open(self):
         self.ensure_one()
@@ -148,9 +170,18 @@ class OfferPdfSendWizard(models.TransientModel):
         return self.action_open()
 
     def action_save(self):
-        """Persist editable transient values without closing the document wizard."""
+        """Save entered values in a persistent draft without closing the wizard."""
         self._check_draft()
-        return self.action_open()
+        self.draft_id = self.env['hr.pdf.document.draft'].save_from_wizard(self)
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'message': _('Document values were saved.'),
+                'type': 'success',
+                'sticky': False,
+            },
+        }
 
     def action_previous(self):
         self._check_draft()
@@ -232,6 +263,7 @@ class OfferPdfSendWizard(models.TransientModel):
             if self.applicant_id.offer_pdf_activity_id:
                 self.applicant_id.offer_pdf_activity_id.action_feedback()
                 self.applicant_id.offer_pdf_activity_id = False
+            self.draft_id.unlink()
         except Exception:
             # The message did not reach the queue, therefore no technical PDF copy must be retained.
             attachments.unlink()

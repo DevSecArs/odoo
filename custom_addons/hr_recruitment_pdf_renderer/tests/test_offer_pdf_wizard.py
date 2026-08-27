@@ -44,8 +44,30 @@ class TestOfferPdfWizard(OfferPdfCase):
 
         value.value = 'Иванов Иван И.'
         action = wizard.action_save()
-        self.assertEqual(action['res_id'], wizard.id)
+        self.assertEqual(action['tag'], 'display_notification')
         self.assertEqual(value.value, 'Иванов Иван И.')
+
+    def test_saved_values_are_restored_after_the_wizard_is_closed(self):
+        wizard = self.env['hr.offer.pdf.send.wizard'].create({
+            'applicant_id': self.applicant.id,
+            'template_id': self.template.id,
+        })
+        value = wizard.current_document_id.value_ids.filtered(
+            lambda item: item.pdf_field_name == 'candidate_name'
+        )
+        value.value = 'Иванов И. И.'
+
+        wizard.action_save()
+        reopened_wizard = self.env['hr.offer.pdf.send.wizard'].create({
+            'applicant_id': self.applicant.id,
+            'template_id': self.template.id,
+        })
+        restored_value = reopened_wizard.current_document_id.value_ids.filtered(
+            lambda item: item.pdf_field_name == 'candidate_name'
+        )
+
+        self.assertTrue(reopened_wizard.draft_id)
+        self.assertEqual(restored_value.value, 'Иванов И. И.')
 
     def test_static_default_is_copied_to_the_wizard(self):
         address_field = self.document.field_ids.filtered(

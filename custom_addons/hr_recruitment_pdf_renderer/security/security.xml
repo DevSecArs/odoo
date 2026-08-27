@@ -11,4 +11,16 @@
         <field name="domain_force">['|', ('document_id.template_id.offer_pdf_company_id', '=', False), ('document_id.template_id.offer_pdf_company_id', 'in', company_ids)]</field>
         <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_manager'))]"/>
     </record>
+    <record id="rule_hr_pdf_document_draft_user" model="ir.rule">
+        <field name="name">PDF document draft owner</field>
+        <field name="model_id" ref="model_hr_pdf_document_draft"/>
+        <field name="domain_force">[('user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]"/>
+    </record>
+    <record id="rule_hr_pdf_document_draft_document_user" model="ir.rule">
+        <field name="name">PDF document draft document owner</field>
+        <field name="model_id" ref="model_hr_pdf_document_draft_document"/>
+        <field name="domain_force">[('draft_id.user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]"/>
+    </record>
 </odoo>

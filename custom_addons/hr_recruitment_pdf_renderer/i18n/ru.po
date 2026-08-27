@@ -377,3 +377,8 @@ msgstr "Это последний документ. Нажмите «Отпра�
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_applicant__offer_pdf_activity_id
 msgid "PDF document activity"
 msgstr "Действие по PDF-документам"
+
+#. module: hr_recruitment_pdf_renderer
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:178
+msgid "Document values were saved."
+msgstr "Значения документа сохранены."
