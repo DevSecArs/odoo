@@ -12,9 +12,9 @@
                     </t>
                     <h3 class="mt-2 mb-1"><t t-esc="this.props.employeeData.employee_name"/></h3>
                     <h5 class="text-muted my-0">
-                        Please enter your PIN to
-                        <t t-if="checkedIn">check out</t>
-                        <t t-else="">check in</t>
+                        Пожалуйста, введите PIN-код для
+                        <t t-if="checkedIn">выхода</t>
+                        <t t-else="">входа</t>
                     </h5>
                     <div class="o_hr_kiosk_mode_code mb-2">
                         <div class="row">
@@ -38,16 +38,16 @@
         <div class="o_hr_kiosk_mode_bottom my-4 mx-auto">
             <button class="btn btn-light btn-lg rounded-pill px-5" t-on-click="() => this.props.onClickBack()">
                 <i class="oi oi-chevron-left me-2"/>
-                <span>Go back</span>
+                <span>Назад</span>
             </button>
         </div>
     </t>
     <t t-else="">
         <div class="alert alert-danger mx-3" role="alert">
-            <h4 class="alert-heading">Error: could not find corresponding employee.</h4>
-            <p>Please return to the main menu.</p>
+            <h4 class="alert-heading">Ошибка: соответствующий сотрудник не найден.</h4>
+            <p>Вернитесь в главное меню.</p>
         </div>
-        <a role="button" class="oe_attendance_sign_in_out" aria-label="Sign out" title="Sign out"/>
+        <a role="button" class="oe_attendance_sign_in_out" aria-label="Выйти" title="Выйти"/>
     </t>
 </t>
 

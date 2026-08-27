@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 
 <t t-name="hr_attendance.companyHeader">
-    <img t-att-src="companyImageUrl" alt="Company Logo" class="o_hr_attendance_kiosk_company_image align-self-center"/>
+    <img t-att-src="companyImageUrl" alt="Логотип компании" class="o_hr_attendance_kiosk_company_image align-self-center"/>
 </t>
 
 <t t-name="hr_attendance.BarcodeScanner" t-inherit="barcodes.BarcodeScanner" t-inherit-mode="primary">
@@ -10,9 +10,9 @@
         <div class="o_hr_attendance_kiosk d-flex justify-content-around" t-att-class="{'position-relative' : !isDisplayStandalone}">
             <button t-if="isBarcodeScannerSupported" t-on-click="openMobileScanner" class="o_mobile_barcode btn btn-light btn-lg p-5 rounded-3" t-att-class="{'position-absolute' : !isDisplayStandalone}">
                 <i class="fa fa-3x fa-barcode mb-3"/>
-                <span class="d-block">Scan your badge</span>
+                <span class="d-block">Отсканируйте свой бейдж</span>
             </button>
-            <a t-if="!isDisplayStandalone" class="o_hr_attendance_install_btn btn btn-secondary d-flex align-items-center justify-content-center fw-bolder position-relative" t-att-href="installURL" target="_blank">Install</a>
+            <a t-if="!isDisplayStandalone" class="o_hr_attendance_install_btn btn btn-secondary d-flex align-items-center justify-content-center fw-bolder position-relative" t-att-href="installURL" target="_blank">Установить</a>
         </div>
     </xpath>
 </t>
@@ -31,16 +31,16 @@
                     'btn-lg rounded-3': !env.isSmall
                 }">
                 <t t-if="env.isSmall">
-                    <img src="/hr_attendance/static/img/tablet-pin.svg" alt="Manual Attendance" width="40%"/>
-                    <h6 class="m-0">Manually (optional PIN)</h6>
+                    <img src="/hr_attendance/static/img/tablet-pin.svg" alt="Ручная отметка посещаемости" width="40%"/>
+                    <h6 class="m-0">Вручную (необязательный PIN-код)</h6>
                 </t>
                 <t t-else="">
-                    <img src="/hr_attendance/static/img/tablet-pin.svg" height="170px" alt="Manual Attendance"/>
+                    <img src="/hr_attendance/static/img/tablet-pin.svg" height="170px" alt="Ручная отметка посещаемости"/>
                 </t>
             </button>
             <t t-if="!env.isSmall">
-                <h5 class="m-0">Select on Tablet</h5>
-                <em>with optional PIN code</em>
+                <h5 class="m-0">Выбрать на планшете</h5>
+                <em>с необязательным PIN-кодом</em>
             </t>
         </div>
         <div class="d-flex flex-column align-items-center text-center gap-2" t-att-style="!env.isSmall ? 'max-width: min-content;' : ''">
@@ -52,15 +52,15 @@
                     'btn-lg rounded-3': !env.isSmall
                 }">
                 <t t-if="env.isSmall">
-                    <img src="/hr_attendance/static/img/tablet-cam.svg" alt="Attendance with barcode" width="40%"/>
-                    <h6 class="m-0">Badge with Barcode</h6>
+                    <img src="/hr_attendance/static/img/tablet-cam.svg" alt="Отметка посещаемости по штрихкоду" width="40%"/>
+                    <h6 class="m-0">Бейдж со штрихкодом</h6>
                 </t>
                 <t t-else="">
-                    <img src="/hr_attendance/static/img/tablet-cam.svg" height="170px" alt="Attendance with barcode"/>
+                    <img src="/hr_attendance/static/img/tablet-cam.svg" height="170px" alt="Отметка посещаемости по штрихкоду"/>
                 </t>
             </button>
             <t t-if="!env.isSmall">
-                <h5 class="m-0 w-75">Badge with Barcode on Tablet</h5>
+                <h5 class="m-0 w-75">Бейдж со штрихкодом на планшете</h5>
             </t>
         </div>
         <div class="d-flex flex-column align-items-center text-center gap-2" t-att-style="!env.isSmall ? 'max-width: min-content;' : ''">
@@ -72,28 +72,28 @@
                     'btn-lg rounded-3': !env.isSmall
                 }">
                 <t t-if="env.isSmall">
-                    <img src="/hr_attendance/static/img/tablet-rfid.svg" alt="Manual Attendance or with barcode" width="40%"/>
-                    <h6 class="m-0">RFID Token with reader</h6>
+                    <img src="/hr_attendance/static/img/tablet-rfid.svg" alt="Ручная отметка посещаемости или по штрихкоду" width="40%"/>
+                    <h6 class="m-0">RFID-токен со считывателем</h6>
                 </t>
                 <t t-else="">
                     <img src="/hr_attendance/static/img/tablet-rfid.svg" height="170px"
-                    alt="Manual Attendance or with barcode"/>
+                    alt="Ручная отметка посещаемости или по штрихкоду"/>
                 </t>
             </button>
             <t t-if="!env.isSmall">
-                <h5 class="m-0 w-75">RFID Token with reader on tablet</h5>
+                <h5 class="m-0 w-75">RFID-токен со считывателем на планшете</h5>
             </t>
         </div>
     </div>
     <div class="o_hr_kiosk_mode_bottom my-5 mx-auto">
-        Powered by <img t-att-height="env.isSmall ? 21 : 32" src="/web/static/img/logo.png" alt="Odoo Logo"/>
+        Работает на платформе <img t-att-height="env.isSmall ? 21 : 32" src="/web/static/img/logo.png" alt="Логотип Odoo"/>
     </div>
 </t>
 
 <t t-name="hr_attendance.NoBadgeEmployeeScreen">
     <div class="alert alert-info align-items-center align-self-center d-flex gap-2" t-att-class="{'flex-wrap': env.isSmall}" style="width: fit-content;" role="alert">
         <span class="m-0" t-att-class="{'text-align-center w-100': env.isSmall}" t-att-style="!env.isSmall? 'min-width: fit-content;' : ''">
-            No Badge defined on employees. Set one to test.
+            У сотрудников не настроены бейджи. Укажите бейдж для проверки.
         </span>
         <div class="input-group">
             <input id="manual_barcode"
@@ -106,7 +106,7 @@
                 t-att-class="{'flex-grow-1': env.isSmall}"
                 t-att-style="env.isSmall? 'width: 15ch;' : ''"/>
             <button type="button" class="btn btn-primary" t-on-click="setBadgeID" t-att-class="{'flex-shrink-0': env.isSmall}">
-                Set my badge
+                Назначить мой бейдж
             </button>
         </div>
     </div>
@@ -128,10 +128,10 @@
                     t-att-class="{'align-self-center col-6': !env.isSmall}"
                     t-att-style="!env.isSmall? 'min-width: fit-content;' : ''">
                         <div>
-                            Connect an RFID reader, and scan a token.
-                            <DocumentationLink path="'/applications/hr/attendances/hardware.html'" label.translate="'Documentation'" alertLink="true"/>
+                            Подключите RFID-считыватель и отсканируйте токен.
+                            <DocumentationLink path="'/applications/hr/attendances/hardware.html'" label="'Документация'" alertLink="true"/>
                         </div>
-                        <button t-on-click="removeDemoMessage" type="button" class="btn-close float-end ms-2" title="Close"/>
+                        <button t-on-click="removeDemoMessage" type="button" class="btn-close float-end ms-2" title="Закрыть"/>
                 </div>
             </t>
             <div class="o_hr_kiosk_mode_main d-flex flex-column flex-sm-row gap-3 m-auto">
@@ -146,15 +146,15 @@
                 <t t-if="this.props.kioskMode !== 'barcode'">
                     <button t-on-click="() => this.switchDisplay('manual')"  class="btn btn-light btn-lg rounded-3">
                         <i class="fa fa-user-o me-2"/>
-                        <span >Identify Manually</span>
+                        <span>Идентифицировать вручную</span>
                     </button>
                     <span>
-                        Powered by <img height="32" src="/web/static/img/logo.png" alt="Odoo Logo"/>
+                        Работает на платформе <img height="32" src="/web/static/img/logo.png" alt="Логотип Odoo"/>
                     </span>
                 </t>
                 <t t-else="">
                     <div class="o_hr_kiosk_mode_bottom mx-auto">
-                        Powered by <img height="32" src="/web/static/img/logo.png" alt="Odoo Logo"/>
+                        Работает на платформе <img height="32" src="/web/static/img/logo.png" alt="Логотип Odoo"/>
                     </div>
                 </t>
             </div>
