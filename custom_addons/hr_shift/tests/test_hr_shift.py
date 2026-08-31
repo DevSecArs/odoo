@@ -30,6 +30,103 @@ class TestHrShift(TestHrShiftBase):
             self.planning.display_name, "2025 Week 3 (2025-01-13 - 2025-01-19)"
         )
 
+    def test_hr_shift_planning_line_incomplete_onchange_values(self):
+        """Computed fields must support the partial records created by onchange."""
+        line = self.env["hr.shift.planning.line"].new({})
+
+        self.assertEqual(line.display_name, "Unassigned")
+        self.assertFalse(line.start_time)
+        self.assertFalse(line.end_time)
+        self.assertFalse(line.start_date)
+
+    def test_daily_unassignment_is_not_restored_from_weekly_template(self):
+        self.planning.generate_shifts()
+        shift = self.planning.shift_ids.filtered(
+            lambda item: item.employee_id == self.employee_a
+        )
+        shift.template_id = self.template_morning
+        line = shift.line_ids.filtered(lambda item: item.day_number == "3")
+
+        line.action_unassign_shift()
+
+        self.assertFalse(line.template_id)
+        self.assertEqual(line.state, "unassigned")
+        line_data = next(
+            value
+            for key, value in shift.lines_data.items()
+            if str(key) == str(line.id)
+        )
+        self.assertEqual(line_data["state"], "unassigned")
+
+    def test_copy_planning_warns_and_skips_employees_on_leave(self):
+        self.planning.generate_shifts()
+        shift_a = self.planning.shift_ids.filtered(
+            lambda shift: shift.employee_id == self.employee_a
+        )
+        shift_b = self.planning.shift_ids.filtered(
+            lambda shift: shift.employee_id == self.employee_b
+        )
+        shift_a.template_id = self.template_morning
+        shift_b.template_id = self.template_afternoon
+        shift_b.line_ids.filtered(
+            lambda line: line.day_number == "3"
+        ).action_unassign_shift()
+        self.env["resource.calendar.leaves"].create(
+            {
+                "calendar_id": self.employee_a.resource_calendar_id.id,
+                "resource_id": self.employee_a.resource_id.id,
+                "date_from": "2025-01-20 08:00:00",
+                "date_to": "2025-01-20 17:00:00",
+            }
+        )
+        wizard = self.env["shift.planning.wizard"].create(
+            {
+                "generation_type": "from_planning",
+                "from_planning_id": self.planning.id,
+                "week_number": 4,
+                "year": 2025,
+                "copy_shift_details": True,
+            }
+        )
+
+        warning_action = wizard.generate()
+
+        self.assertEqual(
+            warning_action["res_model"], "shift.planning.leave.warning.wizard"
+        )
+        self.assertFalse(
+            self.env["hr.shift.planning"].search(
+                [("year", "=", 2025), ("week_number", "=", 4)]
+            )
+        )
+        warning = self.env[warning_action["res_model"]].browse(
+            warning_action["res_id"]
+        )
+        self.assertEqual(warning.employee_ids, self.employee_a)
+
+        planning_action = warning.action_generate_without_employees_on_leave()
+        planning = self.env["hr.shift.planning"].browse(planning_action["res_id"])
+        copied_shift_a = planning.shift_ids.filtered(
+            lambda shift: shift.employee_id == self.employee_a
+        )
+        copied_shift_b = planning.shift_ids.filtered(
+            lambda shift: shift.employee_id == self.employee_b
+        )
+        self.assertFalse(copied_shift_a.template_id)
+        self.assertFalse(copied_shift_a.line_ids.template_id)
+        self.assertEqual(copied_shift_b.template_id, self.template_afternoon)
+        self.assertFalse(
+            copied_shift_b.line_ids.filtered(
+                lambda line: line.day_number == "3"
+            ).template_id
+        )
+        self.assertEqual(
+            copied_shift_b.line_ids.filtered(
+                lambda line: line.day_number == "0"
+            ).template_id,
+            self.template_afternoon,
+        )
+
     def test_attendance_intervals_batch(self):
         self.planning.generate_shifts()
         self.planning.shift_ids.line_ids.template_id = self.template_morning

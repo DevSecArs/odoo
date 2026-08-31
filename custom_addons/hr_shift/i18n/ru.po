@@ -248,3 +248,15 @@ msgid "You can't plan the same week twice!"
 msgstr "Нельзя запланировать одну и ту же неделю дважды!"
 msgid "to"
 msgstr "до"
+
+msgid "Employees on leave"
+msgstr "Сотрудники в отпуске"
+
+msgid "Some employees are on leave during the selected week."
+msgstr "Некоторые сотрудники находятся в отпуске в выбранной неделе."
+
+msgid "Their shifts cannot be copied to the new planning."
+msgstr "Их смены нельзя скопировать в новый план."
+
+msgid "Create without shifts of employees on leave"
+msgstr "Создать без смен сотрудников в отпуске"

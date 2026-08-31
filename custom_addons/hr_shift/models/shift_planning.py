@@ -239,7 +239,12 @@ class ShiftPlanningShift(models.Model):
     def _group_expand_template_id(self, templates, domain):
         return self.env["hr.shift.template"].search([])
 
-    @api.depends("line_ids")
+    @api.depends(
+        "line_ids.day_number",
+        "line_ids.template_id",
+        "line_ids.state",
+        "line_ids.color",
+    )
     def _compute_lines_data(self):
         for shift in self:
             shift.lines_data = {
@@ -358,7 +363,6 @@ class ShiftPlanningLine(models.Model):
             ("holiday", "Holiday"),
         ],
         compute="_compute_state",
-        readonly=False,
         store=True,
     )
     reviewed = fields.Boolean(
@@ -392,13 +396,15 @@ class ShiftPlanningLine(models.Model):
             else:
                 shift.state = "unassigned"
 
-    @api.depends("shift_id.template_id", "state")
+    @api.depends("state")
     def _compute_template_id(self):
         for line in self:
-            if line.state in {"assigned", "unassigned"}:
-                line.template_id = line.shift_id.template_id
             if line.state in {"holiday", "on_leave"}:
                 line.template_id = False
+            else:
+                # The daily template is the source of truth. Restoring the weekly
+                # template here would immediately undo a daily unassignment.
+                line.template_id = line.template_id
 
     @api.model
     def _group_expand_template_id(self, templates, domain):
@@ -406,20 +412,28 @@ class ShiftPlanningLine(models.Model):
 
     @api.depends("day_number", "template_id", "state")
     def _compute_display_name(self):
+        weekday_by_number = dict(WEEK_DAYS_SELECTION)
+        state_by_value = dict(self._fields["state"]._description_selection(self.env))
         for line in self:
-            line.display_name = (
-                f"{_(dict(WEEK_DAYS_SELECTION).get(line.day_number))} - "
-                f"""
-                {line.template_id.name
-                or dict(
-                    self._fields['state']._description_selection(self.env)
-                )[line.state]}"""
+            day_name = weekday_by_number.get(line.day_number)
+            day_name = _(day_name) if day_name else False
+            shift_name = line.template_id.name or state_by_value.get(line.state)
+            line.display_name = " - ".join(filter(None, (day_name, shift_name))) or _(
+                "New"
             )
 
     @api.depends("planning_id", "day_number", "template_id")
     def _compute_shift_time(self):
         # TODO: Unify this calculations as we're repeating them several times
-        for shift in self.filtered("shift_id"):
+        for shift in self:
+            if not (
+                shift.planning_id.start_date
+                and shift.day_number is not False
+                and shift.template_id
+            ):
+                shift.start_time = False
+                shift.end_time = False
+                continue
             shift_date = shift.template_id._get_weekdate(
                 shift.planning_id.start_date, int(shift.day_number)
             )
@@ -429,7 +443,7 @@ class ShiftPlanningLine(models.Model):
                 and shift.template_id._prepare_time()["end_time"]
                 or {"hour": 23, "minute": 59}
             )
-            tz = pytz.timezone(shift.template_id.tz or self.env.user.tz)
+            tz = pytz.timezone(shift.template_id.tz or self.env.user.tz or "UTC")
             start_time = tz.localize(
                 datetime.combine(
                     shift_date,
@@ -451,7 +465,12 @@ class ShiftPlanningLine(models.Model):
 
     def _compute_start_date(self):
         for shift in self:
-            local_tz = pytz.timezone(shift.template_id.tz or self.env.user.tz)
+            if not shift.start_time:
+                shift.start_date = False
+                continue
+            local_tz = pytz.timezone(
+                shift.template_id.tz or self.env.user.tz or "UTC"
+            )
             shift.start_date = (
                 pytz.utc.localize(shift.start_time)
                 .astimezone(local_tz)
@@ -476,7 +495,7 @@ class ShiftPlanningLine(models.Model):
     def _is_on_leave(self):
         if not (self.start_time and self.end_time and self.employee_id):
             return False
-        local_tz = pytz.timezone(self.template_id.tz or self.env.user.tz)
+        local_tz = pytz.timezone(self.template_id.tz or self.env.user.tz or "UTC")
         start_time = fields.datetime.combine(
             pytz.utc.localize(self.start_time).astimezone(local_tz),
             self.start_time.min.time(),

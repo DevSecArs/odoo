@@ -686,3 +686,19 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_shift.res_config_settings_view_form
 msgid "to"
 msgstr ""
+
+#. module: hr_shift
+msgid "Employees on leave"
+msgstr ""
+
+#. module: hr_shift
+msgid "Some employees are on leave during the selected week."
+msgstr ""
+
+#. module: hr_shift
+msgid "Their shifts cannot be copied to the new planning."
+msgstr ""
+
+#. module: hr_shift
+msgid "Create without shifts of employees on leave"
+msgstr ""

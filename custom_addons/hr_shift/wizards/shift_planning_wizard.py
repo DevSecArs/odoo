@@ -1,6 +1,7 @@
 # Copyright 2024 Tecnativa - David Vidal
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 import logging
+from datetime import datetime, timedelta
 
 from odoo import api, fields, models
 from odoo.exceptions import UserError
@@ -58,13 +59,61 @@ class ShiftPlanningWizard(models.TransientModel):
             lambda x: x.generation_type == "from_last"
         ).from_planning_id = self.env["hr.shift.planning"]._get_last_plan()
 
+    def _get_employees_on_leave(self):
+        """Return employees whose copied assignments overlap the target week."""
+        self.ensure_one()
+        source_shifts = self.from_planning_id.shift_ids.filtered(
+            lambda shift: shift.template_id or shift.line_ids.template_id
+        )
+        employees = source_shifts.employee_id.filtered("resource_id")
+        if not employees:
+            return employees
+        week_start = datetime.fromisocalendar(self.year, self.week_number, 1)
+        week_end = week_start + timedelta(days=7)
+        leaves = self.env["resource.calendar.leaves"].search(
+            [
+                ("resource_id", "in", employees.resource_id.ids),
+                ("date_from", "<", week_end),
+                ("date_to", ">=", week_start),
+            ]
+        )
+        return employees.filtered(
+            lambda employee: employee.resource_id in leaves.resource_id
+        )
+
+    def _action_leave_warning(self, employees):
+        warning = self.env["shift.planning.leave.warning.wizard"].create(
+            {
+                "planning_wizard_id": self.id,
+                "employee_ids": [fields.Command.set(employees.ids)],
+            }
+        )
+        view = self.env.ref("hr_shift.shift_planning_leave_warning_wizard_form")
+        return {
+            "type": "ir.actions.act_window",
+            "name": self.env._("Employees on leave"),
+            "res_model": warning._name,
+            "res_id": warning.id,
+            "view_mode": "form",
+            "views": [(view.id, "form")],
+            "target": "new",
+        }
+
     def generate(self):
+        self.ensure_one()
+
         def _shift_details_data(shift_details):
-            # Prepare WEEK_DAYS_SELECTION keys
-            data = dict([(str(i), False) for i in range(7)])
-            for detail in shift_details:
-                data[detail.day_number] = detail.template_id
-            return data
+            return {
+                detail.day_number: detail.template_id for detail in shift_details
+            }
+
+        employees_on_leave = self._get_employees_on_leave()
+        if employees_on_leave and "skip_leave_employee_ids" not in self.env.context:
+            return self._action_leave_warning(employees_on_leave)
+
+        skipped_employee_ids = set(
+            self.env.context.get("skip_leave_employee_ids", [])
+        )
 
         planning = self.from_planning_id.copy(
             {
@@ -78,6 +127,8 @@ class ShiftPlanningWizard(models.TransientModel):
             for x in self.from_planning_id.shift_ids
         }
         for shift in planning.shift_ids:
+            if shift.employee_id.id in skipped_employee_ids:
+                continue
             previous_shift_data = shift_templates_dict.get(shift.employee_id)
             if not previous_shift_data:
                 continue
@@ -88,8 +139,8 @@ class ShiftPlanningWizard(models.TransientModel):
                 )
                 for line in shift.line_ids:
                     try:
-                        line.template_id = (
-                            previous_shift_details[line.day_number] or shift.template_id
+                        line.template_id = previous_shift_details.get(
+                            line.day_number, shift.template_id
                         )
                     except UserError as e:
                         # This might be cause by holidays or employee leaves. Just
@@ -102,3 +153,19 @@ class ShiftPlanningWizard(models.TransientModel):
         action["views"] = [(False, "form")]
         action["res_id"] = planning.id
         return action
+
+
+class ShiftPlanningLeaveWarningWizard(models.TransientModel):
+    _name = "shift.planning.leave.warning.wizard"
+    _description = "Confirm shift planning creation with employees on leave"
+
+    planning_wizard_id = fields.Many2one(
+        comodel_name="shift.planning.wizard", required=True, ondelete="cascade"
+    )
+    employee_ids = fields.Many2many(comodel_name="hr.employee", readonly=True)
+
+    def action_generate_without_employees_on_leave(self):
+        self.ensure_one()
+        return self.planning_wizard_id.with_context(
+            skip_leave_employee_ids=self.employee_ids.ids
+        ).generate()
