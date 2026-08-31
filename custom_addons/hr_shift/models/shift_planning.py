@@ -99,7 +99,10 @@ class ShiftPlanning(models.Model):
         for planning in self.filtered("start_date"):
             planning.year, planning.week_number, *_ = planning.start_date.isocalendar()
 
-    @api.depends("shift_ids", "shift_ids.reviewed")
+    @api.depends(
+        "shift_ids.line_ids.state",
+        "shift_ids.line_ids.reviewed",
+    )
     def _compute_issued_shift_ids(self):
         for plan in self:
             plan.issued_shift_ids = (
@@ -153,6 +156,15 @@ class ShiftPlanning(models.Model):
         self.shift_ids.unlink()
         for planning in self:
             planning.generate_shifts()
+
+    def action_delete_planning(self):
+        """Delete a planning after the explicit confirmation in the view."""
+        self.ensure_one()
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "hr_shift.shift_planning_action"
+        )
+        self.unlink()
+        return action
 
     def copy_to_planning(self):
         action = self.env["ir.actions.act_window"]._for_xml_id(
@@ -311,6 +323,12 @@ class ShiftPlanningShift(models.Model):
     def action_toggle_reviewed(self):
         self.reviewed = not self.reviewed
 
+    def action_delete_shift(self):
+        """Delete one employee shift and refresh the current planning view."""
+        self.ensure_one()
+        self.unlink()
+        return {"type": "ir.actions.client", "tag": "reload"}
+
     def action_view_shift_details(self):
         action = self.env["ir.actions.act_window"]._for_xml_id(
             "hr_shift.shift_planning_line_action"
@@ -384,7 +402,12 @@ class ShiftPlanningLine(models.Model):
                     _("This employee is on leave so can't be assigned to this shift")
                 )
 
-    @api.depends("template_id")
+    @api.depends(
+        "template_id",
+        "shift_id.planning_id.start_date",
+        "day_number",
+        "employee_id",
+    )
     def _compute_state(self):
         for shift in self:
             if shift._is_public_holiday():
@@ -493,24 +516,32 @@ class ShiftPlanningLine(models.Model):
         return False
 
     def _is_on_leave(self):
-        if not (self.start_time and self.end_time and self.employee_id):
+        if not (
+            self.planning_id.start_date
+            and self.day_number is not False
+            and self.employee_id.resource_id
+        ):
             return False
-        local_tz = pytz.timezone(self.template_id.tz or self.env.user.tz or "UTC")
-        start_time = fields.datetime.combine(
-            pytz.utc.localize(self.start_time).astimezone(local_tz),
-            self.start_time.min.time(),
+        shift_date = self.env["hr.shift.template"]._get_weekdate(
+            self.planning_id.start_date, int(self.day_number)
         )
-        end_time = fields.datetime.combine(
-            pytz.utc.localize(self.end_time).astimezone(local_tz),
-            self.end_time.max.time(),
+        timezone = pytz.timezone(
+            self.template_id.tz
+            or self.employee_id.resource_calendar_id.tz
+            or self.env.user.tz
+            or "UTC"
         )
+        start_time = timezone.localize(
+            datetime.combine(shift_date, datetime.min.time())
+        ).astimezone(pytz.UTC).replace(tzinfo=None)
+        end_time = start_time + relativedelta(days=1)
         return bool(
             self.env["resource.calendar.leaves"]
             .sudo()
             .search(
                 [
                     ("resource_id", "=", self.employee_id.resource_id.id),
-                    ("date_from", "<=", end_time),
+                    ("date_from", "<", end_time),
                     ("date_to", ">=", start_time),
                 ]
             )

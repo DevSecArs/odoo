@@ -30,6 +30,26 @@ class TestHrShift(TestHrShiftBase):
             self.planning.display_name, "2025 Week 3 (2025-01-13 - 2025-01-19)"
         )
 
+    def test_delete_shift_and_planning_actions(self):
+        self.planning.generate_shifts()
+        shift = self.planning.shift_ids[:1]
+        shift_lines = shift.line_ids
+
+        reload_action = shift.action_delete_shift()
+
+        self.assertEqual(reload_action["tag"], "reload")
+        self.assertFalse(shift.exists())
+        self.assertFalse(shift_lines.exists())
+
+        remaining_shifts = self.planning.shift_ids
+        remaining_lines = remaining_shifts.line_ids
+        planning_action = self.planning.action_delete_planning()
+
+        self.assertEqual(planning_action["res_model"], "hr.shift.planning")
+        self.assertFalse(self.planning.exists())
+        self.assertFalse(remaining_shifts.exists())
+        self.assertFalse(remaining_lines.exists())
+
     def test_hr_shift_planning_line_incomplete_onchange_values(self):
         """Computed fields must support the partial records created by onchange."""
         line = self.env["hr.shift.planning.line"].new({})
@@ -175,6 +195,34 @@ class TestHrShift(TestHrShiftBase):
         self.assertFalse(shift_a_line_1.exists())
         shift_a_line_1 = shift_a.line_ids.filtered(lambda x: x.day_number == "1")
         self.assertEqual(shift_a_line_1.template_id, template_morning)
+
+    def test_leave_recomputes_unassigned_lines_and_planning_issues(self):
+        self.planning.generate_shifts()
+        shift_a = self.planning.shift_ids.filtered(
+            lambda shift: shift.employee_id == self.employee_a
+        )
+        monday = shift_a.line_ids.filtered(lambda line: line.day_number == "0")
+        self.assertEqual(monday.state, "unassigned")
+        self.assertEqual(self.planning.issued_shifts_count, 0)
+
+        leave = self.env["resource.calendar.leaves"].create(
+            {
+                "calendar_id": self.employee_a.resource_calendar_id.id,
+                "resource_id": self.employee_a.resource_id.id,
+                "date_from": "2025-01-13 08:00:00",
+                "date_to": "2025-01-13 17:00:00",
+            }
+        )
+
+        self.assertEqual(monday.state, "on_leave")
+        self.assertEqual(self.planning.issued_shift_ids, shift_a)
+        self.assertEqual(self.planning.issued_shifts_count, 1)
+
+        leave.unlink()
+
+        self.assertEqual(monday.state, "unassigned")
+        self.assertFalse(self.planning.issued_shift_ids)
+        self.assertEqual(self.planning.issued_shifts_count, 0)
 
     @mute_logger("odoo.models.unlink")
     def test_hr_shift_planning_full(self):

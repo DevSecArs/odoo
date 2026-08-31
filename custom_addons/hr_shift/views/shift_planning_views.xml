@@ -34,6 +34,14 @@
                         invisible="state != 'assignment' or not shift_ids"
                         confirm="This will remove the current shifts assignations for this planning"
                     />
+                    <button
+                        type="object"
+                        name="action_delete_planning"
+                        class="btn btn-danger"
+                        string="Delete planning"
+                        groups="hr_shift.group_shift_manager"
+                        confirm="Delete this planning and all its employee shifts? This action cannot be undone."
+                    />
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
@@ -154,6 +162,16 @@
                                     </div>
                                 </div>
                                 <div class="text-end">
+                                    <button
+                                        type="object"
+                                        name="action_delete_planning"
+                                        class="btn btn-link text-danger"
+                                        title="Delete planning"
+                                        groups="hr_shift.group_shift_manager"
+                                        confirm="Delete this planning and all its employee shifts? This action cannot be undone."
+                                    >
+                                        <i class="fa fa-trash" role="img" />
+                                    </button>
                                     <h3>
                                         <i
                                             class="fa fa-calendar text-primary me-2"
@@ -193,6 +211,14 @@
                 <field name="week_number" />
                 <field name="start_date" />
                 <field name="end_date" />
+                <button
+                    type="object"
+                    name="action_delete_planning"
+                    icon="fa-trash"
+                    title="Delete planning"
+                    groups="hr_shift.group_shift_manager"
+                    confirm="Delete this planning and all its employee shifts? This action cannot be undone."
+                />
             </list>
         </field>
     </record>
@@ -213,6 +239,14 @@
                 <field name="employee_id" />
                 <field name="template_id" />
                 <field name="planning_id" column_invisible="True" />
+                <button
+                    type="object"
+                    name="action_delete_shift"
+                    icon="fa-trash"
+                    title="Delete shift"
+                    groups="hr_shift.group_shift_manager"
+                    confirm="Delete this employee shift and all its daily lines? This action cannot be undone."
+                />
             </list>
         </field>
     </record>
@@ -274,6 +308,16 @@
                                 />
                                 <span t-else="" class="fa fa-square-o" />
                             </a>
+                            <button
+                                type="object"
+                                name="action_delete_shift"
+                                class="btn btn-link text-danger"
+                                title="Delete shift"
+                                groups="hr_shift.group_shift_manager"
+                                confirm="Delete this employee shift and all its daily lines? This action cannot be undone."
+                            >
+                                <i class="fa fa-trash" role="img" />
+                            </button>
                         </aside>
                         <main t-if="record.line_ids.raw_value">
                             <div

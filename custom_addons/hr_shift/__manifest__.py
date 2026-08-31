@@ -3,7 +3,7 @@
 {
     "name": "Employees Shifts",
     "summary": "Define shifts for employees",
-    "version": "18.0.1.1.4",
+    "version": "18.0.1.1.7",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "website": "https://github.com/OCA/shift-planning",

@@ -6,6 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-31 11:52+0000\n"
+"PO-Revision-Date: 2026-08-31 11:52+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -51,6 +53,7 @@ msgid "Basic Employee"
 msgstr ""
 
 #. module: hr_shift
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_leave_warning_wizard_form
 #: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_wizard_form
 msgid "Cancel"
 msgstr ""
@@ -70,6 +73,11 @@ msgstr ""
 #. module: hr_shift
 #: model:ir.model,name:hr_shift.model_res_config_settings
 msgid "Config Settings"
+msgstr ""
+
+#. module: hr_shift
+#: model:ir.model,name:hr_shift.model_shift_planning_leave_warning_wizard
+msgid "Confirm shift planning creation with employees on leave"
 msgstr ""
 
 #. module: hr_shift
@@ -105,10 +113,16 @@ msgid "Create new plannings and their shifts"
 msgstr ""
 
 #. module: hr_shift
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_leave_warning_wizard_form
+msgid "Create without shifts of employees on leave"
+msgstr ""
+
+#. module: hr_shift
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning__create_uid
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_line__create_uid
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_shift__create_uid
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_template__create_uid
+#: model:ir.model.fields,field_description:hr_shift.field_shift_planning_leave_warning_wizard__create_uid
 #: model:ir.model.fields,field_description:hr_shift.field_shift_planning_wizard__create_uid
 msgid "Created by"
 msgstr ""
@@ -118,6 +132,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_line__create_date
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_shift__create_date
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_template__create_date
+#: model:ir.model.fields,field_description:hr_shift.field_shift_planning_leave_warning_wizard__create_date
 #: model:ir.model.fields,field_description:hr_shift.field_shift_planning_wizard__create_date
 msgid "Created on"
 msgstr ""
@@ -160,10 +175,41 @@ msgid "Default Working Week"
 msgstr ""
 
 #. module: hr_shift
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_form
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_kanban
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_tree
+msgid "Delete planning"
+msgstr ""
+
+#. module: hr_shift
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_shift_kanban
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_shift_tree
+msgid "Delete shift"
+msgstr ""
+
+#. module: hr_shift
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_shift_kanban
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_shift_tree
+msgid ""
+"Delete this employee shift and all its daily lines? This action cannot be "
+"undone."
+msgstr ""
+
+#. module: hr_shift
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_form
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_kanban
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_tree
+msgid ""
+"Delete this planning and all its employee shifts? This action cannot be "
+"undone."
+msgstr ""
+
+#. module: hr_shift
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning__display_name
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_line__display_name
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_shift__display_name
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_template__display_name
+#: model:ir.model.fields,field_description:hr_shift.field_shift_planning_leave_warning_wizard__display_name
 #: model:ir.model.fields,field_description:hr_shift.field_shift_planning_wizard__display_name
 msgid "Display Name"
 msgstr ""
@@ -186,8 +232,16 @@ msgstr ""
 #. module: hr_shift
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_line__employee_id
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_shift__employee_id
+#: model:ir.model.fields,field_description:hr_shift.field_shift_planning_leave_warning_wizard__employee_ids
 #: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_line_search
 msgid "Employee"
+msgstr ""
+
+#. module: hr_shift
+#. odoo-python
+#: code:addons/hr_shift/wizards/shift_planning_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_leave_warning_wizard_form
+msgid "Employees on leave"
 msgstr ""
 
 #. module: hr_shift
@@ -307,6 +361,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_line__id
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_shift__id
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_template__id
+#: model:ir.model.fields,field_description:hr_shift.field_shift_planning_leave_warning_wizard__id
 #: model:ir.model.fields,field_description:hr_shift.field_shift_planning_wizard__id
 msgid "ID"
 msgstr ""
@@ -337,6 +392,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_line__write_uid
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_shift__write_uid
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_template__write_uid
+#: model:ir.model.fields,field_description:hr_shift.field_shift_planning_leave_warning_wizard__write_uid
 #: model:ir.model.fields,field_description:hr_shift.field_shift_planning_wizard__write_uid
 msgid "Last Updated by"
 msgstr ""
@@ -346,6 +402,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_line__write_date
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_shift__write_date
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_template__write_date
+#: model:ir.model.fields,field_description:hr_shift.field_shift_planning_leave_warning_wizard__write_date
 #: model:ir.model.fields,field_description:hr_shift.field_shift_planning_wizard__write_date
 msgid "Last Updated on"
 msgstr ""
@@ -383,6 +440,8 @@ msgid "Name"
 msgstr ""
 
 #. module: hr_shift
+#. odoo-python
+#: code:addons/hr_shift/models/shift_planning.py:0
 #: model:ir.model.fields.selection,name:hr_shift.selection__hr_shift_planning__state__new
 msgid "New"
 msgstr ""
@@ -407,6 +466,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_shift__planning_id
 #: model:ir.ui.menu,name:hr_shift.shift_planning_menu
 msgid "Planning"
+msgstr ""
+
+#. module: hr_shift
+#: model:ir.model.fields,field_description:hr_shift.field_shift_planning_leave_warning_wizard__planning_wizard_id
+msgid "Planning Wizard"
 msgstr ""
 
 #. module: hr_shift
@@ -537,6 +601,11 @@ msgid "Shifts Count"
 msgstr ""
 
 #. module: hr_shift
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_leave_warning_wizard_form
+msgid "Some employees are on leave during the selected week."
+msgstr ""
+
+#. module: hr_shift
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning__start_date
 msgid "Start Date"
 msgstr ""
@@ -575,6 +644,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_shift.field_hr_shift_planning_shift__template_id
 #: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_line_search
 msgid "Template"
+msgstr ""
+
+#. module: hr_shift
+#: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_leave_warning_wizard_form
+msgid "Their shifts cannot be copied to the new planning."
 msgstr ""
 
 #. module: hr_shift
@@ -685,20 +759,4 @@ msgstr ""
 #. module: hr_shift
 #: model_terms:ir.ui.view,arch_db:hr_shift.res_config_settings_view_form
 msgid "to"
-msgstr ""
-
-#. module: hr_shift
-msgid "Employees on leave"
-msgstr ""
-
-#. module: hr_shift
-msgid "Some employees are on leave during the selected week."
-msgstr ""
-
-#. module: hr_shift
-msgid "Their shifts cannot be copied to the new planning."
-msgstr ""
-
-#. module: hr_shift
-msgid "Create without shifts of employees on leave"
 msgstr ""

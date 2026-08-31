@@ -14,14 +14,15 @@ class ResourceCalendarLeaves(models.Model):
         employees = self.env["hr.employee"].search(
             [("shift_planning", "=", True), ("resource_id", "in", self.resource_id.ids)]
         )
-        # Intersection of the dates of the leaves and the shifts
+        # Search by planning dates instead of shift datetimes: unassigned lines do
+        # not have start_time/end_time but still need to display the leave state.
         min_date = min(self.mapped("date_from"))
         max_date = max(self.mapped("date_to"))
         return self.env["hr.shift.planning.line"].search(
             [
                 ("employee_id", "in", employees.ids),
-                ("start_time", "<=", max_date),
-                ("end_time", ">", min_date),
+                ("shift_id.planning_id.start_date", "<=", max_date.date()),
+                ("shift_id.planning_id.end_date", ">=", min_date.date()),
             ]
         )
 
