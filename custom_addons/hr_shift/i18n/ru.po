@@ -303,6 +303,12 @@ msgid "Generate Planning"
 msgstr "Создать план"
 
 #. module: hr_shift
+#. odoo-javascript
+#: code:addons/hr_shift/static/src/js/empty_template_group.js:0
+msgid "Individual"
+msgstr "Индивидуальный"
+
+#. module: hr_shift
 #: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_wizard_form
 msgid "Generate for this week"
 msgstr "Создать для этой недели"
@@ -765,6 +771,12 @@ msgstr "Назначения для"
 #: code:addons/hr_shift/models/shift_planning.py:0
 msgid "Details for"
 msgstr "Подробности для"
+
+#. module: hr_shift
+#. odoo-python
+#: code:addons/hr_shift/models/shift_planning.py:0
+msgid "%(day)s shifts of %(planning)s"
+msgstr "Смены на %(day)s (%(planning)s)"
 
 #. module: hr_shift
 #: model_terms:ir.ui.view,arch_db:hr_shift.res_config_settings_view_form

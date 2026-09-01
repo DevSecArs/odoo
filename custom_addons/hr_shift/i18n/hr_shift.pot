@@ -300,6 +300,12 @@ msgid "Generate Planning"
 msgstr ""
 
 #. module: hr_shift
+#. odoo-javascript
+#: code:addons/hr_shift/static/src/js/empty_template_group.js:0
+msgid "Individual"
+msgstr ""
+
+#. module: hr_shift
 #: model_terms:ir.ui.view,arch_db:hr_shift.shift_planning_wizard_form
 msgid "Generate for this week"
 msgstr ""
