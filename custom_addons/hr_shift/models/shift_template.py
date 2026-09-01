@@ -12,13 +12,13 @@ from odoo.addons.base.models.res_partner import _tz_get
 _lt = LazyTranslate(__name__, default_lang="en_US")
 
 WEEK_DAYS_SELECTION = [
-    ("0", _lt("Monday")),
-    ("1", _lt("Tuesday")),
-    ("2", _lt("Wednesday")),
-    ("3", _lt("Thursday")),
-    ("4", _lt("Friday")),
-    ("5", _lt("Saturday")),
-    ("6", _lt("Sunday")),
+    ("0", str(_lt("Monday"))),
+    ("1", str(_lt("Tuesday"))),
+    ("2", str(_lt("Wednesday"))),
+    ("3", str(_lt("Thursday"))),
+    ("4", str(_lt("Friday"))),
+    ("5", str(_lt("Saturday"))),
+    ("6", str(_lt("Sunday"))),
 ]
 
 

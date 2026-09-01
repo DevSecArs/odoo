@@ -127,7 +127,9 @@ class ShiftPlanning(models.Model):
             )
             plan.days_data = {
                 date["weekday"]: {
-                    "weekday": dict(WEEK_DAYS_SELECTION).get(str(date["weekday"])),
+                    "weekday": _(
+                        dict(WEEK_DAYS_SELECTION).get(str(date["weekday"]))
+                    ),
                     "weekday_number": str(date["weekday"]),
                     "plan": plan.id,
                     "day": date["date"].day,
@@ -204,7 +206,7 @@ class ShiftPlanning(models.Model):
         }
         action["display_name"] = _(
             "%(day)s shifts of %(planning)s",
-            day=dict(WEEK_DAYS_SELECTION).get(weekday_number),
+            day=_(dict(WEEK_DAYS_SELECTION).get(weekday_number)),
             planning=self.display_name,
         )
         return action
@@ -261,7 +263,7 @@ class ShiftPlanningShift(models.Model):
         for shift in self:
             shift.lines_data = {
                 line.id: {
-                    "day": dict(WEEK_DAYS_SELECTION).get(line.day_number),
+                    "day": _(dict(WEEK_DAYS_SELECTION).get(line.day_number)),
                     "template": line.template_id.name,
                     "state": line.state,
                     "color": line.color,
