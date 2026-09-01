@@ -743,6 +743,30 @@ msgid "Week Number"
 msgstr "Номер недели"
 
 #. module: hr_shift
+#. odoo-python
+#: code:addons/hr_shift/models/shift_planning.py:0
+msgid "Week"
+msgstr "Неделя"
+
+#. module: hr_shift
+#. odoo-python
+#: code:addons/hr_shift/models/shift_planning.py:0
+msgid "Shifts for"
+msgstr "Смены для"
+
+#. module: hr_shift
+#. odoo-python
+#: code:addons/hr_shift/models/shift_planning.py:0
+msgid "Issues for"
+msgstr "Назначения для"
+
+#. module: hr_shift
+#. odoo-python
+#: code:addons/hr_shift/models/shift_planning.py:0
+msgid "Details for"
+msgstr "Подробности для"
+
+#. module: hr_shift
 #: model_terms:ir.ui.view,arch_db:hr_shift.res_config_settings_view_form
 msgid "Week gos from"
 msgstr "Неделя начинается с"
