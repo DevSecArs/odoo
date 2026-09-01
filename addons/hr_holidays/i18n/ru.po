@@ -1074,19 +1074,19 @@ msgstr "По метке сотрудника"
 #: model:ir.model.fields.selection,name:hr_holidays.selection__hr_leave_type__allocation_validation_type__manager
 #: model:ir.model.fields.selection,name:hr_holidays.selection__hr_leave_type__leave_validation_type__manager
 msgid "By Employee's Approver"
-msgstr "Утвержденный сотрудником"
+msgstr "Прикреплённым утверждающим сотрудником"
 
 #. module: hr_holidays
 #: model:ir.model.fields.selection,name:hr_holidays.selection__hr_leave_type__allocation_validation_type__both
 #: model:ir.model.fields.selection,name:hr_holidays.selection__hr_leave_type__leave_validation_type__both
 msgid "By Employee's Approver and Time Off Officer"
-msgstr "Утверждающий сотрудник и сотрудник, ответственный за отгулы"
+msgstr "Утверждающим сотрудником и сотрудником, ответственным за посещаемость"
 
 #. module: hr_holidays
 #: model:ir.model.fields.selection,name:hr_holidays.selection__hr_leave_type__allocation_validation_type__hr
 #: model:ir.model.fields.selection,name:hr_holidays.selection__hr_leave_type__leave_validation_type__hr
 msgid "By Time Off Officer"
-msgstr "По времени работы"
+msgstr "Ответственным за посещаемость"
 
 #. module: hr_holidays
 #: model:ir.model,name:hr_holidays.model_calendar_event
