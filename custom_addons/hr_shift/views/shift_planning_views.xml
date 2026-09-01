@@ -522,12 +522,12 @@
                                 name="template_id"
                                 string="Shift"
                                 readonly="True"
-                                groups="!hr_shift.group_shift_manager"
+                                groups="!hr_shift.group_shift_manager,!hr_shift.group_shift_own_editor"
                             />
                             <field
                                 name="template_id"
                                 string="Shift"
-                                groups="hr_shift.group_shift_manager"
+                                groups="hr_shift.group_shift_manager,hr_shift.group_shift_own_editor"
                             />
                             <field name="start_time" readonly="1" />
                             <field name="end_time" readonly="1" />
