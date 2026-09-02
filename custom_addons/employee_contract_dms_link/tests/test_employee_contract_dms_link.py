@@ -40,6 +40,18 @@ class TestEmployeeContractDmsLink(TransactionCase):
             "Catalog / Contracts / employment-contract.pdf",
         )
 
+    def test_dms_path_does_not_duplicate_contextual_display_name(self):
+        dms_file = self.dms_file.with_context(
+            employee_contract_dms_show_path=True
+        )
+
+        dms_file._compute_path()
+
+        self.assertEqual(
+            dms_file.path_names,
+            "Catalog/Contracts/employment-contract.pdf",
+        )
+
     def test_create_contract_synchronizes_reference(self):
         contract = self.env["hr.contract"].create(
             {

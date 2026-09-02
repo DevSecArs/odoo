@@ -14,3 +14,11 @@ class DmsFile(models.Model):
         for record in self:
             path_parts = (record.directory_id.complete_name, record.name)
             record.display_name = " / ".join(filter(None, path_parts))
+
+    @api.depends("name", "directory_id", "directory_id.parent_path")
+    def _compute_path(self):
+        """Keep DMS breadcrumbs independent from contextual display names."""
+        return super(
+            DmsFile,
+            self.with_context(employee_contract_dms_show_path=False),
+        )._compute_path()

@@ -38,6 +38,20 @@ export class ContractDmsFileField extends Many2OneField {
             title: _t("Select Contract Document"),
         });
     }
+
+    async openAction() {
+        const context = {
+            ...this.context,
+            employee_contract_dms_show_path: false,
+        };
+        const action = await this.orm.call(
+            this.relation,
+            "get_formview_action",
+            [[this.resId]],
+            { context }
+        );
+        await this.action.doAction(action);
+    }
 }
 
 export const contractDmsFileField = {
