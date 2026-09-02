@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_shift_planning_line_own_editor_interval,shift planning interval own editor,hr_shift.model_hr_shift_planning_line,hr_shift.group_shift_own_editor,1,1,1,1

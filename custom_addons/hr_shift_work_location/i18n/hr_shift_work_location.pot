@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#  * hr_shift_work_location
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: hr_shift_work_location
+msgid "Work Location"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Work Location Type"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Default Work Location"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "From"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "To"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Add Interval"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Delete Interval"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Schedule reviewed"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Pending review"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Office"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Home"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Remote"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Other"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "All shift intervals"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Shift copy warning"
+msgstr ""
+
+#. module: hr_shift_work_location
+msgid "Unreviewed schedules will not be copied."
+msgstr ""

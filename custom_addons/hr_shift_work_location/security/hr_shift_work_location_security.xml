@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_shift.hr_shift_planning_line_rule_user_own" model="ir.rule">
+        <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+    </record>
+</odoo>

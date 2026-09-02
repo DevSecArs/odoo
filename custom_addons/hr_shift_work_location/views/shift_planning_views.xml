@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="shift_planning_form" model="ir.ui.view">
+        <field name="name">hr.shift.planning.form.work.location</field>
+        <field name="model">hr.shift.planning</field>
+        <field name="inherit_id" ref="hr_shift.shift_planning_form" />
+        <field name="arch" type="xml">
+            <button name="action_view_issued_shifts" position="after">
+                <button
+                    class="oe_stat_button"
+                    name="action_view_pending_review_shifts"
+                    type="object"
+                    invisible="state == 'new' or pending_review_shifts_count == 0"
+                    icon="fa-clock-o"
+                >
+                    <field name="pending_review_shifts_count" string="Pending review" widget="statinfo" />
+                </button>
+            </button>
+        </field>
+    </record>
+
+    <record id="shift_planning_shift_kanban" model="ir.ui.view">
+        <field name="name">hr.shift.planning.shift.kanban.work.location</field>
+        <field name="model">hr.shift.planning.shift</field>
+        <field name="inherit_id" ref="hr_shift.shift_planning_shift_kanban" />
+        <field name="arch" type="xml">
+            <field name="lines_data" position="after">
+                <field name="schedule_intervals_data" />
+            </field>
+            <xpath expr="//a[@name='action_toggle_reviewed']" position="attributes">
+                <attribute name="groups">hr_shift.group_shift_manager</attribute>
+                <attribute name="title">Schedule reviewed</attribute>
+            </xpath>
+            <xpath expr="//a[@name='action_toggle_reviewed']" position="after">
+                <span
+                    groups="!hr_shift.group_shift_manager"
+                    t-attf-class="fa #{record.reviewed.raw_value ? 'fa-check-square-o text-success' : 'fa-square-o text-warning'}"
+                    t-att-title="record.reviewed.raw_value ? 'Schedule reviewed' : 'Pending review'"
+                />
+            </xpath>
+            <xpath expr="//main[@t-if='record.line_ids.raw_value']" position="replace">
+                <main t-if="record.line_ids.raw_value" class="o_shift_interval_schedule">
+                    <div class="o_shift_interval_days">
+                        <t t-foreach="record.schedule_intervals_data.raw_value" t-as="day" t-key="day">
+                            <section class="o_shift_interval_day">
+                                <strong class="o_shift_interval_day_name" t-esc="day_value.day.slice(0, 2)" />
+                                <t t-foreach="day_value.intervals" t-as="interval" t-key="interval.id">
+                                    <button
+                                        type="object"
+                                        name="action_view_shift_details"
+                                        t-attf-context="{'shift_line_id': #{interval.id}}"
+                                        t-attf-class="btn btn-sm border o_shift_interval_chip #{interval.css_class}"
+                                    >
+                                        <span t-if="interval.state === 'assigned'">
+                                            <t t-esc="interval.hour_from_display" />–<t t-esc="interval.hour_to_display" />
+                                            <small t-if="interval.work_location" class="d-block" t-esc="interval.work_location" />
+                                        </span>
+                                        <span t-else="" t-esc="interval.state" />
+                                    </button>
+                                </t>
+                            </section>
+                        </t>
+                    </div>
+                    <button type="object" class="btn btn-primary btn-sm mt-2" name="action_view_shift_details">Shift details</button>
+                </main>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="shift_planning_line_search" model="ir.ui.view">
+        <field name="name">hr.shift.planning.line.search.work.location</field>
+        <field name="model">hr.shift.planning.line</field>
+        <field name="inherit_id" ref="hr_shift.shift_planning_line_search" />
+        <field name="arch" type="xml">
+            <field name="template_id" position="after">
+                <field name="work_location_id" />
+                <field name="work_location_type" />
+            </field>
+            <filter name="group_template" position="after">
+                <filter name="group_work_location" string="Work Location" context="{'group_by': 'work_location_id'}" />
+                <filter name="group_work_location_type" string="Work Location Type" context="{'group_by': 'work_location_type'}" />
+            </filter>
+        </field>
+    </record>
+
+    <record id="shift_planning_line_tree" model="ir.ui.view">
+        <field name="name">hr.shift.planning.line.list.work.location</field>
+        <field name="model">hr.shift.planning.line</field>
+        <field name="inherit_id" ref="hr_shift.shift_planning_line_tree" />
+        <field name="arch" type="xml">
+            <field name="day_number" position="after">
+                <field name="hour_from" widget="float_time" />
+                <field name="hour_to" widget="float_time" />
+                <field name="work_location_id" />
+                <field name="work_location_type" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record id="shift_planning_line_kanban" model="ir.ui.view">
+        <field name="name">hr.shift.planning.line.kanban.work.location</field>
+        <field name="model">hr.shift.planning.line</field>
+        <field name="inherit_id" ref="hr_shift.shift_planning_line_kanban" />
+        <field name="arch" type="xml">
+            <field name="end_time" position="after">
+                <field name="hour_from" />
+                <field name="hour_to" />
+                <field name="work_location_id" />
+                <field name="work_location_type" />
+            </field>
+            <field name="start_hour" position="replace">
+                <field name="hour_from" widget="float_time" />
+            </field>
+            <field name="end_hour" position="replace">
+                <field name="hour_to" widget="float_time" />
+            </field>
+            <xpath expr="//span[@t-esc='record.template_id.value']" position="after">
+                <span t-if="record.work_location_id.raw_value" class="ms-2" t-esc="record.work_location_id.value" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="shift_planning_line_calendar" model="ir.ui.view">
+        <field name="name">hr.shift.planning.line.calendar.work.location</field>
+        <field name="model">hr.shift.planning.line</field>
+        <field name="inherit_id" ref="hr_shift.shift_planning_line_calendar" />
+        <field name="arch" type="xml">
+            <calendar position="attributes">
+                <attribute name="mode">week</attribute>
+            </calendar>
+            <field name="employee_id" position="after">
+                <field name="work_location_id" filters="1" />
+                <field name="work_location_type" filters="1" />
+                <field name="hour_from" invisible="1" />
+                <field name="hour_to" invisible="1" />
+            </field>
+        </field>
+    </record>
+
+    <record id="shift_planning_line_form" model="ir.ui.view">
+        <field name="name">hr.shift.planning.line.form.work.location</field>
+        <field name="model">hr.shift.planning.line</field>
+        <field name="inherit_id" ref="hr_shift.shift_planning_line_form" />
+        <field name="arch" type="xml">
+            <form position="attributes">
+                <attribute name="create">1</attribute>
+            </form>
+            <header position="inside">
+                <button name="action_add_interval" type="object" string="Add Interval" class="btn-primary" groups="hr_shift.group_shift_manager,hr_shift.group_shift_own_editor" invisible="not id" />
+                <button name="action_delete_interval" type="object" string="Delete Interval" class="btn-secondary" groups="hr_shift.group_shift_manager,hr_shift.group_shift_own_editor" invisible="not id" confirm="Delete this interval?" />
+            </header>
+            <field name="employee_id" position="after">
+                <field name="shift_id" invisible="1" />
+                <field name="company_id" invisible="1" />
+            </field>
+            <field name="template_id" groups="hr_shift.group_shift_manager,hr_shift.group_shift_own_editor" position="after">
+                <field name="hour_from" widget="float_time" groups="hr_shift.group_shift_manager,hr_shift.group_shift_own_editor" />
+                <field name="hour_to" widget="float_time" groups="hr_shift.group_shift_manager,hr_shift.group_shift_own_editor" />
+                <field name="work_location_id" groups="hr_shift.group_shift_manager,hr_shift.group_shift_own_editor" />
+                <field name="hour_from" widget="float_time" readonly="1" groups="!hr_shift.group_shift_manager,!hr_shift.group_shift_own_editor" />
+                <field name="hour_to" widget="float_time" readonly="1" groups="!hr_shift.group_shift_manager,!hr_shift.group_shift_own_editor" />
+                <field name="work_location_id" readonly="1" groups="!hr_shift.group_shift_manager,!hr_shift.group_shift_own_editor" />
+                <field name="work_location_type" readonly="1" />
+            </field>
+        </field>
+    </record>
+
+    <record id="shift_planning_all_intervals_calendar_action" model="ir.actions.act_window">
+        <field name="name">All Shift Intervals</field>
+        <field name="res_model">hr.shift.planning.line</field>
+        <field name="view_mode">calendar,list,form</field>
+        <field name="domain">[('state', '=', 'assigned')]</field>
+    </record>
+    <menuitem
+        id="shift_planning_all_intervals_calendar_menu"
+        name="All shift intervals"
+        parent="hr_shift.shift_planning_root"
+        action="shift_planning_all_intervals_calendar_action"
+        sequence="25"
+        groups="hr_shift.group_shift_manager"
+    />
+</odoo>

@@ -1,0 +1,25 @@
+.o_shift_interval_schedule {
+    .o_shift_interval_days {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(4.5rem, 1fr));
+        gap: map-get($spacers, 1);
+        overflow-x: auto;
+    }
+
+    .o_shift_interval_day {
+        display: flex;
+        flex-direction: column;
+        gap: map-get($spacers, 1);
+        min-width: 4.5rem;
+    }
+
+    .o_shift_interval_day_name {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .o_shift_interval_chip {
+        line-height: 1.1;
+        white-space: normal;
+    }
+}

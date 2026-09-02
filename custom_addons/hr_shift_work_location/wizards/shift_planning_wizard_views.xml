@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="shift_planning_leave_warning_wizard_form" model="ir.ui.view">
+        <field name="name">shift.planning.leave.warning.form.work.location</field>
+        <field name="model">shift.planning.leave.warning.wizard</field>
+        <field name="inherit_id" ref="hr_shift.shift_planning_leave_warning_wizard_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('alert-warning')]" position="attributes">
+                <attribute name="invisible">not employee_ids</attribute>
+            </xpath>
+            <xpath expr="//group[field[@name='employee_ids']]" position="attributes">
+                <attribute name="invisible">not employee_ids</attribute>
+            </xpath>
+            <field name="employee_ids" position="after">
+                <group string="Pending review" invisible="not unreviewed_employee_ids">
+                    <div class="alert alert-warning" role="alert">
+                        Unreviewed schedules will not be copied.
+                    </div>
+                    <field name="unreviewed_employee_ids" widget="many2many_tags" nolabel="1" />
+                </group>
+            </field>
+            <button name="action_generate_without_employees_on_leave" position="attributes">
+                <attribute name="string">Create without unavailable or unreviewed schedules</attribute>
+            </button>
+        </field>
+    </record>
+</odoo>
