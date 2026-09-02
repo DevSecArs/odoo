@@ -24,8 +24,16 @@
         <field name="model">hr.shift.planning.shift</field>
         <field name="inherit_id" ref="hr_shift.shift_planning_shift_kanban" />
         <field name="arch" type="xml">
+            <kanban position="attributes">
+                <attribute
+                    name="class"
+                    add="o_shift_work_location_kanban"
+                    separator=" "
+                />
+            </kanban>
             <field name="lines_data" position="after">
                 <field name="schedule_intervals_data" />
+                <field name="weekly_planned_hours" />
             </field>
             <xpath expr="//a[@name='action_toggle_reviewed']" position="attributes">
                 <attribute name="groups">hr_shift.group_shift_manager</attribute>
@@ -61,6 +69,11 @@
                             </section>
                         </t>
                     </div>
+                    <div class="o_shift_weekly_total">
+                        <i class="fa fa-clock-o" role="img" />
+                        <span>Planned Hours This Week:</span>
+                        <field name="weekly_planned_hours" widget="float_time" />
+                    </div>
                     <button type="object" class="btn btn-primary btn-sm mt-2" name="action_view_shift_details">Shift details</button>
                 </main>
             </xpath>
@@ -93,6 +106,11 @@
                 <field name="hour_to" widget="float_time" />
                 <field name="work_location_id" />
                 <field name="work_location_type" optional="hide" />
+                <field
+                    name="weekly_planned_hours"
+                    widget="float_time"
+                    optional="show"
+                />
             </field>
         </field>
     </record>
@@ -107,6 +125,7 @@
                 <field name="hour_to" />
                 <field name="work_location_id" />
                 <field name="work_location_type" />
+                <field name="weekly_planned_hours" />
             </field>
             <field name="start_hour" position="replace">
                 <field name="hour_from" widget="float_time" />
@@ -116,6 +135,13 @@
             </field>
             <xpath expr="//span[@t-esc='record.template_id.value']" position="after">
                 <span t-if="record.work_location_id.raw_value" class="ms-2" t-esc="record.work_location_id.value" />
+            </xpath>
+            <xpath expr="//t[@t-name='card']/main/div" position="after">
+                <div class="o_shift_weekly_total mt-2">
+                    <i class="fa fa-clock-o" role="img" />
+                    <span>Planned Hours This Week:</span>
+                    <field name="weekly_planned_hours" widget="float_time" />
+                </div>
             </xpath>
         </field>
     </record>
@@ -164,6 +190,11 @@
                 <field name="hour_to" widget="float_time" readonly="1" groups="!hr_shift.group_shift_manager,!hr_shift.group_shift_own_editor" />
                 <field name="work_location_id" readonly="1" groups="!hr_shift.group_shift_manager,!hr_shift.group_shift_own_editor" />
                 <field name="work_location_type" readonly="1" />
+                <field
+                    name="weekly_planned_hours"
+                    widget="float_time"
+                    readonly="1"
+                />
             </field>
         </field>
     </record>

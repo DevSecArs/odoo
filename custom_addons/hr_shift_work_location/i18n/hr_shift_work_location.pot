@@ -266,3 +266,23 @@ msgstr ""
 #: code:addons/hr_shift_work_location/models/shift_planning.py:0
 msgid "You can only edit your own shift intervals."
 msgstr ""
+
+#. module: hr_shift_work_location
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_shift_kanban
+msgid ""
+"<i class=\"fa fa-clock-o\" role=\"img\"/>\n"
+"                        <span>Planned Hours This Week:</span>"
+msgstr ""
+
+#. module: hr_shift_work_location
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_line_kanban
+msgid ""
+"<i class=\"fa fa-clock-o\" role=\"img\"/>\n"
+"                    <span>Planned Hours This Week:</span>"
+msgstr ""
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_line__weekly_planned_hours
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_shift__weekly_planned_hours
+msgid "Planned Hours This Week"
+msgstr ""

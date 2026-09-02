@@ -1,9 +1,13 @@
+.o_shift_work_location_kanban .o_kanban_renderer {
+    --KanbanRecord-width: 26rem;
+    --KanbanRecord--small-width: 26rem;
+}
+
 .o_shift_interval_schedule {
     .o_shift_interval_days {
         display: grid;
-        grid-template-columns: repeat(7, minmax(4.5rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
         gap: map-get($spacers, 1);
-        overflow-x: auto;
     }
 
     .o_shift_interval_day {
@@ -22,4 +26,20 @@
         line-height: 1.1;
         white-space: normal;
     }
+
+    @include media-breakpoint-down(md) {
+        .o_shift_interval_days {
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(4.5rem, 1fr);
+            grid-template-columns: none;
+            overflow-x: auto;
+        }
+    }
+}
+
+.o_shift_weekly_total {
+    display: flex;
+    align-items: center;
+    gap: map-get($spacers, 1);
+    font-weight: $font-weight-semibold;
 }

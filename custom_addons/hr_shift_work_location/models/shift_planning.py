@@ -53,9 +53,21 @@ class ShiftPlanningShift(models.Model):
     _inherit = "hr.shift.planning.shift"
 
     reviewed = fields.Boolean(help="Schedule reviewed by an HR manager")
+    weekly_planned_hours = fields.Float(
+        string="Planned Hours This Week",
+        compute="_compute_weekly_planned_hours",
+        store=True,
+    )
     schedule_intervals_data = fields.Serialized(
         default={}, compute="_compute_schedule_intervals_data"
     )
+
+    @api.depends("line_ids.template_id", "line_ids.duration_hours")
+    def _compute_weekly_planned_hours(self):
+        for shift in self:
+            shift.weekly_planned_hours = sum(
+                shift.line_ids.filtered("template_id").mapped("duration_hours")
+            )
 
     @api.depends_context("lang")
     @api.depends(
@@ -204,6 +216,10 @@ class ShiftPlanningLine(models.Model):
 
     hour_from = fields.Float(string="From")
     hour_to = fields.Float(string="To")
+    weekly_planned_hours = fields.Float(
+        related="shift_id.weekly_planned_hours",
+        string="Planned Hours This Week",
+    )
     company_id = fields.Many2one(
         related="employee_id.company_id", store=True, readonly=True
     )

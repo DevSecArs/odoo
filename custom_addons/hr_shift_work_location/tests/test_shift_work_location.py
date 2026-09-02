@@ -11,6 +11,26 @@ from .common import ShiftWorkLocationCommon
 
 
 class TestShiftWorkLocation(ShiftWorkLocationCommon):
+    def test_weekly_planned_hours_follow_interval_changes(self):
+        self.monday.write({"template_id": self.morning.id})
+        self.assertEqual(self.shift.weekly_planned_hours, 5.0)
+        evening = self.env["hr.shift.planning.line"].create(
+            {
+                "shift_id": self.shift.id,
+                "day_number": "0",
+                "template_id": self.evening.id,
+            }
+        )
+        self.assertEqual(self.shift.weekly_planned_hours, 9.0)
+        self.assertEqual(evening.weekly_planned_hours, 9.0)
+
+        evening.hour_to = 20.0
+        self.assertEqual(self.shift.weekly_planned_hours, 10.0)
+        self.assertEqual(evening.weekly_planned_hours, 10.0)
+
+        evening.unlink()
+        self.assertEqual(self.shift.weekly_planned_hours, 5.0)
+
     def test_weekdays_use_hr_shift_translation(self):
         if not self.env["res.lang"]._lang_get("ru_RU"):
             self.skipTest("Russian is not enabled in the test database")
