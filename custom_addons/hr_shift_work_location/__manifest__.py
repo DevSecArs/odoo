@@ -17,6 +17,7 @@
     ],
     "assets": {
         "web.assets_backend": [
+            "/hr_shift_work_location/static/src/js/individual_group.js",
             "/hr_shift_work_location/static/src/scss/shift_work_location.scss",
         ],
     },
