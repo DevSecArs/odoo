@@ -7,6 +7,7 @@ from odoo.exceptions import ValidationError
 class ShiftTemplate(models.Model):
     _inherit = "hr.shift.template"
 
+    exclude_from_planned_hours = fields.Boolean(string="Do Not Count Hours")
     default_work_location_id = fields.Many2one(
         comodel_name="hr.work.location",
         string="Default Work Location",

@@ -11,6 +11,20 @@ from .common import ShiftWorkLocationCommon
 
 
 class TestShiftWorkLocation(ShiftWorkLocationCommon):
+    def test_weekly_hours_exclude_marked_templates(self):
+        _morning, evening = self.assign_two_monday_intervals()
+        self.assertEqual(self.shift.weekly_planned_hours, 9.0)
+
+        self.evening.exclude_from_planned_hours = True
+        self.assertEqual(self.shift.weekly_planned_hours, 5.0)
+        self.assertEqual(evening.weekly_planned_hours, 5.0)
+
+        self.morning.exclude_from_planned_hours = True
+        self.assertEqual(self.shift.weekly_planned_hours, 0.0)
+
+        self.evening.exclude_from_planned_hours = False
+        self.assertEqual(self.shift.weekly_planned_hours, 4.0)
+
     def test_weekly_planned_hours_follow_interval_changes(self):
         self.monday.write({"template_id": self.morning.id})
         self.assertEqual(self.shift.weekly_planned_hours, 5.0)

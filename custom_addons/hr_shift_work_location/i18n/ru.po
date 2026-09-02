@@ -102,6 +102,11 @@ msgid "Delete this interval?"
 msgstr "Удалить этот интервал?"
 
 #. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_template__exclude_from_planned_hours
+msgid "Do Not Count Hours"
+msgstr "Не учитывать часы"
+
+#. module: hr_shift_work_location
 #: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_line__hour_from
 msgid "From"
 msgstr "С"

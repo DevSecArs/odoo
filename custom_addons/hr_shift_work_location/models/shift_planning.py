@@ -62,11 +62,18 @@ class ShiftPlanningShift(models.Model):
         default={}, compute="_compute_schedule_intervals_data"
     )
 
-    @api.depends("line_ids.template_id", "line_ids.duration_hours")
+    @api.depends(
+        "line_ids.template_id",
+        "line_ids.template_id.exclude_from_planned_hours",
+        "line_ids.duration_hours",
+    )
     def _compute_weekly_planned_hours(self):
         for shift in self:
             shift.weekly_planned_hours = sum(
-                shift.line_ids.filtered("template_id").mapped("duration_hours")
+                shift.line_ids.filtered(
+                    lambda line: line.template_id
+                    and not line.template_id.exclude_from_planned_hours
+                ).mapped("duration_hours")
             )
 
     @api.depends_context("lang")

@@ -7,6 +7,7 @@
         <field name="arch" type="xml">
             <field name="tz" position="after">
                 <field name="default_work_location_id" />
+                <field name="exclude_from_planned_hours" />
             </field>
         </field>
     </record>
@@ -17,6 +18,7 @@
         <field name="arch" type="xml">
             <field name="tz" position="after">
                 <field name="default_work_location_id" optional="show" />
+                <field name="exclude_from_planned_hours" optional="show" />
             </field>
         </field>
     </record>
