@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_hr_contract_form_dms_link" model="ir.ui.view">
+        <field name="name">hr.contract.form.dms.link</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='title']//field[@name='name']" position="replace">
+                <field name="name" invisible="1" />
+                <field
+                    name="contract_dms_file_id"
+                    widget="contract_dms_file_selector"
+                    class="text-truncate"
+                    placeholder="Select Contract Document"
+                    domain="[('is_hidden', '=', False)]"
+                    context="{'employee_contract_dms_show_path': True}"
+                    options="{'no_create': True, 'no_quick_create': True, 'no_create_edit': True}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

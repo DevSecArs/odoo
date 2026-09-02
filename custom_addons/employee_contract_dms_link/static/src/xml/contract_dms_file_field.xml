@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="employee_contract_dms_link.ContractDmsFileField">
+        <div class="d-flex align-items-center gap-2 mw-100">
+            <a
+                t-if="value"
+                class="o_form_uri text-truncate"
+                t-att-href="`/odoo/${urlRelation}/${value[0]}`"
+                t-on-click.prevent="openAction"
+                t-att-title="displayName"
+            >
+                <t t-esc="displayName" />
+            </a>
+            <span t-elif="props.readonly" class="text-muted">
+                <t t-esc="props.placeholder" />
+            </span>
+            <button
+                t-if="!props.readonly"
+                type="button"
+                class="btn btn-link btn-sm text-nowrap"
+                t-on-click="openSelector"
+            >
+                <t t-if="value">Change</t>
+                <t t-else="">Select Document</t>
+            </button>
+        </div>
+    </t>
+</templates>
