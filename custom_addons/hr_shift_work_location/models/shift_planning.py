@@ -7,6 +7,7 @@ import pytz
 
 from odoo import _, api, fields, models
 from odoo.exceptions import AccessError, ValidationError
+from odoo.tools.safe_eval import safe_eval
 
 from odoo.addons.hr_shift.models.shift_template import WEEK_DAYS_SELECTION
 
@@ -139,6 +140,18 @@ class ShiftPlanningShift(models.Model):
             )
         return True
 
+    def action_view_shift_details(self):
+        """Open details with defaults required to create another interval."""
+        self.ensure_one()
+        action = super().action_view_shift_details()
+        action_context = action.get("context") or {}
+        if isinstance(action_context, str):
+            action_context = safe_eval(action_context)
+        action_context = dict(action_context)
+        action_context["default_shift_id"] = self.id
+        action["context"] = action_context
+        return action
+
     def _copy_reviewed_intervals_to(self, target_shift):
         """Copy every assigned interval while preserving protected target lines."""
         self.ensure_one()
@@ -197,7 +210,9 @@ class ShiftPlanningLine(models.Model):
         domain="[('company_id', '=', company_id)]",
     )
     work_location_type = fields.Selection(
-        related="work_location_id.location_type", store=True
+        related="work_location_id.location_type",
+        string="Work Location Type",
+        store=True,
     )
 
     @api.model

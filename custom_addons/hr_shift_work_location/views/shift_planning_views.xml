@@ -48,7 +48,7 @@
                                     <button
                                         type="object"
                                         name="action_view_shift_details"
-                                        t-attf-context="{'shift_line_id': #{interval.id}}"
+                                        t-attf-context="{'shift_line_id': #{interval.id} }"
                                         t-attf-class="btn btn-sm border o_shift_interval_chip #{interval.css_class}"
                                     >
                                         <span t-if="interval.state === 'assigned'">
@@ -152,6 +152,9 @@
             <field name="employee_id" position="after">
                 <field name="shift_id" invisible="1" />
                 <field name="company_id" invisible="1" />
+            </field>
+            <field name="day_number" position="attributes">
+                <attribute name="readonly">0</attribute>
             </field>
             <field name="template_id" groups="hr_shift.group_shift_manager,hr_shift.group_shift_own_editor" position="after">
                 <field name="hour_from" widget="float_time" groups="hr_shift.group_shift_manager,hr_shift.group_shift_own_editor" />

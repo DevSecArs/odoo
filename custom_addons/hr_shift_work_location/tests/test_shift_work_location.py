@@ -11,6 +11,11 @@ from .common import ShiftWorkLocationCommon
 
 
 class TestShiftWorkLocation(ShiftWorkLocationCommon):
+    def test_shift_details_action_provides_creation_defaults(self):
+        action = self.shift.action_view_shift_details()
+
+        self.assertEqual(action["context"]["default_shift_id"], self.shift.id)
+
     def test_template_defaults_and_explicit_values(self):
         self.monday.write({"template_id": self.morning.id})
         self.assertEqual(self.monday.hour_from, 9.0)

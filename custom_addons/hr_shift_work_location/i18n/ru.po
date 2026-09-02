@@ -1,76 +1,274 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#  * hr_shift_work_location
+# 	* hr_shift_work_location
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
-"Language: ru\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-02 10:31+0000\n"
+"PO-Revision-Date: 2026-09-02 10:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. module: hr_shift_work_location
-msgid "Work Location"
-msgstr "Место работы"
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "A shift card and day are required to create an interval."
+msgstr "Для создания интервала необходимо указать карточку смены и день."
 
 #. module: hr_shift_work_location
-msgid "Work Location Type"
-msgstr "Тип места работы"
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "A shift card is required to create an interval."
+msgstr "Для создания интервала необходима карточка смены."
 
 #. module: hr_shift_work_location
-msgid "Default Work Location"
-msgstr "Место работы по умолчанию"
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "A shift interval must belong to a shift card."
+msgstr "Интервал должен относиться к карточке смены."
 
 #. module: hr_shift_work_location
-msgid "From"
-msgstr "С"
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "A work location is required before the schedule can be reviewed."
+msgstr "Перед подтверждением расписания необходимо указать место работы."
 
 #. module: hr_shift_work_location
-msgid "To"
-msgstr "По"
-
-#. module: hr_shift_work_location
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_line_form
 msgid "Add Interval"
 msgstr "Добавить интервал"
 
 #. module: hr_shift_work_location
-msgid "Delete Interval"
-msgstr "Удалить интервал"
+#: model:ir.actions.act_window,name:hr_shift_work_location.shift_planning_all_intervals_calendar_action
+msgid "All Shift Intervals"
+msgstr "Все интервалы смен"
 
 #. module: hr_shift_work_location
-msgid "Schedule reviewed"
-msgstr "Расписание проверено"
-
-#. module: hr_shift_work_location
-msgid "Pending review"
-msgstr "Ожидает проверки"
-
-#. module: hr_shift_work_location
-msgid "Office"
-msgstr "Офис"
-
-#. module: hr_shift_work_location
-msgid "Home"
-msgstr "Удалённо"
-
-#. module: hr_shift_work_location
-msgid "Remote"
-msgstr "Удалённо"
-
-#. module: hr_shift_work_location
-msgid "Other"
-msgstr "Другое"
-
-#. module: hr_shift_work_location
+#: model:ir.ui.menu,name:hr_shift_work_location.shift_planning_all_intervals_calendar_menu
 msgid "All shift intervals"
 msgstr "Все интервалы смен"
 
 #. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "An empty schedule cannot be reviewed."
+msgstr "Пустое расписание нельзя подтвердить."
+
+#. module: hr_shift_work_location
+#: model:ir.model,name:hr_shift_work_location.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "Основной сотрудник"
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_line__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: hr_shift_work_location
+#: model:ir.model,name:hr_shift_work_location.model_shift_planning_leave_warning_wizard
+msgid "Confirm shift planning creation with employees on leave"
+msgstr "Подтверждение создания плана смен с сотрудниками в отпуске"
+
+#. module: hr_shift_work_location
+#: model:ir.model,name:hr_shift_work_location.model_shift_planning_wizard
+msgid "Create new plannings and their shifts"
+msgstr "Создание новых планов и смен"
+
+#. module: hr_shift_work_location
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_leave_warning_wizard_form
+msgid "Create without unavailable or unreviewed schedules"
+msgstr "Создать без недоступных или непроверенных расписаний"
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_template__default_work_location_id
+msgid "Default Work Location"
+msgstr "Место работы по умолчанию"
+
+#. module: hr_shift_work_location
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_line_form
+msgid "Delete Interval"
+msgstr "Удалить интервал"
+
+#. module: hr_shift_work_location
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_line_form
+msgid "Delete this interval?"
+msgstr "Удалить этот интервал?"
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_line__hour_from
+msgid "From"
+msgstr "С"
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "New"
+msgstr "Новый"
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "Only a Shift Manager can review a schedule."
+msgstr "Подтвердить расписание может только менеджер смен."
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning__pending_review_shifts_count
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_form
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_leave_warning_wizard_form
+msgid "Pending review"
+msgstr "Ожидает проверки"
+
+#. module: hr_shift_work_location
+#: model:ir.model,name:hr_shift_work_location.model_resource_calendar
+msgid "Resource Working Time"
+msgstr "Рабочее время ресурса"
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_shift__reviewed
+msgid "Reviewed"
+msgstr "Проверено"
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_shift__schedule_intervals_data
+msgid "Schedule Intervals Data"
+msgstr "Данные интервалов расписания"
+
+#. module: hr_shift_work_location
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_shift_kanban
+msgid "Schedule reviewed"
+msgstr "Расписание проверено"
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,help:hr_shift_work_location.field_hr_shift_planning_shift__reviewed
+msgid "Schedule reviewed by an HR manager"
+msgstr "Расписание проверено HR-менеджером"
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "Select a shift template for the new interval."
+msgstr "Выберите шаблон смены для нового интервала."
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/wizards/shift_planning_wizard.py:0
 msgid "Shift copy warning"
 msgstr "Предупреждение при копировании смен"
 
 #. module: hr_shift_work_location
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_shift_kanban
+msgid "Shift details"
+msgstr "Детали смены"
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid ""
+"Shift hours must satisfy 0 <= From < To <= 24. Intervals crossing midnight "
+"are not supported."
+msgstr ""
+"Часы смены должны соответствовать условию 0 ≤ С < По ≤ 24. Интервалы через "
+"полночь не поддерживаются."
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_template.py:0
+msgid ""
+"Shift hours must satisfy 0 <= start time < end time <= 24. Intervals "
+"crossing midnight are not supported."
+msgstr ""
+"Часы смены должны соответствовать условию 0 ≤ начало < окончание ≤ 24. "
+"Интервалы через полночь не поддерживаются."
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "Shift intervals can only be edited during assignment or planning."
+msgstr ""
+"Интервалы смен можно изменять только во время назначения или планирования."
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "Shift intervals on the same day cannot overlap."
+msgstr "Интервалы смен в один день не должны пересекаться."
+
+#. module: hr_shift_work_location
+#: model:ir.model,name:hr_shift_work_location.model_hr_shift_planning_line
+msgid "Shift of the day for the employee"
+msgstr "Смена сотрудника на день"
+
+#. module: hr_shift_work_location
+#: model:ir.model,name:hr_shift_work_location.model_hr_shift_planning_shift
+msgid "Shift of the week for a given employee"
+msgstr "Смена сотрудника на неделю"
+
+#. module: hr_shift_work_location
+#: model:ir.model,name:hr_shift_work_location.model_hr_shift_planning
+msgid "Shift plannings"
+msgstr "Планы смен"
+
+#. module: hr_shift_work_location
+#: model:ir.model,name:hr_shift_work_location.model_hr_shift_template
+msgid "Shifts"
+msgstr "Смены"
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "The shift interval is invalid because of a daylight-saving transition."
+msgstr "Интервал смены некорректен из-за перехода на летнее или зимнее время."
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "The work location must belong to the employee company."
+msgstr "Место работы должно относиться к компании сотрудника."
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_line__hour_to
+msgid "To"
+msgstr "По"
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_shift_planning_leave_warning_wizard__unreviewed_employee_ids
+msgid "Unreviewed Employee"
+msgstr "Сотрудник с непроверенным расписанием"
+
+#. module: hr_shift_work_location
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_leave_warning_wizard_form
 msgid "Unreviewed schedules will not be copied."
 msgstr "Непроверенные расписания не будут скопированы."
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_line__work_location_id
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_line_search
+msgid "Work Location"
+msgstr "Место работы"
+
+#. module: hr_shift_work_location
+#: model:ir.model.fields,field_description:hr_shift_work_location.field_hr_shift_planning_line__work_location_type
+#: model_terms:ir.ui.view,arch_db:hr_shift_work_location.shift_planning_line_search
+msgid "Work Location Type"
+msgstr "Тип места работы"
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "You are not allowed to edit shift intervals."
+msgstr "У вас нет прав на изменение интервалов смен."
+
+#. module: hr_shift_work_location
+#. odoo-python
+#: code:addons/hr_shift_work_location/models/shift_planning.py:0
+msgid "You can only edit your own shift intervals."
+msgstr "Можно изменять только собственные интервалы смен."
