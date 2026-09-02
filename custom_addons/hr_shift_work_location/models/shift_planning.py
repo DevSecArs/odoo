@@ -9,9 +9,6 @@ from odoo import _, api, fields, models
 from odoo.exceptions import AccessError, ValidationError
 from odoo.tools.safe_eval import safe_eval
 
-from odoo.addons.hr_shift.models.shift_template import WEEK_DAYS_SELECTION
-
-
 SIGNIFICANT_LINE_FIELDS = {
     "template_id",
     "day_number",
@@ -19,6 +16,12 @@ SIGNIFICANT_LINE_FIELDS = {
     "hour_to",
     "work_location_id",
 }
+
+
+def _translated_weekdays(env):
+    """Return weekday labels translated by the source hr_shift selection."""
+    day_field = env["hr.shift.planning.line"]._fields["day_number"]
+    return dict(day_field._description_selection(env))
 
 
 class ShiftPlanning(models.Model):
@@ -54,6 +57,7 @@ class ShiftPlanningShift(models.Model):
         default={}, compute="_compute_schedule_intervals_data"
     )
 
+    @api.depends_context("lang")
     @api.depends(
         "line_ids.day_number",
         "line_ids.template_id",
@@ -65,7 +69,7 @@ class ShiftPlanningShift(models.Model):
         "line_ids.work_location_type",
     )
     def _compute_schedule_intervals_data(self):
-        weekday_by_number = dict(WEEK_DAYS_SELECTION)
+        weekday_by_number = _translated_weekdays(self.env)
         for shift in self:
             days = defaultdict(list)
             for line in shift.line_ids.sorted(
@@ -93,7 +97,7 @@ class ShiftPlanningShift(models.Model):
                 )
             shift.schedule_intervals_data = {
                 day_number: {
-                    "day": _(weekday_by_number.get(day_number)),
+                    "day": weekday_by_number.get(day_number),
                     "intervals": intervals,
                 }
                 for day_number, intervals in sorted(days.items())
@@ -220,6 +224,7 @@ class ShiftPlanningLine(models.Model):
         total_minutes = round(value * 60)
         return f"{total_minutes // 60:02d}:{total_minutes % 60:02d}"
 
+    @api.depends_context("lang")
     @api.depends(
         "day_number",
         "template_id",
@@ -230,11 +235,10 @@ class ShiftPlanningLine(models.Model):
         "employee_id",
     )
     def _compute_display_name(self):
-        weekday_by_number = dict(WEEK_DAYS_SELECTION)
+        weekday_by_number = _translated_weekdays(self.env)
         state_by_value = dict(self._fields["state"]._description_selection(self.env))
         for line in self:
             day_name = weekday_by_number.get(line.day_number)
-            day_name = _(day_name) if day_name else False
             interval = False
             if line.template_id:
                 interval = "%s–%s" % (

@@ -11,6 +11,16 @@ from .common import ShiftWorkLocationCommon
 
 
 class TestShiftWorkLocation(ShiftWorkLocationCommon):
+    def test_weekdays_use_hr_shift_translation(self):
+        if not self.env["res.lang"]._lang_get("ru_RU"):
+            self.skipTest("Russian is not enabled in the test database")
+        shift = self.shift.with_context(lang="ru_RU")
+        shift.invalidate_recordset(["schedule_intervals_data"])
+
+        self.assertEqual(
+            shift.schedule_intervals_data["0"]["day"], "Понедельник"
+        )
+
     def test_shift_details_action_provides_creation_defaults(self):
         action = self.shift.action_view_shift_details()
 
