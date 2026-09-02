@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_view_form_multi_department" model="ir.ui.view">
+        <field name="name">hr.employee.form.multi.department</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="department_id" position="attributes">
+                <attribute name="string">Primary Department</attribute>
+            </field>
+            <field name="department_id" position="after">
+                <field name="department_ids" string="Departments"
+                    widget="many2many_tags"
+                    domain="[('company_id', 'in', [company_id, False])]"/>
+                <div class="text-muted">
+                    The primary department is included automatically and determines the employee's manager.
+                </div>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_employee_view_tree_multi_department" model="ir.ui.view">
+        <field name="name">hr.employee.list.multi.department</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <field name="department_id" position="attributes">
+                <attribute name="string">Primary Department</attribute>
+                <attribute name="optional">show</attribute>
+            </field>
+            <field name="department_id" position="after">
+                <field name="department_ids" string="Departments"
+                    widget="many2many_tags" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_employee_view_search_multi_department" model="ir.ui.view">
+        <field name="name">hr.employee.search.multi.department</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="/search/field[@name='department_id']" position="replace">
+                <field name="department_ids" string="Departments"/>
+            </xpath>
+            <xpath expr="/search/searchpanel/field[@name='department_id']" position="replace">
+                <field name="department_ids" string="Departments" icon="fa-users"
+                    enable_counters="1" select="multi"/>
+            </xpath>
+            <filter name="group_department" position="attributes">
+                <attribute name="string">Primary Department</attribute>
+            </filter>
+        </field>
+    </record>
+</odoo>

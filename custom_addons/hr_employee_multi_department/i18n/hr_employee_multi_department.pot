@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#  * hr_employee_multi_department
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: hr_employee_multi_department
+#: model:ir.model.fields,help:hr_employee_multi_department.field_hr_employee__department_ids
+msgid ""
+"All departments the employee belongs to. The primary department is added "
+"automatically and cannot be removed from this list while it remains the "
+"primary department."
+msgstr ""
+
+#. module: hr_employee_multi_department
+#: model:ir.model,name:hr_employee_multi_department.model_hr_department
+msgid "Department"
+msgstr ""
+
+#. module: hr_employee_multi_department
+#: model:ir.model.fields,field_description:hr_employee_multi_department.field_hr_employee__department_ids
+#: model:ir.model.fields,field_description:hr_employee_multi_department.field_hr_employee_public__department_ids
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_public_view_form_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_public_view_search_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_public_view_tree_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_view_form_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_view_search_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_view_tree_multi_department
+msgid "Departments"
+msgstr ""
+
+#. module: hr_employee_multi_department
+#: model:ir.model,name:hr_employee_multi_department.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: hr_employee_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_public_view_form_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_public_view_search_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_public_view_tree_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_view_form_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_view_search_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_view_tree_multi_department
+msgid "Primary Department"
+msgstr ""
+
+#. module: hr_employee_multi_department
+#: model:ir.model,name:hr_employee_multi_department.model_hr_employee_public
+msgid "Public Employee"
+msgstr ""
+
+#. module: hr_employee_multi_department
+#: model_terms:ir.ui.view,arch_db:hr_employee_multi_department.hr_employee_view_form_multi_department
+msgid ""
+"The primary department is included automatically and determines the "
+"employee's manager."
+msgstr ""
