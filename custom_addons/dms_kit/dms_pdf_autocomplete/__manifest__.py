@@ -1,0 +1,20 @@
+{
+    'name': 'DMS Автозаполнение PDF',
+    'version': '18.0.1.0.0',
+    'category': 'Document Management',
+    'summary': 'Generate personalized AcroForm PDF batches from DMS files',
+    'license': 'LGPL-3',
+    'depends': ['dms', 'pdf_form_core', 'hr', 'mail', 'web'],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/cron.xml',
+        'views/dms_file_views.xml',
+        'views/generation_batch_views.xml',
+        'wizard/pdf_autocomplete_wizard_views.xml',
+        'wizard/pdf_delivery_wizard_views.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

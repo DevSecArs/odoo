@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="rule_pdf_form_field_file_access" model="ir.rule">
+        <field name="name">PDF fields follow DMS file access</field>
+        <field name="model_id" ref="model_dms_pdf_form_field"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('file_id.permission_read', '=', user.id)]</field>
+    </record>
+    <record id="rule_pdf_field_mapping_file_access" model="ir.rule">
+        <field name="name">PDF mappings follow DMS file access</field>
+        <field name="model_id" ref="model_dms_pdf_field_mapping"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('form_field_id.file_id.permission_read', '=', user.id)]</field>
+    </record>
+
+    <record id="rule_pdf_wizard_owner" model="ir.rule">
+        <field name="name">Users access only their PDF wizards</field>
+        <field name="model_id" ref="model_dms_pdf_autocomplete_wizard"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('owner_user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_pdf_mapping_wizard_owner" model="ir.rule">
+        <field name="name">PDF mapping snapshots follow wizard owner</field>
+        <field name="model_id" ref="model_dms_pdf_autocomplete_mapping"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('wizard_id.owner_user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_pdf_recipient_wizard_owner" model="ir.rule">
+        <field name="name">PDF recipient snapshots follow wizard owner</field>
+        <field name="model_id" ref="model_dms_pdf_autocomplete_recipient"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('wizard_id.owner_user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_pdf_value_wizard_owner" model="ir.rule">
+        <field name="name">PDF value snapshots follow wizard owner</field>
+        <field name="model_id" ref="model_dms_pdf_autocomplete_value"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('recipient_id.wizard_id.owner_user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_pdf_delivery_owner" model="ir.rule">
+        <field name="name">Users access only their PDF delivery wizards</field>
+        <field name="model_id" ref="model_dms_pdf_autocomplete_delivery_wizard"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('owner_user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_pdf_delivery_recipient_owner" model="ir.rule">
+        <field name="name">PDF delivery recipients follow wizard owner</field>
+        <field name="model_id" ref="model_dms_pdf_autocomplete_delivery_recipient"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('delivery_wizard_id.owner_user_id', '=', user.id)]</field>
+    </record>
+
+    <record id="rule_pdf_batch_company" model="ir.rule">
+        <field name="name">PDF generation batches are multi-company</field>
+        <field name="model_id" ref="model_dms_pdf_generation_batch"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_pdf_batch_owner" model="ir.rule">
+        <field name="name">Users read their own PDF generation batches</field>
+        <field name="model_id" ref="model_dms_pdf_generation_batch"/>
+        <field name="groups" eval="[(4, ref('dms.group_dms_user'))]"/>
+        <field name="domain_force">[('user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_pdf_batch_manager" model="ir.rule">
+        <field name="name">DMS managers read company PDF generation batches</field>
+        <field name="model_id" ref="model_dms_pdf_generation_batch"/>
+        <field name="groups" eval="[(4, ref('dms.group_dms_manager'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+    <record id="rule_pdf_result_company" model="ir.rule">
+        <field name="name">PDF generation results are multi-company</field>
+        <field name="model_id" ref="model_dms_pdf_generation_result"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_pdf_result_owner" model="ir.rule">
+        <field name="name">Users read their own PDF generation results</field>
+        <field name="model_id" ref="model_dms_pdf_generation_result"/>
+        <field name="groups" eval="[(4, ref('dms.group_dms_user'))]"/>
+        <field name="domain_force">[('user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_pdf_result_manager" model="ir.rule">
+        <field name="name">DMS managers read company PDF generation results</field>
+        <field name="model_id" ref="model_dms_pdf_generation_result"/>
+        <field name="groups" eval="[(4, ref('dms.group_dms_manager'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+</odoo>

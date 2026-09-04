@@ -1,0 +1,11 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_dms_pdf_form_field_user,dms.pdf.form.field user,model_dms_pdf_form_field,dms.group_dms_user,1,1,1,1
+access_dms_pdf_field_mapping_user,dms.pdf.field.mapping user,model_dms_pdf_field_mapping,dms.group_dms_user,1,1,1,1
+access_dms_pdf_generation_batch_user,dms.pdf.generation.batch user,model_dms_pdf_generation_batch,dms.group_dms_user,1,1,1,0
+access_dms_pdf_generation_result_user,dms.pdf.generation.result user,model_dms_pdf_generation_result,dms.group_dms_user,1,1,1,0
+access_dms_pdf_autocomplete_wizard_user,dms.pdf.autocomplete.wizard user,model_dms_pdf_autocomplete_wizard,dms.group_dms_user,1,1,1,1
+access_dms_pdf_autocomplete_mapping_user,dms.pdf.autocomplete.mapping user,model_dms_pdf_autocomplete_mapping,dms.group_dms_user,1,1,1,1
+access_dms_pdf_autocomplete_recipient_user,dms.pdf.autocomplete.recipient user,model_dms_pdf_autocomplete_recipient,dms.group_dms_user,1,1,1,1
+access_dms_pdf_autocomplete_value_user,dms.pdf.autocomplete.value user,model_dms_pdf_autocomplete_value,dms.group_dms_user,1,1,1,1
+access_dms_pdf_delivery_wizard_user,dms.pdf.autocomplete.delivery.wizard user,model_dms_pdf_autocomplete_delivery_wizard,dms.group_dms_user,1,1,1,1
+access_dms_pdf_delivery_recipient_user,dms.pdf.autocomplete.delivery.recipient user,model_dms_pdf_autocomplete_delivery_recipient,dms.group_dms_user,1,1,1,1

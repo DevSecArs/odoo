@@ -1,0 +1,368 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dms_pdf_autocomplete
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: dms_pdf_autocomplete
+msgid "%(current)s of %(total)s"
+msgstr "%(current)s из %(total)s"
+
+#. module: dms_pdf_autocomplete
+msgid "<p>Your personal document is attached.</p>"
+msgstr "<p>Ваш персональный документ прикреплён к сообщению.</p>"
+
+#. module: dms_pdf_autocomplete
+msgid "Attachments published through Email or Odoo chat follow the Mail retention policy\n                        and are not deleted by the generated-document cleanup job."
+msgstr "Вложения, отправленные по электронной почте или в чате Odoo, подчиняются политике хранения Почты\n                        и не удаляются заданием очистки созданных документов."
+
+#. module: dms_pdf_autocomplete
+msgid "Binary and image fields cannot be written to a PDF text field."
+msgstr "Бинарные поля и изображения нельзя записать в текстовое поле PDF."
+
+#. module: dms_pdf_autocomplete
+msgid "Close"
+msgstr "Закрыть"
+
+#. module: dms_pdf_autocomplete
+msgid "Contact \"%(name)s\" has no active internal Odoo user."
+msgstr "У контакта «%(name)s» нет активного внутреннего пользователя Odoo."
+
+#. module: dms_pdf_autocomplete
+msgid "Contacts"
+msgstr "Контакты"
+
+#. module: dms_pdf_autocomplete
+msgid "Date"
+msgstr "Дата"
+
+#. module: dms_pdf_autocomplete
+msgid "Date and time"
+msgstr "Дата и время"
+
+#. module: dms_pdf_autocomplete
+msgid "Deliver"
+msgstr "Разослать"
+
+#. module: dms_pdf_autocomplete
+msgid "Deliver personalized PDFs"
+msgstr "Разослать персональные PDF"
+
+#. module: dms_pdf_autocomplete
+msgid "Delivery Channel"
+msgstr "Канал доставки"
+
+#. module: dms_pdf_autocomplete
+msgid "Delivery Error"
+msgstr "Ошибка доставки"
+
+#. module: dms_pdf_autocomplete
+msgid "Done"
+msgstr "Готово"
+
+#. module: dms_pdf_autocomplete
+msgid "Download ZIP"
+msgstr "Скачать ZIP"
+
+#. module: dms_pdf_autocomplete
+msgid "Email"
+msgstr "Электронная почта"
+
+#. module: dms_pdf_autocomplete
+msgid "Employees"
+msgstr "Сотрудники"
+
+#. module: dms_pdf_autocomplete
+msgid "Enable at least one recipient."
+msgstr "Включите хотя бы одного получателя."
+
+#. module: dms_pdf_autocomplete
+msgid "Enter a valid email address for \"%(name)s\"."
+msgstr "Укажите корректный адрес электронной почты для «%(name)s»."
+
+#. module: dms_pdf_autocomplete
+msgid "Enter values"
+msgstr "Ввод значений"
+
+#. module: dms_pdf_autocomplete
+msgid "Failed"
+msgstr "Ошибка"
+
+#. module: dms_pdf_autocomplete
+msgid "Field \"%(field)s\" does not exist on model \"%(model)s\"."
+msgstr "Поле «%(field)s» отсутствует в модели «%(model)s»."
+
+#. module: dms_pdf_autocomplete
+msgid "Field type \"%(type)s\" is not supported."
+msgstr "Тип поля «%(type)s» не поддерживается."
+
+#. module: dms_pdf_autocomplete
+msgid "Fill PDF"
+msgstr "Заполнить PDF"
+
+#. module: dms_pdf_autocomplete
+msgid "Generated PDF batches"
+msgstr "Созданные пакеты PDF"
+
+#. module: dms_pdf_autocomplete
+msgid "Generating"
+msgstr "Создание"
+
+#. module: dms_pdf_autocomplete
+msgid "Invalid"
+msgstr "Некорректен"
+
+#. module: dms_pdf_autocomplete
+msgid "Invalid PDF form"
+msgstr "Некорректная PDF-форма"
+
+#. module: dms_pdf_autocomplete
+msgid "Invalid PDF generation target."
+msgstr "Некорректный целевой объект создания PDF."
+
+#. module: dms_pdf_autocomplete
+msgid "Manual input"
+msgstr "Ручной ввод"
+
+#. module: dms_pdf_autocomplete
+msgid "Manual mappings cannot define an Odoo field path."
+msgstr "Для ручного сопоставления нельзя задавать путь поля Odoo."
+
+#. module: dms_pdf_autocomplete
+msgid "Manual values"
+msgstr "Ручные значения"
+
+#. module: dms_pdf_autocomplete
+msgid "Map fields"
+msgstr "Сопоставление полей"
+
+#. module: dms_pdf_autocomplete
+msgid "Next"
+msgstr "Далее"
+
+#. module: dms_pdf_autocomplete
+msgid "No"
+msgstr "Нет"
+
+#. module: dms_pdf_autocomplete
+msgid "Not checked"
+msgstr "Не проверен"
+
+#. module: dms_pdf_autocomplete
+msgid "Odoo chat"
+msgstr "Чат Odoo"
+
+#. module: dms_pdf_autocomplete
+msgid "Odoo field"
+msgstr "Поле Odoo"
+
+#. module: dms_pdf_autocomplete
+msgid "Only DMS users can fill PDF templates."
+msgstr "Заполнять шаблоны PDF могут только пользователи DMS."
+
+#. module: dms_pdf_autocomplete
+msgid "Only application/pdf DMS files can be filled."
+msgstr "Можно заполнять только файлы DMS с типом application/pdf."
+
+#. module: dms_pdf_autocomplete
+msgid "Only one mapping per target model is allowed for each PDF field."
+msgstr "Для каждого поля PDF допускается только одно сопоставление с целевой моделью."
+
+#. module: dms_pdf_autocomplete
+msgid "Only relational fields may be followed in a field path."
+msgstr "В пути поля переходить далее можно только через реляционные поля."
+
+#. module: dms_pdf_autocomplete
+msgid "PDF field names must be unique per DMS file."
+msgstr "Имена полей PDF должны быть уникальны в пределах файла DMS."
+
+#. module: dms_pdf_autocomplete
+msgid "Partially delivered"
+msgstr "Доставлено частично"
+
+#. module: dms_pdf_autocomplete
+msgid "Partially sent"
+msgstr "Отправлено частично"
+
+#. module: dms_pdf_autocomplete
+msgid "Pending"
+msgstr "Ожидает"
+
+#. module: dms_pdf_autocomplete
+msgid "Personal document"
+msgstr "Персональный документ"
+
+#. module: dms_pdf_autocomplete
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#. module: dms_pdf_autocomplete
+msgid "Previous"
+msgstr "Назад"
+
+#. module: dms_pdf_autocomplete
+msgid "Ready"
+msgstr "Готов"
+
+#. module: dms_pdf_autocomplete
+msgid "Recipient \"%(name)s\" no longer exists."
+msgstr "Получатель «%(name)s» больше не существует."
+
+#. module: dms_pdf_autocomplete
+msgid "Retention Days"
+msgstr "Срок хранения, дней"
+
+#. module: dms_pdf_autocomplete
+msgid "Retention days cannot be negative."
+msgstr "Срок хранения не может быть отрицательным."
+
+#. module: dms_pdf_autocomplete
+msgid "Review"
+msgstr "Проверка"
+
+#. module: dms_pdf_autocomplete
+msgid "Save Mapping As Default"
+msgstr "Сохранить сопоставление по умолчанию"
+
+#. module: dms_pdf_autocomplete
+msgid "Select a recipient to preview."
+msgstr "Выберите получателя для предпросмотра."
+
+#. module: dms_pdf_autocomplete
+msgid "Select a valid Odoo field path."
+msgstr "Выберите корректный путь поля Odoo."
+
+#. module: dms_pdf_autocomplete
+msgid "Select at least one recipient."
+msgstr "Выберите хотя бы одного получателя."
+
+#. module: dms_pdf_autocomplete
+msgid "Select exactly one DMS PDF file."
+msgstr "Выберите ровно один PDF-файл DMS."
+
+#. module: dms_pdf_autocomplete
+msgid "Select recipients"
+msgstr "Выбор получателей"
+
+#. module: dms_pdf_autocomplete
+msgid "Send"
+msgstr "Отправить"
+
+#. module: dms_pdf_autocomplete
+msgid "Sending"
+msgstr "Отправка"
+
+#. module: dms_pdf_autocomplete
+msgid "Sent"
+msgstr "Отправлено"
+
+#. module: dms_pdf_autocomplete
+msgid "Skipped"
+msgstr "Пропущено"
+
+#. module: dms_pdf_autocomplete
+msgid "The DMS PDF changed. Restart the wizard before saving mappings."
+msgstr "PDF-файл DMS изменился. Перезапустите мастер перед сохранением сопоставлений."
+
+#. module: dms_pdf_autocomplete
+msgid "The DMS file content is not valid base64 data."
+msgstr "Содержимое файла DMS не является корректными данными base64."
+
+#. module: dms_pdf_autocomplete
+msgid "The DMS file is locked by another user."
+msgstr "Файл DMS заблокирован другим пользователем."
+
+#. module: dms_pdf_autocomplete
+msgid "The Odoo field path is invalid."
+msgstr "Некорректный путь поля Odoo."
+
+#. module: dms_pdf_autocomplete
+msgid "The PDF download is not available."
+msgstr "Скачивание PDF недоступно."
+
+#. module: dms_pdf_autocomplete
+msgid "The PDF download token is invalid or expired."
+msgstr "Токен скачивания PDF некорректен или просрочен."
+
+#. module: dms_pdf_autocomplete
+msgid "The PDF field configuration is no longer synchronized."
+msgstr "Конфигурация полей PDF больше не синхронизирована."
+
+#. module: dms_pdf_autocomplete
+msgid "The PDF snapshot checksum is invalid. Restart the wizard."
+msgstr "Контрольная сумма снимка PDF некорректна. Перезапустите мастер."
+
+#. module: dms_pdf_autocomplete
+msgid "The PDF snapshot is not valid base64 data."
+msgstr "Снимок PDF не является корректными данными base64."
+
+#. module: dms_pdf_autocomplete
+msgid "The generated ZIP exceeds the configured size limit."
+msgstr "Созданный ZIP превышает настроенное ограничение размера."
+
+#. module: dms_pdf_autocomplete
+msgid "The selected batch exceeds the configured recipient limit."
+msgstr "Выбранный пакет превышает настроенное ограничение числа получателей."
+
+#. module: dms_pdf_autocomplete
+msgid "The selected record does not match the target model."
+msgstr "Выбранная запись не соответствует целевой модели."
+
+#. module: dms_pdf_autocomplete
+msgid "The value for field \"%(field)s\" exceeds the allowed length."
+msgstr "Значение поля «%(field)s» превышает допустимую длину."
+
+#. module: dms_pdf_autocomplete
+msgid "This PDF batch is already being processed."
+msgstr "Этот пакет PDF уже обрабатывается."
+
+#. module: dms_pdf_autocomplete
+msgid "This PDF template must be synchronized by a user with write access to the DMS file."
+msgstr "Этот шаблон PDF должен синхронизировать пользователь с правом записи файла DMS."
+
+#. module: dms_pdf_autocomplete
+msgid "This delivery is already being processed."
+msgstr "Эта доставка уже обрабатывается."
+
+#. module: dms_pdf_autocomplete
+msgid "This is the first recipient."
+msgstr "Это первый получатель."
+
+#. module: dms_pdf_autocomplete
+msgid "Unsupported target model."
+msgstr "Целевая модель не поддерживается."
+
+#. module: dms_pdf_autocomplete
+msgid "Valid"
+msgstr "Корректен"
+
+#. module: dms_pdf_autocomplete
+msgid "Values from Odoo"
+msgstr "Значения из Odoo"
+
+#. module: dms_pdf_autocomplete
+msgid "Yes"
+msgstr "Да"
+
+#. module: dms_pdf_autocomplete
+msgid "You cannot access another user’s PDF wizard."
+msgstr "У вас нет доступа к мастеру PDF другого пользователя."
+
+#. module: dms_pdf_autocomplete
+msgid "You cannot access another user’s delivery wizard."
+msgstr "У вас нет доступа к мастеру доставки другого пользователя."
+
+#. module: dms_pdf_autocomplete
+msgid "You cannot access the related DMS file."
+msgstr "У вас нет доступа к связанному файлу DMS."
+
+#. module: dms_pdf_autocomplete
+msgid "You need write access to configure this DMS PDF."
+msgstr "Для настройки этого PDF DMS требуется право записи."

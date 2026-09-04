@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_dms_file_form_pdf_autocomplete" model="ir.ui.view">
+        <field name="name">dms.file.form.pdf.autocomplete</field>
+        <field name="model">dms.file</field>
+        <field name="inherit_id" ref="dms.view_dms_file_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button name="action_dms_pdf_fill" type="object" string="Fill PDF"
+                        class="oe_highlight" groups="dms.group_dms_user"
+                        invisible="mimetype != 'application/pdf'"/>
+            </xpath>
+            <xpath expr="//page[@name='page_technical']/group[@name='technical']" position="after">
+                <group string="PDF AcroForm" groups="dms.group_dms_user"
+                       invisible="not permission_write">
+                    <group>
+                        <field name="pdf_form_state"/>
+                        <field name="pdf_form_enabled"/>
+                        <field name="pdf_form_field_count"/>
+                    </group>
+                    <group>
+                        <field name="pdf_form_checksum"/>
+                        <field name="pdf_form_checked_at"/>
+                        <field name="pdf_form_message"/>
+                    </group>
+                    <field name="pdf_form_field_ids" nolabel="1" readonly="not permission_write">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="pdf_field_name"/>
+                            <field name="label"/>
+                            <field name="multiline"/>
+                            <field name="active"/>
+                        </list>
+                    </field>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_dms_file_fill_pdf" model="ir.actions.server">
+        <field name="name">Fill PDF</field>
+        <field name="model_id" ref="dms.model_dms_file"/>
+        <field name="binding_model_id" ref="dms.model_dms_file"/>
+        <field name="binding_view_types">list,kanban</field>
+        <field name="groups_id" eval="[(4, ref('dms.group_dms_user'))]"/>
+        <field name="state">code</field>
+        <field name="code">action = records.action_dms_pdf_fill()</field>
+    </record>
+</odoo>
