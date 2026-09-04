@@ -1,10 +1,10 @@
 {
     'name': 'PDF-документы для подбора персонала',
     'summary': 'Ручное заполнение PDF-документов AcroForm перед отправкой',
-    'version': '18.0.1.2.2',
+    'version': '18.0.1.2.3',
     'category': 'Human Resources/Recruitment',
     'license': 'LGPL-3',
-    'depends': ['hr_recruitment', 'mail', 'web'],
+    'depends': ['hr_recruitment', 'mail', 'pdf_form_core', 'web'],
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',

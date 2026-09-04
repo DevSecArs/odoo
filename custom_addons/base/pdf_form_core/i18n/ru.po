@@ -1,0 +1,113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pdf_form_core
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: pdf_form_core
+msgid "Encrypted PDF documents are not supported."
+msgstr "Зашифрованные PDF-документы не поддерживаются."
+
+#. module: pdf_form_core
+msgid "Only text AcroForm fields (/Tx) are supported."
+msgstr "Поддерживаются только текстовые поля AcroForm (/Tx)."
+
+#. module: pdf_form_core
+msgid "PDF field names may only contain letters, digits, hyphens and underscores."
+msgstr "Имена полей PDF могут содержать только латинские буквы, цифры, дефисы и подчёркивания."
+
+#. module: pdf_form_core
+msgid "PDF fields changed since the document configuration was saved."
+msgstr "Поля PDF изменились после сохранения настроек документа."
+
+#. module: pdf_form_core
+msgid "The PDF could not be filled. Check its form field appearance settings."
+msgstr "Не удалось заполнить PDF. Проверьте настройки отображения полей формы."
+
+#. module: pdf_form_core
+msgid "The generated PDF did not preserve the value of field \"%(name)s\"."
+msgstr "Созданный PDF не сохранил значение поля «%(name)s»."
+
+#. module: pdf_form_core
+msgid "The generated PDF field \"%(name)s\" is not read-only."
+msgstr "Поле «%(name)s» в созданном PDF доступно для редактирования."
+
+#. module: pdf_form_core
+msgid "The generated PDF has an inconsistent widget structure."
+msgstr "Созданный PDF содержит несогласованную структуру виджетов."
+
+#. module: pdf_form_core
+msgid "The generated PDF has no normal appearance for field \"%(name)s\"."
+msgstr "В созданном PDF отсутствует отображение поля «%(name)s»."
+
+#. module: pdf_form_core
+msgid "The generated PDF is damaged."
+msgstr "Созданный PDF повреждён."
+
+#. module: pdf_form_core
+msgid "The generated PDF does not contain all expected fields."
+msgstr "Созданный PDF содержит не все ожидаемые поля."
+
+#. module: pdf_form_core
+msgid "The PDF AcroForm does not contain any fields."
+msgstr "Форма AcroForm в PDF не содержит полей."
+
+#. module: pdf_form_core
+msgid "The PDF contains a cyclic form field hierarchy."
+msgstr "PDF содержит циклическую иерархию полей формы."
+
+#. module: pdf_form_core
+msgid "The PDF contains an ambiguous form field hierarchy."
+msgstr "PDF содержит неоднозначную иерархию полей формы."
+
+#. module: pdf_form_core
+msgid "The PDF contains an ambiguous widget annotation."
+msgstr "PDF содержит неоднозначную аннотацию виджета."
+
+#. module: pdf_form_core
+msgid "The PDF contains duplicate field name \"%(name)s\"."
+msgstr "PDF содержит повторяющееся имя поля «%(name)s»."
+
+#. module: pdf_form_core
+msgid "The PDF contains duplicate widgets for field \"%(name)s\"."
+msgstr "PDF содержит несколько виджетов поля «%(name)s»."
+
+#. module: pdf_form_core
+msgid "The PDF contains an orphan widget annotation."
+msgstr "PDF содержит аннотацию виджета без связанного поля."
+
+#. module: pdf_form_core
+msgid "The PDF document is damaged or uses an unsupported encoding."
+msgstr "PDF-документ повреждён или использует неподдерживаемую кодировку."
+
+#. module: pdf_form_core
+msgid "The PDF does not contain an AcroForm."
+msgstr "PDF не содержит форму AcroForm."
+
+#. module: pdf_form_core
+msgid "The PDF does not contain any text AcroForm field."
+msgstr "PDF не содержит текстовых полей AcroForm."
+
+#. module: pdf_form_core
+msgid "The PDF field \"%(name)s\" has no widget annotation."
+msgstr "У поля PDF «%(name)s» отсутствует аннотация виджета."
+
+#. module: pdf_form_core
+msgid "The PDF file is empty or exceeds the allowed size."
+msgstr "PDF-файл пуст или превышает допустимый размер."
+
+#. module: pdf_form_core
+msgid "The uploaded file is not a PDF document."
+msgstr "Загруженный файл не является PDF-документом."
+
+#. module: pdf_form_core
+msgid "XFA PDF forms are not supported. Use AcroForm text fields."
+msgstr "PDF-формы XFA не поддерживаются. Используйте текстовые поля AcroForm."

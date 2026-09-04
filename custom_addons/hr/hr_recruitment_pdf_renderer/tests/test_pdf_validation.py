@@ -1,7 +1,7 @@
 import base64
 
 from odoo.exceptions import ValidationError
-from odoo.addons.hr_recruitment_pdf_renderer.models.offer_pdf_service import inspect_pdf, render_pdf
+from odoo.addons.pdf_form_core.services import inspect_pdf, render_pdf
 
 from .common import OfferPdfCase
 

@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pdf_form_core
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: pdf_form_core
+msgid "Encrypted PDF documents are not supported."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "Only text AcroForm fields (/Tx) are supported."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "PDF field names may only contain letters, digits, hyphens and underscores."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "PDF fields changed since the document configuration was saved."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF could not be filled. Check its form field appearance settings."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The generated PDF did not preserve the value of field \"%(name)s\"."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The generated PDF field \"%(name)s\" is not read-only."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The generated PDF has an inconsistent widget structure."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The generated PDF has no normal appearance for field \"%(name)s\"."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The generated PDF is damaged."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The generated PDF does not contain all expected fields."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF AcroForm does not contain any fields."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF contains a cyclic form field hierarchy."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF contains an ambiguous form field hierarchy."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF contains an ambiguous widget annotation."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF contains duplicate field name \"%(name)s\"."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF contains duplicate widgets for field \"%(name)s\"."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF contains an orphan widget annotation."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF document is damaged or uses an unsupported encoding."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF does not contain an AcroForm."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF does not contain any text AcroForm field."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF field \"%(name)s\" has no widget annotation."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The PDF file is empty or exceeds the allowed size."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "The uploaded file is not a PDF document."
+msgstr ""
+
+#. module: pdf_form_core
+msgid "XFA PDF forms are not supported. Use AcroForm text fields."
+msgstr ""

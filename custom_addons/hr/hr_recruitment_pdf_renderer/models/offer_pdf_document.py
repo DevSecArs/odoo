@@ -4,7 +4,10 @@ import hashlib
 from odoo import Command, _, api, fields, models
 from odoo.exceptions import ValidationError
 
-from .offer_pdf_service import MAX_PDF_SIZE, inspect_pdf
+from odoo.addons.pdf_form_core.services import DEFAULT_MAX_PDF_SIZE, inspect_pdf
+
+
+MAX_PDF_SIZE = DEFAULT_MAX_PDF_SIZE
 
 
 class OfferPdfDocument(models.Model):

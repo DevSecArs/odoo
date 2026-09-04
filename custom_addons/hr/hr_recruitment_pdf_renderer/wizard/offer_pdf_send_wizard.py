@@ -4,7 +4,7 @@ import math
 from odoo import Command, _, api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 
-from odoo.addons.hr_recruitment_pdf_renderer.models.offer_pdf_service import inspect_pdf, render_pdf
+from odoo.addons.pdf_form_core.services import inspect_pdf, render_pdf
 from odoo.addons.hr_recruitment_pdf_renderer.models.offer_attachment_service import (
     DEFAULT_MAX_REQUESTED_FILE_SIZE,
     validate_requested_file,

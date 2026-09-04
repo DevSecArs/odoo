@@ -1,4 +1,3 @@
-from . import offer_pdf_service
 from . import offer_attachment_service
 from . import mail_template
 from . import offer_pdf_document
