@@ -4,54 +4,61 @@
         <field name="model">mail.template</field>
         <field name="inherit_id" ref="mail.email_template_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[@class='oe_title']/label[@for='name']" position="attributes">
+            <xpath expr="//div[hasclass('oe_title')]/label[@for='name']" position="attributes">
                 <attribute name="string">Template name</attribute>
             </xpath>
-            <xpath expr="//div[@class='oe_title']//h1/field[@name='name']" position="attributes">
+            <xpath expr="//div[hasclass('oe_title')]//h1/field[@name='name']" position="attributes">
                 <attribute name="string">Template name</attribute>
             </xpath>
             <xpath expr="//notebook" position="inside">
-                <page string="PDF documents" name="offer_pdf" groups="hr_recruitment.group_hr_recruitment_manager">
+                <page string="Documents" name="offer_pdf" groups="hr_recruitment.group_hr_recruitment_manager">
                     <group>
                         <field name="offer_pdf_manual_enabled"/>
                         <field name="offer_pdf_company_id" groups="base.group_multi_company"/>
                     </group>
-                    <div class="alert alert-info" invisible="not offer_pdf_manual_enabled">
-                        Source PDFs are kept separately and are never attached to the email unchanged.
+                    <div class="alert alert-info" role="status" invisible="not offer_pdf_manual_enabled">
+                        Fillable source PDFs are rendered by Odoo. Requested files are uploaded later for a specific applicant.
                     </div>
                     <field name="offer_pdf_document_ids" invisible="not offer_pdf_manual_enabled">
                         <list editable="bottom">
                             <field name="sequence" widget="handle"/>
                             <field name="name"/>
-                            <field name="pdf_file" widget="pdf_viewer" filename="pdf_filename"/>
+                            <field name="document_type"/>
+                            <field name="upload_required" invisible="document_type != 'requested_file'"/>
+                            <field name="pdf_file" widget="pdf_viewer" filename="pdf_filename" invisible="document_type != 'fillable_pdf'"/>
                             <field name="pdf_filename" invisible="1"/>
                             <field name="pdf_mimetype" invisible="1"/>
-                            <field name="field_count" readonly="1"/>
-                            <field name="validation_state" readonly="1"/>
-                            <field name="validation_message" readonly="1"/>
+                            <field name="field_count" readonly="1" invisible="document_type != 'fillable_pdf'"/>
+                            <field name="validation_state" readonly="1" invisible="document_type != 'fillable_pdf'"/>
+                            <field name="validation_message" readonly="1" invisible="document_type != 'fillable_pdf'"/>
                             <field name="active"/>
                             <button name="action_open_field_configuration" type="object"
                                     string="Configure PDF fields" icon="fa-cog"
-                                    invisible="not id or validation_state != 'valid'"/>
+                                    invisible="not id or document_type != 'fillable_pdf' or validation_state != 'valid'"/>
                         </list>
-                        <form string="PDF document" class="o_offer_pdf_document_form">
+                        <form string="Document" class="o_offer_pdf_document_form">
                             <sheet>
                                 <group>
                                     <field name="name"/>
+                                    <field name="document_type"/>
                                     <field name="sequence"/>
                                     <field name="active"/>
-                                    <field name="pdf_file" widget="pdf_viewer" filename="pdf_filename"/>
-                                    <field name="pdf_filename"/>
+                                    <field name="upload_required" invisible="document_type != 'requested_file'"/>
+                                    <field name="pdf_file" widget="pdf_viewer" filename="pdf_filename" invisible="document_type != 'fillable_pdf'"/>
+                                    <field name="pdf_filename" invisible="document_type != 'fillable_pdf'"/>
                                     <field name="pdf_mimetype" invisible="1"/>
                                     <field name="validation_state" readonly="1"/>
                                     <field name="validation_message" readonly="1"/>
                                 </group>
-                                <separator string="PDF field defaults"/>
-                                <div class="alert alert-info">
+                                <div class="alert alert-info" role="status" invisible="document_type != 'requested_file'">
+                                    The user will be asked to upload PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, ODS, or ODP while preparing the email.
+                                </div>
+                                <separator string="PDF field defaults" invisible="document_type != 'fillable_pdf'"/>
+                                <div class="alert alert-info" role="status" invisible="document_type != 'fillable_pdf'">
                                     For each PDF field, choose a safe source from the applicant or enter static text.
                                     Initial values can still be edited before the email is sent.
                                 </div>
-                                <field name="field_ids">
+                                <field name="field_ids" invisible="document_type != 'fillable_pdf'">
                                     <list editable="bottom" create="0" delete="0">
                                         <field name="sequence" widget="handle"/>
                                         <field name="pdf_field_name"/>
@@ -89,23 +96,28 @@
         <field name="name">mail.template.offer.pdf.document.form</field>
         <field name="model">mail.template.offer.pdf.document</field>
         <field name="arch" type="xml">
-            <form string="PDF document">
+            <form string="Document">
                 <sheet>
                     <group>
                         <field name="name"/>
+                        <field name="document_type"/>
                         <field name="sequence"/>
                         <field name="active"/>
-                        <field name="pdf_file" widget="pdf_viewer" filename="pdf_filename"/>
-                        <field name="pdf_filename"/>
+                        <field name="upload_required" invisible="document_type != 'requested_file'"/>
+                        <field name="pdf_file" widget="pdf_viewer" filename="pdf_filename" invisible="document_type != 'fillable_pdf'"/>
+                        <field name="pdf_filename" invisible="document_type != 'fillable_pdf'"/>
                         <field name="validation_state" readonly="1"/>
                         <field name="validation_message" readonly="1"/>
                     </group>
-                    <separator string="PDF field defaults"/>
-                    <div class="alert alert-info">
+                    <div class="alert alert-info" role="status" invisible="document_type != 'requested_file'">
+                        The user will be asked to upload PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, ODS, or ODP while preparing the email.
+                    </div>
+                    <separator string="PDF field defaults" invisible="document_type != 'fillable_pdf'"/>
+                    <div class="alert alert-info" role="status" invisible="document_type != 'fillable_pdf'">
                         For each PDF field, choose a safe source from the applicant or enter static text.
                         Initial values can still be edited before the email is sent.
                     </div>
-                    <field name="field_ids">
+                    <field name="field_ids" invisible="document_type != 'fillable_pdf'">
                         <list editable="bottom" create="0" delete="0">
                             <field name="sequence" widget="handle"/>
                             <field name="pdf_field_name"/>

@@ -46,13 +46,24 @@ class HrPdfDocumentDraft(models.Model):
         for document in wizard.document_ids:
             if not document.source_document_id:
                 continue
-            documents.append(Command.create({
+            values = {
                 'source_document_id': document.source_document_id.id,
+                'document_type': document.document_type,
                 'value_map': {
                     value.pdf_field_name: value.value or ''
                     for value in document.value_ids
-                },
-            }))
+                } if document.document_type == 'fillable_pdf' else {},
+            }
+            if document.document_type == 'requested_file' and document.uploaded_file:
+                metadata = document._validate_upload()
+                values.update({
+                    'uploaded_file': document.uploaded_file,
+                    'uploaded_filename': metadata['filename'],
+                    'uploaded_mimetype': metadata['mimetype'],
+                    'uploaded_checksum': metadata['checksum'],
+                    'uploaded_size': metadata['size'],
+                })
+            documents.append(Command.create(values))
         draft.write({'document_ids': [Command.clear(), *documents]})
         return draft
 
@@ -65,7 +76,17 @@ class HrPdfDocumentDraftDocument(models.Model):
     source_document_id = fields.Many2one(
         'mail.template.offer.pdf.document', required=True, ondelete='cascade', index=True,
     )
-    value_map = fields.Json(required=True, default=dict)
+    value_map = fields.Json(default=dict)
+    document_type = fields.Selection(
+        [('fillable_pdf', 'Fillable PDF'), ('requested_file', 'Requested file')],
+        required=True,
+        default='fillable_pdf',
+    )
+    uploaded_file = fields.Binary(string='Uploaded document', attachment=True)
+    uploaded_filename = fields.Char(string='Uploaded filename')
+    uploaded_mimetype = fields.Char(string='File format', readonly=True)
+    uploaded_checksum = fields.Char(readonly=True)
+    uploaded_size = fields.Integer(string='File size (bytes)', readonly=True)
 
     _sql_constraints = [
         (

@@ -5,13 +5,14 @@ from odoo.exceptions import AccessError, ValidationError
 class HrApplicant(models.Model):
     _inherit = 'hr.applicant'
 
-    offer_pdf_activity_id = fields.Many2one('mail.activity', string='PDF document activity', copy=False, readonly=True)
+    offer_pdf_activity_id = fields.Many2one(
+        'mail.activity', string='Document preparation activity', copy=False, readonly=True,
+    )
 
     def _offer_pdf_check_user(self):
         if not self.env.user.has_group('hr_recruitment.group_hr_recruitment_user'):
-            raise AccessError(_('Only Recruitment users can prepare PDF documents.'))
+            raise AccessError(_('Only Recruitment users can prepare documents.'))
         self.check_access('read')
-        self.check_access_rule('read')
 
     def _offer_pdf_check_email(self):
         self.ensure_one()
@@ -75,7 +76,7 @@ class HrApplicant(models.Model):
         activity = self.activity_schedule(
             'hr_recruitment_pdf_renderer.mail_activity_type_offer_pdf',
             user_id=(self.user_id or self.env.user).id,
-            summary=_('Prepare PDF documents'),
-            note=_('Prepare the completed PDF documents before sending them to the candidate.'),
+            summary=_('Prepare documents'),
+            note=_('Fill in the PDF documents and attach the requested files before sending them to the candidate.'),
         )
         self.offer_pdf_activity_id = activity

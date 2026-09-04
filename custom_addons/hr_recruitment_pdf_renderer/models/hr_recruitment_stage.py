@@ -6,7 +6,7 @@ class HrRecruitmentStage(models.Model):
 
     offer_mail_template_id = fields.Many2one(
         'mail.template',
-        string='Manual PDF document template',
+        string='Manual document template',
         domain="[('model', '=', 'hr.applicant'), ('offer_pdf_manual_enabled', '=', True)]",
         check_company=False,
         groups='hr_recruitment.group_hr_recruitment_manager',

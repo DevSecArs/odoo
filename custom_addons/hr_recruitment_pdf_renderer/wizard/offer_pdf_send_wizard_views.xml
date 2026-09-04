@@ -3,10 +3,10 @@
         <field name="name">hr.offer.pdf.send.wizard.form</field>
         <field name="model">hr.offer.pdf.send.wizard</field>
         <field name="arch" type="xml">
-            <form string="Prepare PDF documents" class="o_offer_pdf_wizard" create="0" edit="1" delete="0">
+            <form string="Prepare documents" class="o_offer_pdf_wizard" create="0" edit="1" delete="0">
                 <header>
                     <button name="action_previous" string="Back" type="object" class="btn-secondary" invisible="current_index == 0 or state != 'draft'"/>
-                    <button name="action_refresh_preview" string="Refresh preview" type="object" class="btn-secondary" invisible="state != 'draft'"/>
+                    <button name="action_refresh_preview" string="Refresh preview" type="object" class="btn-secondary" invisible="state != 'draft' or current_document_type != 'fillable_pdf'"/>
                     <button name="action_next" string="Next" type="object" class="btn-primary" invisible="current_index + 1 >= document_count or state != 'draft'"/>
                     <button name="action_done" string="Send" type="object" class="btn-primary" invisible="current_index + 1 != document_count or state not in ('draft', 'failed')"/>
                 </header>
@@ -16,16 +16,18 @@
                     <field name="document_count" invisible="1"/>
                     <field name="preview_stale" invisible="1"/>
                     <field name="current_document_id" invisible="1"/>
+                    <field name="current_document_type" invisible="1"/>
+                    <field name="current_upload_required" invisible="1"/>
                     <group>
                         <field name="applicant_id" readonly="1"/>
                         <field name="template_id" readonly="1"/>
-                        <field name="current_document_name" string="PDF document" readonly="1"/>
+                        <field name="current_document_name" string="Document" readonly="1"/>
                         <field name="step_label" string="Document" readonly="1"/>
                     </group>
-                    <div class="alert alert-warning" invisible="not preview_stale">
+                    <div class="alert alert-warning" role="status" invisible="not preview_stale or current_document_type != 'fillable_pdf'">
                         Values have changed. Refresh the preview to view current values.
                     </div>
-                    <div class="o_offer_pdf_wizard_stack">
+                    <div class="o_offer_pdf_wizard_stack" invisible="current_document_type != 'fillable_pdf'">
                         <group string="Fields" class="o_offer_pdf_fields_section">
                             <field name="current_value_ids" nolabel="1">
                                 <list editable="bottom" create="0" delete="0">
@@ -42,6 +44,23 @@
                             <field name="preview_filename" invisible="1"/>
                         </group>
                     </div>
+                    <group string="Upload document" invisible="current_document_type != 'requested_file'">
+                        <div class="alert alert-info" role="status" invisible="not current_upload_required">
+                            The requested document is required.
+                        </div>
+                        <div class="alert alert-info" role="status" invisible="current_upload_required">
+                            Optional document: you may continue without uploading a file.
+                        </div>
+                        <field name="current_uploaded_file" filename="current_uploaded_filename"/>
+                        <!-- The binary widget must be allowed to write its filename field. -->
+                        <field name="current_uploaded_filename" invisible="1"/>
+                        <field name="current_uploaded_mimetype" readonly="1"/>
+                        <field name="current_uploaded_size" readonly="1"/>
+                        <div class="text-muted">
+                            Allowed formats: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, ODS, ODP.
+                            Do not upload executable, archive, or macro-enabled files.
+                        </div>
+                    </group>
                 </sheet>
                 <footer>
                     <button name="action_save" string="Save" type="object" class="btn-primary" invisible="state not in ('draft', 'failed')"/>
@@ -51,7 +70,7 @@
         </field>
     </record>
     <record id="action_hr_offer_pdf_send_wizard" model="ir.actions.act_window">
-        <field name="name">Prepare PDF documents</field>
+        <field name="name">Prepare documents</field>
         <field name="res_model">hr.offer.pdf.send.wizard</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="hr_offer_pdf_send_wizard_view_form"/>

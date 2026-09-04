@@ -1,35 +1,9 @@
 # Translation of Odoo Server.
-#. module: hr_recruitment_pdf_renderer
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Language: ru\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-
-#. module: hr_recruitment_pdf_renderer
-#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template__offer_pdf_manual_enabled
-msgid "Manually complete PDF documents"
-msgstr "Заполнять PDF-документы вручную"
-
-#. module: hr_recruitment_pdf_renderer
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
-#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template__offer_pdf_document_ids
-msgid "PDF documents"
-msgstr "PDF-документы"
-
-#. module: hr_recruitment_pdf_renderer
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_applicant_view_form_offer_pdf
-msgid "Prepare and send PDF documents"
-msgstr "Подготовить и отправить PDF-документы"
-
-#. module: hr_recruitment_pdf_renderer
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
-#: model:mail.activity.type,name:hr_recruitment_pdf_renderer.mail_activity_type_offer_pdf
-#: model:mail.activity.type,summary:hr_recruitment_pdf_renderer.mail_activity_type_offer_pdf
-#: model:ir.actions.act_window,name:hr_recruitment_pdf_renderer.action_hr_offer_pdf_send_wizard
-#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:78
-msgid "Prepare PDF documents"
-msgstr "Подготовить PDF-документы"
 
 #. module: hr_recruitment_pdf_renderer
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
@@ -123,13 +97,6 @@ msgstr "Постоянный текст"
 
 #. module: hr_recruitment_pdf_renderer
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_offer_pdf_document_view_form
-msgid "PDF document"
-msgstr "PDF-документ"
-
-#. module: hr_recruitment_pdf_renderer
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
 msgid "Preview"
 msgstr "Предпросмотр"
 
@@ -139,24 +106,10 @@ msgid "Fields"
 msgstr "Поля"
 
 #. module: hr_recruitment_pdf_renderer
-#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template__offer_pdf_company_id
-msgid "PDF documents company"
-msgstr "Компания PDF-документов"
-
-#. module: hr_recruitment_pdf_renderer
-#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_recruitment_stage__offer_mail_template_id
-msgid "Manual PDF document template"
-msgstr "Шаблон PDF-документов с ручным заполнением"
-
-#. module: hr_recruitment_pdf_renderer
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
-msgid "Source PDFs are kept separately and are never attached to the email unchanged."
-msgstr "Исходные PDF хранятся отдельно и никогда не прикладываются к письму без заполнения."
-
-#. module: hr_recruitment_pdf_renderer
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
 msgid "Values have changed. Refresh the preview to view current values."
-msgstr "Значения изменены. Обновите предпросмотр, чтобы увидеть актуальные значения."
+msgstr ""
+"Значения изменены. Обновите предпросмотр, чтобы увидеть актуальные значения."
 
 #. module: hr_recruitment_pdf_renderer
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__pdf_file
@@ -235,12 +188,6 @@ msgstr "Постоянное начальное значение"
 
 #. module: hr_recruitment_pdf_renderer
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_offer_pdf_document_view_form
-msgid "For each PDF field, choose a safe source from the applicant or enter static text. Initial values can still be edited before the email is sent."
-msgstr "Для каждого поля PDF выберите безопасный источник из заявки кандидата или введите постоянный текст. Начальное значение можно изменить перед отправкой письма."
-
-#. module: hr_recruitment_pdf_renderer
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
 msgid "PDF field"
 msgstr "Поле PDF"
 
@@ -255,40 +202,47 @@ msgid "Configure PDF fields"
 msgstr "Настроить поля PDF"
 
 #. module: hr_recruitment_pdf_renderer
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_offer_pdf_document_view_form
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
 msgid "PDF field defaults"
 msgstr "Начальные значения полей PDF"
 
 #. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:60
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
 msgid "The email template was deleted. Start a new PDF document process."
-msgstr "Шаблон email удалён. Запустите новый процесс подготовки PDF-документов."
+msgstr ""
+"Шаблон email удалён. Запустите новый процесс подготовки PDF-документов."
 
 #. module: hr_recruitment_pdf_renderer
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__label
 msgid "Field"
 msgstr "Поле"
 
 #. module: hr_recruitment_pdf_renderer
-#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__value_ids
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__value
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_value_ids
 msgid "Value"
 msgstr "Значение"
 
 #. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__sequence
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__sequence
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__sequence
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__sequence
 msgid "Sequence"
 msgstr "Порядок"
 
 #. module: hr_recruitment_pdf_renderer
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__required
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__required
 msgid "Required"
 msgstr "Обязательное"
 
 #. module: hr_recruitment_pdf_renderer
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__multiline
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__multiline
 msgid "Multiline"
 msgstr "Многострочное"
 
@@ -313,72 +267,947 @@ msgid "Used unchanged as the name of the sent PDF attachment."
 msgstr "Используется без изменений как имя отправляемого PDF-вложения."
 
 #. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:12
-#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:56
-msgid "Only Recruitment users can prepare PDF documents."
-msgstr "Подготавливать PDF-документы могут только пользователи модуля «Подбор персонала»."
-
-#. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:19
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:0
 msgid "The applicant must have an email address before preparing a document."
-msgstr "Перед подготовкой документа у кандидата должен быть указан адрес электронной почты."
+msgstr ""
+"Перед подготовкой документа у кандидата должен быть указан адрес электронной"
+" почты."
 
 #. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:33
-msgid "No enabled manual PDF document template is available for this applicant."
-msgstr "Для этого кандидата нет доступного активного шаблона PDF-документов с ручным заполнением."
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:0
+msgid ""
+"No enabled manual PDF document template is available for this applicant."
+msgstr ""
+"Для этого кандидата нет доступного активного шаблона PDF-документов с ручным"
+" заполнением."
 
 #. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:79
-msgid "Prepare the completed PDF documents before sending them to the candidate."
-msgstr "Подготовьте заполненные PDF-документы перед отправкой кандидату."
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/mail_template.py:0
+msgid ""
+"Manual PDF documents can only be configured on hr.applicant email templates."
+msgstr ""
+"PDF-документы с ручным заполнением можно настроить только в шаблонах писем "
+"для кандидатов."
 
 #. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/models/mail_template.py:22
-msgid "Manual PDF documents can only be configured on hr.applicant email templates."
-msgstr "PDF-документы с ручным заполнением можно настроить только в шаблонах писем для кандидатов."
-
-#. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/models/mail_template.py:27
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/mail_template.py:0
 msgid "Select an enabled manual PDF document template for applicants."
-msgstr "Выберите активный шаблон PDF-документов с ручным заполнением для кандидатов."
+msgstr ""
+"Выберите активный шаблон PDF-документов с ручным заполнением для кандидатов."
 
 #. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/models/mail_template.py:29
-msgid "The email template has no manual PDF documents."
-msgstr "В шаблоне письма нет PDF-документов с ручным заполнением."
-
-#. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/models/mail_template.py:34
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/mail_template.py:0
 msgid "Fix the PDF field mapping before starting the document process."
 msgstr "Исправьте настройку полей PDF перед началом подготовки документов."
 
 #. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_document.py:42
-msgid "Only application/pdf files can be used as documents."
-msgstr "В качестве документов можно использовать только файлы application/pdf."
-
-#. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:118
-msgid "These PDF documents have already been sent."
-msgstr "Эти PDF-документы уже отправлены."
-
-#. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:120
-msgid "These PDF documents are currently being sent."
-msgstr "Эти PDF-документы сейчас отправляются."
-
-#. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:175
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
 msgid "This is the last document. Use Send to deliver the documents."
-msgstr "Это последний документ. Нажмите «Отправить», чтобы отправить документы."
+msgstr ""
+"Это последний документ. Нажмите «Отправить», чтобы отправить документы."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "Document values were saved."
+msgstr "Значения документа сохранены."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__hr_offer_pdf_send_document__document_type__fillable_pdf
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__hr_pdf_document_draft_document__document_type__fillable_pdf
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__mail_template_offer_pdf_document__document_type__fillable_pdf
+msgid "Fillable PDF"
+msgstr "Заполняемый PDF"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__hr_offer_pdf_send_document__document_type__requested_file
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__hr_pdf_document_draft_document__document_type__requested_file
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__mail_template_offer_pdf_document__document_type__requested_file
+msgid "Requested file"
+msgstr "Запрашиваемый файл"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__upload_required
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_upload_required
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__upload_required
+msgid "Required upload"
+msgstr "Обязательное вложение"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__uploaded_file
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_uploaded_file
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
+msgid "Upload document"
+msgstr "Прикрепите документ"
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "File format is not allowed."
+msgstr "Формат файла не разрешён."
+
+#. module: hr_recruitment_pdf_renderer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
+msgid "The requested document is required."
+msgstr "Требуемый документ обязателен."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:0
+#: model:ir.actions.act_window,name:hr_recruitment_pdf_renderer.action_hr_offer_pdf_send_wizard
+#: model:mail.activity.type,name:hr_recruitment_pdf_renderer.mail_activity_type_offer_pdf
+#: model:mail.activity.type,summary:hr_recruitment_pdf_renderer.mail_activity_type_offer_pdf
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
+msgid "Prepare documents"
+msgstr "Подготовить документы"
+
+#. module: hr_recruitment_pdf_renderer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_applicant_view_form_offer_pdf
+msgid "Prepare and send documents"
+msgstr "Подготовить и отправить документы"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__document_ids
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template__offer_pdf_document_ids
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
+msgid "Documents"
+msgstr "Документы"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__document_id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__document_ids
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__document_id
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_offer_pdf_document_view_form
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
+msgid "Document"
+msgstr "Документ"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template__offer_pdf_manual_enabled
+msgid "Prepare documents manually"
+msgstr "Подготавливать документы вручную"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template__offer_pdf_company_id
+msgid "Documents company"
+msgstr "Компания документов"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_recruitment_stage__offer_mail_template_id
+msgid "Manual document template"
+msgstr "Шаблон документов с ручной подготовкой"
 
 #. module: hr_recruitment_pdf_renderer
 #: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_applicant__offer_pdf_activity_id
-msgid "PDF document activity"
-msgstr "Действие по PDF-документам"
+msgid "Document preparation activity"
+msgstr "Действие по подготовке документов"
 
 #. module: hr_recruitment_pdf_renderer
-#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:178
-msgid "Document values were saved."
-msgstr "Значения документа сохранены."
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "%(current)s of %(total)s"
+msgstr "%(current)s из %(total)s"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.constraint,message:hr_recruitment_pdf_renderer.constraint_hr_pdf_document_draft_document_hr_pdf_document_draft_document_unique_source
+msgid "A document can only be saved once in the same draft."
+msgstr "Документ можно сохранить в одном черновике только один раз."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_document.py:0
+msgid "A document name is required."
+msgstr "Необходимо указать название документа."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_document.py:0
+msgid "A fillable PDF requires a source PDF and filename."
+msgstr "Для заполняемого PDF требуются исходный PDF и имя файла."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "A fillable PDF wizard step requires a source PDF."
+msgstr "Для шага с заполняемым PDF требуется исходный PDF."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__active
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__active
+msgid "Active"
+msgstr "Активно"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_hr_applicant
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__applicant_id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__applicant_id
+msgid "Applicant"
+msgstr "Кандидат"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__create_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__create_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__create_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__create_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__create_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__create_uid
+msgid "Created by"
+msgstr "Кем создано"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__create_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__create_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__create_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__create_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__create_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__create_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__create_date
+msgid "Created on"
+msgstr "Дата создания"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_document_id
+msgid "Current Document"
+msgstr "Текущий документ"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_index
+msgid "Current Index"
+msgstr "Текущий номер"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,help:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__active
+msgid "Disabled because this field is no longer present in the uploaded PDF."
+msgstr "Отключено, поскольку этого поля больше нет в загруженном PDF."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__document_count
+msgid "Document Count"
+msgstr "Количество документов"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__document_type
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_document_type
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__document_type
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__document_type
+msgid "Document Type"
+msgstr "Тип документа"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__draft_id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__draft_id
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__hr_offer_pdf_send_wizard__state__draft
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_mail_template
+msgid "Email Templates"
+msgstr "Шаблоны электронной почты"
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "Encrypted PDF documents are not supported."
+msgstr "Зашифрованные PDF-документы не поддерживаются."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__hr_offer_pdf_send_wizard__state__failed
+msgid "Failed"
+msgstr "Ошибка"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__uploaded_mimetype
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_uploaded_mimetype
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__uploaded_mimetype
+msgid "File format"
+msgstr "Формат файла"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__uploaded_size
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_uploaded_size
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__uploaded_size
+msgid "File size (bytes)"
+msgstr "Размер файла (байт)"
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "Fill in all required PDF fields before sending."
+msgstr "Перед отправкой заполните все обязательные поля PDF."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "Fill in required field(s): %(names)s."
+msgstr "Заполните обязательные поля: %(names)s."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:0
+msgid ""
+"Fill in the PDF documents and attach the requested files before sending them"
+" to the candidate."
+msgstr ""
+"Заполните PDF-документы и приложите запрошенные файлы перед отправкой "
+"кандидату."
+
+#. module: hr_recruitment_pdf_renderer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
+msgid ""
+"Fillable source PDFs are rendered by Odoo. Requested files are uploaded "
+"later for a specific applicant."
+msgstr ""
+"Заполняемые исходные PDF формируются в Odoo. Запрашиваемые файлы загружаются"
+" позже для конкретного кандидата."
+
+#. module: hr_recruitment_pdf_renderer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
+msgid ""
+"For each PDF field, choose a safe source from the applicant or enter static text.\n"
+"                                    Initial values can still be edited before the email is sent."
+msgstr ""
+"Для каждого поля PDF выберите безопасный источник из данных кандидата или "
+"введите постоянный текст. Начальные значения можно изменить перед отправкой "
+"письма."
+
+#. module: hr_recruitment_pdf_renderer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_offer_pdf_document_view_form
+msgid ""
+"For each PDF field, choose a safe source from the applicant or enter static text.\n"
+"                        Initial values can still be edited before the email is sent."
+msgstr ""
+"Для каждого поля PDF выберите безопасный источник из данных кандидата или "
+"введите постоянный текст. Начальные значения можно изменить перед отправкой "
+"письма."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__write_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__write_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__write_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__write_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__write_uid
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__write_uid
+msgid "Last Updated by"
+msgstr "Кем изменено"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__write_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__write_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__write_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__write_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__write_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__write_date
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__write_date
+msgid "Last Updated on"
+msgstr "Дата изменения"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,help:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__default_text
+msgid "Literal text used only when the initial value source is Static text."
+msgstr ""
+"Текст используется только при выборе источника начального значения "
+"«Постоянный текст»."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "Macro-enabled documents are not allowed."
+msgstr "Документы с макросами не разрешены."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_mail_template_offer_pdf_document
+msgid "Manual PDF Document"
+msgstr "PDF-документ с ручным заполнением"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_mail_template_offer_pdf_field
+msgid "Manual PDF Document Field"
+msgstr "Поле PDF-документа с ручным заполнением"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__name
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_document_name
+msgid "Name"
+msgstr "Название"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template__offer_pdf_document_count
+msgid "Offer Pdf Document Count"
+msgstr "Количество документов предложения"
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/hr_applicant.py:0
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "Only Recruitment users can prepare documents."
+msgstr ""
+"Подготавливать документы могут только пользователи модуля «Подбор "
+"персонала»."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_document.py:0
+msgid "Only application/pdf files can be used as fillable PDFs."
+msgstr ""
+"В качестве заполняемых PDF можно использовать только файлы application/pdf."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.constraint,message:hr_recruitment_pdf_renderer.constraint_hr_pdf_document_draft_hr_pdf_document_draft_unique_user_applicant_template
+msgid ""
+"Only one saved PDF document draft is allowed per user, applicant and "
+"template."
+msgstr ""
+"Для одного пользователя, кандидата и шаблона допускается только один "
+"сохранённый черновик документов."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "Only text AcroForm fields (/Tx) are supported."
+msgstr "Поддерживаются только текстовые поля AcroForm (/Tx)."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "OpenDocument files containing scripts are not allowed."
+msgstr "Файлы OpenDocument со скриптами не разрешены."
+
+#. module: hr_recruitment_pdf_renderer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
+msgid "Optional document: you may continue without uploading a file."
+msgstr "Необязательный документ: можно продолжить без загрузки файла."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_hr_offer_pdf_send_value
+msgid "PDF Document Field Value"
+msgstr "Значение поля PDF-документа"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.constraint,message:hr_recruitment_pdf_renderer.constraint_mail_template_offer_pdf_document_offer_pdf_document_name_unique
+msgid "PDF document names must be unique per template."
+msgstr "Названия документов должны быть уникальными в пределах шаблона."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid ""
+"PDF field names may only contain letters, digits, hyphens and underscores."
+msgstr ""
+"Имена полей PDF могут содержать только буквы, цифры, дефисы и знаки "
+"подчёркивания."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.constraint,message:hr_recruitment_pdf_renderer.constraint_mail_template_offer_pdf_field_offer_pdf_field_name_unique
+msgid "PDF field names must be unique per document."
+msgstr "Имена полей PDF должны быть уникальными в пределах документа."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "PDF fields changed since the document configuration was saved."
+msgstr "Поля PDF изменились после сохранения настроек документа."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__pdf_field_name
+msgid "Pdf Field Name"
+msgstr "Имя поля PDF"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__preview_filename
+msgid "Preview Filename"
+msgstr "Имя файла предпросмотра"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__preview_pdf
+msgid "Preview Pdf"
+msgstr "PDF предпросмотра"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__preview_stale
+msgid "Preview Stale"
+msgstr "Предпросмотр устарел"
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "Preview is only available for fillable PDF documents."
+msgstr "Предпросмотр доступен только для заполняемых PDF-документов."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_hr_offer_pdf_send_document
+msgid "Recruitment Document to Send"
+msgstr "Документ подбора для отправки"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_hr_recruitment_stage
+msgid "Recruitment Stages"
+msgstr "Этапы подбора персонала"
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_document.py:0
+msgid "Requested files cannot contain a source PDF or PDF field mapping."
+msgstr ""
+"Запрашиваемые файлы не могут содержать исходный PDF или настройку полей PDF."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_hr_pdf_document_draft_document
+msgid "Saved PDF Document Draft"
+msgstr "Сохранённый документ черновика"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_hr_pdf_document_draft
+msgid "Saved PDF Document Values"
+msgstr "Сохранённые значения документов"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,help:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_field__default_source
+msgid ""
+"Select a safe applicant field to prefill this PDF field, or choose static "
+"text."
+msgstr ""
+"Выберите безопасное поле кандидата для заполнения поля PDF или постоянный "
+"текст."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model,name:hr_recruitment_pdf_renderer.model_hr_offer_pdf_send_wizard
+msgid "Send Recruitment Documents"
+msgstr "Отправка документов кандидата"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__hr_offer_pdf_send_wizard__state__sending
+msgid "Sending"
+msgstr "Отправляется"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields.selection,name:hr_recruitment_pdf_renderer.selection__hr_offer_pdf_send_wizard__state__sent
+msgid "Sent"
+msgstr "Отправлено"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__sent_mail_id
+msgid "Sent Mail"
+msgstr "Отправленное письмо"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__sent_message_id
+msgid "Sent Message"
+msgstr "Отправленное сообщение"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__source_document_id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__source_document_id
+msgid "Source Document"
+msgstr "Исходный документ"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_value__source_field_id
+msgid "Source Field"
+msgstr "Исходное поле"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__source_filename
+msgid "Source Filename"
+msgstr "Имя исходного файла"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__source_pdf
+msgid "Source Pdf"
+msgstr "Исходный PDF"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__state
+msgid "State"
+msgstr "Состояние"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__step_label
+msgid "Step Label"
+msgstr "Обозначение шага"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__step_sequence
+msgid "Step Sequence"
+msgstr "Порядок шага"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__template_id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__template_id
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_mail_template_offer_pdf_document__template_id
+msgid "Template"
+msgstr "Шаблон"
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF AcroForm does not contain any fields."
+msgstr "PDF AcroForm не содержит полей."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF contains a cyclic form field hierarchy."
+msgstr "PDF содержит циклическую иерархию полей формы."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF contains an ambiguous widget annotation."
+msgstr "PDF содержит неоднозначную аннотацию поля."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF contains an orphan widget annotation."
+msgstr "PDF содержит несвязанную аннотацию поля."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF contains duplicate field name \"%(name)s\"."
+msgstr "PDF содержит повторяющееся имя поля «%(name)s»."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF contains duplicate widgets for field \"%(name)s\"."
+msgstr "PDF содержит несколько элементов для поля «%(name)s»."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF could not be filled. Check its form field appearance settings."
+msgstr ""
+"Не удалось заполнить PDF. Проверьте настройки отображения полей формы."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF document is damaged or uses an unsupported encoding."
+msgstr "PDF-документ повреждён или использует неподдерживаемую кодировку."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF does not contain an AcroForm."
+msgstr "PDF не содержит AcroForm."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF does not contain any text AcroForm field."
+msgstr "PDF не содержит текстовых полей AcroForm."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_document.py:0
+msgid "The PDF exceeds the allowed size."
+msgstr "Размер PDF превышает допустимый."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF field \"%(name)s\" has no widget annotation."
+msgstr "У поля PDF «%(name)s» отсутствует аннотация элемента."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The PDF file is empty or exceeds the allowed size."
+msgstr "PDF-файл пуст или превышает допустимый размер."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/mail_template.py:0
+msgid "The applicant and PDF template belong to different companies."
+msgstr "Кандидат и шаблон документов относятся к разным компаниям."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "The document email could not be queued."
+msgstr "Не удалось поставить письмо с документами в очередь."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "The email template has no active document."
+msgstr "В шаблоне письма нет активного документа."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/mail_template.py:0
+msgid "The email template has no active documents."
+msgstr "В шаблоне письма нет активных документов."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The generated PDF did not preserve the value of field \"%(name)s\"."
+msgstr "Сформированный PDF не сохранил значение поля «%(name)s»."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The generated PDF does not contain all expected fields."
+msgstr "Сформированный PDF содержит не все ожидаемые поля."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The generated PDF field \"%(name)s\" is not read-only."
+msgstr "Поле «%(name)s» сформированного PDF доступно для изменения."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The generated PDF has an inconsistent widget structure."
+msgstr "Сформированный PDF имеет несогласованную структуру элементов формы."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The generated PDF has no normal appearance for field \"%(name)s\"."
+msgstr "В сформированном PDF отсутствует обычное отображение поля «%(name)s»."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The requested document exceeds the allowed size."
+msgstr "Размер запрашиваемого документа превышает допустимый."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The requested document is empty."
+msgstr "Запрашиваемый документ пуст."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "The requested document is required: %(name)s."
+msgstr "Необходимо приложить запрашиваемый документ: %(name)s."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded OOXML document has no content type declaration."
+msgstr "В загруженном документе OOXML отсутствует описание типов содержимого."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded OpenDocument file has no mimetype entry."
+msgstr "В загруженном файле OpenDocument отсутствует запись mimetype."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded OpenDocument mimetype is invalid."
+msgstr "В загруженном файле OpenDocument указан некорректный MIME-тип."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded document contains an unsafe archive path."
+msgstr "Загруженный документ содержит небезопасный путь внутри архива."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded document contains too many archive entries."
+msgstr "Загруженный документ содержит слишком много элементов архива."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "The uploaded document data is invalid."
+msgstr "Данные загруженного документа некорректны."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded document expands beyond the allowed size."
+msgstr "Размер распакованного документа превышает допустимый."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded document has an unsafe compression ratio."
+msgstr "Загруженный документ имеет небезопасную степень сжатия."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded file contents do not match its extension."
+msgstr "Содержимое загруженного файла не соответствует его расширению."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "The uploaded file is not a PDF document."
+msgstr "Загруженный файл не является PDF-документом."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded file is not a valid document container."
+msgstr "Загруженный файл не является корректным контейнером документа."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded file must have a valid name."
+msgstr "У загруженного файла должно быть корректное имя."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The uploaded legacy Office file has an invalid signature."
+msgstr ""
+"Загруженный файл устаревшего формата Office имеет некорректную сигнатуру."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "These documents are currently being sent."
+msgstr "Эти документы сейчас отправляются."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "These documents have already been sent."
+msgstr "Эти документы уже отправлены."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "This is the first document."
+msgstr "Это первый документ."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_field.py:0
+msgid "Unsupported PDF default source."
+msgstr "Неподдерживаемый источник начального значения PDF."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_document.py:0
+msgid "Upload a valid AcroForm PDF when changing the document type."
+msgstr "При изменении типа документа загрузите корректный PDF AcroForm."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__uploaded_checksum
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__uploaded_checksum
+msgid "Uploaded Checksum"
+msgstr "Контрольная сумма загруженного файла"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__uploaded_file
+msgid "Uploaded document"
+msgstr "Загруженный документ"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__uploaded_filename
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_wizard__current_uploaded_filename
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__uploaded_filename
+msgid "Uploaded filename"
+msgstr "Имя загруженного файла"
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/wizard/offer_pdf_send_wizard.py:0
+msgid "Uploads are only accepted for requested-file steps."
+msgstr "Загрузка файлов разрешена только на шагах с запрашиваемым файлом."
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft__user_id
+msgid "User"
+msgstr "Пользователь"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_pdf_document_draft_document__value_map
+msgid "Value Map"
+msgstr "Карта значений"
+
+#. module: hr_recruitment_pdf_renderer
+#: model:ir.model.fields,field_description:hr_recruitment_pdf_renderer.field_hr_offer_pdf_send_document__wizard_id
+msgid "Wizard"
+msgstr "Мастер"
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_pdf_service.py:0
+msgid "XFA PDF forms are not supported. Use AcroForm text fields."
+msgstr "PDF-формы XFA не поддерживаются. Используйте текстовые поля AcroForm."
+
+#. module: hr_recruitment_pdf_renderer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.hr_offer_pdf_send_wizard_view_form
+msgid ""
+"Allowed formats: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, ODS, ODP.\n"
+"                            Do not upload executable, archive, or macro-enabled files."
+msgstr ""
+"Допустимые форматы: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, ODS, ODP. Не "
+"загружайте исполняемые файлы, архивы и документы с макросами."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "Encrypted requested PDF documents are not supported."
+msgstr "Зашифрованные запрашиваемые PDF-документы не поддерживаются."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The requested PDF document contains no pages."
+msgstr "Запрашиваемый PDF-документ не содержит страниц."
+
+#. module: hr_recruitment_pdf_renderer
+#. odoo-python
+#: code:addons/hr_recruitment_pdf_renderer/models/offer_attachment_service.py:0
+msgid "The requested PDF document is damaged."
+msgstr "Запрашиваемый PDF-документ повреждён."
+
+#. module: hr_recruitment_pdf_renderer
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_offer_pdf_document_view_form
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_pdf_renderer.mail_template_view_form_offer_pdf
+msgid ""
+"The user will be asked to upload PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, "
+"ODS, or ODP while preparing the email."
+msgstr ""
+"При подготовке письма пользователю будет предложено загрузить PDF, DOC, "
+"DOCX, XLS, XLSX, PPT, PPTX, ODT, ODS или ODP."

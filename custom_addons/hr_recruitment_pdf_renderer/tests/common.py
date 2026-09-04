@@ -1,11 +1,33 @@
 import base64
 import io
+import zipfile
 
 from odoo.tests.common import TransactionCase
 from odoo.tools import pdf
 
 
 class OfferPdfCase(TransactionCase):
+    @staticmethod
+    def make_ooxml(kind='word'):
+        """Create a minimal OOXML container for upload validation tests."""
+        result = io.BytesIO()
+        with zipfile.ZipFile(result, 'w', zipfile.ZIP_DEFLATED) as archive:
+            archive.writestr(
+                '[Content_Types].xml',
+                '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"/>',
+            )
+            archive.writestr(f'{kind}/document.xml', '<document/>')
+        return result.getvalue()
+
+    @staticmethod
+    def make_odf(mimetype='application/vnd.oasis.opendocument.text'):
+        """Create a minimal OpenDocument container for upload validation tests."""
+        result = io.BytesIO()
+        with zipfile.ZipFile(result, 'w') as archive:
+            archive.writestr('mimetype', mimetype, compress_type=zipfile.ZIP_STORED)
+            archive.writestr('content.xml', '<office:document/>')
+        return result.getvalue()
+
     @staticmethod
     def make_pdf(field_names=('candidate_name', 'candidate_address'), field_type='/Tx', encrypted=False):
         """Create a small AcroForm fixture without relying on a user file."""

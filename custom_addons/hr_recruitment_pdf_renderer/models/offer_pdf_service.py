@@ -16,7 +16,9 @@ MAX_PDF_SIZE = 10 * 1024 * 1024
 
 def _resolve(value):
     """Resolve an indirect PDF object on all supported Odoo PDF backends."""
-    return value.get_object() if hasattr(value, 'get_object') else value.getObject() if hasattr(value, 'getObject') else value
+    if hasattr(value, 'get_object'):
+        return value.get_object()
+    return value.getObject() if hasattr(value, 'getObject') else value
 
 
 def _object_key(value):
@@ -166,6 +168,9 @@ def render_pdf(document, values, readonly=False):
         writer = pdf.PdfFileWriter()
         for page_number in range(reader.getNumPages()):
             writer.addPage(reader.getPage(page_number))
+        writer._root_object.update({
+            pdf.NameObject('/AcroForm'): reader.trailer['/Root']['/AcroForm'],
+        })
         pdf.fill_form_fields_pdf(writer, expected)
         if readonly:
             for page_number in range(writer.getNumPages()):
@@ -175,7 +180,11 @@ def render_pdf(document, values, readonly=False):
                         continue
                     definition = _field_definition(widget)
                     if definition:
-                        definition.update({pdf.NameObject('/Ff'): pdf.NumberObject(int(definition.get('/Ff', 0)) | READ_ONLY)})
+                        definition.update({
+                            pdf.NameObject('/Ff'): pdf.NumberObject(
+                                int(definition.get('/Ff', 0)) | READ_ONLY
+                            ),
+                        })
         stream = io.BytesIO()
         writer.write(stream)
         result = stream.getvalue()

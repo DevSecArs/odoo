@@ -1,22 +1,28 @@
-# PDF-документы для подбора персонала
+# Документы для подбора персонала
 
-`hr_recruitment_pdf_renderer` lets a recruitment user complete AcroForm PDF documents for one applicant before an email template is sent.
+`hr_recruitment_pdf_renderer` позволяет подготовить комплект документов кандидата перед отправкой одного письма. В одной таблице email-шаблона поддерживаются два типа строк:
 
-## Installation and configuration
+- **Fillable PDF** — Odoo копирует AcroForm в wizard, подставляет и позволяет изменить значения, затем формирует PDF только для чтения;
+- **Requested file** — HR-пользователь загружает один заранее подготовленный документ для конкретного кандидата. Вложение может быть обязательным или необязательным.
 
-1. Install the module after `hr_recruitment`.
-2. Create an email template for **Applicant** and enable **Manually complete PDF documents** on its **PDF documents** tab.
-3. Upload one or more PDF AcroForms, set their order, and configure every discovered field's label, default source and required flag.
-4. Optionally select this template in **Recruitment / Configuration / Stages**. Moving an applicant to that stage schedules a *Prepare PDF documents* activity; it does not send an empty email.
+Например, сначала пользователь заполняет PDF «Согласие кандидата», затем прикладывает обязательный DOCX «Офер». Все активные Fillable PDF всегда идут первыми, после них — Requested file; внутри каждой группы действует `sequence`.
 
-PDFs must be unencrypted AcroForms with at least one text (`/Tx`) field. XFA, checkboxes, choice fields, signatures, ambiguous widgets and unsafe field names are rejected. Store technical field names with only `A-Z`, `a-z`, `0-9`, `_` and `-`.
+## Настройка и использование
 
-Use **Prepare and send PDF documents** on one applicant. Edit the prefilled values, choose **Refresh preview**, then move through the documents with **Back** and **Next**. On the final document choose **Send**. Only filled, read-only PDFs are attached to the queued mail; the source PDFs are never added to the template attachments.
+1. Создайте email-шаблон модели **Applicant** и включите документный workflow на вкладке **Documents**.
+2. Для Fillable PDF загрузите незашифрованный AcroForm и настройте обнаруженные поля.
+3. Для Requested file задайте название, порядок и флаг **Required upload**. Исходный Office-файл в шаблоне не хранится.
+4. При необходимости свяжите шаблон с этапом подбора. Переход кандидата на этап создаёт activity **Prepare documents**, но не отправляет пустое письмо.
+5. В wizard заполните все PDF, затем приложите запрошенные файлы. Необязательный файл можно пропустить. Кнопка **Save** сохраняет и значения PDF, и загрузки; при повторном открытии они восстанавливаются.
 
-## Diagnostics and limits
+После успешной постановки письма в очередь черновик удаляется. Заполненные PDF и загруженные файлы прикрепляются к одному письму и к кандидату; статические вложения email-шаблона продолжают обрабатываться стандартным механизмом Odoo.
 
-If a replaced PDF removes a configured field, its mapping is retained but disabled and the template cannot be used until it is corrected. Preview and final rendering re-validate the form structure server-side.
+## Форматы и безопасность
 
-The module relies on the font and appearance dictionary embedded in the original PDF. Verify Cyrillic names and long values in the target browser/PDF reader. A missing Cyrillic font, clipped field, or broken appearance must be corrected in the source PDF; the module deliberately does not replace fonts globally. Read-only AcroForm flags are not cryptographic protection and can be removed with a specialised PDF editor.
+Разрешены `.pdf`, `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`, `.odt`, `.ods`, `.odp`. Макросодержащие `.docm`, `.xlsm`, `.pptm`, архивы и исполняемые файлы не принимаются. MIME определяется сервером. PDF проверяется по структуре документа, OOXML и ODF — как ZIP-контейнеры с ограничениями против zip bomb и path traversal, legacy Office — по OLE-сигнатуре.
 
-The default maximum source PDF size is 10 MiB (`MAX_PDF_SIZE` in the service). Preview bytes are stored on the transient wizard and cleared after a successful queueing; final attachments remain available to the mail queue and chatter.
+Загруженные документы не конвертируются и не исполняются сервером. Такая проверка не гарантирует обнаружение вредоносного кода, особенно в legacy `.doc/.xls/.ppt`: на уровне инфраструктуры необходим антивирус.
+
+Максимальный размер ручного файла задаётся системным параметром `hr_recruitment_pdf_renderer.max_requested_file_size_mb`, значение по умолчанию — 25 MiB. Лимит исходного PDF остаётся отдельным — 10 MiB.
+
+PDF должен быть AcroForm как минимум с одним текстовым (`/Tx`) полем. XFA, шифрование, checkbox/choice/signature, неоднозначные widgets и небезопасные имена полей отклоняются. Внешний вид кириллицы зависит от шрифта и appearance dictionary исходного PDF; readonly-флаг AcroForm не является криптографической защитой.
