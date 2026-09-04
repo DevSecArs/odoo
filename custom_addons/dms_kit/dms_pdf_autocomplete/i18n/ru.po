@@ -5,6 +5,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-04 13:09+0000\n"
+"PO-Revision-Date: 2026-09-04 13:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -12,357 +17,1134 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "%(current)s of %(total)s"
 msgstr "%(current)s из %(total)s"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_delivery_wizard.py:0
 msgid "<p>Your personal document is attached.</p>"
 msgstr "<p>Ваш персональный документ прикреплён к сообщению.</p>"
 
 #. module: dms_pdf_autocomplete
-msgid "Attachments published through Email or Odoo chat follow the Mail retention policy\n                        and are not deleted by the generated-document cleanup job."
-msgstr "Вложения, отправленные по электронной почте или в чате Odoo, подчиняются политике хранения Почты\n                        и не удаляются заданием очистки созданных документов."
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__active
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__active
+msgid "Active"
+msgstr "Активно"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__attachment_id
+msgid "Attachment"
+msgstr "Вложение"
+
+#. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_delivery_wizard_form
+msgid ""
+"Attachments published through Email or Odoo chat follow the Mail retention policy\n"
+"                        and are not deleted by the generated-document cleanup job."
+msgstr ""
+"Вложения, отправленные по электронной почте или в чате Odoo, подчиняются политике хранения Почты\n"
+"                        и не удаляются заданием очистки созданных документов."
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__automatic_value_ids
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__current_automatic_value_ids
+msgid "Automatic Value"
+msgstr "Автоматическое значение"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__batch_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__batch_id
+msgid "Batch"
+msgstr "Пакет"
+
+#. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "Binary and image fields cannot be written to a PDF text field."
 msgstr "Бинарные поля и изображения нельзя записать в текстовое поле PDF."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__body_html
+msgid "Body Html"
+msgstr "Текст HTML"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__format_hint__boolean
+msgid "Boolean"
+msgstr "Логическое"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__channel
+msgid "Channel"
+msgstr "Канал"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__chat_partner_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__chat_partner_id
+msgid "Chat Partner"
+msgstr "Контакт чата"
+
+#. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_autocomplete_wizard_form
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_delivery_wizard_form
 msgid "Close"
 msgstr "Закрыть"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__company_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__company_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__target_model__partner
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__target_model__partner
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_delivery_wizard.py:0
 msgid "Contact \"%(name)s\" has no active internal Odoo user."
 msgstr "У контакта «%(name)s» нет активного внутреннего пользователя Odoo."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__partner_ids
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__target_model__partner
 msgid "Contacts"
 msgstr "Контакты"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__create_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__create_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__create_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__create_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__create_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__create_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__create_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__create_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__create_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__create_uid
+msgid "Created by"
+msgstr "Создал"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__create_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__create_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__create_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__create_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__create_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__create_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__create_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__create_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__create_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__create_date
+msgid "Created on"
+msgstr "Создано"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__current_index
+msgid "Current Index"
+msgstr "Текущий индекс"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__current_recipient_id
+msgid "Current Recipient"
+msgstr "Текущий получатель"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_autocomplete_mapping
+msgid "DMS PDF Autocomplete Mapping Snapshot"
+msgstr "Снимок сопоставления автозаполнения PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_autocomplete_recipient
+msgid "DMS PDF Autocomplete Recipient Snapshot"
+msgstr "Снимок получателя автозаполнения PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_autocomplete_value
+msgid "DMS PDF Autocomplete Value Snapshot"
+msgstr "Снимок значения автозаполнения PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_autocomplete_wizard
+msgid "DMS PDF Autocomplete Wizard"
+msgstr "Мастер автозаполнения PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_autocomplete_delivery_wizard
+msgid "DMS PDF Delivery Confirmation"
+msgstr "Подтверждение доставки PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_autocomplete_delivery_recipient
+msgid "DMS PDF Delivery Recipient"
+msgstr "Получатель PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_field_mapping
+msgid "DMS PDF Field Mapping"
+msgstr "Сопоставление поля PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_form_field
+msgid "DMS PDF Form Field"
+msgstr "Поле PDF-формы DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_generation_batch
+msgid "DMS PDF Generation Batch"
+msgstr "Пакет создания PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_generation_result
+msgid "DMS PDF Generation Result"
+msgstr "Результат создания PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_pdf_value_resolver
+msgid "DMS PDF Safe Field Resolver"
+msgstr "Безопасное получение значения поля PDF DMS"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.actions.server,name:dms_pdf_autocomplete.ir_cron_cleanup_expired_pdf_batches_ir_actions_server
+msgid "DMS PDF: clean expired generated documents"
+msgstr "PDF DMS: очистка просроченных документов"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__format_hint__date
 msgid "Date"
 msgstr "Дата"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__format_hint__datetime
 msgid "Date and time"
 msgstr "Дата и время"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__format_hint__default
+msgid "Default"
+msgstr "По умолчанию"
+
+#. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_autocomplete_wizard_form
 msgid "Deliver"
 msgstr "Разослать"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.actions.act_window,name:dms_pdf_autocomplete.action_pdf_delivery_wizard
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_delivery_wizard_form
 msgid "Deliver personalized PDFs"
 msgstr "Разослать персональные PDF"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__delivery_channel
 msgid "Delivery Channel"
 msgstr "Канал доставки"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__delivery_error
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__delivery_error
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__delivery_error
 msgid "Delivery Error"
 msgstr "Ошибка доставки"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__delivery_state
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__delivery_state
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__delivery_state
+msgid "Delivery State"
+msgstr "Состояние доставки"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__delivery_wizard_id
+msgid "Delivery Wizard"
+msgstr "Мастер доставки"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__display_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__display_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__display_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__display_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__display_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__display_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__display_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__display_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__display_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__display_name_snapshot
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__display_name_snapshot
+msgid "Display Name Snapshot"
+msgstr "Снимок отображаемого имени"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_wizard__state__done
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__state__done
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__state__done
 msgid "Done"
 msgstr "Готово"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__channel__download
+msgid "Download"
+msgstr "Скачивание"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__download_token
+msgid "Download Token"
+msgstr "Токен скачивания"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__download_token_expires_at
+msgid "Download Token Expires At"
+msgstr "Срок действия токена скачивания"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__download_token_used
+msgid "Download Token Used"
+msgstr "Токен скачивания использован"
+
+#. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_autocomplete_wizard_form
 msgid "Download ZIP"
 msgstr "Скачать ZIP"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_wizard__state__draft
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_wizard__delivery_channel__email
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__channel__email
 msgid "Email"
 msgstr "Электронная почта"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__email_to
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__email_to
+msgid "Email To"
+msgstr "Адрес электронной почты"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__target_model__employee
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__target_model__employee
+msgid "Employee"
+msgstr "Сотрудник"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__employee_ids
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__target_model__employee
 msgid "Employees"
 msgstr "Сотрудники"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_delivery_wizard.py:0
 msgid "Enable at least one recipient."
 msgstr "Включите хотя бы одного получателя."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_delivery_wizard.py:0
 msgid "Enter a valid email address for \"%(name)s\"."
 msgstr "Укажите корректный адрес электронной почты для «%(name)s»."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__state__enter_values
 msgid "Enter values"
 msgstr "Ввод значений"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__error_count
+msgid "Error Count"
+msgstr "Количество ошибок"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__expires_at
+msgid "Expires At"
+msgstr "Срок хранения"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_recipient__delivery_state__failed
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_recipient__delivery_state__failed
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__state__failed
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__state__failed
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_result__delivery_state__failed
 msgid "Failed"
 msgstr "Ошибка"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "Field \"%(field)s\" does not exist on model \"%(model)s\"."
 msgstr "Поле «%(field)s» отсутствует в модели «%(model)s»."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__field_paths_audit
+msgid "Field Paths Audit"
+msgstr "Аудит путей полей"
+
+#. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "Field type \"%(type)s\" is not supported."
 msgstr "Тип поля «%(type)s» не поддерживается."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model,name:dms_pdf_autocomplete.model_dms_file
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__file_id
+msgid "File"
+msgstr "Файл"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__fill_mode
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__fill_mode
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__fill_mode
+msgid "Fill Mode"
+msgstr "Режим заполнения"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.actions.act_window,name:dms_pdf_autocomplete.action_pdf_autocomplete_wizard
+#: model:ir.actions.server,name:dms_pdf_autocomplete.action_dms_file_fill_pdf
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_dms_file_form_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_autocomplete_wizard_form
 msgid "Fill PDF"
 msgstr "Заполнить PDF"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__form_field_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__form_field_id
+msgid "Form Field"
+msgstr "Поле формы"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__format_hint
+msgid "Format Hint"
+msgstr "Формат"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.actions.act_window,name:dms_pdf_autocomplete.action_dms_pdf_generation_batch
+#: model:ir.ui.menu,name:dms_pdf_autocomplete.menu_dms_pdf_generation_batch
 msgid "Generated PDF batches"
 msgstr "Созданные пакеты PDF"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__state__generating
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__state__generating
 msgid "Generating"
 msgstr "Создание"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__generation_result_id
+msgid "Generation Result"
+msgstr "Результат создания"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__id
+msgid "ID"
+msgstr "ID"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_file__pdf_form_state__invalid
 msgid "Invalid"
 msgstr "Некорректен"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/dms_file.py:0
 msgid "Invalid PDF form"
 msgstr "Некорректная PDF-форма"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/generation_batch.py:0
 msgid "Invalid PDF generation target."
 msgstr "Некорректный целевой объект создания PDF."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__label
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__label
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__label
+msgid "Label"
+msgstr "Подпись"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__write_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__write_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__write_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__write_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__write_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__write_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__write_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__write_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__write_uid
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__write_uid
+msgid "Last Updated by"
+msgstr "Последнее изменение"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__write_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__write_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__write_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__write_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__write_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__write_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__write_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__write_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__write_date
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__write_date
+msgid "Last Updated on"
+msgstr "Дата изменения"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__last_validated_at
+msgid "Last Validated At"
+msgstr "Дата последней проверки"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__format_hint__list
+msgid "List"
+msgstr "Список"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__mail_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__mail_id
+msgid "Mail"
+msgstr "Письмо"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__manual_value_ids
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__current_manual_value_ids
+msgid "Manual Value"
+msgstr "Ручное значение"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_mapping__fill_mode__manual
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_value__fill_mode__manual
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__fill_mode__manual
 msgid "Manual input"
 msgstr "Ручной ввод"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/pdf_field_mapping.py:0
 msgid "Manual mappings cannot define an Odoo field path."
 msgstr "Для ручного сопоставления нельзя задавать путь поля Odoo."
 
 #. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_autocomplete_wizard_form
 msgid "Manual values"
 msgstr "Ручные значения"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__state__map_fields
 msgid "Map fields"
 msgstr "Сопоставление полей"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__mapping_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__mapping_ids
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__mapping_ids
+msgid "Mapping"
+msgstr "Сопоставление"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__message_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__message_id
+msgid "Message"
+msgstr "Сообщение"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__format_hint__monetary
+msgid "Monetary"
+msgstr "Денежный"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__multiline
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__multiline
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__multiline
+msgid "Multiline"
+msgstr "Многострочное"
+
+#. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_autocomplete_wizard_form
 msgid "Next"
 msgstr "Далее"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "No"
 msgstr "Нет"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_file__pdf_form_state__not_checked
 msgid "Not checked"
 msgstr "Не проверен"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_wizard__delivery_channel__chat
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__channel__chat
 msgid "Odoo chat"
 msgstr "Чат Odoo"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_mapping__fill_mode__odoo_field
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_value__fill_mode__odoo_field
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_field_mapping__fill_mode__odoo_field
 msgid "Odoo field"
 msgstr "Поле Odoo"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/dms_file.py:0
 msgid "Only DMS users can fill PDF templates."
 msgstr "Заполнять шаблоны PDF могут только пользователи DMS."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/dms_file.py:0
 msgid "Only application/pdf DMS files can be filled."
 msgstr "Можно заполнять только файлы DMS с типом application/pdf."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.constraint,message:dms_pdf_autocomplete.constraint_dms_pdf_field_mapping_dms_pdf_field_mapping_target_unique
 msgid "Only one mapping per target model is allowed for each PDF field."
-msgstr "Для каждого поля PDF допускается только одно сопоставление с целевой моделью."
+msgstr ""
+"Для каждого поля PDF допускается только одно сопоставление с целевой "
+"моделью."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "Only relational fields may be followed in a field path."
 msgstr "В пути поля переходить далее можно только через реляционные поля."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__output_checksum
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__output_checksum
+msgid "Output Checksum"
+msgstr "Контрольная сумма результата"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__output_filename
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__output_filename
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__output_filename
+msgid "Output Filename"
+msgstr "Имя итогового файла"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__output_pdf
+msgid "Output Pdf"
+msgstr "Итоговый PDF"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__owner_user_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__owner_user_id
+msgid "Owner User"
+msgstr "Владелец"
+
+#. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_dms_file_form_pdf_autocomplete
+msgid "PDF AcroForm"
+msgstr "PDF AcroForm"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.constraint,message:dms_pdf_autocomplete.constraint_dms_pdf_form_field_dms_pdf_form_field_name_unique
 msgid "PDF field names must be unique per DMS file."
 msgstr "Имена полей PDF должны быть уникальны в пределах файла DMS."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_file__pdf_form_field_ids
+msgid "PDF form fields"
+msgstr "Поля PDF-формы"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__state__partial
 msgid "Partially delivered"
 msgstr "Доставлено частично"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_wizard__state__partial
 msgid "Partially sent"
 msgstr "Отправлено частично"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__pdf_field_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__pdf_field_name
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__pdf_field_name
+msgid "Pdf Field Name"
+msgstr "Имя поля PDF"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_file__pdf_form_checked_at
+msgid "Pdf Form Checked At"
+msgstr "Дата проверки PDF-формы"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_file__pdf_form_checksum
+msgid "Pdf Form Checksum"
+msgstr "Контрольная сумма PDF-формы"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_file__pdf_form_enabled
+msgid "Pdf Form Enabled"
+msgstr "PDF-форма настроена"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_file__pdf_form_field_count
+msgid "Pdf Form Field Count"
+msgstr "Количество полей PDF-формы"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_file__pdf_form_message
+msgid "Pdf Form Message"
+msgstr "Сообщение PDF-формы"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_file__pdf_form_state
+msgid "Pdf Form State"
+msgstr "Состояние PDF-формы"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_recipient__delivery_state__pending
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_recipient__delivery_state__pending
 msgid "Pending"
 msgstr "Ожидает"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_delivery_wizard.py:0
 msgid "Personal document"
 msgstr "Персональный документ"
 
 #. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_autocomplete_wizard_form
 msgid "Preview"
 msgstr "Предпросмотр"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__preview_filename
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__current_preview_filename
+msgid "Preview Filename"
+msgstr "Имя файла предпросмотра"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__preview_pdf
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__current_preview_pdf
+msgid "Preview Pdf"
+msgstr "PDF предпросмотра"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__preview_stale
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__current_preview_stale
+msgid "Preview Stale"
+msgstr "Предпросмотр устарел"
+
+#. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_autocomplete_wizard_form
 msgid "Previous"
 msgstr "Назад"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_recipient__delivery_state__ready
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__state__ready
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_batch__state__ready
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_result__delivery_state__ready
 msgid "Ready"
 msgstr "Готов"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__recipient_ids
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__recipient_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__recipient_ids
+msgid "Recipient"
+msgstr "Получатель"
+
+#. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "Recipient \"%(name)s\" no longer exists."
 msgstr "Получатель «%(name)s» больше не существует."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__recipient_count
+msgid "Recipient Count"
+msgstr "Количество получателей"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__recipient_display_name
+msgid "Recipient Display Name"
+msgstr "Имя получателя"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__result_ids
+msgid "Result"
+msgstr "Результат"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__retention_days
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__retention_days
 msgid "Retention Days"
 msgstr "Срок хранения, дней"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "Retention days cannot be negative."
 msgstr "Срок хранения не может быть отрицательным."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__state__review
 msgid "Review"
 msgstr "Проверка"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__save_mapping_as_default
 msgid "Save Mapping As Default"
 msgstr "Сохранить сопоставление по умолчанию"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "Select a recipient to preview."
 msgstr "Выберите получателя для предпросмотра."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/pdf_field_mapping.py:0
 msgid "Select a valid Odoo field path."
 msgstr "Выберите корректный путь поля Odoo."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "Select at least one recipient."
 msgstr "Выберите хотя бы одного получателя."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/dms_file.py:0
 msgid "Select exactly one DMS PDF file."
 msgstr "Выберите ровно один PDF-файл DMS."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__state__select_recipients
 msgid "Select recipients"
 msgstr "Выбор получателей"
 
 #. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_delivery_wizard_form
 msgid "Send"
 msgstr "Отправить"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__send_enabled
+msgid "Send Enabled"
+msgstr "Отправлять"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_wizard__state__sending
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_wizard__state__sending
 msgid "Sending"
 msgstr "Отправка"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_recipient__delivery_state__sent
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_recipient__delivery_state__sent
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_result__delivery_state__sent
 msgid "Sent"
 msgstr "Отправлено"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_form_field__sequence
+msgid "Sequence"
+msgstr "Последовательность"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_delivery_recipient__delivery_state__skipped
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_autocomplete_recipient__delivery_state__skipped
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_pdf_generation_result__delivery_state__skipped
 msgid "Skipped"
 msgstr "Пропущено"
 
 #. module: dms_pdf_autocomplete
-msgid "The DMS PDF changed. Restart the wizard before saving mappings."
-msgstr "PDF-файл DMS изменился. Перезапустите мастер перед сохранением сопоставлений."
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__source_checksum
+msgid "Source Checksum"
+msgstr "Контрольная сумма источника"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__source_field_path
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__source_field_path
+msgid "Source Field Path"
+msgstr "Путь поля источника"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__source_file_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__source_file_id
+msgid "Source File"
+msgstr "Исходный файл"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__source_file_checksum
+msgid "Source File Checksum"
+msgstr "Контрольная сумма исходного файла"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__source_filename
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__source_filename
+msgid "Source Filename"
+msgstr "Имя исходного файла"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__source_pdf
+msgid "Source Pdf"
+msgstr "Исходный PDF"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_recipient__source_recipient_id
+msgid "Source Recipient"
+msgstr "Исходный получатель"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__source_wizard_id
+msgid "Source Wizard"
+msgstr "Исходный мастер"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__state
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__state
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__state
+msgid "State"
+msgstr "Состояние"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__step_label
+msgid "Step Label"
+msgstr "Номер шага"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_delivery_wizard__subject
+msgid "Subject"
+msgstr "Тема"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__success_count
+msgid "Success Count"
+msgstr "Количество успешных"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__target_model
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_field_mapping__target_model
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__target_model
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__target_model
+msgid "Target Model"
+msgstr "Целевая модель"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__target_res_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__target_res_id
+msgid "Target Res"
+msgstr "Целевая запись"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__target_res_ids_audit
+msgid "Target Res Ids Audit"
+msgstr "Аудит ID целевых записей"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__target_res_model
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_wizard__target_res_model
+msgid "Target Res Model"
+msgstr "Модель целевой записи"
+
+#. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
+msgid "The DMS PDF changed. Restart the wizard before saving mappings."
+msgstr ""
+"PDF-файл DMS изменился. Перезапустите мастер перед сохранением "
+"сопоставлений."
+
+#. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/dms_file.py:0
 msgid "The DMS file content is not valid base64 data."
 msgstr "Содержимое файла DMS не является корректными данными base64."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/dms_file.py:0
 msgid "The DMS file is locked by another user."
 msgstr "Файл DMS заблокирован другим пользователем."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "The Odoo field path is invalid."
 msgstr "Некорректный путь поля Odoo."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/controllers/download.py:0
 msgid "The PDF download is not available."
 msgstr "Скачивание PDF недоступно."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "The PDF download token is invalid or expired."
 msgstr "Токен скачивания PDF некорректен или просрочен."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "The PDF field configuration is no longer synchronized."
 msgstr "Конфигурация полей PDF больше не синхронизирована."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "The PDF snapshot checksum is invalid. Restart the wizard."
 msgstr "Контрольная сумма снимка PDF некорректна. Перезапустите мастер."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "The PDF snapshot is not valid base64 data."
 msgstr "Снимок PDF не является корректными данными base64."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "The generated ZIP exceeds the configured size limit."
 msgstr "Созданный ZIP превышает настроенное ограничение размера."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "The selected batch exceeds the configured recipient limit."
 msgstr "Выбранный пакет превышает настроенное ограничение числа получателей."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "The selected record does not match the target model."
 msgstr "Выбранная запись не соответствует целевой модели."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "The value for field \"%(field)s\" exceeds the allowed length."
 msgstr "Значение поля «%(field)s» превышает допустимую длину."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "This PDF batch is already being processed."
 msgstr "Этот пакет PDF уже обрабатывается."
 
 #. module: dms_pdf_autocomplete
-msgid "This PDF template must be synchronized by a user with write access to the DMS file."
-msgstr "Этот шаблон PDF должен синхронизировать пользователь с правом записи файла DMS."
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/dms_file.py:0
+msgid ""
+"This PDF template must be synchronized by a user with write access to the "
+"DMS file."
+msgstr ""
+"Этот шаблон PDF должен синхронизировать пользователь с правом записи файла "
+"DMS."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_delivery_wizard.py:0
 msgid "This delivery is already being processed."
 msgstr "Эта доставка уже обрабатывается."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "This is the first recipient."
 msgstr "Это первый получатель."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "Unsupported target model."
 msgstr "Целевая модель не поддерживается."
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_batch__user_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_generation_result__user_id
+msgid "User"
+msgstr "Пользователь"
+
+#. module: dms_pdf_autocomplete
+#: model:ir.model.fields.selection,name:dms_pdf_autocomplete.selection__dms_file__pdf_form_state__valid
 msgid "Valid"
 msgstr "Корректен"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__value_ids
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_value__value
+msgid "Value"
+msgstr "Значение"
+
+#. module: dms_pdf_autocomplete
+#: model_terms:ir.ui.view,arch_db:dms_pdf_autocomplete.view_pdf_autocomplete_wizard_form
 msgid "Values from Odoo"
 msgstr "Значения из Odoo"
 
 #. module: dms_pdf_autocomplete
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_mapping__wizard_id
+#: model:ir.model.fields,field_description:dms_pdf_autocomplete.field_dms_pdf_autocomplete_recipient__wizard_id
+msgid "Wizard"
+msgstr "Мастер"
+
+#. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/value_resolver.py:0
 msgid "Yes"
 msgstr "Да"
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_autocomplete_wizard.py:0
 msgid "You cannot access another user’s PDF wizard."
 msgstr "У вас нет доступа к мастеру PDF другого пользователя."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/wizard/pdf_delivery_wizard.py:0
 msgid "You cannot access another user’s delivery wizard."
 msgstr "У вас нет доступа к мастеру доставки другого пользователя."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/pdf_form_field.py:0
 msgid "You cannot access the related DMS file."
 msgstr "У вас нет доступа к связанному файлу DMS."
 
 #. module: dms_pdf_autocomplete
+#. odoo-python
+#: code:addons/dms_pdf_autocomplete/models/dms_file.py:0
 msgid "You need write access to configure this DMS PDF."
 msgstr "Для настройки этого PDF DMS требуется право записи."
